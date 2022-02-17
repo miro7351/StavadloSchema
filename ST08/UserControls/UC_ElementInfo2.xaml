@@ -1,0 +1,207 @@
+﻿<UserControl x:Class="PA.Stavadlo.MH.UserControls.UC_ElementInfo2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PA.Stavadlo.MH.UserControls"
+             mc:Ignorable="d" 
+             xmlns:conv="clr-namespace:PA.Stavadlo.MH.Converters"
+             xmlns:model="clr-namespace:PA.Stavadlo.MH.ViewModels"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+             d:DesignHeight="300" d:DesignWidth="400" Width="Auto" Height="430" MaxWidth="380"  IsVisibleChanged="UserControl_IsVisibleChanged">
+    
+    <!--User control je umiestneny v StavadloPage01.xaml; zviditelni sa az po prijme telegramu c. 131. pozri ElementInfoViewModel
+        //Visibility sa riadi globalData.ElementInfoPanelVisibility = Visibility.Visible;
+        <Visibility x:Key="visibilityElementInfo">Collapsed</Visibility> je v AppResources.xaml
+        Visibility="{DynamicResource visibilityElementInfo}"
+        DataContext nastaveny v xaml.
+        Da sa dragovat!
+    
+      PFunkcie\Informacie\O prvku
+    -->
+    <UserControl.Resources>
+        <!--<conv:TestConverter x:Key="tc1"/>-->
+        <BooleanToVisibilityConverter x:Key="boolToVis"/>
+        <!--podla dlzky zobrazovaneho textu nastavi lavy okraj pre TextBlock;-->
+        <conv:VymenaMarginConverter x:Key="marginConv1"/>
+        <!--na testovanie-->
+        <conv:TestConverter x:Key="testConv"/>
+        <!--VIEW MODEL-->
+        <model:ElementInfoViewModel x:Key="viewModelInfo"/>
+    </UserControl.Resources>
+
+    <Grid   DataContext="{StaticResource viewModelInfo}" ShowGridLines="True"
+          d:DataContext="{d:DesignData  Source=../Data/SampleData/ElementInfoWindowViewModelSampleData.xaml}">
+        <i:Interaction.Behaviors>
+            <ei:MouseDragElementBehavior/>
+        </i:Interaction.Behaviors>
+        <DockPanel LastChildFill="True" Background="{StaticResource lightBlueBackgroundBrush}" >
+            <DockPanel DockPanel.Dock="Top"  Background="{StaticResource TitleBackgroundBrush}" >
+                <!-- MouseLeftButtonDown="StartDrag"-->
+                <Button Style="{StaticResource btnClosePanel}" Command="{Binding CloseCommand}" DockPanel.Dock="Right" Margin="0 0 10 0"/>
+                <TextBlock  Text="Informácie o prvku"  Style="{StaticResource txbHeaderStyle}" />
+            </DockPanel>
+            <Grid  Grid.IsSharedSizeScope="True" HorizontalAlignment="Center" >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <!--typ prvku-->
+                    <RowDefinition Height="auto"/>
+                    <!--Grid pre Nazov a Status-->
+                    <RowDefinition Height="auto"/>
+                    <!--StackPanel pre Priradeny usek-->
+                    <RowDefinition Height="auto"/>
+                    <!--Grid pre Adresa v PLC, Stojan, Vyluka, UvolIzol-->
+                </Grid.RowDefinitions>
+                <TextBlock  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Text="{Binding MyElementInfoData.HeaderText, Mode=OneWay}" Style="{StaticResource txbNameStyle}"  />
+
+                <!--Nazov a Stav-->
+                <Grid Grid.Row="1" HorizontalAlignment="Left">
+
+                    <Grid ShowGridLines="False">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <!--Nazov udaju-->
+                            <ColumnDefinition Width="*" MinWidth="200" />
+                            <!-- hodnoty-->
+                            <ColumnDefinition MinWidth="50" SharedSizeGroup="hexaData" />
+                            <!--hexa data-->
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <!--Nazov-->
+                            <RowDefinition Height="auto" />
+                            <!--Stav: text21-->
+                            <RowDefinition Height="auto" />
+                            <!--Stav: text22-->
+                        </Grid.RowDefinitions>
+                        <TextBlock  Grid.Column="0" Grid.Row="0" Text="{Binding Path=MyElementInfoData.Text1, Mode=OneWay}"  Style="{StaticResource txbInfoPopis}"  />
+                        <!--1 Nazov-->
+                        <TextBlock  Grid.Column="0" Grid.Row="1" Text="{Binding Path=MyElementInfoData.Text2, Mode=OneWay}"  Style="{StaticResource txbInfoPopis}"   />
+                        <!--2 Stav  stav 1.riadok-->
+                        <TextBlock  Grid.Column="0" Grid.Row="2" Text="" Visibility="{Binding Path=StavText2Visibility, Mode=OneWay}"  Style="{StaticResource txbInfoPopis}" />
+                        <!--3 stav 2.riadok-->
+                        <TextBlock  Grid.Column="1" Grid.Row="0" Text="{Binding Path=MyElementInfoData.ElementName, Mode=OneWay}" Style="{StaticResource txbInfoData}"
+                           HorizontalAlignment="Left" Foreground="Blue"   Margin="0,10"/>
+
+                        <!--stav horny riadok-->
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Path=MyElementInfoData.DataText21, Mode=OneWay}" Style="{StaticResource txbInfoData}"
+                           Margin="0,10"/>
+                        <!--stav dolny riadok-->
+                        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding MyElementInfoData.DataText22, Mode=OneWay}" Style="{StaticResource txbInfoData}"
+                           Margin="0,10"  />
+                        <!--Stav hexa-->
+                        <TextBlock Grid.Column="2" Grid.Row="1" Style="{StaticResource txbInfoDataHexa}" >
+                     <Run Text="["/>
+                     <Run Text="{Binding MyElementInfoData.Stav, Mode=OneWay, StringFormat={}{0:X4}}" />
+                     <Run Text="]"/>
+                        </TextBlock>
+                    </Grid>
+                </Grid>
+                <!--Priradene navestidlo/Priradeny usek-->
+                <StackPanel Grid.Row="2" Orientation="Horizontal" >
+                    <!-- Popis Priradene navestidlo/Priradeny usek-->
+                    <TextBlock   Text="{Binding Path=MyElementInfoData.Text3, Mode=OneWay}"  Style="{StaticResource txbInfoPopis}"/>
+                    <!--Udaje: Priradene navestidlo/Priradeny usek-->
+                    <TextBlock Text="{Binding Path=MyElementInfoData.DataText3, Mode=OneWay}" Style="{StaticResource txbInfoData}" Margin="0 10" />
+                </StackPanel>
+
+                <!--Adresa, Stojan, Vyluka, UvolIzol-->
+                <Grid Grid.Row="3" ShowGridLines="False" HorizontalAlignment="Left" >
+                    <Grid.RowDefinitions>
+                        <!--Adresa v simaticu-->
+                        <RowDefinition Height="auto" />
+                        <!--Stojan-->
+                        <RowDefinition Height="auto"  />
+                        <!--Vyluka-->
+                        <RowDefinition Height="{Binding Path=MyElementInfoData.RowVylukaGridLenght, Mode=OneWay}" />
+                        <!--Uvolnena Izolacia-->
+                        <RowDefinition Height="{Binding Path=MyElementInfoData.RowUvolIzolGridLenght, Mode=OneWay}"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Adresa v PLC-->
+                    <Grid Grid.Column="0" Grid.Row="0" ShowGridLines="False">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition SharedSizeGroup="popis1" MinWidth="160" />
+                            <!--Nazov udaju-->
+                            <ColumnDefinition Width="*" MinWidth="100" />
+                            <!-- hodnoty-->
+                            <ColumnDefinition    SharedSizeGroup="hexaData"/>
+                            <!--hexa data-->
+                        </Grid.ColumnDefinitions>
+                        <!--5 Adresa v PLC-->
+                        <TextBlock  Text="{Binding Path=MyElementInfoData.Text4, Mode=OneWay}"  Style="{StaticResource txbInfoPopis}" />
+                        <!--Adresa v PLC -->
+                        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Path=MyElementInfoData.DataText4, Mode=OneWay}" Style="{StaticResource txbInfoData}" />
+                    </Grid>
+                    <!--6 Stojan-->
+                    <Grid Grid.Column="0" Grid.Row="1" ShowGridLines="False">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition SharedSizeGroup="popis1" MinWidth="160" />
+                            <!--Nazov udaju-->
+                            <ColumnDefinition Width="*"  />
+                            <!-- hodnoty-->
+                            <ColumnDefinition    SharedSizeGroup="hexaData"/>
+                            <!--hexa data-->
+                        </Grid.ColumnDefinitions>
+                        <!--6 Stojan-->
+                        <TextBlock  Grid.Column="0" Grid.Row="1" Text="{Binding Path=MyElementInfoData.Text5, Mode=OneWay}"  Style="{StaticResource txbInfoPopis}"/>
+                        <!--Stojan-->
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Path=MyElementInfoData.DataText5, Mode=OneWay}" Style="{StaticResource txbInfoData}" />
+
+                    </Grid>
+                    <!-- 7 Vyluka-->
+                    <Grid  Grid.Column="0" Grid.Row="2"  HorizontalAlignment="Stretch"  ShowGridLines="False">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <!--Nazov udaju-->
+                            <ColumnDefinition Width="*"  />
+                            <!-- hodnoty-->
+                            <ColumnDefinition    SharedSizeGroup="hexaData"/>
+                            <!--hexa data-->
+                        </Grid.ColumnDefinitions>
+                        <TextBlock  Text="{Binding Path=MyElementInfoData.Text6, Mode=OneWay}"  Style="{StaticResource txbInfoPopis}" />
+                        <!--Vyluka-->
+                        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Path=MyElementInfoData.DataText6, Mode=OneWay}" HorizontalAlignment="Center"
+                                   Style="{StaticResource txbInfoData}"  />
+
+                        <!--Vyluka hexa-->
+                        <TextBlock Grid.Column="2" Grid.Row="0" Style="{StaticResource txbInfoDataHexa}" >
+                             <Run Text="["/>
+                             <Run Text="{Binding MyElementInfoData.Vyluka, Mode=OneWay, StringFormat={}{0:X2}}" />
+                             <Run Text="]"/>
+                        </TextBlock>
+                    </Grid>
+                    <!-- Uvolnena izolacia-->
+                    <Grid Grid.Column="0" Grid.Row="3"  ShowGridLines="False">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition SharedSizeGroup="popis1" MinWidth="160" />
+                            <!--Nazov udaju-->
+                            <ColumnDefinition  Width="*" MinWidth="122" />
+                            <!-- hodnoty-->
+                            <ColumnDefinition    SharedSizeGroup="hexaData"/>
+                            <!--hexa data-->
+                        </Grid.ColumnDefinitions>
+                        <!-- 8 Popis:Uvolnena izolacia-->
+                        <TextBlock  Grid.Column="0" Grid.Row="0" Text="{Binding Path=MyElementInfoData.Text7, Mode=OneWay}"  Style="{StaticResource txbInfoPopis}" />
+
+                        <!--Udaj: Uvolnena izolacia-->
+                        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Path=MyElementInfoData.DataText7, Mode=OneWay}" Style="{StaticResource txbInfoData}" />
+
+                        <!--<TextBlock Grid.Column="1" Grid.Row="3" Text="{Binding Path=MyElementInfoData.DataText7, Mode=OneWay}" Style="{StaticResource txbInfoData}" 
+                           Visibility="{Binding MyElementInfoData.UvolIzolIsVisible, Converter={StaticResource boolToVis}, Mode=OneWay}" Height="21" Margin="20,10,0,10" Width="36"/>-->
+
+                        <!--Uvolnena izolacia hexa-->
+                        <TextBlock Grid.Column="2" Grid.Row="0" Style="{StaticResource txbInfoDataHexa}" >
+                             <Run Text="["/>
+                             <Run Text="{Binding MyElementInfoData.UvolnenaIzolacia, Mode=OneWay, StringFormat={}{0:X2}}" />
+                             <Run Text="]"/>
+                        </TextBlock>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </DockPanel>
+
+    </Grid>
+</UserControl>

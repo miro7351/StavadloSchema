@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="PA.Stavadlo.MH.UserControls.UCArrow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PA.Stavadlo.MH.UserControls"
+             xmlns:enum="clr-namespace:PA.Stavadlo.MH.Enums"
+             mc:Ignorable="d" 
+             
+             d:DesignHeight="50" d:DesignWidth="70">
+    <!--Sipka pre zobrazenie suhlasu (sipka trvalo svieti), alebo ziadosti (sipka blika) pouzivana v mape stavadla.
+        Sipka pre vstup ma zltu farbu MyFill="Yellow"
+        Sipka pre vystup ma zelenu farbu MyFill="Green"
+    
+    Pre pouzitie controlu treba pouzit style
+    <Style TargetType="controls:UCArrow" x:Key="sipka">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Visibility" Value="Visible"/>
+            <Setter Property="Panel.ZIndex" Value="100"/>
+            <Setter Property="RenderTransformOrigin" Value="0.5 0.5"/>
+        </Style>
+    
+     <Style TargetType="controls:UCArrow" x:Key="sipkaVychod" BasedOn="{StaticResource sipka}">
+            <Setter Property="MyFill" Value="Green"/>
+        </Style>
+    
+        Pozri xaml.cs kde su definovane Dependency property
+        Pre zobrazenie v designeri klikni na Path
+    -->
+    <UserControl.Resources>
+        <Style x:Key="arrowStyle" TargetType="Path">
+            <Setter Property="Visibility" Value="Visible" />
+            <Setter Property="RenderTransformOrigin" Value="0.5 0.5"/>
+            <Setter Property="Stroke" Value="Black" />
+            <Setter Property="Fill" Value="{Binding MyFill, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+        </Style>
+    </UserControl.Resources>
+    <!--<Setter Property="Fill" Value="{Binding MyFill, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+     <Setter Property="Stroke" Value="{Binding MyStroke, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+    -->
+   
+    <!--MH: september 2018 - Uprava velkosti controlu sa nastavuje pomocou Height a Width-->
+    <Grid Width="{Binding RelativeSource={RelativeSource AncestorType=local:UCArrow,AncestorLevel=1}, Path=Width, Mode=OneWay}"
+          Height="{Binding RelativeSource={RelativeSource AncestorType=local:UCArrow, AncestorLevel=1}, Path=Height, Mode=OneWay}">
+        <Viewbox>
+            <Path Style="{StaticResource arrowStyle}" Data="M21.167999,0.5 L21.167999,5.4940002 49.455467,5.675 49.455466,18.516667 21.167999,18.494 21.167999,23.5 5.5820494,12.024625 z" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Margin="0" />    
+        </Viewbox>
+    </Grid>
+</UserControl>

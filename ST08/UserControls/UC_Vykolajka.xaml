@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="PA.Stavadlo.MH.UserControls.UC_Vykolajka"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             MouseRightButtonDown="UserControl_MouseRightButtonDown" 
+             MouseLeftButtonUp="UserControl_ManipulationComplete"
+             MouseRightButtonUp="UserControl_ManipulationComplete"
+             MouseWheel="UserControl_MouseWheel"  
+             xmlns:UC="clr-namespace:PA.Stavadlo.MH.UserControls"
+             d:DesignWidth="150"
+             d:DesignHeight="150"
+             >
+    <!--ToolTip="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Height, Mode=OneWay}"-->
+    
+    <!--MH modifikovany kod: september 2018
+       User control Vykolajka (cerveny, cierny trojuholnik), predmet pouzivany na kolajisku.
+        
+        Pre nastavenie velkosti je definovany styl v StavadloElementsStyles.xaml
+        Typ=L pre lavu vykolajku, Typ=P pre pravu vykolajku; Typ default=string.empty
+    
+    MouseRightButtonDown: vykolajka sa po kliku presunie do pociatocnej polohy
+    MouseWheel: otacanim kolieska mysi sa otaca aj vykolajka okolo osi
+    
+        
+    Pre pouzitie pozri StavadloElementsStyles: Styl pre vykolajku
+    -->
+    <UserControl.Resources>
+        <UC:TypConverter x:Key="myTypConverter"/>
+        <!--myTypConverter pouziva sa pre ScaleTransform ScaleX pozri. xaml.cs; Typ P, L konvertuje na 1, alebo -1-->
+        <DrawingBrush x:Key="vykolajka1" Stretch="Uniform">
+            <DrawingBrush.Drawing>
+                <DrawingGroup>
+                    <DrawingGroup.Children>
+                        <GeometryDrawing Brush="{Binding VykolajkaBrush, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=OneWay, FallbackValue=Yellow}" Geometry="F1 M 0,63.3748L 0,0L 127.209,0L 0,63.3748 Z "/>
+                    </DrawingGroup.Children>
+                </DrawingGroup>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </UserControl.Resources>
+    
+    <Grid  RenderTransformOrigin=".5 .5" Background="{StaticResource vykolajka1}" >
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform ScaleX="{Binding Path=Typ, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=OneWay,Converter={StaticResource myTypConverter}}" ScaleY="1"/>
+                <SkewTransform/>
+                <RotateTransform Angle="{Binding RotAngle, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+    </Grid>
+    
+   
+
+
+    <!--<Grid  Width="45" Height="30" RenderTransformOrigin=".5 .5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform ScaleX="{Binding Path=Typ, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=OneWay,Converter={StaticResource myTypConverter}}" ScaleY="1"/>
+                <SkewTransform/>
+                <RotateTransform Angle="{Binding RotAngle, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Path Data="M0,3 L45,3 0,27 z" Fill="Red" />
+    </Grid>-->
+
+</UserControl>

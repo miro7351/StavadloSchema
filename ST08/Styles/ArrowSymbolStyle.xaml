@@ -1,0 +1,141 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:myEnum="clr-namespace:PA.Stavadlo.MH.Enums">
+
+    <!--MH september 2018: styly pouzite pre UCArrowSymbol
+        Na skusku ci Blend for Visual Studio 2017 to spracuje dobre. Je to OK!!
+    -->
+    <!--<ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="BasicResources.xaml"/>
+    </ResourceDictionary.MergedDictionaries>-->
+    
+    <Storyboard x:Key="yellowBlicker">
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)"
+                                                      Duration="0:0:2"
+                                                      FillBehavior="HoldEnd"
+                                                      RepeatBehavior="Forever">
+            <DiscreteColorKeyFrame KeyTime="0:0:0" Value="Black" />
+            <DiscreteColorKeyFrame KeyTime="0:0:1" Value="Transparent" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Fill).(SolidColorBrush.Color)"
+                                                      Duration="0:0:2"
+                                                      FillBehavior="HoldEnd"
+                                                      RepeatBehavior="Forever">
+            <DiscreteColorKeyFrame KeyTime="0:0:0" Value="{StaticResource SuhlasYellowColor}" />
+            <DiscreteColorKeyFrame KeyTime="0:0:1" Value="Transparent" />
+        </ColorAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <Storyboard x:Key="greenBlicker">
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)"
+                                                      Duration="0:0:2"
+                                                      FillBehavior="HoldEnd"
+                                                      RepeatBehavior="Forever">
+            <DiscreteColorKeyFrame KeyTime="0:0:0" Value="Black" />
+            <DiscreteColorKeyFrame KeyTime="0:0:1" Value="Transparent" />
+        </ColorAnimationUsingKeyFrames>
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Fill).(SolidColorBrush.Color)"
+                                                      Duration="0:0:2"
+                                                      FillBehavior="HoldEnd"
+                                                      RepeatBehavior="Forever">
+            <DiscreteColorKeyFrame KeyTime="0:0:0" Value="{StaticResource SuhlasGreenColor}" />
+            <DiscreteColorKeyFrame KeyTime="0:0:1" Value="Transparent" />
+        </ColorAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <!--Styl pre ziadost/suhlas; farba a blikanie sa spusta v DataTriggeri pri nastaveni ARROW_SYMBOL-->
+    <Style x:Key="arrowStyleBlink" TargetType="Path">
+        <Setter Property="Visibility" Value="Visible" />
+        <Setter Property="Fill" Value="Transparent" />
+        <Setter Property="Stroke" Value="Black" />
+        <Style.Triggers>
+            <!--Neviditelny-->
+            <DataTrigger Binding="{Binding ARROW_SYMBOL, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static myEnum:ARROW_SYMBOL_MODE.INVISIBLE}" >
+                <Setter Property="Visibility" Value="Collapsed" />
+            </DataTrigger>
+
+            <!--Nezabera pri animacii
+                <DataTrigger Binding="{Binding Path=Fill, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="Transparent">
+                    <Setter Property="Stroke" Value="Transparent"/>
+                </DataTrigger>-->
+
+            <!--Ziadost pre VCHOD: zlta blika-->
+            <DataTrigger Binding="{Binding ARROW_SYMBOL, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static myEnum:ARROW_SYMBOL_MODE.ZIADOST_VCHOD}">
+                <Setter Property="Visibility" Value="Visible" />
+                <Setter Property="Fill" Value="{StaticResource SuhlasYellowBrush}"/>
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard Storyboard="{StaticResource yellowBlicker}" x:Name="Blink" />
+                </DataTrigger.EnterActions>
+                <DataTrigger.ExitActions>
+                    <RemoveStoryboard BeginStoryboardName="Blink" />
+                </DataTrigger.ExitActions>
+            </DataTrigger>
+
+            <!--Suhlas pre vchod: zlta trvalo svieti-->
+            <DataTrigger Binding="{Binding ARROW_SYMBOL, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static myEnum:ARROW_SYMBOL_MODE.SUHLAS_VCHOD}">
+                <Setter Property="Visibility" Value="Visible" />
+                <Setter Property="Fill" Value="{StaticResource SuhlasYellowBrush}"/>
+            </DataTrigger>
+
+            <!--Ziadost pre odchod: zelena blika-->
+            <DataTrigger Binding="{Binding ARROW_SYMBOL, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static myEnum:ARROW_SYMBOL_MODE.ZIADOST_ODCHOD}" >
+                <Setter Property="Visibility" Value="Visible" />
+                <Setter Property="Fill" Value="{StaticResource SuhlasGreenBrush}"/>
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard Storyboard="{StaticResource greenBlicker}" x:Name="BlinkGreen" />
+                </DataTrigger.EnterActions>
+                <DataTrigger.ExitActions>
+                    <RemoveStoryboard BeginStoryboardName="BlinkGreen" />
+                </DataTrigger.ExitActions>
+            </DataTrigger>
+            <!--Suhlas pre odchod: zelana svieti-->
+            <DataTrigger Binding="{Binding ARROW_SYMBOL, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static myEnum:ARROW_SYMBOL_MODE.SUHLAS_ODCHOD}">
+                <Setter Property="Visibility" Value="Visible" />
+                <Setter Property="Fill" Value="{StaticResource SuhlasGreenBrush}"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--Styl pre ziadost/suhlas; farba sa nastavuje v DataTriggeri pri nastaveni hodnoty ARROW_SYMBOL, blikanie sa riadi kodom (Visible/Hidden)-->
+    <Style x:Key="arrowStyleStatic" TargetType="Path">
+        <Setter Property="Visibility" Value="Visible" />
+        <Setter Property="Fill" Value="Transparent" />
+        <Setter Property="Stroke" Value="Black" />
+        <Style.Triggers>
+            
+            <!--Neviditelny-->
+            <DataTrigger Binding="{Binding ARROW_SYMBOL, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static myEnum:ARROW_SYMBOL_MODE.INVISIBLE}" >
+                <Setter Property="Visibility" Value="Collapsed" />
+            </DataTrigger>
+
+            <!--Nezabera pri animacii
+                <DataTrigger Binding="{Binding Path=Fill, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="Transparent">
+                    <Setter Property="Stroke" Value="Transparent"/>
+                </DataTrigger>-->
+
+            <!--Ziadost pre VCHOD: zlta;  blikanie je urobene v kode-->
+            <DataTrigger Binding="{Binding ARROW_SYMBOL, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static myEnum:ARROW_SYMBOL_MODE.ZIADOST_VCHOD}">
+                <Setter Property="Visibility" Value="Visible" />
+                <Setter Property="Fill" Value="{StaticResource SuhlasYellowBrush}"/>
+            </DataTrigger>
+
+            <!--Suhlas pre vchod: zlta trvalo svieti-->
+            <DataTrigger Binding="{Binding ARROW_SYMBOL, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static myEnum:ARROW_SYMBOL_MODE.SUHLAS_VCHOD}">
+                <Setter Property="Visibility" Value="Visible" />
+                <Setter Property="Fill" Value="{StaticResource SuhlasYellowBrush}"/>
+            </DataTrigger>
+
+            <!--Ziadost pre odchod: zelena; blikanie je urobene v kode-->
+            <DataTrigger Binding="{Binding ARROW_SYMBOL, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static myEnum:ARROW_SYMBOL_MODE.ZIADOST_ODCHOD}" >
+                <Setter Property="Visibility" Value="Visible" />
+                <Setter Property="Fill" Value="{StaticResource SuhlasGreenBrush}"/>
+            </DataTrigger>
+            <!--Suhlas pre odchod: zelana svieti-->
+            <DataTrigger Binding="{Binding ARROW_SYMBOL, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static myEnum:ARROW_SYMBOL_MODE.SUHLAS_ODCHOD}">
+                <Setter Property="Visibility" Value="Visible" />
+                <Setter Property="Fill" Value="{StaticResource SuhlasGreenBrush}"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>
