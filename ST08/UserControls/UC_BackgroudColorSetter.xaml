@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="PA.Stavadlo.MH.UserControls.UC_BackgroudColorSetter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PA.Stavadlo.MH.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="410">
+       
+    
+    <!-- MH: Februar 2019
+    User control pre nastavenie pozadia pre mapu stavadla.
+    Zobrazenie menu: PFunkcie\Nastavenie\Pozadie nastavuje  App.Current.Resources["backgroundSetterStavadlo"]
+       
+        Visibility UserControlu sa riadi podla App.Current.Resources["backgroundSetterStavadlo"]
+        vo funkcii slider1_ValueChanged sa nastavuje dependency property  SytostFarby= (byte)e.NewValue, podla hodnoty slider1.Value
+        
+    Poznamky pre nastavenie jasu pre mapu stavadla:
+    Grid x:Name="GridMapaStavadla" je  vlozeny do gridu x:Name="GridMapAndElements.
+    Ak sa meni sytost-jas (opacity cierneho brushu) pre Background Gridu x:Name="GridMapaStavadla", potom sa meni jas pre mapu stavadla.
+    <Grid DockPanel.Dock="Top"    Margin="0"  Background="#FFCBCBCB"
+              HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="GridMapAndElements">
+    <Grid x:Name="GridMapaStavadla"
+     Background="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=Tag, Mode=OneWay, Converter={StaticResource sytostConv}}"
+    ..../>
+    -->
+    <Grid >
+        <StackPanel Name="panel1" Orientation="Horizontal" Margin="3"
+                        Background="Yellow" VerticalAlignment="Top" HorizontalAlignment="Left" Panel.ZIndex="2">
+            <TextBlock Text="Pozadie stavadla" VerticalAlignment="Center" Margin="10 0"/>
+            <Slider x:Name="slider1" Height="24" Width="200" Margin="0 10"
+        		    Maximum="165" SmallChange="5" TickFrequency="16" TickPlacement="BottomRight" Value="50" LargeChange="10" ValueChanged="slider1_ValueChanged" />
+            <Button Style="{StaticResource btnClosePanel}" Margin="10 0" Click="ClosePanel_Click"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

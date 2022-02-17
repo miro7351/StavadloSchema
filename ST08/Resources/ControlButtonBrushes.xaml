@@ -1,0 +1,181 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    
+                  >
+    <!--pozadie signalizacneho buttonu: stav stlaceny-->
+    <DrawingBrush x:Key="backgroundPressedBrush" Stretch="Uniform">
+        <DrawingBrush.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Children>
+                    <GeometryDrawing Geometry="F1 M 31.9972,31.9918L 671.997,31.9918L 671.997,415.992L 31.9972,415.992L 31.9972,31.9918 Z ">
+                        <GeometryDrawing.Pen>
+                            <Pen Thickness="0.1" LineJoin="Round" Brush="#FF000000"/>
+                        </GeometryDrawing.Pen>
+                        <GeometryDrawing.Brush>
+                            <RadialGradientBrush RadiusX="0.500195" RadiusY="0.833659" Center="0.5,0.5" GradientOrigin="0.5,0.5">
+                                <RadialGradientBrush.GradientStops>
+                                    <GradientStop Color="#FFFE5555" Offset="0"/>
+                                    <GradientStop Color="#FFB40E0E" Offset="1"/>
+                                </RadialGradientBrush.GradientStops>
+                                <RadialGradientBrush.RelativeTransform>
+                                    <TransformGroup/>
+                                </RadialGradientBrush.RelativeTransform>
+                            </RadialGradientBrush>
+                        </GeometryDrawing.Brush>
+                    </GeometryDrawing>
+                    <GeometryDrawing Geometry="F1 M 31.9597,31.9742L 63.9848,63.9866L 639.954,63.9866L 671.995,31.9973L 31.9597,31.9742 Z ">
+                        <GeometryDrawing.Brush>
+                            <LinearGradientBrush StartPoint="0.556316,0.154342" EndPoint="0.556316,0.810338">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Color="#FF641515" Offset="0"/>
+                                    <GradientStop Color="#FFDA4F4F" Offset="0.680135"/>
+                                    <GradientStop Color="#FFFFFFFF" Offset="1"/>
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </GeometryDrawing.Brush>
+                    </GeometryDrawing>
+                    <GeometryDrawing Geometry="F1 M 31.9949,415.986L 63.9949,383.986L 63.9949,63.9864L 31.9793,31.9708L 31.9949,415.986 Z ">
+                        <GeometryDrawing.Brush>
+                            <LinearGradientBrush StartPoint="0.34491,0.520667" EndPoint="0.907135,0.520667">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Color="#FF641515" Offset="0"/>
+                                    <GradientStop Color="#FFDA4F4F" Offset="0.680135"/>
+                                    <GradientStop Color="#FFFFFFFF" Offset="1"/>
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </GeometryDrawing.Brush>
+                    </GeometryDrawing>
+                    <GeometryDrawing Geometry="F1 M 671.999,31.9891L 640,63.9892L 640,383.989L 671.999,415.989L 671.999,31.9891 Z ">
+                        <GeometryDrawing.Brush>
+                            <LinearGradientBrush StartPoint="0.994919,0.416863" EndPoint="0.0027237,0.416863">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Color="#FF641515" Offset="0"/>
+                                    <GradientStop Color="#FFDA4F4F" Offset="0.680135"/>
+                                    <GradientStop Color="#FFFFFFFF" Offset="1"/>
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </GeometryDrawing.Brush>
+                    </GeometryDrawing>
+                    <GeometryDrawing Geometry="F1 M 671.994,415.988L 640,383.993L 63.9858,383.988L 31.9856,416.015L 671.994,415.988 Z ">
+                        <GeometryDrawing.Brush>
+                            <LinearGradientBrush StartPoint="0.449891,0.998961" EndPoint="0.449891,-0.000222977">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Color="#FF641515" Offset="0"/>
+                                    <GradientStop Color="#FFDA4F4F" Offset="0.680135"/>
+                                    <GradientStop Color="#FFFFFFFF" Offset="1"/>
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </GeometryDrawing.Brush>
+                    </GeometryDrawing>
+                </DrawingGroup.Children>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+
+    <!--pozadie signalizacneho buttonu: stav normalny, nestlaceny-->
+    <DrawingBrush x:Key="backgroundNormalBrush" Stretch="Uniform">
+        <DrawingBrush.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Children>
+                    <GeometryDrawing Brush="#FF938D8D" Geometry="F1 M 31.9972,31.9918L 671.997,31.9918L 671.997,415.992L 31.9972,415.992L 31.9972,31.9918 Z ">
+                        <GeometryDrawing.Pen>
+                            <Pen Thickness="0.1" LineJoin="Round" Brush="#FF000000"/>
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                    <GeometryDrawing Geometry="F1 M 671.996,31.9899L 639.97,63.939L 639.97,383.939L 671.996,415.99L 671.996,31.9899 Z ">
+                        <GeometryDrawing.Brush>
+                            <LinearGradientBrush StartPoint="0.980824,0.5013" EndPoint="-0.975903,0.5013">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Color="#FF453D3D" Offset="0"/>
+                                    <GradientStop Color="#FF764D4D" Offset="1"/>
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </GeometryDrawing.Brush>
+                    </GeometryDrawing>
+                    <GeometryDrawing Geometry="F1 M 31.9932,415.997L 63.9694,383.939L 639.97,383.939L 671.993,415.997L 31.9932,415.997 Z ">
+                        <GeometryDrawing.Brush>
+                            <LinearGradientBrush StartPoint="0.531337,1.01536" EndPoint="0.531337,-0.960252">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Color="#FF453D3D" Offset="0"/>
+                                    <GradientStop Color="#FF764D4D" Offset="1"/>
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </GeometryDrawing.Brush>
+                    </GeometryDrawing>
+                    <GeometryDrawing Geometry="F1 M 31.9878,415.971L 64.0738,383.918L 63.9957,63.9961L 31.9981,31.9965L 31.9878,415.971 Z ">
+                        <GeometryDrawing.Brush>
+                            <LinearGradientBrush StartPoint="0.0841903,0.416351" EndPoint="1.95416,0.416351">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Color="#FFDCDCDC" Offset="0"/>
+                                    <GradientStop Color="#FFA99494" Offset="0.501701"/>
+                                    <GradientStop Color="#FF764D4D" Offset="1"/>
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </GeometryDrawing.Brush>
+                    </GeometryDrawing>
+                    <GeometryDrawing Geometry="F1 M 31.9887,31.9915L 63.9708,63.9389L 639.97,63.9389L 671.978,32.0071L 31.9887,31.9915 Z ">
+                        <GeometryDrawing.Brush>
+                            <LinearGradientBrush StartPoint="0.435477,0.0586291" EndPoint="0.435477,1.99932">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop Color="#FFDCDCDC" Offset="0"/>
+                                    <GradientStop Color="#FFA99494" Offset="0.501701"/>
+                                    <GradientStop Color="#FF764D4D" Offset="1"/>
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </GeometryDrawing.Brush>
+                    </GeometryDrawing>
+                </DrawingGroup.Children>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+
+    <!--MH: 11.10.2013 Styly boli presunute do MainPage01.xaml-->
+    <!--styl pre signalizacny button, pri stlaceni sa nemeni farba pozadia-->
+  <!--  <Style TargetType="Button" x:Key="signalButtonStyle">
+        <Setter Property="Margin" Value="3"/>
+        <Setter Property="Background" Value="{StaticResource backgroundNormalBrush}"/>
+        <Setter Property="TextElement.FontSize" Value="{StaticResource SignalBtnFontSize}"/>
+        <Setter Property="TextBlock.FontWeight" Value="SemiBold"/>
+    </Style>-->
+
+    <!--styl pre signalizacny button, pri stlaceni sa meni farba pozadia-->
+    <!--<Style TargetType="Button" x:Key="signalButtonStyle1" BasedOn="{StaticResource signalButtonStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid Background="{TemplateBinding Background}" x:Name="buttonGrid" Width="60" Height="35">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding Path=(attprop:SignalButtonAttProp.Mode),RelativeSource={RelativeSource Mode=Self}}">
+                            <DataTrigger.Value>
+                                <attprop:BUTTON_MODE>PRESSED</attprop:BUTTON_MODE>
+                            </DataTrigger.Value>
+                            <Setter Property="Background" TargetName="buttonGrid" Value="{StaticResource backgroundPressedBrush}" />
+                        </DataTrigger>
+
+                        <DataTrigger Binding="{Binding Path=(attprop:SignalButtonAttProp.Mode),RelativeSource={RelativeSource Mode=Self}}">
+                            <DataTrigger.Value>
+                                <attprop:BUTTON_MODE>RELEASED</attprop:BUTTON_MODE>
+                            </DataTrigger.Value>
+                            <Setter Property="Background" TargetName="buttonGrid" Value="{StaticResource backgroundNormalBrush}" />
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+
+    <!--styl pre signalizacny button DEN/NOC, pri stlaceni sa nemeni farba pozadia-->
+    <!--<Style TargetType="Button" x:Key="signalButtonStyleDN" BasedOn="{StaticResource signalButtonStyle}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid Background="{TemplateBinding Background}" x:Name="buttonGrid" Width="60" Height="35">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+</ResourceDictionary>

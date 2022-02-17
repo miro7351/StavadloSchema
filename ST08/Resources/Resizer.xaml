@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<!--Graficky prvok do praveho dolneho rohu okna pre zvacsovanie okna-->
+    <DrawingBrush x:Key="Resizer" Stretch="Uniform">
+		<DrawingBrush.Drawing>
+			<DrawingGroup>
+				<DrawingGroup.Children>
+					<GeometryDrawing Brush="#FF000000" Geometry="F1 M 1.5,40.1278L 14.5,40.1278C 15.0523,40.1278 15.5,40.5756 15.5,41.1278L 15.5,54.1278C 15.5,54.6801 15.0523,55.1278 14.5,55.1278L 1.5,55.1278C 0.947716,55.1278 0.5,54.6801 0.5,54.1278L 0.5,41.1278C 0.5,40.5756 0.947716,40.1278 1.5,40.1278 Z ">
+						<GeometryDrawing.Pen>
+							<Pen LineJoin="Round" Brush="#FF000000"/>
+						</GeometryDrawing.Pen>
+					</GeometryDrawing>
+					<GeometryDrawing Brush="#FF000000" Geometry="F1 M 26.0833,40.0445L 39.0833,40.0445C 39.6356,40.0445 40.0833,40.4922 40.0833,41.0445L 40.0833,54.0445C 40.0833,54.5968 39.6356,55.0445 39.0833,55.0445L 26.0833,55.0445C 25.5311,55.0445 25.0833,54.5968 25.0833,54.0445L 25.0833,41.0445C 25.0833,40.4922 25.5311,40.0445 26.0833,40.0445 Z ">
+						<GeometryDrawing.Pen>
+							<Pen LineJoin="Round" Brush="#FF000000"/>
+						</GeometryDrawing.Pen>
+					</GeometryDrawing>
+					<GeometryDrawing Brush="#FF000000" Geometry="F1 M 50.5833,40.0445L 63.5833,40.0445C 64.1356,40.0445 64.5833,40.4922 64.5833,41.0445L 64.5833,54.0445C 64.5833,54.5968 64.1356,55.0445 63.5833,55.0445L 50.5833,55.0445C 50.0311,55.0445 49.5833,54.5968 49.5833,54.0445L 49.5833,41.0445C 49.5833,40.4922 50.0311,40.0445 50.5833,40.0445 Z ">
+						<GeometryDrawing.Pen>
+							<Pen LineJoin="Round" Brush="#FF000000"/>
+						</GeometryDrawing.Pen>
+					</GeometryDrawing>
+					<GeometryDrawing Brush="#FF000000" Geometry="F1 M 25.75,20.5445L 38.75,20.5445C 39.3023,20.5445 39.75,20.9922 39.75,21.5445L 39.75,34.5445C 39.75,35.0968 39.3023,35.5445 38.75,35.5445L 25.75,35.5445C 25.1977,35.5445 24.75,35.0968 24.75,34.5445L 24.75,21.5445C 24.75,20.9922 25.1977,20.5445 25.75,20.5445 Z ">
+						<GeometryDrawing.Pen>
+							<Pen LineJoin="Round" Brush="#FF000000"/>
+						</GeometryDrawing.Pen>
+					</GeometryDrawing>
+					<GeometryDrawing Brush="#FF000000" Geometry="F1 M 50.4069,20.5743L 63.4069,20.5743C 63.9592,20.5743 64.4069,21.0221 64.4069,21.5743L 64.4069,34.5743C 64.4069,35.1266 63.9592,35.5743 63.4069,35.5743L 50.4069,35.5743C 49.8546,35.5743 49.4069,35.1266 49.4069,34.5743L 49.4069,21.5743C 49.4069,21.0221 49.8546,20.5743 50.4069,20.5743 Z ">
+						<GeometryDrawing.Pen>
+							<Pen LineJoin="Round" Brush="#FF000000"/>
+						</GeometryDrawing.Pen>
+					</GeometryDrawing>
+					<GeometryDrawing Brush="#FF000000" Geometry="F1 M 50.2147,0.499994L 63.2147,0.499994C 63.767,0.499994 64.2147,0.947714 64.2147,1.49999L 64.2147,14.5C 64.2147,15.0523 63.767,15.5 63.2147,15.5L 50.2147,15.5C 49.6624,15.5 49.2147,15.0523 49.2147,14.5L 49.2147,1.49999C 49.2147,0.947714 49.6624,0.499994 50.2147,0.499994 Z ">
+						<GeometryDrawing.Pen>
+							<Pen LineJoin="Round" Brush="#FF000000"/>
+						</GeometryDrawing.Pen>
+					</GeometryDrawing>
+				</DrawingGroup.Children>
+			</DrawingGroup>
+		</DrawingBrush.Drawing>
+	</DrawingBrush>
+</ResourceDictionary>

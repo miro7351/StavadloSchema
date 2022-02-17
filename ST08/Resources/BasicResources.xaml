@@ -1,0 +1,172 @@
+﻿<ResourceDictionary  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!--MH: oktober 2018
+    vlozene do App.Resources
+    alebo vlozit do App.xaml, 
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ST08;component/Resources/BasicResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+-->
+    
+    <!--======== VELKOSTI FONTOV =============-->
+    <!--Velkost fontu pre text Stavadlo 17 Veľká Ida-->
+    <sys:Double x:Key="TitleSize">20</sys:Double>
+    <!--Velkost fontu pre texty v menu-->
+    <sys:Double x:Key="MenuFontSize">16</sys:Double>
+    <!--Velkost fontu pre -->
+    <sys:Double x:Key="MapLabelFontSize">18</sys:Double>
+    <!--Velkost fontu pre texty Draha hasiaceho stroja, Velka Ida-->
+    <sys:Double x:Key="MapTitleFontSize">22</sys:Double>
+    <!--Velkost fontu pre text v tooltipe-->
+    <sys:Double x:Key="ToolTipFontSize">15</sys:Double>
+
+    <!--Velkost fontu pre text v signalizacnych buttonoch-->
+    <sys:Double x:Key="SignalBtnFontSize">16</sys:Double>
+
+    <!--Velkost fontu pre Login okna-->
+    <sys:Double x:Key="loginTextFontSize">15</sys:Double>
+
+    <!--Velkost fontu pre zobrazenie casu-->
+    <sys:Double x:Key="DtFontSize">20</sys:Double>
+
+    <!--====================-->
+
+    <!--======== Color a SolidColorBrush =============-->
+
+    <SolidColorBrush x:Key="TransparentBrush">Transparent</SolidColorBrush>
+    <Color x:Key="transparentColor">Transparent</Color>
+
+    <Color x:Key="redColor">#ffff0000</Color>
+    <Color x:Key="blackColor">#ff000000</Color>
+    <SolidColorBrush x:Key="magentaBrush">#FF8500B6</SolidColorBrush>
+    <!--obsadeny usek-->
+    <SolidColorBrush x:Key="greenBrush">#FF00B000</SolidColorBrush>
+    <!--vlakova cesta-->
+    <SolidColorBrush x:Key="whiteBrush">#FFFFFFFF</SolidColorBrush>
+    <!--posunova cesta-->
+    <SolidColorBrush x:Key="blackBrush">#FF000000</SolidColorBrush>
+    <!--Zaciatok a koniec stavania cesty-->
+    <SolidColorBrush x:Key="startEndPathBrush">#FFFFFFFF</SolidColorBrush>
+    <!--biela farba textu-->
+    <SolidColorBrush x:Key="whiteSwitchNameTextBrush">#FFFFFFFF</SolidColorBrush>
+    <!--biela farba textu-->
+    <SolidColorBrush x:Key="redSwitchNameTextBrush">#FFFF0000</SolidColorBrush>
+
+    <!--rameno vyhybky, stroke pre path-->
+
+    <!--<SolidColorBrush x:Key="izolovanyUsekBrush">#FFC0C0C0</SolidColorBrush>
+    <SolidColorBrush x:Key="neizolovanyUsekBrush">#FF909090</SolidColorBrush>-->
+
+    <SolidColorBrush x:Key="izolovanyUsekBrush">#FF909090</SolidColorBrush>
+    <Color x:Key="izolovanyUsekColor">#FF909090</Color>
+    <SolidColorBrush x:Key="neizolovanyUsekBrush">#FF787878</SolidColorBrush>
+
+    <SolidColorBrush x:Key="uvolnenaIzolaciaBrush">#FFFFDEBD</SolidColorBrush>
+    <Color x:Key="uvolnenaIzolaciaColor">#FFFFDEBD</Color>
+    <SolidColorBrush x:Key="neinicializovanyBrush">#ff3469bc</SolidColorBrush>
+
+    <SolidColorBrush x:Key="vlakCestaBrush">#FF00B000</SolidColorBrush>
+    <Color x:Key="vlakCestaColor">#FF00B000</Color>
+    <!--vlakova cesta: green-->
+    <SolidColorBrush x:Key="posunCestaBrush">#FFFFFFFF</SolidColorBrush>
+    <Color x:Key="posunCestaColor">#FFFFFFFF</Color>
+    <!--posunova cesta:white-->
+    <SolidColorBrush x:Key="obsadenyUsekBrush">#FF8500B6</SolidColorBrush>
+    <!--obsadeny usek: fialova-->
+    <Color x:Key="obsadenyUsekColor">#FF8500B6</Color>
+
+    <SolidColorBrush x:Key="backBrushStavadlo">#FFC0C0C0</SolidColorBrush>
+
+    <SolidColorBrush x:Key="vymenaNormalBrush">#FF000000</SolidColorBrush>
+    <Color x:Key="vymenaNormalColor">#FF000000</Color>
+
+    <SolidColorBrush x:Key="vyhybkaVManipulaciiBrush">#FF0000FF</SolidColorBrush>
+    <!--modra: vyhybka v manipulacii-->
+    <!--<SolidColorBrush x:Key="vylukaPrestaveniaBrush">#FFFFFF00</SolidColorBrush>-->
+    <SolidColorBrush x:Key="vylukaPrestaveniaBrush">#FFFFFF00</SolidColorBrush>
+    <!--zlta: vyluka prestavenia-->
+
+    <!--Suhlasy - farby pre sipky -->
+    <SolidColorBrush x:Key="SuhlasYellowBrush" Color="Yellow"/>
+    <SolidColorBrush x:Key="SuhlasGreenBrush" Color="#ff2d9a21"/>
+    <SolidColorBrush x:Key="SuhlasWhiteBrush" Color="#ffFFFFFF"/>
+    <Color x:Key="SuhlasYellowColor">Yellow</Color>
+    <Color x:Key="SuhlasGreenColor">#ff2d9a21</Color>
+    
+    <!--farby pre UserControl pre vyber farieb: listbox-->
+    <SolidColorBrush x:Key="WhiteBrush" Color="#ffffffff"/>
+    <SolidColorBrush x:Key="YellowBrush" Color="#fffcfc00"/>
+    <SolidColorBrush x:Key="GreenBrush" Color="#FF00A800"/>
+    <SolidColorBrush x:Key="SalmonBrush" Color="#FFFFA4A4"/>
+    <SolidColorBrush x:Key="RedBrush" Color="#ffff0000"/>
+    <SolidColorBrush x:Key="PurpleBrush" Color="#FFA853A8"/>
+    <SolidColorBrush x:Key="LightBlueBrush" Color="#FF6B87FC"/>
+    <SolidColorBrush x:Key="BlueBrush" Color="#FF0000E4"/>
+    <SolidColorBrush x:Key="LightGrayBrush" Color="#FFC8C8C8"/>
+    <SolidColorBrush x:Key="GrayBrush" Color="#FFA0A0A0"/>
+    <SolidColorBrush x:Key="DarkGrayBrush" Color="#FF505050"/>
+    <SolidColorBrush x:Key="BlackBrush" Color="#ff000000"/>
+    
+    <!--Color pre blikanie poruch-->
+    <!--<Color x:Key="poruchaCervenaColor">#ffb9aab9</Color>-->
+    <Color x:Key="vyhybkaRozrezPoruchaColor">#ffb9aab9</Color>
+    <Color x:Key="ramenoVyhybkyPoruchaColor">#ff565656</Color>
+
+    <!--<SolidColorBrush x:Key="poruchaCervenaBrush" Color="#ffb9aab9"/>--><!--nie je to cervena!!!-->
+    <SolidColorBrush x:Key="vyhybkaRozrezPoruchaBrush" Color="#ffb9aab9"/><!--nie je to cervena!!!-->
+    <!--pouzita namiesto myliaceho nazvu poruchaCervenaBrush-->
+    
+    <SolidColorBrush x:Key="ramenoVyhybkyPoruchaBrush" Color="#ff565656"/>
+    
+    <!--farba pre pozadie textu Stavadloxx-->
+    <SolidColorBrush x:Key="TitleBackgroundBrush" Color="#FF0080FF"/>
+    <!--farba pre pozadie pre menu, signal. buttony, timer-->
+    <!--<SolidColorBrush x:Key="ControlBackgroundBrush" Color="#FFBFBDFF"/>-->
+    <SolidColorBrush x:Key="ControlBackgroundBrush" Color="#FF66EAFF"/>
+
+    <SolidColorBrush x:Key="LoginBackground" Color="AliceBlue"/>
+
+    <!--farba pre tlacidla menu-->
+    <SolidColorBrush x:Key="MenuButtonBorderBrush" Color="#ffF8F8F8"/>
+    <SolidColorBrush x:Key="MenuButtonBackgroundBrush" Color="#FFFEFFBD" />
+    <SolidColorBrush x:Key="MenuButtonDarkEffectBrush" Color="#FF606060" />
+    <SolidColorBrush x:Key="MenuButtonLightEffectBrush" Color="White" />
+    <!--Color="White"-->
+   
+    
+    <!--farba pre tlacidla zvuk-->
+    <SolidColorBrush x:Key="ButtonBorderBrush" Color="#ffF8F8F8"/>
+    <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#FFAAAAAA" />
+    <SolidColorBrush x:Key="ButtonDarkEffectBrush" Color="#FF606060" />
+    <SolidColorBrush x:Key="ButtonLightEffectBrush" Color="White" />
+
+    <!--Farby pre tooltipy-->
+    <SolidColorBrush x:Key="ToolTipSemaforBrush" Color="#FF8FB8C1"/>
+    <SolidColorBrush x:Key="ToolTipUsekBrush"    Color="#FFC1B88F"/>
+    <!--<SolidColorBrush x:Key="ToolTipVyhybkaBrush" Color="#FF8FB8C1"/>-->
+    <SolidColorBrush x:Key="ToolTipVyhybkaBrush" Color="#FFFEFFB3"/>
+
+    <!--Farby pre login okno-->
+    <!--<SolidColorBrush x:Key="LoginGreen">#FF008070</SolidColorBrush>-->
+    <!--<SolidColorBrush x:Key="LoginBackground">#FFDCDCDC</SolidColorBrush>-->
+
+    <SolidColorBrush x:Key="LoginGreen">#FF0080FF</SolidColorBrush>
+    <SolidColorBrush x:Key="LoginWindowBackground">#FFEAF5FF</SolidColorBrush>
+    <SolidColorBrush x:Key="LoginButtonBackground">#FFE1E1FF</SolidColorBrush>
+
+    <!--Rychlost rotacie pre lokomotivu a vykolajku pomocou kolieska mysi-->
+    <sys:Double x:Key="RotationSpeed">3</sys:Double>
+
+    <!--Farby pre page a subokna-->
+    <SolidColorBrush x:Key="lightBlueBackgroundBrush" Color="#FF88C5F2"/>
+    <SolidColorBrush x:Key="GateBrush" Color="Black"/>
+    <Color x:Key="loginBorderGradientColor">#FF686868</Color>
+
+  
+</ResourceDictionary>

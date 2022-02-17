@@ -1,0 +1,40 @@
+MH: 17.02.2022
+
+Projekt "StavadloSchema" sa pouziva na kreslenie, alebo upravu grafickej schemy stavadla.
+Projekt treba spustat vo Visual Studio 2019 Blend.
+Projekt teraz pouziva .NET Framework 4.8, lebo Visual Studio Blend 2022 nefunguje dobre!!!
+
+Ak Visual Studio 2022 Blend bude OK, moze sa projekt portovat do .NET 6.
+
+
+Ak sa robi novy projekt pre stavadloXX, potom treba nakreslit schemu stavadla v tomto projekte. Graficke rozhranie je rovnake ako
+na ostrom projekte stavadla.
+Ak sa pouzije uz existujuci projekt, napr. Stavadlo22 na vytvorenie  noveho projektu napr. Stavadlo08, potom pri kresleni schemy je problem so
+zobrazenim schemy stavadla.
+V ostrom projekte sa spusta vela veci....co pre vyvoj a zobrazenie schemy nie je potrebne.
+
+V tomto projekte buttony nie su funkcne, su len preto aby sa simulovala obrazovka ostrej aplikacie.
+
+------------------------------------------------
+Kreslenie novej schemy.
+
+Do zalozky UserControls pridat UserControl napr. UC_MapaST05.xaml.
+Nastavit vhodny namespace napr: PA.Stavadlo.MH.UserControls
+
+V kode StavadloPage.xaml upravit kod:
+
+<Grid>
+        <Viewbox Name="viewbox1"  Stretch="Uniform" >
+            <Viewbox.Child>
+                <!--<uc:UC_MapaST08/>-->
+                <uc:UC_MapaST05/>
+            </Viewbox.Child>
+        </Viewbox>
+</Grid>
+
+Postupne kreslit schemu stavadla, spustit aplikaciu a sledovat ako sa vykresluje stavadlo.
+
+
+
+
+  

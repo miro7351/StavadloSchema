@@ -1,0 +1,303 @@
+﻿<Page x:Class="PA.Stavadlo.MH.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ST08.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage">
+
+    <!--
+    MH: februar 2022
+    Page vlozena do MainTabPage
+    -->
+    <Page.Resources>
+        <!--<local:MarginConverter x:Key="marginConverter" />
+        <conv:RoleConverter3 x:Key="roleConv3"/>-->
+        
+        <!--nastavuje Visibility-->
+        <!--<conv:SignalButtonConverter x:Key="signalConv1"/>
+        <conv:BackgroundColorConverter x:Key="signalConv2"/>-->
+
+        <!--<model:MainPageViewModel x:Key="viewModel"/>-->
+
+        <!--#region ===STYLES ===-->
+
+        <!--styl pre signalizacny button, pri stlaceni sa nemeni farba pozadia-->
+        <Style TargetType="Button" x:Key="signalButtonStyle">
+            <Setter Property="Margin" Value="0 3"/>
+            <Setter Property="Background" Value="{StaticResource backgroundNormalBrush}"/>
+            <Setter Property="TextElement.FontSize" Value="{StaticResource SignalBtnFontSize}"/>
+            <Setter Property="TextBlock.FontWeight" Value="SemiBold"/>
+        </Style>
+
+        <!--styl pre signalizacny button DEN/NOC, pri stlaceni sa nemeni farba pozadia-->
+        <Style TargetType="Button" x:Key="signalButtonStyleDN" BasedOn="{StaticResource signalButtonStyle}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}" x:Name="buttonGrid" Width="60" Height="35">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--styl pre signalizacny button, pri stlaceni sa meni farba pozadia; 
+        Podla property Tag sa nastavuje farba pozadia: Tag=0 sive pozadie, Tag=1 cervene, Tag=2 nevidno Content-->
+        <Style TargetType="Button" x:Key="signalButtonStyle2" BasedOn="{StaticResource signalButtonStyle}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}" x:Name="buttonGrid" Width="60" Height="35" >
+                            <ContentPresenter x:Name="cntPresenter"  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5" Visibility="Visible"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding Path=Tag, RelativeSource={RelativeSource Mode=Self}, Mode=OneWay}" Value="0">
+                                <Setter Property="Background" TargetName="buttonGrid" Value="{StaticResource backgroundNormalBrush}" />
+                            </DataTrigger>
+
+                            <DataTrigger Binding="{Binding Path=Tag, RelativeSource={RelativeSource Mode=Self}, Mode=OneWay}" Value="1" >
+                                <Setter Property="Background" TargetName="buttonGrid" Value="{StaticResource backgroundPressedBrush}" />
+                            </DataTrigger>
+
+                            <DataTrigger Binding="{Binding Path=Tag, RelativeSource={RelativeSource Mode=Self}, Mode=OneWay}" Value="2">
+                                <Setter Property="Visibility" TargetName="cntPresenter" Value="Hidden" />
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--aby sa dal pouzit Converter, lebo v ResourceDictionary sa nemoze pouzit Converter; Converter nastavuje Visibility-->
+        <!--<Style TargetType="{x:Type MenuItem}" BasedOn="{StaticResource menuItemBasic}">
+            <Setter Property="Visibility" Value="{Binding RelativeSource={RelativeSource Mode=Self}, Path=(attProp:EnabledRolesHelper.EnabledRoles), Mode=OneWay, Converter={StaticResource roleConv3}}"/>
+        </Style>-->
+
+        <!--Visibility sa nastavuje pomocou funkcie ak sa zmeni rola uzivatela pri prihaseni
+            Pri spusteni aplikacie vznika vela Exceptions!!!!-->
+        <!--<Style TargetType="{x:Type MenuItem}" BasedOn="{StaticResource menuItemBasic}">
+            <Setter Property="Visibility" Value="{Binding RelativeSource={RelativeSource Mode=Self}, Path=(attProp:EnabledRolesHelper.EnabledRoles), Mode=OneWay, FallbackValue=Visible}" />
+        </Style>-->
+
+        <!--Visibility sa nastavuje pomocou NastavMIpristup(MenuItem mi, USER_ROLE userRole), ak sa zmeni rola uzivatela pri prihaseni pozri xaml.cs-->
+        <Style TargetType="{x:Type MenuItem}" BasedOn="{StaticResource menuItemBasic}">
+            <Setter Property="Visibility" Value="Visible"  />
+        </Style>
+
+        <Style x:Key="menuTooltip" TargetType="ToolTip">
+            <Setter Property="IsHitTestVisible" Value="False"/>
+            <Setter Property="IsTabStop" Value="False"/>
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToolTip">
+                        <Border BorderBrush="Black" BorderThickness="1" CornerRadius="0">
+                            <Grid Background="Yellow" >
+                                <Label Content="{TemplateBinding Content}" FontWeight="SemiBold" FontSize="15" />
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--#endregion   ===STYLES === -->
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <!--Menu-->
+            <RowDefinition Height="*"/>
+            <!--Grid s UC_MapaStavadla-->
+        </Grid.RowDefinitions>
+        <!--MENU-->
+        <DockPanel Grid.Row="0"    x:Name="mainDock">
+            <!--Background="{DynamicResource ControlBackgroundBrush}"-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!--datum a cas-->
+                <!--
+                    A monospaced font, also called a fixed-pitch, fixed-width, or non-proportional font, is a font whose letters and characters each occupy the same amount
+                    of horizontal space. 
+                    Examples of monospaced fonts include Courier, Courier New, Lucida Console, Monaco, and Consolas.-->
+                <!--<timer:MyTimer Grid.Column="2" TimeFormat="d.M.yyyy  HH:mm:ss" TimeInterval="1" timer:AttProp.DayFlag="True" 
+                           Margin="0"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Center"
+                           TextElement.FontFamily="Courier New"
+                           TextElement.FontSize="{StaticResource DtFontSize}" TextElement.FontWeight="SemiBold" />-->
+                <!--Zapnutie/vypnutie zvuku-->
+                <!--<uc:SoundControler Grid.Column="1" Width="35" Height="35" HorizontalAlignment="Center">
+                    <uc:SoundControler.ToolTip>
+                        <ToolTip Style="{StaticResource menuTooltip}" Content="Zapnutie/vypnutie zvuku"/>
+                    </uc:SoundControler.ToolTip>
+                </uc:SoundControler>-->
+
+                <!--Menu a Signalizacne buttony-->
+                <DockPanel  Grid.Row="0" Visibility="Visible">
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
+                        <!--Handler Menu_Click sa spusti pred spustenim Commandu-->
+                        <Menu  Style="{StaticResource menuStyle1}" MenuItem.Click="Menu_Click"
+                              Margin="10" DockPanel.Dock="Left" x:Name="mainMenu">
+
+                            <!--PFunkcie: IsEnabled="{Binding MenuButtonIsEnabledFlag, Mode=OneWay}" Pri rucnom ovladani je pristupne!!!-->
+                            <MenuItem Header="PFunkcie" x:Name="miPFunkcie"  >
+                                <MenuItem.ToolTip>
+                                    <ToolTip Style="{StaticResource menuTooltip}" Content="Prihlásenie, nastavenia, informácie"/>
+                                    <!--Content="Prihlásenie, nastavenia, informácie"-->
+                                </MenuItem.ToolTip>
+
+                                <!--MH: 16.10.2013 az po prijme prveho telegramu z Logicu je polozka PFunkcie pristupna, podobne ostatne polozky menu-->
+                                <!--Foreground="{Binding RelativeSource={RelativeSource,Mode=Self}, Path=IsEnabled, Converter=}-->
+
+                                <MenuItem Header="Prihlasenie/Odhlasenie"/>
+                                         
+                                        
+                                <MenuItem Header="Informacie" >
+                                    
+                                </MenuItem>
+
+
+                                <MenuItem Header="Nastavenie">
+                                   
+                                </MenuItem>
+
+                                <!--Simulacia-->
+                                <MenuItem Header="Simulacia" Name="miSimulation" >
+                                </MenuItem>
+
+                                
+
+                                <Separator />
+                                <!--KONIEC Programu-->
+                                <MenuItem Header="Koniec"  />
+
+                            </MenuItem>
+                            <!--PFunkcie-->
+
+                            <!-- UDRZBA:  v DEBUG MODE sa nastavi MenuButtonIsEnabledFlag=true, pozri MainPageViewModel.cs -->
+                            <MenuItem Header="Udrzba"  >
+                            </MenuItem>
+
+                            <!--Vymeny-->
+                            <MenuItem Header="Vymeny">
+                                <MenuItem.ToolTip>
+                                    <ToolTip Style="{StaticResource menuTooltip}" Content="Individuálne prestavenie výmen"/>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+
+                            <!--VCesta-->
+                            <MenuItem Header="Vcesta"  >
+                                <MenuItem.ToolTip>
+                                    <ToolTip Style="{StaticResource menuTooltip}" Content="Stavanie vlakových ciest"/>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+
+                            <!--PCesta-->
+                            <MenuItem Header="Pcesta" >
+                                <MenuItem.ToolTip>
+                                    <ToolTip Style="{StaticResource menuTooltip}" Content="Stavanie posunových ciest"/>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+
+                            <!--Zrus-->
+                            <MenuItem Header="Zrus" >
+                                <MenuItem.ToolTip>
+                                    <ToolTip Style="{StaticResource menuTooltip}" Content="Rušenie jazdných ciest"/>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+
+                            <!--Suhlas-->
+                            <MenuItem Header="Suhlas">
+                                <MenuItem.ToolTip>
+                                    <ToolTip Style="{StaticResource menuTooltip}" Content="Obsluha súhlasov"/>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+
+                            <!--Stop-->
+                            <MenuItem Header="Stop"  >
+                                <MenuItem.ToolTip>
+                                    <ToolTip Style="{StaticResource menuTooltip}" Content="Núdzový stop"/>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+
+                            <!--Napoveda-->
+                            <MenuItem Header="Napoveda"   >
+                                <MenuItem.ToolTip>
+                                    <ToolTip Style="{StaticResource menuTooltip}" Content="Informácie o programe"/>
+                                </MenuItem.ToolTip>
+                            </MenuItem>
+
+
+                        </Menu>
+
+                        <!-- ======= Signalizacne buttony ===============-->
+                        <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" ButtonBase.Click="SignalButton_Click" Margin="100 0 0 0" >
+                            <!--signalizacne buttony, sa riadia pomocou Simulacie, alebo podla udajov v telegrame-->
+
+                            <!--Automatický/ručný režim ovládania: Content="AUT/RUC", Content sa meni AUT alebo RUC, pri RUC je pozadie cervene; -->
+                            <Button x:Name="btnAUT" Content="Aut/Ruc" Style="{StaticResource signalButtonStyle2}"  >
+                                <Button.ToolTip>
+                                    <ToolTip Style="{StaticResource menuTooltip}" Content="Automatický/ručný režim ovládania"/>
+                                </Button.ToolTip>
+                            </Button>
+
+                            <!--DEN/NOC:   Content="DEN/NOC"-->
+                            <Button x:Name="btnNOC" Content="Den/Noc" Style="{StaticResource signalButtonStyleDN}" >
+                                <Button.ToolTip>
+                                    <ToolTip Style="{StaticResource menuTooltip}" Content="Prepínanie návestidiel Deň/Noc"/>
+                                </Button.ToolTip>
+                            </Button>
+                            <!-- nemeni farbu pozadia, Content sa meni DEN alebo NOC-->
+
+                            <!--Podla hodnoty Tag sa nastavuje farba; 
+                             je to v style signalButtonStyle2: Tag=0 pozadie buttonu je sive; Tag=1 pozadie buttonu cervene;  Tag=2 Content nevidno,-->
+                            <!--Rušenie Záveru Výmen-->
+                            <Button x:Name="btnRZV" Content="RZV"  Style="{StaticResource signalButtonStyle2}">
+                                <Button.ToolTip>
+                                    <ToolTip Style="{StaticResource menuTooltip}" Content="Rušenie záveru výmen"/>
+                                </Button.ToolTip>
+                            </Button>
+
+                            <!--Vypnutie Prestavného Prúdu-->
+                            <Button x:Name="btnVPP" Content="VPP" 
+                                    Style="{StaticResource signalButtonStyle2}" >
+                                <Button.ToolTip>
+                                    <ToolTip Style="{StaticResource menuTooltip}" Content="Vypnutie prestavného prúdu"/>
+                                </Button.ToolTip>
+                            </Button>
+
+                            <!--Stredná poloha radičov výmen-->
+                            <Button x:Name="btnSPR" Content="SPR">
+                                <Button.ToolTip>
+                                    <ToolTip Style="{StaticResource menuTooltip}" Content="Stredná poloha radičov výmen"/>
+                                </Button.ToolTip>
+                            </Button>
+
+                            <!--Vybavenie rozrezu-->
+                            <Button x:Name="btnVR"  Content="VR"  >
+                                <Button.ToolTip>
+                                    <ToolTip Style="{StaticResource menuTooltip}" Content="Vybavenie rozrezu"/>
+                                </Button.ToolTip>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                </DockPanel>
+            </Grid>
+        </DockPanel>
+        <!--Mapa stavadla a kontroly: Jas pozadia, UC_ElementInfo, LogPlayerControl, UC_InfoZariadenie-->
+        <Frame x:Name="mainFrame" Grid.Row="1"    NavigationUIVisibility="Hidden" Source="StavadloPage.xaml"/>
+    </Grid>
+</Page>

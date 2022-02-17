@@ -1,0 +1,104 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/ST08;component/Resources/BasicResources.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <!--MH: pridane 19.11.2013-->
+    <!-- Brushes pre zebrovite vyfarbenie usekov pri vymenach; useky vyhybiek, ktore su v manipulacii a stavia sa cez nich cesta-->
+    <VisualBrush x:Key="VLAK_CESTA_VYMENA_NORMALBrush"
+            TileMode="Tile" Viewport="0,10,10,10"
+            ViewportUnits="Absolute" Viewbox="0,0,10,10"
+            ViewboxUnits="Absolute">
+        <VisualBrush.Visual>
+            <Canvas>
+                <Rectangle Fill="{StaticResource izolovanyUsekBrush}" Width="5" Height="10" />
+                <Rectangle Margin="5,0" Fill="{StaticResource vlakCestaBrush}" Width="5" Height="10" />
+            </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+    <VisualBrush x:Key="VLAK_CESTA_VYMENA_OBSADBrush"
+            TileMode="Tile" Viewport="0,10,10,10"
+            ViewportUnits="Absolute" Viewbox="0,0,10,10"
+            ViewboxUnits="Absolute">
+        <VisualBrush.Visual>
+            <Canvas>
+                <Rectangle Fill="{StaticResource obsadenyUsekBrush}" Width="5" Height="10" />
+                <Rectangle Margin="5,0" Fill="{StaticResource vlakCestaBrush}" Width="5" Height="10" />
+            </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+    <VisualBrush x:Key="VLAK_CESTA_VYMENA_UVOLIZOLBrush"
+            TileMode="Tile" Viewport="0,10,10,10"
+            ViewportUnits="Absolute" Viewbox="0,0,10,10"
+            ViewboxUnits="Absolute">
+        <VisualBrush.Visual>
+            <Canvas>
+                <Rectangle Fill="{StaticResource uvolnenaIzolaciaBrush}" Width="5" Height="10" />
+                <Rectangle Margin="5,0" Fill="{StaticResource vlakCestaBrush}" Width="5" Height="10" />
+            </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+    <VisualBrush x:Key="STAV_CESTA_VYMENA_NORMALBrush"
+            TileMode="Tile" Viewport="0,10,10,10"
+            ViewportUnits="Absolute" Viewbox="0,0,10,10"
+            ViewboxUnits="Absolute">
+        <VisualBrush.Visual>
+            <Canvas>
+                <Rectangle Fill="{StaticResource izolovanyUsekBrush}" Width="5" Height="10" />
+                <Rectangle Margin="5,0" Fill="{StaticResource posunCestaBrush}" Width="5" Height="10" />
+            </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+    <VisualBrush x:Key="STAV_CESTA_VYMENA_OBSADBrush"
+            TileMode="Tile" Viewport="0,10,10,10"
+            ViewportUnits="Absolute" Viewbox="0,0,10,10"
+            ViewboxUnits="Absolute">
+        <VisualBrush.Visual>
+            <Canvas>
+                <Rectangle Fill="{StaticResource obsadenyUsekBrush}" Width="5" Height="10" />
+                <Rectangle Margin="5,0" Fill="{StaticResource posunCestaBrush}" Width="5" Height="10" />
+            </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+    <VisualBrush x:Key="STAV_CESTA_VYMENA_UVOLIZOLBrush"
+            TileMode="Tile" Viewport="0,10,10,10"
+            ViewportUnits="Absolute" Viewbox="0,0,10,10"
+            ViewboxUnits="Absolute">
+        <VisualBrush.Visual>
+            <Canvas>
+                <Rectangle Fill="{StaticResource uvolnenaIzolaciaBrush}" Width="5" Height="10" />
+                <Rectangle Margin="5,0" Fill="{StaticResource posunCestaBrush}" Width="5" Height="10" />
+            </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+    
+    
+    <!--MH: 19.11.2013 Brushes pre zebrovite vyfarbenie ramena vymeny, ktora ma odvrat je sucastou cesty a nema zaver  -->
+    <!--pouziva sa pre SWITCH_STATE: ODVRAT_PC_PRECHOD a ODVRAT_VYLUKA_PC_PRECHOD-->
+    <VisualBrush x:Key="odvratPC_PrechodBrush"
+            TileMode="Tile" Viewport="0,10,10,10"
+            ViewportUnits="Absolute" Viewbox="0,0,10,10"
+            ViewboxUnits="Absolute">
+        <VisualBrush.Visual>
+            <Canvas>
+                <Rectangle Fill="{StaticResource izolovanyUsekBrush}" Width="5" Height="10" />
+                <Rectangle Margin="5,0" Fill="{StaticResource posunCestaBrush}" Width="5" Height="10" />
+            </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+    <!--MH: 19.11.2013 pouziva sa pre SWITCH_STATE: ODVRAT_VC_PRECHOD a ODVRAT_VYLUKA_VC_PRECHOD-->
+    <VisualBrush x:Key="odvratVC_PrechodBrush"
+            TileMode="Tile" Viewport="0,10,10,10"
+            ViewportUnits="Absolute" Viewbox="0,0,10,10"
+            ViewboxUnits="Absolute">
+        <VisualBrush.Visual>
+            <Canvas>
+                <!--<Rectangle Fill="{StaticResource obsadenyUsekBrush}" Width="5" Height="10" />-->
+                <Rectangle Fill="{StaticResource izolovanyUsekBrush}" Width="5" Height="10" />
+                <Rectangle Margin="5,0" Fill="{StaticResource vlakCestaBrush}" Width="5" Height="10" />
+            </Canvas>
+        </VisualBrush.Visual>
+    </VisualBrush>
+
+</ResourceDictionary>

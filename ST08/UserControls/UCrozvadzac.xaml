@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="PA.Stavadlo.MH.UserControls.UCrozvadzac"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            
+             mc:Ignorable="d" 
+             d:DesignHeight="100"
+             d:DesignWidth="100">
+    <!--Visibility="{DynamicResource visibilityRozvadzace}" pre riadenie viditelnosti;
+      pri editovani nastavit Visibility=Visible;
+    
+    Resource pre rozvadzac1 je v \Styles\Rozvadzac.xaml
+    Pri kliku sa zobrazi okno so suborom, kde su udaje o rozvadzaci.
+    Tag obsahuje nazov suboru.
+    -->
+    
+    <!--MH: September 2018 prestylovanie aby velkost controlu sa nastavovala pouzitim Width  a Height.
+   
+    Pre pouzitie treba pouzit styl:pozri StavadloElementsStyles.xaml
+    <Style TargetType="controls:UCrozvadzac">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Visibility" Value="Visible"/>
+        <Setter Property="Panel.ZIndex" Value="100"/>
+        <Setter Property="RenderTransformOrigin" Value="0.5 0.5"/>
+        <Setter Property="ToolTip" Value="{Binding Tag, RelativeSource={RelativeSource Mode=Self}}"/>
+    </Style>
+    -->
+    <UserControl.Resources>
+        <DrawingBrush x:Key="rozvadzac1" Stretch="Uniform">
+            <DrawingBrush.Drawing>
+                <DrawingGroup>
+                    <DrawingGroup.Children>
+                        <GeometryDrawing Brush="#FFFFFF00" Geometry="F1 M 0,90.8235L 0,75.6078L 7.52941,75.6078L 7.52941,64.2353L 7.52941,52.9412L 68,53.0196L 68,75.6863L 75.2941,75.6863L 75.2941,90.6667">
+                            <GeometryDrawing.Pen>
+                                <Pen Thickness="0" LineJoin="Round" Brush="#FF000000"/>
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Brush="#FF000000" Geometry="F1 M 7.5098,52.8824L 14.9804,52.8824L 14.9804,64.1765L 7.5098,64.1765L 7.5098,52.8824 Z ">
+                            <GeometryDrawing.Pen>
+                                <Pen Thickness="1" LineJoin="Round" Brush="#FF000000"/>
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Brush="#FF000000" Geometry="F1 M 60.4216,52.9412L 67.8922,52.9412L 67.8922,64.2353L 60.4216,64.2353L 60.4216,52.9412 Z ">
+                            <GeometryDrawing.Pen>
+                                <Pen Thickness="1" LineJoin="Round" Brush="#FF000000"/>
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Brush="#FF969182" Geometry="F1 M 14.9804,75.6471L 60.451,75.6471L 60.451,83.4118L 14.9804,83.4118L 14.9804,75.6471 Z ">
+                            <GeometryDrawing.Pen>
+                                <Pen Thickness="0" LineJoin="Round" Brush="#FF000000"/>
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Brush="#FF969182" Geometry="F1 M 14.9804,64.2353L 60.451,64.2353L 60.451,72L 14.9804,72L 14.9804,64.2353 Z ">
+                            <GeometryDrawing.Pen>
+                                <Pen Thickness="0" LineJoin="Round" Brush="#FF000000"/>
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Brush="#FFFFFF00" Geometry="F1 M 14.9804,14.9412L 60.4216,14.9412L 60.4216,52.9412L 14.9804,52.9412L 14.9804,14.9412 Z ">
+                            <GeometryDrawing.Pen>
+                                <Pen Thickness="0" LineJoin="Round" Brush="#FF000000"/>
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Brush="#FFFFFF00" Geometry="F1 M 18.9804,7.88235L 56.8627,7.88235L 56.8627,14.8235L 18.9804,14.8235L 18.9804,7.88235 Z ">
+                            <GeometryDrawing.Pen>
+                                <Pen Thickness="0" LineJoin="Round" Brush="#FF000000"/>
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Brush="#FFE9E9DA" Geometry="F1 M 41.8039,19.2941L 52.6274,19.2941L 52.6274,52.8235L 41.8039,52.8235L 41.8039,19.2941 Z ">
+                            <GeometryDrawing.Pen>
+                                <Pen Thickness="0" LineJoin="Round" Brush="#FF000000"/>
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                    </DrawingGroup.Children>
+                </DrawingGroup>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </UserControl.Resources>
+    <Grid Background="{DynamicResource rozvadzac1}" MouseLeftButtonDown="Rozvadzac_MouseLeftButtonDown" />
+</UserControl>

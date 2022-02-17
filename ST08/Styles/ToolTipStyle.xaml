@@ -1,0 +1,100 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:attProp ="clr-namespace:PA.Stavadlo.MH.Infrastructure.PathHelperPA"
+                    xmlns:controls="clr-namespace:PA.Stavadlo.MH.UserControls">
+                   
+
+    <!--zakladny styl pre border pre ToolTip-->
+    <Style x:Key="tooltipBorder" TargetType="Border">
+        <Setter Property="CornerRadius" Value="2"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource BlackBrush}"/>
+    </Style>
+    
+    <!--Border pre ToolTip pre usek-->
+    <Style TargetType="Border" x:Key="ttUsekBorder" BasedOn="{StaticResource tooltipBorder}">
+        <Setter Property="Background" Value="{DynamicResource ToolTipUsekBrush}"/>
+    </Style>
+
+    <!--Border pre ToolTip pre semafor-->
+    <Style TargetType="Border" x:Key="ttSemaforBorder" BasedOn="{StaticResource tooltipBorder}">
+        <Setter Property="Background" Value="{DynamicResource ToolTipSemaforBrush}"/>
+    </Style>
+
+    <!--Border pre ToolTip pre vyhybku-->
+    <Style TargetType="Border" x:Key="ttVyhybkaBorder" BasedOn="{StaticResource tooltipBorder}">
+        <Setter Property="Background" Value="{DynamicResource ToolTipVyhybkaBrush}"/>
+    </Style>
+    
+    <!--ToolTip pre usek-Path, nastavuje sa v Style pre usek-->
+    <ToolTip x:Key="ttUsek1" DataContext="{Binding PlacementTarget, RelativeSource={RelativeSource Mode=Self}}">
+        <ToolTip.Template>
+            <ControlTemplate TargetType="{x:Type ToolTip}">
+                <Border Style="{StaticResource ttUsekBorder}">
+                    <TextBlock Text="{Binding Name, Mode=OneWay}" Style="{StaticResource txbToolTip}"/>
+                </Border>
+            </ControlTemplate>
+        </ToolTip.Template>
+    </ToolTip>
+
+
+    <!--ToolTip pre Path-->
+    <ToolTip x:Key="ttUsek" DataContext="{Binding PlacementTarget, RelativeSource={RelativeSource Mode=Self}}">
+        <ToolTip.Template>
+            <ControlTemplate TargetType="{x:Type ToolTip}">
+                <Border Style="{StaticResource ttUsekBorder}">
+                  <!--  <TextBlock Text="{Binding (attProp:PathHelper.PathNumber), Mode=OneWay}" Style="{StaticResource txbToolTip}"/>
+                    <TextBlock Text="{Binding Path=(attProp:PathHelper.Mode), Mode=OneWay}" Style="{StaticResource txbToolTip}"/>-->
+                    <!--<TextBlock Text="{Binding Path=(Panel.ZIndex), Mode=OneWay}" Style="{StaticResource txbToolTip}"/>-->
+                </Border>
+            </ControlTemplate>
+        </ToolTip.Template>
+    </ToolTip>
+
+    <!--ToolTip pre Path, ktora patri vyhybke-->
+    <ToolTip x:Key="ttUsekTS" DataContext="{Binding PlacementTarget, RelativeSource={RelativeSource Mode=Self}}">
+        <ToolTip.Template>
+            <ControlTemplate TargetType="{x:Type ToolTip}">
+                <Border Style="{StaticResource ttVyhybkaBorder}">
+                     <!-- <TextBlock Text="{Binding (attProp:PathHelper.PathNumber), Mode=OneWay}" Style="{StaticResource txbToolTip}"/>
+                  <TextBlock Text="{Binding Path=(Panel.ZIndex), Mode=OneWay}" Style="{StaticResource txbToolTip}"/>-->
+                </Border>
+            </ControlTemplate>
+        </ToolTip.Template>
+    </ToolTip>
+
+    <Style TargetType="Border" x:Key="semaforBorderStyle">
+        <Setter Property="CornerRadius" Value="15"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Opacity"  Value="1"/>
+        <!--<Setter Property="BorderBrush" Value="{StaticResource strokeBrush}"/>-->
+        <Setter Property="BorderBrush" Value="{StaticResource BlackBrush}"/>
+    </Style>
+
+    <!--Tooltip pre semafor-->
+    <ToolTip x:Key="ttSemafor" >
+        <ToolTip.Template>
+            <ControlTemplate TargetType="ToolTip">
+                <Border Style="{StaticResource ttSemaforBorder}" >
+                    <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type UserControl},AncestorLevel=1}, Path=Name}"
+                                  Style="{StaticResource txbToolTip}"/>
+                    <!--<TextBlock Style="{StaticResource txbToolTip}">
+                            <TextBlock.Text>
+                                <MultiBinding Converter="{StaticResource concatStringConv}" ConverterParameter="x">
+                                    <Binding RelativeSource="{RelativeSource Mode=FindAncestor,AncestorType={x:Type controls:Semafor1Control},AncestorLevel=1}" Path="Width" Mode="OneWay"/>
+                                    <Binding RelativeSource="{RelativeSource Mode=FindAncestor,AncestorType={x:Type controls:Semafor1Control},AncestorLevel=1}" Path="Height" Mode="OneWay"/>
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>-->
+                    <!--<TextBlock  Style="{StaticResource txbToolTip}">
+                            <Run Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type controls:Semafor1Control},AncestorLevel=1}, Path=Name}"/>
+                            <Run> Width:</Run>
+                            <Run Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type controls:Semafor1Control},AncestorLevel=1}, Path=Width}"/>
+                            <Run> Height:</Run>
+                            <Run Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type controls:Semafor1Control},AncestorLevel=1}, Path=Height}"/>
+                        </TextBlock>-->
+                </Border>
+            </ControlTemplate>
+        </ToolTip.Template>
+    </ToolTip>
+</ResourceDictionary>

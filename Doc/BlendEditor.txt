@@ -1,0 +1,42 @@
+MH: 17.02.2022
+
+Poznamky pre Blend graficky editor.
+
+mod "Direct"  (cierna sipka celkom hore v menu pre graf. editor): oznacenie celeho graf. objetku napr. pre operaciu "Copy", alebo pre posun objektu;
+
+mod "Direct Selection" (sipka len s okrajom ) ak potrebujeme editovat jednotlive body, alebo hrany graf. objektu.
+
+Klik na graf. objekt, oznacia sa nam body vo vrcholoch objektu,
+Ak potrebujeme editovat polohu bodu, potom posunut kurzor nad bod, pri kurzore mysi sa objavi maly cierny stvorcek, kliknut na bod, bod ziska modru farbu a pomocou klaves ho mozeme posuvat.
+Ak potrebujeme editovat polohu hrany obejtu, potom posunut kurzor nad hranu, pri kurzore mysi sa objavi maly cierny oblucik, kliknut na hranu, hrana ziska modru farbu a pomocou klaves ju mozeme posuvat.
+
+Rychle prepinanie modu "Direct" a "Direct  Selection":
+stlac klavesu V (vrchny) "Direct" mod
+stlac klavesu A "Direct Selection" mod.
+
+
+Rychly posun objektu - posun objektu s velkym krokom
+Pouzit mod "Direct" oznacit objekt, stlacit klavesu "Shift" a prislusnu klavesu pre pohyb ( sipka dolava, doprava, hore, dole).
+
+Pomaly posun objektu- posun objektu s malym krokom
+Pouzit mod "Direct" oznacit objekt, stlacit klavesu "Ctrl" a prislusnu klavesu pre pohyb ( sipka dolava, doprava, hore, dole).
+
+
+------------------
+
+
+Vytvorenie zlozeneho grafickeho objektu.
+Vytvorit objekt z pravouhlych elementov typu "Path" pouzit mod "Direct" oznacit vsetky elementy a pouzit Format-Combine-Unit.
+
+Vymazanie bodu z Path
+Ak v tomto zlozenom je viacej bodov blizko seba, potom pouzit mod "Direct Selection" oznacit bod ktory chceme vymazat
+a na klevesnici stlacit klavesu "Delete".
+
+
+Vymazanie hrany v Path
+Ak mame objekt typu "Path" a potrebujeme vymazat ciaru na okraji, potom pouzit mod "Direct Selection" oznacit hranu ktoru chceme vymazat
+a na klavesnici stlacit klavesu "Delete".
+
+Poznamka 18.02.2022 14:06
+
+-----------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,120 @@
+﻿<UserControl x:Class="PA.Stavadlo.MH.UserControls.UC_VstupOdchod"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:enum="clr-namespace:PA.Stavadlo.MH.Enums"
+             xmlns:local="clr-namespace:PA.Stavadlo.MH.UserControls"
+             xmlns:controls="clr-namespace:PA.Stavadlo.MH.UserControls"
+             mc:Ignorable="d" d:DesignWidth="50" Height="40">
+    <!--MH: september 2018
+            UserControl obsahuje sipku. Jej zobrazenie zavisi od hodnoty dependency property SuhlasTyp.
+            UserControl je vlozeny do UC_MapaStavadla.
+    
+    
+            Dependency property: SuhlasTyp sa nastavuje podla hodnoty SuhlasStatus (stav) z telegramu pre suhlas pre kolaj napr. s386;
+                                 Podla SuhlasTyp sa zobrazi sipka pre vstup alebo odchod v prislusnom stave-trvalo svieti, alebo blika.
+                                 TimerFlag sa binduje na hodnotu property TimerFlag vo viewModeli a obahuje hodnotu True/False, ktora sa meni raz za sekundu.
+                                 Podla hodnoty TimerFalg sa meni Visibility.
+    Styl pre user control pozri: Styles: StavadloElementStyles.xaml
+    <Style TargetType="controls:UC_VstupOdchod">
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="Height" Value="60"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="RenderTransformOrigin" Value="0.5 0.5"/>
+    </Style>
+    
+     <controls:UC_VstupOdchod x:Name="s386"
+               SuhlasStatus="{Binding STOc[s386].CombineStatus, Mode=OneWay}" TimerFlag="{Binding TimerFlag, Mode=OneWay}"
+               Margin="22,523,0,0" />
+    -->
+    <UserControl.Resources>
+        <Style TargetType="controls:UCArrow" >
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Visibility" Value="Visible"/>
+            <Setter Property="RenderTransformOrigin" Value="0.5 0.5"/>
+            <Setter Property="MyStroke" Value="Black"/>
+            <Style.Triggers>
+                <!--NONE: sipka nie je zobrazena-->
+                <!-- AK by sa pouzilo toto potom sa musi urobiy  <controls:UCArrow Mode={Binding Path=SuhlasTyp, Mode=OneWay} Grid.Row="0" />
+                <DataTrigger Binding="{Binding Path=Mode}" Value="{x:Static enum:TYP_SUHLASU.NONE}">
+                    <Setter Property="Visibility" Value="Hidden" />
+                </DataTrigger>-->
+                
+                <DataTrigger Binding="{Binding Path=SuhlasTyp, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static enum:TYP_SUHLASU.NONE}">
+                    <Setter Property="Visibility" Value="Hidden" />
+                </DataTrigger>
+                
+                <!--SUHLAS_VSTUP: trvalo svieti zlta sipka, smeruje dnu-->
+                <DataTrigger Binding="{Binding Path=SuhlasTyp, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static enum:TYP_SUHLASU.SUHLAS_VSTUP}">
+                    <Setter Property="MyFill" Value="{StaticResource SuhlasYellowBrush}"/>
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <RotateTransform Angle="-180"/>
+                        </Setter.Value>
+                    </Setter>
+                </DataTrigger>
+                
+                <!--SUHLAS_ODCHOD: trvalo svieti zelena sipka, smeruje von-->
+                <DataTrigger Binding="{Binding Path=SuhlasTyp, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static enum:TYP_SUHLASU.SUHLAS_ODCHOD}">
+                    <Setter Property="MyFill" Value="{StaticResource SuhlasGreenBrush}"/>
+                </DataTrigger>
+
+                <!--ZIADOST_VSTUP: blika zlta sipka, smeruje dnu-->
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding Path=SuhlasTyp, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static enum:TYP_SUHLASU.ZIADOST_VSTUP}"/>
+                        <Condition Binding="{Binding Path=TimerFlag, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="False"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="MyFill" Value="{StaticResource SuhlasYellowBrush}"/>
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <RotateTransform Angle="-180"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Visibility" Value="Visible"/>
+                </MultiDataTrigger>
+                
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding Path=SuhlasTyp, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static enum:TYP_SUHLASU.ZIADOST_VSTUP}"/>
+                        <Condition Binding="{Binding Path=TimerFlag, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="True"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="Visibility" Value="Hidden"/>
+                </MultiDataTrigger>
+                <!--==================-->
+
+                <!--ZIADOST_ODCHOD: blika zelena sipka, smeruje von-->
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding Path=SuhlasTyp, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static enum:TYP_SUHLASU.ZIADOST_ODCHOD}"/>
+                        <Condition Binding="{Binding Path=TimerFlag, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="False"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="MyFill" Value="{StaticResource SuhlasGreenBrush}"/>
+                    <Setter Property="Visibility" Value="Visible"/>
+                </MultiDataTrigger>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding Path=SuhlasTyp, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="{x:Static enum:TYP_SUHLASU.ZIADOST_ODCHOD}"/>
+                        <Condition Binding="{Binding Path=TimerFlag, RelativeSource={RelativeSource AncestorType=UserControl}}" Value="True"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="Visibility" Value="Hidden"/>
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid x:Name="Mo" Height="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=Height, Mode=OneWay}"
+          Width="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=Width, Mode=OneWay}" 
+          >
+        <Viewbox>
+            <Grid>
+                <controls:UCArrow  Grid.Row="0" />
+            </Grid>
+        </Viewbox>
+    </Grid>
+</UserControl>

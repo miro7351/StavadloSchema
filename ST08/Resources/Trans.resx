@@ -1,0 +1,827 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="adresa" xml:space="preserve">
+    <value>Adresa</value>
+  </data>
+  <data name="adresaIP" xml:space="preserve">
+    <value>IP adresa</value>
+  </data>
+  <data name="appConnectedToServer" xml:space="preserve">
+    <value>Aplikácia je pripojená na server!</value>
+    <comment>oznam po pripojeni na server</comment>
+  </data>
+  <data name="appTitle" xml:space="preserve">
+    <value>Stavadlo 22</value>
+    <comment>titulok aplikacie</comment>
+  </data>
+  <data name="brana" xml:space="preserve">
+    <value>Brána</value>
+  </data>
+  <data name="chyboveHlasenia" xml:space="preserve">
+    <value>Chybové hlásenia</value>
+  </data>
+  <data name="chyby" xml:space="preserve">
+    <value>Chyby</value>
+  </data>
+  <data name="cisloTelPreKlienta" xml:space="preserve">
+    <value>Číslo telegramu pre klienta</value>
+  </data>
+  <data name="cisloTelPreServer" xml:space="preserve">
+    <value>Číslo telegramu pre server</value>
+  </data>
+  <data name="drahaHasiacehoVozu" xml:space="preserve">
+    <value>Dráha hasiaceho vozu</value>
+  </data>
+  <data name="heslo" xml:space="preserve">
+    <value>Heslo:</value>
+    <comment>loginPage</comment>
+  </data>
+  <data name="hesloNeboloZmenene" xml:space="preserve">
+    <value>!! Heslo NEBOLO ZMENENÉ, skúste ešte raz !!</value>
+  </data>
+  <data name="hesloNeboloZmenene2" xml:space="preserve">
+    <value>Heslo NEBOLO ZMENENÉ !!</value>
+  </data>
+  <data name="hesloZmenene" xml:space="preserve">
+    <value>Heslo bolo úspešne zmenené!</value>
+  </data>
+  <data name="infoOzariadeni" xml:space="preserve">
+    <value> Informácie o zariadení</value>
+  </data>
+  <data name="infoPanel" xml:space="preserve">
+    <value>info panel</value>
+  </data>
+  <data name="informacie" xml:space="preserve">
+    <value>Informácie</value>
+  </data>
+  <data name="izolovanyStyk" xml:space="preserve">
+    <value>- izolovaný styk</value>
+  </data>
+  <data name="izolovanyUsek" xml:space="preserve">
+    <value>- izolovaný úsek</value>
+  </data>
+  <data name="izolStykVPrechPriereze" xml:space="preserve">
+    <value>- izol. styk v prech. priereze</value>
+  </data>
+  <data name="jedenZoVariantovPosunCesta" xml:space="preserve">
+    <value>Označte jeden zo {0} variantov posunovej cesty {1}!</value>
+  </data>
+  <data name="jedenZoVariantovPosunVylukaZrusenie" xml:space="preserve">
+    <value>Označte jeden zo {0} variantov posunovej cesty {1} pre výluku, alebo jej zrušenie!</value>
+  </data>
+  <data name="jedenZoVariantovVlakCesty" xml:space="preserve">
+    <value>Označte jeden zo {0} variantov vlakovej cesty {1}!</value>
+  </data>
+  <data name="jedenZoVariantovVylukaZrusenie" xml:space="preserve">
+    <value>Označte jeden z {0} variantov vlakovej cesty {1} pre výluku, alebo jej zrušenie!</value>
+  </data>
+  <data name="jedenZvariantovPosunCesta" xml:space="preserve">
+    <value>Označte jeden z {0} variantov posunovej cesty {1}!</value>
+  </data>
+  <data name="jedenZvariantovPosunVylukaZrusenie" xml:space="preserve">
+    <value>Označte jeden z {0} variantov posunovej cesty {1} pre výluku, alebo jej zrušenie!</value>
+  </data>
+  <data name="jedenZvariantovVlakCesty" xml:space="preserve">
+    <value>Označte jeden z {0} variantov vlakovej cesty {1}!</value>
+  </data>
+  <data name="jedenZvariantovVylukaZrusenie" xml:space="preserve">
+    <value>Označte jeden z {0} variantov vlakovej cesty {1} pre výluku, alebo jej zrušenie!</value>
+  </data>
+  <data name="klient" xml:space="preserve">
+    <value>Klient</value>
+  </data>
+  <data name="komunikacneParametre" xml:space="preserve">
+    <value>Komunikačné parametre</value>
+  </data>
+  <data name="koniec" xml:space="preserve">
+    <value>Koniec</value>
+    <comment>loginPage</comment>
+  </data>
+  <data name="kritickaPorucha" xml:space="preserve">
+    <value>Kritická porucha</value>
+  </data>
+  <data name="loginMessage01" xml:space="preserve">
+    <value>Pre prihlásenie do programu zadajte meno a heslo</value>
+  </data>
+  <data name="loginMessage02" xml:space="preserve">
+    <value>Pre opätovné prihlásenie zadajte meno a heslo</value>
+  </data>
+  <data name="meno" xml:space="preserve">
+    <value>Meno:</value>
+    <comment>loginPage</comment>
+  </data>
+  <data name="menoKlienta" xml:space="preserve">
+    <value>Meno</value>
+  </data>
+  <data name="menu_koniec" xml:space="preserve">
+    <value>Koniec</value>
+  </data>
+  <data name="miestneOvladanie" xml:space="preserve">
+    <value>miestne ovládanie</value>
+  </data>
+  <data name="nadprud" xml:space="preserve">
+    <value>Nadprúd</value>
+  </data>
+  <data name="nadprudPoruchaPrest" xml:space="preserve">
+    <value>- nadprúd, porucha prestavenia</value>
+  </data>
+  <data name="napoveda" xml:space="preserve">
+    <value>Nápoveda</value>
+  </data>
+  <data name="nastavenie" xml:space="preserve">
+    <value>Nastavenie</value>
+  </data>
+  <data name="navestidla" xml:space="preserve">
+    <value>Návestidla</value>
+  </data>
+  <data name="nedostatocneOpravneniaPreZmenuElementa" xml:space="preserve">
+    <value>Nemáte oprávnenia pre ovládanie daného prvku.</value>
+  </data>
+  <data name="neizolovanyUsek" xml:space="preserve">
+    <value>- neizolovaný úsek</value>
+  </data>
+  <data name="noveHeslo" xml:space="preserve">
+    <value>Nové heslo:</value>
+  </data>
+  <data name="obsadenosti" xml:space="preserve">
+    <value>Obsadenosti</value>
+  </data>
+  <data name="obsadenyUsek" xml:space="preserve">
+    <value>- obsadený úsek</value>
+  </data>
+  <data name="odhlasenie" xml:space="preserve">
+    <value>Odhlásenie</value>
+    <comment>loginPage</comment>
+  </data>
+  <data name="oPomSignaloch" xml:space="preserve">
+    <value>o pomocných signáloch</value>
+  </data>
+  <data name="oPrograme" xml:space="preserve">
+    <value>O programe</value>
+  </data>
+  <data name="oPrvku" xml:space="preserve">
+    <value>o prvku</value>
+  </data>
+  <data name="oSuhlasoch" xml:space="preserve">
+    <value>o súhlasoch</value>
+  </data>
+  <data name="oSymboloch" xml:space="preserve">
+    <value>o symboloch</value>
+  </data>
+  <data name="otvorit" xml:space="preserve">
+    <value>otvoriť</value>
+  </data>
+  <data name="oZariadeni" xml:space="preserve">
+    <value>o zariadení</value>
+  </data>
+  <data name="oznacenieObsadenia" xml:space="preserve">
+    <value>Označenie obsadenia</value>
+  </data>
+  <data name="oznacNavestPrivolNavest" xml:space="preserve">
+    <value>Označte návestidlo pre privolávaciu návesť!</value>
+  </data>
+  <data name="oznacteCestuNaZrusenie" xml:space="preserve">
+    <value>Označte cestu na zrušenie!</value>
+  </data>
+  <data name="oznacteJednuZ" xml:space="preserve">
+    <value>Označte jednu z {0} ciest na zrušenie!</value>
+  </data>
+  <data name="oznacteJednuZo" xml:space="preserve">
+    <value>Označte jednu zo {0} ciest na zrušenie!</value>
+  </data>
+  <data name="oznacteKoniecPosunCesty" xml:space="preserve">
+    <value>Označte koniec posunovej cesty!</value>
+  </data>
+  <data name="oznacteKoniecPosunCestyVyluka" xml:space="preserve">
+    <value>Označte koniec posunovej cesty pre výluku, alebo jej zrušenie!</value>
+  </data>
+  <data name="oznacteKoniecVlakCestaVyluka" xml:space="preserve">
+    <value>Označte koniec vlakovej cesty pre výluku, alebo jej zrušenie!</value>
+  </data>
+  <data name="oznacteKoniecVlakCesty" xml:space="preserve">
+    <value>Označte koniec vlakovej cesty!</value>
+  </data>
+  <data name="oznacteNavestidloVyluka" xml:space="preserve">
+    <value>Označte návestidlo určené na výluku, alebo k jej zrušeniu!</value>
+  </data>
+  <data name="oznacteNavSimPorCervenej" xml:space="preserve">
+    <value>Označte návestidlo určené na simuláciu poruchy červenej!</value>
+  </data>
+  <data name="oznacteNavSimPovolNav" xml:space="preserve">
+    <value>Označte návestidlo určené na simuláciu poruchy povoľovacej návesti!</value>
+  </data>
+  <data name="oznactePrvokInfoZar" xml:space="preserve">
+    <value>Označte prvok pre zobrazenie informácií o zariadení!</value>
+  </data>
+  <data name="oznactePrvokPreZrusPoruchy" xml:space="preserve">
+    <value>Označte prvok na zrušenie poruchy!</value>
+  </data>
+  <data name="oznactePrvokZobrInfo" xml:space="preserve">
+    <value>Označte prvok pre zobrazenie jeho informácií!</value>
+  </data>
+  <data name="oznacteUsekOznacObsad" xml:space="preserve">
+    <value>Označte úsek pre označenie obsadenia, alebo pre jeho zrušenie!</value>
+  </data>
+  <data name="oznacteUsekPosunCestaOdchod" xml:space="preserve">
+    <value>Označte úsek pre vyslanie žiadosti o súhlas pre odchod posunovou cestou!</value>
+    <comment>Označte úsek pre odchod posunovou cestou!</comment>
+  </data>
+  <data name="oznacteUsekSimObsadenia" xml:space="preserve">
+    <value>Označte úsek pre nastavenie, alebo zrušenie simulácie obsadenia!</value>
+  </data>
+  <data name="oznacteUsekUdelSuhlas" xml:space="preserve">
+    <value>Označte úsek pre udelenie súhlasu!</value>
+  </data>
+  <data name="oznacteUsekUdelSuhlasu" xml:space="preserve">
+    <value>Označte koľaj pre udelenie súhlasu!</value>
+  </data>
+  <data name="oznacteUsekUvolIzol" xml:space="preserve">
+    <value>Označte úsek určený k uvoľneniu izolácie!</value>
+  </data>
+  <data name="oznacteUsekVlakCestaOdchod" xml:space="preserve">
+    <value>Označte úsek pre vyslanie žiadosti o súhlas pre odchod vlakovou cestou!</value>
+    <comment>Označte úsek pre odchod vlakovou cestou!</comment>
+  </data>
+  <data name="oznacteUsekZrusSuhlas" xml:space="preserve">
+    <value>Označte úsek pre zrušenie súhlasu!</value>
+  </data>
+  <data name="oznacteUsekZrusSuhlasu" xml:space="preserve">
+    <value>Označte koľaj pre zrušenie súhlasu!</value>
+  </data>
+  <data name="oznacteVymenuPoruchaNadprud" xml:space="preserve">
+    <value>Označte výmenu určenú na simuláciu poruchy nadprúdu!</value>
+  </data>
+  <data name="oznacteVymenuPoruchaPrest" xml:space="preserve">
+    <value>Označte výmenu určenú na simuláciu poruchy prestavenia!</value>
+  </data>
+  <data name="oznacteVymenuPoruchaRozrez" xml:space="preserve">
+    <value>Označte výmenu určenú na simuláciu poruchy rozrezu!</value>
+  </data>
+  <data name="oznacteVymenuPrestavenie" xml:space="preserve">
+    <value>Označte výmenu určenú na prestavenie!</value>
+  </data>
+  <data name="oznacteVymenuStrataDohl" xml:space="preserve">
+    <value>Označte výmenu určenú na simuláciu poruchy straty dohliadania!</value>
+  </data>
+  <data name="oznacteVymenuZapadSkuska" xml:space="preserve">
+    <value>Označte výmenu na vykonanie západkovej skúšky!</value>
+  </data>
+  <data name="oznacteVymUplnaVyluka" xml:space="preserve">
+    <value>Označte výmenu určenú na úplnú výluku, alebo jej zrušenie!</value>
+  </data>
+  <data name="oznacteVymVylukaPrestav" xml:space="preserve">
+    <value>Označte výmenu určenú na výluku prestavenia, alebo jej zrušenie!</value>
+  </data>
+  <data name="oznacteZacPosunCesty" xml:space="preserve">
+    <value>Označte začiatok posunovej cesty!</value>
+  </data>
+  <data name="oznacteZacPosunCestyVyluka" xml:space="preserve">
+    <value>Označte začiatok posunovej cesty určenej pre výluku, alebo jej zrušenie!</value>
+  </data>
+  <data name="oznacteZacVlakCestaVyluka" xml:space="preserve">
+    <value>Označte začiatok vlakovej cesty určenej pre výluku, alebo  jej zrušenie!</value>
+  </data>
+  <data name="oznacteZacVlakCesty" xml:space="preserve">
+    <value>Označte začiatok vlakovej cesty!</value>
+  </data>
+  <data name="panely" xml:space="preserve">
+    <value>panely</value>
+  </data>
+  <data name="Pcesta" xml:space="preserve">
+    <value>Pcesta</value>
+  </data>
+  <data name="PFunkcie" xml:space="preserve">
+    <value>PFunkcie</value>
+  </data>
+  <data name="pokusOOdovzanieOvladaniaBezPrav" xml:space="preserve">
+    <value>Nemáte žiadne ovládanie, požiadajte druhého operátora o privilégia.</value>
+  </data>
+  <data name="pomInfo" xml:space="preserve">
+    <value>Informácie</value>
+    <comment>header pre TabItem Pomocne informacie</comment>
+  </data>
+  <data name="pomocne" xml:space="preserve">
+    <value>pomocné</value>
+  </data>
+  <data name="pomSymboly" xml:space="preserve">
+    <value>pomocné symboly</value>
+  </data>
+  <data name="port" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="poruchaCervenej" xml:space="preserve">
+    <value>Porucha červenej</value>
+  </data>
+  <data name="poruchaNavestidla" xml:space="preserve">
+    <value>- porucha návestidla</value>
+  </data>
+  <data name="poruchaPovolovacejNavesti" xml:space="preserve">
+    <value>Porucha povoľovacej návesti</value>
+  </data>
+  <data name="poruchaPrestavenia" xml:space="preserve">
+    <value>Porucha prestavenia</value>
+  </data>
+  <data name="porucha_navestidla" xml:space="preserve">
+    <value>návestidla</value>
+  </data>
+  <data name="poruchy" xml:space="preserve">
+    <value>Poruchy</value>
+  </data>
+  <data name="posunNedovoleny" xml:space="preserve">
+    <value>- Posun nedovolený</value>
+  </data>
+  <data name="posunNezabDovoleny" xml:space="preserve">
+    <value>- Posun nezabezpečený dovolený</value>
+  </data>
+  <data name="posunovaCesta" xml:space="preserve">
+    <value>- posunová cesta</value>
+  </data>
+  <data name="posunovejCesty" xml:space="preserve">
+    <value>posunovej cesty</value>
+  </data>
+  <data name="posunZabDovoleny" xml:space="preserve">
+    <value>- Posun zabezpečený dovolený</value>
+  </data>
+  <data name="povolit" xml:space="preserve">
+    <value>povoliť</value>
+  </data>
+  <data name="pozadie" xml:space="preserve">
+    <value>pozadie</value>
+  </data>
+  <data name="pozadieStavadloPage" xml:space="preserve">
+    <value>Pozadie</value>
+  </data>
+  <data name="preObsluhuV801" xml:space="preserve">
+    <value>pre obsluhu V801</value>
+  </data>
+  <data name="prePusunovuCestu" xml:space="preserve">
+    <value>pre posunovú cestu</value>
+  </data>
+  <data name="prestavenia" xml:space="preserve">
+    <value>prestavenia</value>
+  </data>
+  <data name="prestavenieVymeny10sZaciatok" xml:space="preserve">
+    <value>Prestavenie vymeny - začiatok 10s intervalu</value>
+  </data>
+  <data name="preVlakovuCestu" xml:space="preserve">
+    <value>pre vlakovú cestu</value>
+  </data>
+  <data name="prihlasenie" xml:space="preserve">
+    <value>Prihlásenie</value>
+    <comment>loginPage</comment>
+  </data>
+  <data name="prihlasenieAOdhlasenie" xml:space="preserve">
+    <value>Prihlásenie a odhlásenie</value>
+  </data>
+  <data name="prihlasenieUzivatela" xml:space="preserve">
+    <value>Prihlásenie užívateľa</value>
+  </data>
+  <data name="privolavaciaNavest" xml:space="preserve">
+    <value>Privolávacia návesť</value>
+  </data>
+  <data name="programBudeUkonceny" xml:space="preserve">
+    <value>Program bude ukončený!</value>
+  </data>
+  <data name="riadenie" xml:space="preserve">
+    <value>riadenie</value>
+  </data>
+  <data name="roleManager" xml:space="preserve">
+    <value>RoleManager:</value>
+  </data>
+  <data name="roleManagerIsDisabled" xml:space="preserve">
+    <value>RoleManager nie je prístupný!</value>
+  </data>
+  <data name="rozrez" xml:space="preserve">
+    <value>Rozrez</value>
+  </data>
+  <data name="rozrezInfo" xml:space="preserve">
+    <value>- rozrez</value>
+  </data>
+  <data name="rozvadzace" xml:space="preserve">
+    <value>rozvádzače</value>
+  </data>
+  <data name="rusenia" xml:space="preserve">
+    <value>Rušenie</value>
+  </data>
+  <data name="server" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="signalu" xml:space="preserve">
+    <value>Signálu</value>
+  </data>
+  <data name="simulacia" xml:space="preserve">
+    <value>Simulácia</value>
+  </data>
+  <data name="simulZiadostSuhlas" xml:space="preserve">
+    <value>Označte koľaj pre vyslanie žiadosti o súhlas</value>
+  </data>
+  <data name="skladZVM" xml:space="preserve">
+    <value>Sklad žiaruvzdorného materiálu</value>
+  </data>
+  <data name="skladZVM1" xml:space="preserve">
+    <value>Sklad žiaruvzdorného</value>
+  </data>
+  <data name="skladZVM2" xml:space="preserve">
+    <value>materialu</value>
+  </data>
+  <data name="spravaPreServer" xml:space="preserve">
+    <value>Správa pre server:</value>
+  </data>
+  <data name="spravaZoServera" xml:space="preserve">
+    <value>Správa zo servera:</value>
+  </data>
+  <data name="stareHeslo" xml:space="preserve">
+    <value>Staré heslo:</value>
+  </data>
+  <data name="stavadlo" xml:space="preserve">
+    <value>Stavadlo</value>
+  </data>
+  <data name="stoj" xml:space="preserve">
+    <value>- Stoj</value>
+  </data>
+  <data name="stop" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="strataDohliadania" xml:space="preserve">
+    <value>Strata dohliadania</value>
+  </data>
+  <data name="strataDohliadaniaInfo" xml:space="preserve">
+    <value>- strata dohliadania</value>
+  </data>
+  <data name="strednaPolohaRadicov" xml:space="preserve">
+    <value>Stredná poloha radičov</value>
+  </data>
+  <data name="suhlas" xml:space="preserve">
+    <value>Súhlas</value>
+  </data>
+  <data name="suhlasOdchod" xml:space="preserve">
+    <value>- súhlas pre odchod</value>
+  </data>
+  <data name="suhlasu" xml:space="preserve">
+    <value>Súhlasu</value>
+  </data>
+  <data name="suhlasVchod" xml:space="preserve">
+    <value>- súhlas pre vchod</value>
+  </data>
+  <data name="sysChyby" xml:space="preserve">
+    <value>Sys. Chyby</value>
+  </data>
+  <data name="tooltipPcesta" xml:space="preserve">
+    <value>Stavanie posunových ciest</value>
+  </data>
+  <data name="tooltipPFunkcie" xml:space="preserve">
+    <value>Prihlásenie, nastavenia, informácie</value>
+  </data>
+  <data name="tooltipStop" xml:space="preserve">
+    <value>Núdzový stop</value>
+  </data>
+  <data name="tooltipSuhlas" xml:space="preserve">
+    <value>Obsluha súhlasov</value>
+  </data>
+  <data name="tooltipUdrzba" xml:space="preserve">
+    <value>Rušenie porúch, výluky, uvoľnenie izolacie</value>
+  </data>
+  <data name="tooltipVcesta" xml:space="preserve">
+    <value>Stavanie vlakových ciest</value>
+  </data>
+  <data name="tooltipVymeny" xml:space="preserve">
+    <value>Individuálne prestavenie výmen</value>
+  </data>
+  <data name="tooltipZrus" xml:space="preserve">
+    <value>Rušenie jazdných ciest</value>
+  </data>
+  <data name="udelenia" xml:space="preserve">
+    <value>Udelenie</value>
+  </data>
+  <data name="udelenieSuhlasu" xml:space="preserve">
+    <value>Udelenie súhlasu</value>
+  </data>
+  <data name="udrzba" xml:space="preserve">
+    <value>Údržba</value>
+  </data>
+  <data name="ukonceniePrivolNavesti" xml:space="preserve">
+    <value>Pre ukončenie privolávacej návesti uvoľnite tlačidlo!</value>
+  </data>
+  <data name="uplna" xml:space="preserve">
+    <value>úplná</value>
+  </data>
+  <data name="uplnaVyluka" xml:space="preserve">
+    <value>- úplná výluka</value>
+  </data>
+  <data name="uvolnenaIzolacia" xml:space="preserve">
+    <value>- uvoľnená izolácia</value>
+  </data>
+  <data name="uvolnenieIzolacie" xml:space="preserve">
+    <value>Uvoľnenie izolácie</value>
+  </data>
+  <data name="uzivatela" xml:space="preserve">
+    <value>Užívatelia</value>
+    <comment>loginPage</comment>
+  </data>
+  <data name="vapenca" xml:space="preserve">
+    <value>vápenca</value>
+  </data>
+  <data name="Vcesta" xml:space="preserve">
+    <value>Vcesta</value>
+  </data>
+  <data name="VelkaIda" xml:space="preserve">
+    <value>Veľká Ida</value>
+  </data>
+  <data name="veriftikacia" xml:space="preserve">
+    <value>Verifikácia:</value>
+  </data>
+  <data name="verzia" xml:space="preserve">
+    <value>Verzia</value>
+  </data>
+  <data name="verziaCLR" xml:space="preserve">
+    <value>CLR verzia</value>
+  </data>
+  <data name="vlakovaCesta" xml:space="preserve">
+    <value>- vlaková cesta</value>
+  </data>
+  <data name="vlakovejCesty" xml:space="preserve">
+    <value>vlakovej cesty</value>
+  </data>
+  <data name="volno" xml:space="preserve">
+    <value>- Voľno</value>
+  </data>
+  <data name="vybaveniePoruch" xml:space="preserve">
+    <value>Vybavenie porúch</value>
+  </data>
+  <data name="vyhybkaVManipulacii" xml:space="preserve">
+    <value>- výhybka v manipulácii</value>
+  </data>
+  <data name="vyhybkaVPolohe" xml:space="preserve">
+    <value>- výhybka v polohe +/-</value>
+  </data>
+  <data name="vyluka" xml:space="preserve">
+    <value>Výluka</value>
+  </data>
+  <data name="vylukaNavestidla" xml:space="preserve">
+    <value>- výluka návestidla</value>
+  </data>
+  <data name="vylukaPrestaveniaBrush" xml:space="preserve">
+    <value>- výluka prestavenia</value>
+  </data>
+  <data name="vymeny" xml:space="preserve">
+    <value>Výmeny</value>
+  </data>
+  <data name="vyslanieZiadostiV801Suhlas" xml:space="preserve">
+    <value>Vyslanie žiadosti o súhlas pre obsluhu V801!</value>
+  </data>
+  <data name="vysypnaJama" xml:space="preserve">
+    <value>Výsypná jama</value>
+  </data>
+  <data name="zaciatokDalsejPosunCesty" xml:space="preserve">
+    <value>Označte začiatok ďalšej posunovej cesty!</value>
+    <comment>Po povoleni cesty, po kliku na semafor</comment>
+  </data>
+  <data name="zaciatokDalsejPosunCestyVyluka" xml:space="preserve">
+    <value>Označte začiatok ďalšej posunovej cesty pre výluku, alebo jej zrušenie!</value>
+  </data>
+  <data name="zaciatokDalsejVlakCesty" xml:space="preserve">
+    <value>Označte začiatok ďalšej vlakovej cesty!</value>
+    <comment>Po povoleni cesty, po kliku na semafor</comment>
+  </data>
+  <data name="zakazat" xml:space="preserve">
+    <value>zakázať</value>
+  </data>
+  <data name="zapadkovaSkuska" xml:space="preserve">
+    <value>Západková skúška</value>
+  </data>
+  <data name="zavriet" xml:space="preserve">
+    <value>zavrieť</value>
+  </data>
+  <data name="zaznam" xml:space="preserve">
+    <value>Záznam</value>
+  </data>
+  <data name="zaznamPrehrat" xml:space="preserve">
+    <value>Prehrať záznamy</value>
+  </data>
+  <data name="zaznamZoradit" xml:space="preserve">
+    <value>zoradiť</value>
+  </data>
+  <data name="zaznamZvolit" xml:space="preserve">
+    <value>Vybrať záznamy pre prehrávanie</value>
+  </data>
+  <data name="ziadosti" xml:space="preserve">
+    <value>Žiadosť</value>
+  </data>
+  <data name="ziadostOdchod" xml:space="preserve">
+    <value>- žiadosť pre odchod</value>
+  </data>
+  <data name="ziadostOSuhlas" xml:space="preserve">
+    <value>Žiadosť o súhlas</value>
+  </data>
+  <data name="ziadostVchod" xml:space="preserve">
+    <value>- žiadosť pre vchod</value>
+  </data>
+  <data name="zmenaHesla" xml:space="preserve">
+    <value>Zmena hesla</value>
+    <comment>loginPage</comment>
+  </data>
+  <data name="zoServera" xml:space="preserve">
+    <value>zo Servera</value>
+  </data>
+  <data name="zrus" xml:space="preserve">
+    <value>Zruš</value>
+  </data>
+  <data name="zruseniePoruchy" xml:space="preserve">
+    <value>Zrušenie poruchy</value>
+  </data>
+  <data name="zrusenieSuhlasu" xml:space="preserve">
+    <value>Rušenie súhlasu </value>
+  </data>
+  <data name="zurnal" xml:space="preserve">
+    <value>Žurnál</value>
+  </data>
+  <data name="zurnaly" xml:space="preserve">
+    <value>Žurnály</value>
+  </data>
+  <data name="zvuk" xml:space="preserve">
+    <value>zvuk</value>
+  </data>
+  <data name="suhlasVstup" xml:space="preserve">
+    <value>- súhlas pre vstup</value>
+  </data>
+  <data name="ziadostVstup" xml:space="preserve">
+    <value>- žiadosť pre vstup</value>
+  </data>
+  <data name="suborNenajdeny" xml:space="preserve">
+    <value>Súbor sa nepodarilo nájsť!</value>
+  </data>
+  <data name="oznacteUsekOdchod" xml:space="preserve">
+    <value>Označte  koľaj pre vyslanie žiadosti o súhlas</value>
+  </data>
+  <data name="cakajte" xml:space="preserve">
+    <value>Čakajte...</value>
+  </data>
+  <data name="dtDo" xml:space="preserve">
+    <value>Dátum a čas do:</value>
+  </data>
+  <data name="dtOd" xml:space="preserve">
+    <value>Dátum a čas od:</value>
+  </data>
+  <data name="prihlasenieOdhlasenie" xml:space="preserve">
+    <value>len prihlásenia/odhlásenia</value>
+  </data>
+  <data name="resetFilter" xml:space="preserve">
+    <value>Nastaví počiatočné podmienky pre filter</value>
+  </data>
+  <data name="rola" xml:space="preserve">
+    <value>Rola:</value>
+  </data>
+  <data name="spustenieUkoncenie" xml:space="preserve">
+    <value>len spustenia/skončenia</value>
+  </data>
+  <data name="spustiPrehravanieZaznamov" xml:space="preserve">
+    <value>Spustí prehrávanie vybratých záznamov</value>
+  </data>
+  <data name="spustitPrehravanie" xml:space="preserve">
+    <value>Spustiť prehrávanie</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>len chybové hlásenia</value>
+  </data>
+  <data name="vsetko" xml:space="preserve">
+    <value>všetko</value>
+  </data>
+  <data name="vyberLogSuborovZDB" xml:space="preserve">
+    <value>Výber logovacích záznamov z databázy</value>
+  </data>
+  <data name="vybrateLogSubory" xml:space="preserve">
+    <value>Vybraté log súbory</value>
+  </data>
+  <data name="vybrateZaznamy" xml:space="preserve">
+    <value>Vybraté záznamy</value>
+  </data>
+  <data name="vybratUdaje" xml:space="preserve">
+    <value>Vybrať údaje</value>
+  </data>
+  <data name="vypisFiltrovanychUdajov" xml:space="preserve">
+    <value>Výpis filtrovaných údajov</value>
+  </data>
+  <data name="posunDovoleny" xml:space="preserve">
+    <value>- Posun dovolený</value>
+  </data>
+  <data name="filterPreVyberZaznamov" xml:space="preserve">
+    <value>Filter pre výber záznamov</value>
+  </data>
+</root>
