@@ -26,7 +26,7 @@ Vytvorit objekt z pravouhlych elementov typu "Path" pouzit mod "Direct" oznacit 
 
 Vymazanie bodu z Path
 Ak v tomto zlozenom je viacej bodov blizko seba, potom pouzit mod "Direct Selection" oznacit bod ktory chceme vymazat
-a na klevesnici stlacit klavesu "Delete".
+a na klavesnici stlacit klavesu "Delete".
 
 
 Vymazanie hrany v Path
