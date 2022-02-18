@@ -34,7 +34,7 @@ V kode StavadloPage.xaml upravit kod:
 
 Postupne kreslit schemu stavadla, spustit aplikaciu a sledovat ako sa vykresluje stavadlo.
 
-
+Poznamka napisana na PC 17.02.2022 21:12.
 
 
   

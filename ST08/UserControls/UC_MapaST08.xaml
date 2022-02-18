@@ -254,13 +254,13 @@
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
                 </controls:UC_PanakUss>
-                <controls:UC_PanakUss  Margin="2186.556,794.442,0,0" x:Name="Panak2">
+                <controls:UC_PanakUss  Margin="2460,728,0,0" x:Name="Panak2">
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
                 </controls:UC_PanakUss>
 
-                <controls:UC_PanakUss  Margin="2081,791,0,0" x:Name="Panak3">
+                <controls:UC_PanakUss  Margin="2460,828,0,0" x:Name="Panak3">
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
