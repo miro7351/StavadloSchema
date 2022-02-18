@@ -33,3 +33,10 @@ a na klevesnici stlacit klavesu "Delete".
 Vymazanie hrany v Path
 Ak mame objekt typu "Path" a potrebujeme vymazat ciaru na okraji, potom pouzit mod "Direct Selection" oznacit hranu ktoru chceme vymazat
 a na klevesnici stlacit klavesu "Delete".
+
+
+=======
+To som zvedavy akoto bude fungovat 17.02.2022 20:50. Text napisany na PC VS 2019.
+
+Dalsi text dopisany na PC: 17.02.2022 21:03. 
+
