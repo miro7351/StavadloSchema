@@ -2,8 +2,11 @@ MH: 17.02.2022
 
 Poznamky pre Blend graficky editor.
 
+Mod "Selection" (cierna sipka ) ak potrebujeme oznacit cely graficky objket, napr, pre posun alebo vymazanie.
+Rychla volba - stlac klavesu "V"  (vrchna);  
 
 Mod "Direct Selection" (sipka len s okrajom ) ak potrebujeme editovat jednotlive body, alebo hrany graf. objektu.
+Rychla volba - stlac klavesu "A";  
 
 Klik na graf. objekt, oznacia sa nam body vo vrcholoch objektu,
 Ak potrebujeme editovat polohu bodu, potom posunut kurzor nad bod, pri kurzore mysi sa objavi maly cierny stvorcek, kliknut na bod, bod ziska modru farbu a pomocou klaves ho mozeme posuvat.
@@ -14,7 +17,7 @@ Ak potrebujeme editovat polohu hrany obejtu, potom posunut kurzor nad hranu, pri
 Rychly posun objektu - posun objektu s velkym krokom
 Pouzit mod "Direct" oznacit objekt, stlacit klavesu "Shift" a prislusnu klavesu pre pohyb ( sipka dolava, doprava, hore, dole).
 
-Pomaly posun objektu- posun objektu s malym krokom
+Pomaly posun objekt u- posun objektu s malym krokom
 Pouzit mod "Direct" oznacit objekt, stlacit klavesu "Ctrl" a prislusnu klavesu pre pohyb ( sipka dolava, doprava, hore, dole).
 
 
@@ -31,4 +34,6 @@ a na klavesnici stlacit klavesu "Delete".
 
 Vymazanie hrany v Path
 Ak mame objekt typu "Path" a potrebujeme vymazat ciaru na okraji, potom pouzit mod "Direct Selection" oznacit hranu ktoru chceme vymazat
-a stlacit klavesu "Delate".
+a stlacit klavesu "Delete".
+
+Poznamka napisana 21.02.2022
