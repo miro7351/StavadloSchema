@@ -187,7 +187,7 @@
                 <!--#region LOKOMOTIVY -->
                 <!--Pozri StavadloElementsStyles.xaml-->
 
-                <controls:UClocomotive Margin="2423.5,734.442,0,0"   LocNumber="I"  >
+                <controls:UClocomotive Margin="2348,729,0,0"   LocNumber="I"  >
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
@@ -210,7 +210,7 @@
                     </i:Interaction.Behaviors>
                 </controls:UClocomotive>
 
-                <controls:UClocomotive Margin="2348.5,734.442,0,0"  LocNumber="V">
+                <controls:UClocomotive Margin="2262,727,0,0"  LocNumber="V">
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
@@ -254,13 +254,13 @@
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
                 </controls:UC_PanakUss>
-                <controls:UC_PanakUss  Margin="2186.556,794.442,0,0" x:Name="Panak2">
+                <controls:UC_PanakUss  Margin="2460,728,0,0" x:Name="Panak2">
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
                 </controls:UC_PanakUss>
 
-                <controls:UC_PanakUss  Margin="2138.778,794.442,0,0" x:Name="Panak3">
+                <controls:UC_PanakUss  Margin="2460,828,0,0" x:Name="Panak3">
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
