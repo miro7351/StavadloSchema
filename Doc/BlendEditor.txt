@@ -3,7 +3,7 @@ MH: 17.02.2022
 Poznamky pre Blend graficky editor.
 
 
-mod "Direct Selection" (sipka len s okrajom ) ak potrebujeme editovat jednotlive body, alebo hrany graf. objektu.
+Mod "Direct Selection" (sipka len s okrajom ) ak potrebujeme editovat jednotlive body, alebo hrany graf. objektu.
 
 Klik na graf. objekt, oznacia sa nam body vo vrcholoch objektu,
 Ak potrebujeme editovat polohu bodu, potom posunut kurzor nad bod, pri kurzore mysi sa objavi maly cierny stvorcek, kliknut na bod, bod ziska modru farbu a pomocou klaves ho mozeme posuvat.
@@ -31,3 +31,4 @@ a na klavesnici stlacit klavesu "Delete".
 
 Vymazanie hrany v Path
 Ak mame objekt typu "Path" a potrebujeme vymazat ciaru na okraji, potom pouzit mod "Direct Selection" oznacit hranu ktoru chceme vymazat
+a stlacit klavesu "Delate".
