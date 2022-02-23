@@ -120,6 +120,9 @@
     <Compile Include="UserControls\UC_PanakUss.xaml.cs">
       <DependentUpon>UC_PanakUss.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Parts.xaml.cs">
+      <DependentUpon>UC_Parts.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_VstupOdchod.xaml.cs">
       <DependentUpon>UC_VstupOdchod.xaml</DependentUpon>
     </Compile>
@@ -329,6 +332,9 @@
     <Page Include="UserControls\UC_PanakUss.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\UC_Parts.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UC_VstupOdchod.xaml">
       <Generator>MSBuild:Compile</Generator>
