@@ -2060,6 +2060,28 @@
                 </Path>
                 <Path Data="M1,1.3390011 L52.823593,1.5398907 52.823593,9.9398873 1,9.7389977 z" HorizontalAlignment="Left" Height="10.514" Margin="903.396,789.736,0,0" Stretch="Fill" VerticalAlignment="Top" Width="32.289"/>
                 <Path Data="M1,1.3390011 L52.823593,1.5398907 52.823593,9.9398873 1,9.7389977 z" HorizontalAlignment="Left" Height="10.514" Margin="884.146,789.487,0,0" Stretch="Fill" VerticalAlignment="Top" Width="20.4"/>
+                <Path HorizontalAlignment="Left" VerticalAlignment="Top" Data="M140.10293,0.5 L140.4102,0.90205481 185.40824,0.90205481 185.40824,10.194057 142.31643,10.194057 115.80431,30.287472 0.5,15.201523 1.3460693,5.8406817 114.60205,19.683365 139.21324,1.1692813 139.21324,0.90205481 139.56847,0.90205481 z" Height="30.787" Margin="764.936,855.609,0,0" RenderTransformOrigin="0.873069103696686,0.180204984743888" Stretch="Fill" Width="185.908">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="37.389"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="Vxxxxx"  Data="M1099.0349,54.431077 L1173.2605,53.836107 1173.2605,62.898606 1104.5192,63.585967 1068.2507,92.67831 1061.8938,85.75492 z"
+                    Height="39.844" Margin="942.142,911.548,0,0" Stretch="Fill"  Width="112.358" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
 
                 <!--#endregion PANACI-figurky -->
             </Grid>
