@@ -308,7 +308,7 @@
                 <controls:UC_VstupOdchod x:Name="s386_Copy" 
                     SuhlasStatus="{Binding STC[s386].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
                     Margin="58,27,0,0" RenderTransformOrigin="0.65,-3.45" />
-                <Path x:Name="K770A_Copy" Data="M1.6999986,0.5 L219.58901,0.89999849 219.58901,9.8999984 139.68451,9.7533099 79.107005,69.802428 79.107005,70.052893 146.30561,137.7662 219.58901,137.89999 219.58901,146.89999 0.5,146.5 0.5,137.5 133.60305,137.74301 72.593684,76.266341 1.6999986,75.9 1.6999986,66.9 68.900737,67.24726 126.92424,9.7298848 1.6999986,9.4999997 z" Height="147.4" Margin="770.026,543.454,0,0" Stretch="Fill" Width="220.089"/>
+                <Path x:Name="K770A_Copy" Data="M1.6999986,0.5 L219.58901,0.89999849 219.58901,9.8999984 139.68451,9.7533099 79.107005,69.802428 79.107005,70.052893 146.30561,137.7662 219.58901,137.89999 219.58901,146.89999 0.5,146.5 0.5,137.5 133.60305,137.74301 72.593684,76.266341 1.6999986,75.9 1.6999986,66.9 68.900737,67.24726 126.92424,9.7298848 1.6999986,9.4999997 z" Height="147.4" Margin="840.57,314.948,0,0" Stretch="Fill" Width="220.089"/>
                 <Path x:Name="K770A_Copy2" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
                     Height="10.4" Margin="429.104,18.836,0,0" Stretch="Fill"  Width="176.696"
                       
@@ -339,7 +339,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K770A_Copy1" Data="M0.5,0.5 L554.96198,0.9000026 554.96198,9.9000044 114.51921,9.5822573 177.98698,73.555326 278.56201,73.700002 278.56201,82.700002 0.5,82.300008 0.5,73.300008 165.2912,73.537061 101.83247,9.5731049 0.5,9.500001 z" Height="83.2" Margin="1202.804,638.921,0,0" Stretch="Fill"  Width="555.462"
+                <Path x:Name="K770A_Copy1" Data="M68.376151,0.38889024 L497.09898,0.56666925 497.09898,9.566671 114.51921,9.5822573 177.98698,73.555326 250.43214,73.366669 250.43214,82.366669 69.042818,81.300008 69.042818,72.300008 165.2912,73.537061 101.83247,9.5731049 68.376151,9.3888912 z" Height="82.978" Margin="1019.296,583.374,0,0" Stretch="Fill"  Width="429.722"
                       
                      />
                 <Path Data="M40,400 L2640.5,401.5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="2.5" Margin="40,520,0,0" Stretch="Fill" Stroke="Black" VerticalAlignment="Top" Width="2601.5"/>
@@ -452,11 +452,11 @@
                       
                      />
                 <Path x:Name="K770A_Copy32" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
-                    Height="10.4" Margin="1020.104,656.425,0,0" Stretch="Fill"  Width="176.696"
+                    Height="10.4" Margin="1640.104,656.425,0,0" Stretch="Fill"  Width="176.696"
                       
                      />
                 <Path x:Name="K770A_Copy33" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
-                    Height="10.4" Margin="1020.104,583.485,0,0" Stretch="Fill"  Width="176.696"
+                    Height="10.4" Margin="481.104,583.485,0,0" Stretch="Fill"  Width="176.696"
                       
                      />
                 <controls:Semafor1Control x:Name="S775_Copy" SemaphoreType="S1"    Margin="10,304.321,0,0"
@@ -630,7 +630,7 @@
                     </Path.RenderTransform>
                 </Path>
                 <Path x:Name="K775_Copy10" Data="M0,0 L90.027846,1.6770741E-13 90.027846,10 0,10 z"  
-                    Height="10" Margin="1915.361,828,0,0" Stretch="Fill" Width="54.162" RenderTransformOrigin="3.264,-12.516"
+                    Height="10" Margin="1915.361,568,0,0" Stretch="Fill" Width="54.162" RenderTransformOrigin="3.264,-12.516"
                      
                      />
                 <Path x:Name="V194p1_Copy3"  Data="M1102.7016,55.304553 L1146.4519,54.737848 1146.4522,64.466975 1104.519,64.335933 1001.6113,114.49778 997.62753,105.73964 z"
@@ -670,7 +670,7 @@
                     </Path.RenderTransform>
                 </Path>
                 <Path x:Name="K770A_Copy39" Data="M0,0 L90.734896,0.44444444 90.738089,12.31561 0.0031929792,11.871166 z"
-                    Height="12.084" Margin="463.324,142.787,0,0" Stretch="Fill"  Width="176.702" RenderTransformOrigin="0.5,0.5"
+                    Height="12.084" Margin="436.991,161.676,0,0" Stretch="Fill"  Width="176.702" RenderTransformOrigin="0.5,0.5"
                       
                      >
                     <Path.RenderTransform>
@@ -757,7 +757,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K775_Copy12" Data="M53.342056,0.5 L53.464989,0.53961384 53.662003,0.53961384 53.662003,0.60309932 165.56535,36.662803 200.78934,71.364543 193.89584,78.230846 160.44855,44.324142 50.53669,9.6222193 50.562092,9.5396158 0.5,9.5396158 0.5,0.53961384 53.329872,0.53961384 z" Height="78.731" Margin="1985.333,573.127,0,0" RenderTransformOrigin="0.13453767786376,0.0640106789632481" Stretch="Fill" Width="201.289">
+                <Path x:Name="K775_Copy12" Data="M53.342056,0.5 L53.464989,0.53961384 53.662003,0.53961384 53.662003,0.60309932 165.56535,36.662803 200.78934,71.364543 193.89584,78.230846 160.44855,44.324142 50.53669,9.6222193 50.562092,9.5396158 0.5,9.5396158 0.5,0.53961384 53.329872,0.53961384 z" Height="78.731" Margin="1985.333,614.46,0,0" RenderTransformOrigin="0.13453767786376,0.0640106789632481" Stretch="Fill" Width="201.289">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -1435,12 +1435,12 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K770A_Copy57" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
-                    Height="10.4" Margin="1783.593,388.635,0,0" Stretch="Fill"  Width="176.696"
+                <Path x:Name="K770A_Copy57" Data="M15.198712,0.49383094 L90.734896,0.44444444 90.734896,10.444444 15.198712,10.493831 z"
+                    Height="10.044" Margin="1879.185,388.701,0,0" Stretch="Fill"  Width="95.466"
                       
                      />
-                <Path x:Name="K770A_Copy58" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
-                    Height="10.4" Margin="1789.343,451.358,0,0" Stretch="Fill"  Width="176.696"
+                <Path x:Name="K770A_Copy58" Data="M-5.6265593,-0.74074069 L90.734896,0.44444444 90.734896,10.444444 -5.6265593,9.2592593 z"
+                    Height="11.067" Margin="1714.296,448.024,0,0" Stretch="Fill"  Width="167.059"
                       
                      />
                 <Path x:Name="V543xx_Copy6" Data="M300.39818,0.5 L308.44664,4.5296783 287.26644,47.072123 287.26702,48.101285 243.86702,48.174715 177.82953,178.9138 0.53687072,179.89172 0.5,171.01051 170.08376,169.96566 236.11136,39.061712 281.19954,39.062194 z" Height="180.392" Margin="2348.071,287.678,0,0" RenderTransformOrigin="-4.36018648418813E-08,0.213766546639163" Stretch="Fill" Width="308.947">
@@ -1476,8 +1476,8 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path  x:Name="V539p2_Copy14" Data="M1097.4085,54.644474 L1138.2976,54.202537 1138.1332,63.602035 1102.7252,63.951939 1074.9951,120.79142 1066.9775,116.94325 z" 
-                    Height="67.591" Margin="2016.954,426.533,0,0" Stretch="Fill"  Width="72.317" RenderTransformOrigin="0,0" 
+                <Path  x:Name="V539p2_Copy14" Data="M1097.4085,54.644474 L1138.2976,54.202537 1138.1332,63.602035 1102.7252,63.951939 1081.3354,108.30298 1073.3178,104.45481 z" 
+                    Height="55.102" Margin="2019.733,420.835,0,0" Stretch="Fill"  Width="65.977" RenderTransformOrigin="0,0" 
                        >
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -1488,18 +1488,18 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K770A_Copy59" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
-                    Height="10.4" Margin="1960.289,388.635,0,0" Stretch="Fill"  Width="155.363"
+                <Path x:Name="K770A_Copy59" Data="M7.9066565,0.12345678 L90.734896,0.44444444 90.734896,10.444444 7.9066565,10.123457 z"
+                    Height="10.289" Margin="1973.74,388.579,0,0" Stretch="Fill"  Width="141.912"
                       
                      />
-                <Path x:Name="V194p1_Copy19"  Data="M1099.0381,53.097459 L1235.1068,52.477011 1235.1044,62.539735 1104.1867,63.251777 1051.7813,91.550057 1045.9294,81.796955 z"
-                    Height="40.065" Margin="2305.836,398.808,0,0" Stretch="Fill"  Width="190.199" RenderTransformOrigin="0,0"
+                <Path x:Name="V194p1_Copy19"  Data="M1099.8713,53.930982 L1235.1068,52.477011 1235.1044,61.706205 1104.1867,62.918367 1049.1101,92.648467 1044.4247,84.062297 z"
+                    Height="41.162" Margin="2307.339,398.802,0,0" Stretch="Fill"  Width="191.708" RenderTransformOrigin="0,0"
                      >
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="179.863"/>
+                            <SkewTransform AngleY="0" AngleX="180"/>
+                            <RotateTransform Angle="180"/>
                             <TranslateTransform/>
                         </TransformGroup>
                     </Path.RenderTransform>
@@ -1518,7 +1518,7 @@
                     </Path.RenderTransform>
                 </Path>
                 <Path x:Name="K770A_Copy62" Data="M18.825467,-1.4809879 L90.734896,0.44444444 92.776207,10.506639 19.20307,10.022055 z"
-                    Height="11.785" Margin="2295.411,335.287,0,0" Stretch="Fill"  Width="81.977" RenderTransformOrigin="0.5,0.5"
+                    Height="11.785" Margin="2298.382,334.546,0,0" Stretch="Fill"  Width="78.821" RenderTransformOrigin="0.5,0.5"
                       
                      >
                     <Path.RenderTransform>
@@ -1527,6 +1527,204 @@
                             <SkewTransform/>
                             <RotateTransform Angle="-28"/>
                             <TranslateTransform X="1.4011718360771184" Y="4.2347932847455"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="V194p1_Copy20"  Data="M1102.7016,55.304553 L1136.3692,54.71815 1136.3695,64.447277 1104.519,64.335933 1041.9718,86.5001 1038.444,78.333636 z"
+                    Height="32.785" Margin="2216.044,403.668,0,0" Stretch="Fill"  Width="98.931" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="152.003"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="V194p1_Copy21"  Data="M1099.0349,54.431077 L1152.1459,54.502743 1152.1459,63.565242 1104.5192,63.585967 1011.9274,154.33367 1005.0676,147.90742 z"
+                    Height="100.908" Margin="2234.716,525.401,0,0" Stretch="Fill"  Width="148.059" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="180.321"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="K770A_Copy63" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
+                    Height="10.4" Margin="1870.956,514.1,0,0" Stretch="Fill"  Width="216.363"
+                      
+                     />
+                <Path x:Name="K770A_Copy64" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
+                    Height="10.4" Margin="1654.456,514.1,0,0" Stretch="Fill"  Width="216.363"
+                      
+                     />
+                <Path x:Name="V194p1_Copy22"
+                    Height="151.911" Data="M183.34129,-77.03124 L221.66744,-76.876175 221.66744,-67.504325 185.49183,-67.400201 53.661999,73.80114 -54.244607,73.989332 -54.244607,64.989332 49.942121,65.155999 z" Margin="1560.961,666.215,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="276.915">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform Y="-7.3791743171292781E-07" X="-60.678962552125384"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="K770A_Copy65" Data="M0,0 L90.734896,0.44444444 90.738089,12.31561 0.0031929792,11.871166 z"
+                    Height="12.084" Margin="1417.324,533.787,0,0" Stretch="Fill"  Width="176.702" RenderTransformOrigin="0.5,0.5"
+                      
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45"/>
+                            <TranslateTransform X="0.59450523010262657" Y="-0.24873741058448218"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="K770A_Copy67" Data="M26.056882,0.6944444 L90.734896,0.44444444 90.734896,10.444444 26.056882,10.694444 z"
+                    Height="10.225" Margin="1127.685,656.075,0,0" Stretch="Fill"  Width="126.24"
+                      
+                     />
+                <Path x:Name="K770A_Copy66" Data="M26.056882,0.6944444 L90.734896,0.44444444 90.734896,10.444444 26.056882,10.694444 z"
+                    Height="10.225" Margin="1253.17,655.908,0,0" Stretch="Fill"  Width="126.24"
+                      
+                     />
+                <Path x:Name="V194p1_Copy23"
+                    Height="74.656" Data="M115.00919,0.5 L125.85763,0.57167071 125.85763,9.3013097 120.493,9.3220359 53.661999,74.134473 18.024605,74.155999 18.024605,65.155999 49.942121,65.155999 z" Margin="1253.415,730.815,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="108.834">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-180"/>
+                            <TranslateTransform Y="1.1000822772308756E-09"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="K775_Copy20" Data="M0,0 L90.027846,1.6770741E-13 90.027846,10 0,10 z"  
+                    Height="10" Margin="1361.415,720.938,0,0" Stretch="Fill" Width="31.162"
+                     
+                     />
+                <Path x:Name="K775_Copy21" Data="M0,0 L90.027846,1.6770741E-13 90.027846,10 0,10 z"  
+                    Height="10" Margin="1391.748,720.938,0,0" Stretch="Fill" Width="31.162"
+                     
+                     />
+                <Path x:Name="K770A_Copy68" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
+                    Height="10.4" Margin="589.33,450.358,0,0" Stretch="Fill"  Width="122.363"
+                      
+                     />
+                <Path x:Name="V194p1_Copy24"  Data="M1099.0349,54.431077 L1195.1221,53.836115 1195.1221,62.898614 1104.5192,63.585967 1037.5828,129.42374 1031.2259,122.50035 z"
+                    Height="76.592" Margin="754.734,449.802,0,0" Stretch="Fill"  Width="164.883" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="V194p1_Copy25"  Data="M1099.0349,54.431077 L1239.1218,54.112547 1239.1218,63.175046 1104.5192,63.585967 1037.5828,129.42374 1031.2259,122.50035 z"
+                    Height="76.316" Margin="747.402,593.691,0,0" Stretch="Fill"  Width="208.879" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0.21"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="V194p1_Copy26"  Data="M1099.0404,52.931185 L1170.6734,53.361738 1170.6734,62.424237 1104.5247,62.086075 967.58152,198.20874 961.22462,191.28535 z"
+                    Height="146.287" Margin="746.741,664.866,0,0" Stretch="Fill"  Width="210.427" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0.21"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <controls:Semafor1Control x:Name="S775_Copy21" SemaphoreType="S1"    Margin="899.383,624.099,0,0"
+                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
+                <controls:Semafor1Control x:Name="S775_Copy22" SemaphoreType="S1"    Margin="900.715,558.437,0,0"
+                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
+                <Path x:Name="K775_Copy22" Data="M0,0 L106.76001,-0.74074074 106.76001,9.2592593 0,10 z"  
+                    Height="10.667" Margin="955.92,583.436,0,0" Stretch="Fill" Width="64.042"
+                     
+                     />
+                <Path x:Name="K775_Copy23" Data="M0,0 L107.28197,0.13888889 107.28197,10.138889 0,10 z"  
+                    Height="10.125" Margin="956.584,655.186,0,0" Stretch="Fill" Width="64.351"
+                     
+                     />
+                <Path x:Name="V194p1_Copy27"  Data="M1096.1453,57.952606 L1152.146,54.836056 1152.1463,64.565183 1098.8969,67.598092 1018.9806,113.80699 1014.2133,105.59048 z"
+                    Height="59.965" Margin="2112.72,503.802,0,0" Stretch="Fill"  Width="138.939" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-210.121"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="K770A_Copy69" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
+                    Height="10.4" Margin="1880.855,449.108,0,0" Stretch="Fill"  Width="206.184"
+                      
+                     />
+                <Path x:Name="V194p1_Copy28"
+                    Height="70.313" Data="M110.73066,4.8423353 L165.32211,4.9605183 165.32211,14.856813 114.064,14.675668 53.661999,73.80114 -57.483334,74.155999 -57.483334,65.155999 49.942121,65.155999 z" Margin="1787.377,459.086,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="223.806">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform Y="4.2645010023279886E-08" X="-30.9224641340345"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="V194p1_Copy29"  Data="M1118.8047,54.244866 L1224.4006,53.647479 1224.4025,63.043308 1119.3046,64.130444 1071.0463,99.613851 1064.8533,93.183848 z"
+                    Height="46.968" Margin="1710.911,525.182,0,0" Stretch="Fill"  Width="160.53" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-180.321"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="V194p1_Copy30"  Data="M1099.5,54.908718 L1147.4386,49.759678 1147.4386,58.822177 1104.5192,63.585967 1091.2697,76.296524 1084.4099,69.870274 z"
+                    Height="27.545" Margin="1671.962,433.671,0,0" Stretch="Fill"  Width="64.018" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="224.233"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="V194p1_Copy31"  Data="M1099.0349,54.431077 L1152.1459,54.502743 1152.1459,63.565242 1104.5192,63.585967 1011.9274,154.33367 1005.0676,147.90742 z"
+                    Height="100.908" Margin="1477.383,458.734,0,0" Stretch="Fill"  Width="148.059" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-180.321"/>
+                            <TranslateTransform/>
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
