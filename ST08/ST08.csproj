@@ -89,6 +89,12 @@
     <Compile Include="UserControls\SoundControler.xaml.cs">
       <DependentUpon>SoundControler.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\TrainSwich45.xaml.cs">
+      <DependentUpon>TrainSwich45.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TrainSwitch25.xaml.cs">
+      <DependentUpon>TrainSwitch25.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\TrainSwitch64.xaml.cs">
       <DependentUpon>TrainSwitch64.xaml</DependentUpon>
     </Compile>
@@ -288,6 +294,12 @@
     <Page Include="UserControls\SoundControler.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TrainSwich45.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TrainSwitch25.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\TrainSwitch64.xaml">
       <Generator>MSBuild:Compile</Generator>

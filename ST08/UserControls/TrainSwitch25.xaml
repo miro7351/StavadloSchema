@@ -1,0 +1,162 @@
+﻿<controls:BaseTrainSwitchControl x:Class="PA.Stavadlo.MH.UserControls.TrainSwitch25"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ST08.UserControls"
+             xmlns:controls="clr-namespace:PA.Stavadlo.MH.UserControls"
+             Panel.ZIndex="20"
+             Width="50" Height="50"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="50"
+             Loaded="TrainSwitchControl_Loaded">
+
+
+    <!--MH: Februar 2022
+            Vyhybka s uhlom ramien 25 stupnov 
+            zmena farieb a riadenie viditelnosti jednotlivych casti vyhybky sa robi z kodu!!!!
+    
+            POZOR TOTO MUSI BYT TAKTO:    Width="50" Height="50"    d:DesignHeight="50" d:DesignWidth="50"
+    
+    -->
+    <controls:BaseTrainSwitchControl.Resources>
+
+        <!--Odremovat, ak sa pouziva Blend. Zaremovat, aby poruchove stavy blikali-->
+        <SolidColorBrush x:Key="redBrush">#FFFF0000</SolidColorBrush>
+        <Color x:Key="redColor">#FFFF0000</Color>
+        <SolidColorBrush x:Key="transparentBrush">Transparent</SolidColorBrush>
+        <Color x:Key="transparentColor">Transparent</Color>
+        <Color x:Key="poruchaCervenaColor">#FFB9AAB9</Color>
+        <Color x:Key="ramenoVyhybkyPoruchaColor">#FF565656</Color>
+        <SolidColorBrush x:Key="vyhybkaVManipulaciiBrush">#FF0000FF</SolidColorBrush>
+
+
+        <Style TargetType="Path" x:Key="RozrezStyle">
+            <Setter Property="Fill" Value="{StaticResource RedBrush}"/>
+            <Setter Property="Stretch" Value="Fill"/>
+            <Setter Property="StrokeThickness" Value="2"/>
+            <Setter Property="Stroke" Value="Black"/>
+            <Setter Property="Panel.ZIndex" Value="1"/>
+        </Style>
+
+        <Style x:Key="RamenaStyle" TargetType="{x:Type Path}"/>
+
+        <!--ToolTip pre vymenu-vyhybku-->
+        <ToolTip x:Key="ttVyhybka">
+            <ToolTip.Template>
+                <ControlTemplate TargetType="ToolTip">
+                    <Border Style="{StaticResource ttVyhybkaBorder}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type controls:TrainSwitch25}}, Path=Name}" Style="{StaticResource txbToolTip}"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </ToolTip.Template>
+        </ToolTip>
+
+        <Style x:Key="variantStyle" TargetType="Path">
+            <Setter Property="Fill" Value="Transparent"/>
+            <Setter Property="Stretch" Value="Fill"/>
+            <Setter Property="Panel.ZIndex" Value="20"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Stroke" Value="{DynamicResource WhiteBrush}"/>
+            <Setter Property="StrokeThickness"  Value="2"/>
+        </Style>
+
+        <!--ramcek okolo vyhybky, aby sa zobrazil Tooltip aj ked nie je kurzor priamo na vyhybkou-->
+        <Style x:Key="okrajStyle" TargetType="Path">
+            <Setter Property="Fill" Value="Transparent"/>
+            <Setter Property="Stretch" Value="Fill"/>
+            <Setter Property="Panel.ZIndex" Value="20"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Stroke" Value="Transparent"/>
+            <!--<Setter Property="ToolTip" Value="{StaticResource ttVyhybka}"/>-->
+            <!--Ak nastavime Tooltip tu, potom ak nastavime ToolTip="{x:Null}", tak to nefunguje!!!!-->
+            <!--  VE DESIGN MODE-->
+            <!--<Setter Property="StrokeThickness"  Value="2"/>-->
+
+            <!--  V RUNTIME MODE-->
+            <Setter Property="StrokeThickness"  Value="0"/>
+        </Style>
+    </controls:BaseTrainSwitchControl.Resources>
+
+    <!-- mozeme nastavit ToolTip="{x:Null}" a vyhybka nebude mat tooltip
+      <UserControls:TrainSwitch64 x:Name="V100"  Margin="20,0,0,-0.033" ToolTip="{x:Null}".../>-->
+    <controls:BaseTrainSwitchControl.ToolTip>
+        <StaticResource ResourceKey="ttVyhybka"/>
+    </controls:BaseTrainSwitchControl.ToolTip>
+
+    <Grid MouseLeftButtonDown="MouseLeftButtonDown" x:Name="mainGrid_25" Margin="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Path Style="{StaticResource RozrezStyle}" x:Name="Rozrez1_25" Data="M1,1 L38.375,1 38.375,9.0000002 1,9.0000002 z" 
+              Fill="{DynamicResource vylukaPrestaveniaBrush}" Height="9.996" Margin="4.875,0,5.75,9.935" RenderTransformOrigin="0.533333333333333,0.500000008940697" Stretch="Fill"
+              Stroke="{DynamicResource vylukaPrestaveniaBrush}" StrokeThickness="2" VerticalAlignment="Bottom" Panel.ZIndex="0">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+
+        <!--ramcek okolo vyhybky aby sa sa ukazal Tootip aj ked kurzor nie je priamo nad vyhybkou;
+            v xaml Visibility="Visible", len pre vyvoj je Visibility="Collapsed"-->
+        <Path x:Name="Pozadie"  Style="{StaticResource okrajStyle}" ToolTip="{Binding RelativeSource={RelativeSource AncestorType={x:Type controls:BaseTrainSwitchControl}}, Path=ToolTip}"
+              Data="M0,0 L50,0 L50,50 L0,50 z"  Margin="0,0,0,0"  Visibility="Collapsed"/>
+
+
+        <Path Style="{StaticResource RozrezStyle}" x:Name="Rozrez2_25" Data="M3.4776896,1.894192 L13.157116,11.656059 33.008985,17.27719 31.228659,25.540744 9.3704017,19.589241 -2.4141152,7.7867581 z" 
+              Fill="{DynamicResource vylukaPrestaveniaBrush}" Margin="1.062,13.847,11.535,10.505" RenderTransformOrigin="0.73313046142258,0.755141832065706" Stretch="Fill" 
+              Stroke="{DynamicResource vylukaPrestaveniaBrush}" StrokeThickness="2"
+			Panel.ZIndex="0" >
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="45"/>
+                    <TranslateTransform X="-10.158707584370504" Y="-4.2078744576285487"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path Style="{StaticResource RamenaStyle}" x:Name="Rameno1_25" Data="M14.001517,0.69735522 L20.634071,0.74997991 20.634071,9.1250001 0.74169224,9.1330185 z" Fill="{DynamicResource BlueBrush}" HorizontalAlignment="Right" Height="10.434" Margin="0,0,-2.294,9.958" RenderTransformOrigin="-0.0425238692696327,0.500000038743017" Stretch="Fill" Stroke="{DynamicResource BlueBrush}" StrokeThickness="2"
+			VerticalAlignment="Bottom" Width="21.836"
+			Panel.ZIndex="0" >
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="0.017179643184931148"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path Style="{StaticResource RamenaStyle}" x:Name="Rameno2_25" Data="M-1.234253,1.7712608 L19.436961,0.65420656 20.170247,9.4818667 14.87331,9.537946 z" Fill="{DynamicResource BlueBrush}" HorizontalAlignment="Right" Margin="0,0,0.414,12.372" RenderTransformOrigin="0.127249843065485,0.49999995529652" Stretch="Fill" Stroke="{DynamicResource BlueBrush}" StrokeThickness="2"
+			Width="23.38"
+			Panel.ZIndex="0" Height="10.879" VerticalAlignment="Bottom" >
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="25"/>
+                    <TranslateTransform X="-1.5994265814947486" Y="-0.54762851564668491"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <!--Pre zobrazenie variantu: Visibility sa nastavuje v kode; v xaml je Visibility="Hidden"-->
+        <!--V DESIGN MODE:  x:Name="VariantGrid"  Visibility="Visible";   dalsie Path...Stroke="Black" aby sme videli tvar Path, po nastaveni Path vratit x:Name="VariantGrid"  Visibility="Hidden", lebo inac nemozeme editovat Raozrez1, Rozrez2, Rameno1, Rameno2-->
+
+        <Grid x:Name="VariantGrid_25"  Visibility="Hidden" Panel.ZIndex="20"  Background="Transparent" Margin="0,-2.083,0,2.083">
+            <Path Style="{StaticResource variantStyle}" x:Name="Path2" Data="M6.65625,29.78125 L22.719,29.844 17.093837,18.794048" Fill="Transparent" HorizontalAlignment="Left" Margin="5.656,17.75,0,19.156" Stretch="Fill" Stroke="White" StrokeThickness="2" Width="18.063"  />
+            <Path Style="{StaticResource variantStyle}" x:Name="Path1" Data="M2.8125,40.0625 L46.0005,39.8755" Fill="Transparent" Height="2.187" Margin="5.624,0,3,8.938" Stretch="Fill" Stroke="White" StrokeThickness="2" VerticalAlignment="Bottom" />
+            <Path Style="{StaticResource variantStyle}" x:Name="Path3" Data="M46,29.78125 L33.96875,29.81275 25.999584,13.968065" Fill="Transparent" HorizontalAlignment="Right" Margin="0,13.219,3,19.188" Stretch="Fill" Stroke="White" StrokeThickness="2" Width="22" />
+            <!--<Path Style="{StaticResource variantStyle}" x:Name="Path2" Data="M8.9940204,30.027923 L17.79646,30.082154 9.6203432,26.631151" Fill="Transparent" HorizontalAlignment="Left" Margin="5.666,28.145,0,16.383" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="10.79"  />
+            <Path Style="{StaticResource variantStyle}" x:Name="Path1" Data="M2.2183968,40.0625 L46.0005,39.8755" Fill="Transparent" Height="2.189" Margin="5.826,0,0,7.793" Stretch="Fill" Stroke="Black" StrokeThickness="2" VerticalAlignment="Bottom" Width="41.918" />
+            <Path Style="{StaticResource variantStyle}" x:Name="Path3" Data="M46.083324,29.78125 L33.96875,29.81275 11.42712,17.790324" Fill="Transparent" HorizontalAlignment="Right" Margin="0,19.728,2.256,16.438" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="36.66" />-->
+        </Grid>
+    </Grid>
+</controls:BaseTrainSwitchControl>

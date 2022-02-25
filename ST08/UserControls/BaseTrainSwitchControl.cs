@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Data;
-using System.Collections;
 using System.Windows.Input;
 using System.Windows.Controls;
 using System.Windows.Shapes;
@@ -9,8 +8,6 @@ using System.Windows.Media;
 
 
 using PA.Stavadlo.MH.Enums;
-
-using PA.Stavadlo.MH.Controls;
 
 using ST08;
 
@@ -142,7 +139,7 @@ namespace PA.Stavadlo.MH.UserControls
         private void BaseTrainSwitchControl_Loaded(object sender, RoutedEventArgs e)
         {
             //Pre kazdu vymenu nastavime binding pre DP TimerFlagProperty na property DataContext.TimerFlag
-            //aby sme to nerobili v xaml pre kazdy TrainSwitch64 napr. <controls:TrainSwitch64 x:Name="V1124"  TimerFlag="{Binding TimerFlag, Mode=OneWay}".../>
+            //aby sme to nerobili v xaml pre kazdy TrainSwitchXX napr. <controls:TrainSwitch64 x:Name="V1124"  TimerFlag="{Binding TimerFlag, Mode=OneWay}".../>
             //Binding urobime v kode pred zobrazenim controlu, lebo pre vymenu DP TimerFlagProperty sa binduje na jeden zdroj v DataContexte!!!
             //"TimerFlag" je meno property z DataContextu
 
