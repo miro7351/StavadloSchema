@@ -586,5 +586,49 @@
                 </TransformGroup>
             </Path.RenderTransform>
         </Path>
+        <Path Data="M-0.46612573,110.70759 L16.401229,48.393517 27.220859,48.403575 27.222938,55.412779 19.163407,55.399007 3.3091545,113.55879 z" 
+            Height="84.762"  Stretch="Fill" Width="58.568" Margin="276.724,441.548,0,0"/>
+        <Rectangle Fill="#FFCCED6C" HorizontalAlignment="Left" Height="10" Margin="470,510,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="80.444" RenderTransformOrigin="0.506,0.502" Panel.ZIndex="40">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-62.868"/>
+                    <TranslateTransform X="-21.19" Y="34.413"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Path x:Name="V194p1_Copy8"  Data="M1070.6547,82.871103 L1133.4878,83.147668 1133.3683,92.261893 1075.1446,92.066292 1022.9324,143.35225 1016.5755,136.42886 z"
+            Height="61.485" Margin="191.396,584.225,0,0" Stretch="Fill"  Width="117.9" RenderTransformOrigin="0,0"
+                     >
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="-0.749"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path x:Name="_775_Copy" Data="M-8.0168015,-3.7811034 L64.39834,20.498426 128.40553,20.692958 128.40553,29.69296 63.281698,30.42321 -11.111045,5.076476 z" Height="35.204" Margin="159.387,541.198,0,0" RenderTransformOrigin="0.742136705905957,0.834398449532532" Stretch="Fill" Width="140.515">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-64"/>
+                    <TranslateTransform Y="-10.091794731399347" X="-1.0806824690714407"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <UserControls:TrainSwitchY64 HorizontalAlignment="Left" Height="50" Margin="225.498,559.003,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
+            <UserControls:TrainSwitchY64.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="136.342"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </UserControls:TrainSwitchY64.RenderTransform>
+        </UserControls:TrainSwitchY64>
     </Grid>
 </UserControl>

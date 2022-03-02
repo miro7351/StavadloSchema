@@ -790,8 +790,8 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path  x:Name="V539p2_Copy13" Data="M1097.7434,55.092042 L1158.8342,55.059301 1158.7258,64.347058 1103.2282,64.064284 1082.5726,105.24729 1074.518,101.19411 z" 
-                    Height="51.189" Margin="2449.578,163.715,0,0" Stretch="Fill"  Width="85.313" RenderTransformOrigin="0,0" 
+                <Path  x:Name="V539p2_Copy13" Data="M1097.7434,55.092042 L1159.2804,56.028732 1158.9858,65.12995 1103.2282,64.064284 1084.5148,101.37359 1076.4602,97.320409 z" 
+                    Height="47.282" Margin="2453.067,165.466,0,0" Stretch="Fill"  Width="83.817" RenderTransformOrigin="0,0" 
                        >
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -802,8 +802,8 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="V194p1_Copy13"  Data="M1100.9291,55.074683 L1114.971,48.565388 1119.0339,57.071625 1105.3117,63.326989 1051.1258,123.61009 1044.4471,117.63372 z"
-                    Height="76.028" Margin="2443.314,308.843,0,0" Stretch="Fill"  Width="75.566" RenderTransformOrigin="0,0"
+                <Path x:Name="V194p1_Copy13"  Data="M1100.3513,54.702305 L1114.971,48.565388 1119.0339,57.071625 1104.8382,63.166084 1046.9283,121.18205 1040.2377,114.98157 z"
+                    Height="73.6" Margin="2447.297,307.488,0,0" Stretch="Fill"  Width="79.775" RenderTransformOrigin="0,0"
                      >
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -985,8 +985,8 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="V194p1_Copy20"  Data="M1102.2088,51.704562 L1136.3692,54.71815 1135.928,64.212588 1102.9113,61.388904 1041.9718,86.5001 1038.444,78.333636 z"
-                    Height="35.799" Margin="2214.629,401.007,0,0" Stretch="Fill"  Width="98.931" RenderTransformOrigin="0,0"
+                <Path x:Name="V194p1_Copy20"  Data="M1102.2088,51.704562 L1136.3692,54.71815 1135.928,64.212588 1102.9113,61.388904 1041.809,86.673095 1038.444,78.333636 z"
+                    Height="35.971" Margin="2214.629,401.007,0,0" Stretch="Fill"  Width="98.931" RenderTransformOrigin="0,0"
                      >
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -997,8 +997,8 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="V194p1_Copy21"  Data="M1099.0349,54.431077 L1152.1459,54.502743 1152.1459,63.565242 1104.5192,63.585967 1011.9274,154.33367 1005.0676,147.90742 z"
-                    Height="100.908" Margin="2234.716,525.401,0,0" Stretch="Fill"  Width="148.059" RenderTransformOrigin="0,0"
+                <Path x:Name="V194p1_Copy21"  Data="M1096.3678,54.446016 L1152.1459,54.502743 1152.1459,63.565242 1101.8521,63.600906 1011.9274,154.33367 1005.4458,148.46778 z"
+                    Height="100.892" Margin="2234.342,525.385,0,0" Stretch="Fill"  Width="147.674" RenderTransformOrigin="0,0"
                      >
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -1146,8 +1146,8 @@
                     Height="10.125" Margin="956.584,655.186,0,0" Stretch="Fill" Width="64.351"
                      
                      />
-                <Path x:Name="V194p1_Copy27"  Data="M1096.2289,58.096781 L1145.0205,54.064089 1145.2024,63.10975 1098.8133,67.453916 1018.897,113.66281 1014.2969,105.73466 z"
-                    Height="60.592" Margin="2111.678,506.265,0,0" Stretch="Fill"  Width="131.911" RenderTransformOrigin="0,0"
+                <Path x:Name="V194p1_Copy27"  Data="M1087.9406,62.907094 L1135.3642,50.818053 1158.1038,57.400785 1155.1574,65.741156 1135.179,60.469006 1090.525,72.264229 1018.897,113.66281 1014.2969,105.73466 z"
+                    Height="63.822" Margin="2113.294,509.054,0,0" Stretch="Fill"  Width="144.835" RenderTransformOrigin="0,0"
                      >
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -1581,7 +1581,7 @@
                         </TransformGroup>
                     </controls:Semafor1Control.RenderTransform>
                 </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy38" SemaphoreType="S1"    Margin="2090.157,196.672,0,0"
+                <controls:Semafor1Control x:Name="S775_Copy38" SemaphoreType="S1"    Margin="2071,197,0,0"
                     SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
                     <controls:Semafor1Control.RenderTransform>
                         <TransformGroup>
@@ -1727,16 +1727,6 @@
                 </controls:TrainSwitch64>
                 <controls:TrainSwitch64 HorizontalAlignment="Left" Height="50" Margin="766.398,969.499,0,0" VerticalAlignment="Top" Width="50"/>
                 <controls:TrainSwitch64 HorizontalAlignment="Left" Height="50" Margin="854.546,969.337,0,0" VerticalAlignment="Top" Width="50"/>
-                <controls:TrainSwitch64 HorizontalAlignment="Left" Height="50" Margin="2211.48,442.222,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
-                    <controls:TrainSwitch64.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-44.991"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:TrainSwitch64.RenderTransform>
-                </controls:TrainSwitch64>
                 <controls:TrainSwitch64 HorizontalAlignment="Left" Height="50" Margin="595.354,439.956,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
                     <controls:TrainSwitch64.RenderTransform>
                         <TransformGroup>
@@ -1868,22 +1858,12 @@
                     </controls:TrainSwitch64.RenderTransform>
                 </controls:TrainSwitch64>
                 <controls:TrainSwitch64 HorizontalAlignment="Left" Height="50" Margin="2568.688,285.249,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"/>
-                <controls:TrainSwitch64 HorizontalAlignment="Left" Height="50" Margin="2411.105,174.666,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
+                <controls:TrainSwitch64 HorizontalAlignment="Left" Height="50" Margin="2416.105,174.666,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
                     <controls:TrainSwitch64.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1" ScaleX="1"/>
                             <SkewTransform AngleY="0" AngleX="0"/>
                             <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:TrainSwitch64.RenderTransform>
-                </controls:TrainSwitch64>
-                <controls:TrainSwitch64 HorizontalAlignment="Left" Height="50" Margin="2362.813,283.665,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
-                    <controls:TrainSwitch64.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-2.2"/>
                             <TranslateTransform/>
                         </TransformGroup>
                     </controls:TrainSwitch64.RenderTransform>
@@ -1938,7 +1918,7 @@
                         </TransformGroup>
                     </Rectangle.RenderTransform>
                 </Rectangle>
-                <Rectangle Fill="#FFCCED6C" HorizontalAlignment="Left" Height="10" Margin="890.69,241.945,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="80.444" RenderTransformOrigin="0.506,0.502" Panel.ZIndex="40">
+                <Rectangle Fill="#FFCCED6C" HorizontalAlignment="Left" Height="10" Margin="810,205.945,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="80.444" RenderTransformOrigin="0.506,0.502" Panel.ZIndex="40">
                     <Rectangle.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -2388,6 +2368,56 @@
                         </TransformGroup>
                     </controls:Semafor1Control.RenderTransform>
                 </controls:Semafor1Control>
+                <controls:TrainSwitch30 HorizontalAlignment="Left" Height="50" Margin="2244,363,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
+                    <controls:TrainSwitch30.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-23.026"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </controls:TrainSwitch30.RenderTransform>
+                </controls:TrainSwitch30>
+                <Path x:Name="_775_Copy2" Data="M-8.0168015,-3.7811034 L64.39834,20.498426 128.40553,20.692958 128.40553,29.69296 63.281698,30.42321 -11.111045,5.076476 z" Height="35.204" Margin="796.66,276.68,0,0" RenderTransformOrigin="0.742136705905957,0.834398449532532" Stretch="Fill" Width="140.515">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-64"/>
+                            <TranslateTransform Y="-10.091794731399347" X="-1.0806824690714407"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <controls:TrainSwitchY64 HorizontalAlignment="Left" Height="50" Margin="865.125,291.25,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
+                    <controls:TrainSwitchY64.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="135"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </controls:TrainSwitchY64.RenderTransform>
+                </controls:TrainSwitchY64>
+                <controls:TrainSwitchY64 HorizontalAlignment="Left" Height="50" Margin="2358.875,289.75,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
+                    <controls:TrainSwitchY64.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="138.16"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </controls:TrainSwitchY64.RenderTransform>
+                </controls:TrainSwitchY64>
+                <controls:TrainSwitch30 HorizontalAlignment="Left" Height="50" Margin="2177.167,417.667,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
+                    <controls:TrainSwitch30.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-44.552"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </controls:TrainSwitch30.RenderTransform>
+                </controls:TrainSwitch30>
             </Grid>
         </Grid>
     </DockPanel>

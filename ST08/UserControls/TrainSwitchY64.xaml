@@ -1,8 +1,9 @@
-﻿<controls:BaseTrainSwitchControl x:Class="PA.Stavadlo.MH.UserControls.TrainSwitch45"
+﻿<controls:BaseTrainSwitchControl x:Class="PA.Stavadlo.MH.UserControls.TrainSwitchY64"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ST08.UserControls"
              xmlns:controls="clr-namespace:PA.Stavadlo.MH.UserControls"
              Panel.ZIndex="20"
              Width="50" Height="50"
@@ -11,8 +12,8 @@
              Loaded="TrainSwitchControl_Loaded">
 
 
-    <!--MH: Februar 2022
-            Vyhybka s uhlom ramien 45 stupnov 
+    <!--JB: Februar 2022
+            Vyhybka v tvare Y s uhlom ramien 64 stupnov 
             zmena farieb a riadenie viditelnosti jednotlivych casti vyhybky sa robi z kodu!!!!
     
             POZOR TOTO MUSI BYT TAKTO:    Width="50" Height="50"    d:DesignHeight="50" d:DesignWidth="50"
@@ -28,7 +29,7 @@
         <Color x:Key="poruchaCervenaColor">#FFB9AAB9</Color>
         <Color x:Key="ramenoVyhybkyPoruchaColor">#FF565656</Color>
         <SolidColorBrush x:Key="vyhybkaVManipulaciiBrush">#FF0000FF</SolidColorBrush>
-<!--=====-->
+        <!--=====-->
 
         <Style TargetType="Path" x:Key="RozrezStyle">
             <Setter Property="Fill" Value="{StaticResource RedBrush}"/>
@@ -86,7 +87,7 @@
         <StaticResource ResourceKey="ttVyhybka"/>
     </controls:BaseTrainSwitchControl.ToolTip>
 
-    <Grid MouseLeftButtonDown="MouseLeftButtonDown" x:Name="mainGrid_45" Margin="0">
+    <Grid MouseLeftButtonDown="MouseLeftButtonDown" x:Name="mainGridY_64" Margin="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="39*"/>
             <RowDefinition Height="11*"/>
@@ -94,18 +95,6 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Path Style="{StaticResource RozrezStyle}" x:Name="Rozrez1_45" Data="M1,1.0000035 L38.375,1.0416702 38.375,8.8124923 1,8.8124923 z" 
-              Fill="{DynamicResource vylukaPrestaveniaBrush}" Height="9.811" Margin="4.083,0,6.542,10.476" RenderTransformOrigin="0.533333333333333,0.500000008940697" Stretch="Fill"
-              Stroke="{DynamicResource vylukaPrestaveniaBrush}" StrokeThickness="2" VerticalAlignment="Bottom" Panel.ZIndex="0" Grid.RowSpan="2">
-            <Path.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                    <SkewTransform AngleY="0" AngleX="0"/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Path.RenderTransform>
-        </Path>
 
         <!--ramcek okolo vyhybky aby sa sa ukazal Tootip aj ked kurzor nie je priamo nad vyhybkou;
             v xaml Visibility="Visible", len pre vyvoj je Visibility="Collapsed"-->
@@ -113,8 +102,8 @@
               Data="M0,0 L50,0 L50,50 L0,50 z"  Margin="0,0,0,0"  Visibility="Collapsed" Grid.RowSpan="2"/>
 
         <!--Fill="{DynamicResource vylukaPrestaveniaBrush}"    Stroke="{DynamicResource vylukaPrestaveniaBrush}"-->
-        <Path Style="{StaticResource RozrezStyle}" x:Name="Rozrez2_45" Data="M3.2566814,2.169839 L12.965576,11.72918 32.33174,11.553936 32.523078,18.856791 9.1641319,19.269281 -2.4435819,7.8156868 z" 
-              Fill="{DynamicResource vylukaPrestaveniaBrush}" Margin="0.077,13.492,12.961,6.118" RenderTransformOrigin="0.73313046142258,0.755141832065706" Stretch="Fill" 
+        <Path Style="{StaticResource RozrezStyle}" x:Name="RozrezY2_64" Data="M3.2566807,2.1698331 L13.379035,11.876801 32.960147,13.223464 32.72457,20.614921 9.0470747,20.132135 -2.7529838,8.1197815 z" 
+              Fill="{DynamicResource vylukaPrestaveniaBrush}" Margin="0.294,1.751,11.999,16.484" RenderTransformOrigin="0.73313046142258,0.755141832065706" Stretch="Fill" 
               Stroke="{DynamicResource vylukaPrestaveniaBrush}" StrokeThickness="2"
 			Panel.ZIndex="0" >
             <Path.RenderTransform>
@@ -122,31 +111,31 @@
                     <ScaleTransform ScaleY="1" ScaleX="-1"/>
                     <SkewTransform AngleY="0" AngleX="0"/>
                     <RotateTransform Angle="45"/>
-                    <TranslateTransform X="-6.1044995751493616" Y="-2.5285665155274515"/>
+                    <TranslateTransform X="-7.771094028420535" Y="-3.2188925410481986"/>
                 </TransformGroup>
             </Path.RenderTransform>
         </Path>
-        <Path Style="{StaticResource RamenaStyle}" x:Name="Rameno1_45" Data="M7.2242479,1.2419126 L21.360894,1.2083269 21.360893,8.9791564 -0.42353514,9.0127368 z" Fill="{DynamicResource BlueBrush}" HorizontalAlignment="Right" Height="9.805" Margin="0,0,-5.174,10.459" RenderTransformOrigin="-0.0425238692696327,0.500000038743017" Stretch="Fill" Stroke="{DynamicResource BlueBrush}" StrokeThickness="2"
-			VerticalAlignment="Bottom" Width="23.718"
-			Panel.ZIndex="0" Grid.RowSpan="2" >
+        <Path Style="{StaticResource RamenaStyle}" x:Name="RamenoY1_64" Data="M5.9687847,0.24919319 L21.140738,0.28823054 21.17218,8.3143533 1.4575339,9.2916769 z" Fill="{DynamicResource BlueBrush}" HorizontalAlignment="Right" Height="11.037" Margin="0,0,-1.491,10.571" RenderTransformOrigin="-0.0425238692696327,0.500000038743017" Stretch="Fill" Stroke="{DynamicResource BlueBrush}" StrokeThickness="2"
+			VerticalAlignment="Bottom" Width="21.652"
+			Panel.ZIndex="0" >
             <Path.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1" ScaleX="-1"/>
                     <SkewTransform AngleY="0" AngleX="0"/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform X="0.17757967806998587"/>
+                    <RotateTransform Angle="-21"/>
+                    <TranslateTransform X="0.25470230770091895" Y="-0.0019929264237594779"/>
                 </TransformGroup>
             </Path.RenderTransform>
         </Path>
-        <Path Style="{StaticResource RamenaStyle}" x:Name="Rameno2_45" Data="M-1.8073171,0.19676379 L18.123567,0.2337964 18.380991,8.5692582 6.6773943,8.6979249 z" Fill="{DynamicResource BlueBrush}" HorizontalAlignment="Right" Margin="0,0,1.562,1.458" RenderTransformOrigin="0.127249843065485,0.49999995529652" Stretch="Fill" Stroke="{DynamicResource BlueBrush}" StrokeThickness="2"
-			Width="22.181"
-			Panel.ZIndex="0" Height="10.499" VerticalAlignment="Bottom" >
+        <Path Style="{StaticResource RamenaStyle}" x:Name="RamenoY2_64" Data="M-0.34085335,-0.41359217 L18.025928,-0.028331404 18.158538,8.5327605 2.1824945,8.441671 z" Fill="{DynamicResource BlueBrush}" HorizontalAlignment="Right" Margin="0,0,5.619,14.008" RenderTransformOrigin="0.127249843065485,0.49999995529652" Stretch="Fill" Stroke="{DynamicResource BlueBrush}" StrokeThickness="2"
+			Width="20.491"
+			Panel.ZIndex="0" Height="10.94" VerticalAlignment="Bottom" >
             <Path.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1" ScaleX="-1"/>
                     <SkewTransform AngleY="0" AngleX="0"/>
-                    <RotateTransform Angle="45"/>
-                    <TranslateTransform X="-1.0863957003710283" Y="-0.44999983319748971"/>
+                    <RotateTransform Angle="43"/>
+                    <TranslateTransform X="-0.84794426216851271" Y="-0.34990972457083025"/>
                 </TransformGroup>
             </Path.RenderTransform>
         </Path>
@@ -154,13 +143,52 @@
         <!--V DESIGN MODE:  x:Name="VariantGrid"  Visibility="Visible";   lebo inac sa neda editovat!!!!!
         dalsie Path...Stroke="Black" aby sme videli tvar Path, po nastaveni Path vratit x:Name="VariantGrid"  Visibility="Hidden"  Path Stroke="White", lebo inac nemozeme editovat Raozrez1, Rozrez2, Rameno1, Rameno2-->
 
-        <Grid x:Name="VariantGrid_45"  Visibility="Visible" Panel.ZIndex="20"  Background="Transparent" Margin="-1.241,0.083,1.261,-0.073" Grid.RowSpan="2">
+        <Grid x:Name="VariantGridY_64"  Visibility="Visible" Panel.ZIndex="20"  Background="Transparent" Margin="-3.697,-11.753,3.716,0.763">
             <!--<Path Style="{StaticResource variantStyle}" x:Name="Path2" Data="M6.65625,29.78125 L22.719,29.844 17.093837,18.794048" Fill="Transparent" HorizontalAlignment="Left" Margin="5.656,17.75,0,19.156" Stretch="Fill" Stroke="White" StrokeThickness="2" Width="18.063"  />
             <Path Style="{StaticResource variantStyle}" x:Name="Path1" Data="M2.8125,40.0625 L46.0005,39.8755" Fill="Transparent" Height="2.187" Margin="5.624,0,3,8.938" Stretch="Fill" Stroke="White" StrokeThickness="2" VerticalAlignment="Bottom" />
             <Path Style="{StaticResource variantStyle}" x:Name="Path3" Data="M46,29.78125 L33.96875,29.81275 25.999584,13.968065" Fill="Transparent" HorizontalAlignment="Right" Margin="0,13.219,3,19.188" Stretch="Fill" Stroke="White" StrokeThickness="2" Width="22" />-->
-            <Path Style="{StaticResource variantStyle}" x:Name="Path2" Data="M3.6426491,30.144117 L18.834366,30.092348 9.4305077,20.399759" Fill="Transparent" HorizontalAlignment="Left" Margin="6.1,19.939,0,18.258" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="17.177"  />
-            <Path Style="{StaticResource variantStyle}" x:Name="Path1" Data="M1.9441983,39.996282 L46.080475,39.957189" Fill="Transparent" Height="2.041" Margin="6.101,0,0,10.381" Stretch="Fill" Stroke="Black" StrokeThickness="2" VerticalAlignment="Bottom" Width="42.244" />
-            <Path Style="{StaticResource variantStyle}" x:Name="Path3" Data="M47.24983,29.781258 L33.979116,29.791609 18.79798,14.472577" Fill="Transparent" HorizontalAlignment="Right" Margin="0,14.299,1.642,18.624" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="30.458" />
+            <Path Style="{StaticResource variantStyle}" x:Name="Path2" Data="M6.7781548,32.236297 L22.204059,29.795203 13.131533,17.262245" Fill="Transparent" HorizontalAlignment="Left" Margin="6.712,20.802,0,12.129" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="17.405" RenderTransformOrigin="0.5,0.5"  >
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-12.278"/>
+                        <TranslateTransform X="0.55732512179918992" Y="-0.084360185125582632"/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+            <Path Style="{StaticResource variantStyle}" x:Name="Path3" Data="M49.4473,29.844786 L34.916308,29.600919 18.870345,14.887213" Fill="Transparent" HorizontalAlignment="Right" Margin="0,14.481,-1.057,18.801" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="32.583" />
+            <Path Style="{StaticResource variantStyle}" x:Name="Path3_Copy" Data="M47.312335,29.251535 L32.36066,29.253015 10.299795,22.18956" Fill="Transparent" HorizontalAlignment="Right" Margin="0,32.804,-1.065,8.241" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="39.021" RenderTransformOrigin="0.5,0.5" >
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                        <SkewTransform AngleY="0" AngleX="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform Y="5.1649999999999956"/>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
         </Grid>
+        <!--Pre Runtime
+        Fill="{DynamicResource vylukaPrestaveniaBrush}" 
+         Stroke="{DynamicResource vylukaPrestaveniaBrush}"
+        V Designe mode
+        Fill="LightGray"
+        Stroke="Black"
+        -->
+        <Path Style="{StaticResource RozrezStyle}" x:Name="RozrezY1_64" Data="M3.3892936,2.1263956 L14.601085,13.163346 32.014454,21.203323 29.226846,28.041114 8.5747359,19.066545 -2.4435819,7.8156868 z" 
+            Fill="{DynamicResource vylukaPrestaveniaBrush}" Margin="0.108,14.943,13.442,6.705" RenderTransformOrigin="0.73313046142258,0.755141832065706" Stretch="Fill" 
+            Stroke="{DynamicResource vylukaPrestaveniaBrush}" StrokeThickness="2"
+            Panel.ZIndex="-1" 
+              Grid.RowSpan="2" >
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="-45"/>
+                    <TranslateTransform X="-10.249117687582384" Y="-9.8639726212535663"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
     </Grid>
 </controls:BaseTrainSwitchControl>

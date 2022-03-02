@@ -101,6 +101,9 @@
     <Compile Include="UserControls\TrainSwitch64.xaml.cs">
       <DependentUpon>TrainSwitch64.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\TrainSwitchY64.xaml.cs">
+      <DependentUpon>TrainSwitchY64.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCArrow.xaml.cs">
       <DependentUpon>UCArrow.xaml</DependentUpon>
     </Compile>
@@ -310,6 +313,9 @@
     <Page Include="UserControls\TrainSwitch64.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TrainSwitchY64.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\UCArrow.xaml">
       <Generator>MSBuild:Compile</Generator>
