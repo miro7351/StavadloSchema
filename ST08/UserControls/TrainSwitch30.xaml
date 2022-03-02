@@ -148,13 +148,13 @@
         <!--Pre zobrazenie variantu: Visibility sa nastavuje v kode; v xaml je Visibility="Hidden"-->
         <!--V DESIGN MODE:  x:Name="VariantGrid"  Visibility="Visible";   dalsie Path...Stroke="Black" aby sme videli tvar Path, po nastaveni Path vratit x:Name="VariantGrid"  Visibility="Hidden", lebo inac nemozeme editovat Raozrez1, Rozrez2, Rameno1, Rameno2-->
 
-        <Grid x:Name="VariantGrid_30"  Visibility="Visible" Panel.ZIndex="20"  Background="Transparent" Margin="0.048,-1.832,-0.04,1.832">
+        <Grid x:Name="VariantGrid_30"  Visibility="Hidden" Panel.ZIndex="20"  Background="Transparent" Margin="0.048,-1.832,-0.04,1.832">
             <!--<Path Style="{StaticResource variantStyle}" x:Name="Path2" Data="M6.65625,29.78125 L22.719,29.844 17.093837,18.794048" Fill="Transparent" HorizontalAlignment="Left" Margin="5.656,17.75,0,19.156" Stretch="Fill" Stroke="White" StrokeThickness="2" Width="18.063"  />
             <Path Style="{StaticResource variantStyle}" x:Name="Path1" Data="M2.8125,40.0625 L46.0005,39.8755" Fill="Transparent" Height="2.187" Margin="5.624,0,3,8.938" Stretch="Fill" Stroke="White" StrokeThickness="2" VerticalAlignment="Bottom" />
             <Path Style="{StaticResource variantStyle}" x:Name="Path3" Data="M46,29.78125 L33.96875,29.81275 25.999584,13.968065" Fill="Transparent" HorizontalAlignment="Right" Margin="0,13.219,3,19.188" Stretch="Fill" Stroke="White" StrokeThickness="2" Width="22" />-->
-            <Path Style="{StaticResource variantStyle}" x:Name="Path2" Data="M8.2848125,30.607916 L20.756209,30.558536 10.183581,24.704545" Fill="Transparent" HorizontalAlignment="Left" Margin="5.678,26.279,0,15.788" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="14.436"  />
-            <Path Style="{StaticResource variantStyle}" x:Name="Path1" Data="M2.3326538,40.124339 L45.680597,39.978348" Fill="Transparent" Height="2.148" Margin="5.763,0,0,7.834" Stretch="Fill" Stroke="Black" StrokeThickness="2" VerticalAlignment="Bottom" Width="41.521" />
-            <Path Style="{StaticResource variantStyle}" x:Name="Path3" Data="M45.812522,29.865927 L34.822825,29.897427 12.656155,17.028548" Fill="Transparent" HorizontalAlignment="Right" Margin="0,19.016,2.777,16.313" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="35.16" />
+            <Path Style="{StaticResource variantStyle}" x:Name="Path2" Data="M8.2848125,30.607916 L20.756209,30.558536 10.183581,24.704545" Fill="Transparent" HorizontalAlignment="Left" Margin="5.678,26.279,0,15.788" Stretch="Fill" Stroke="White" StrokeThickness="2" Width="14.436"  />
+            <Path Style="{StaticResource variantStyle}" x:Name="Path1" Data="M2.3326538,40.124339 L45.680597,39.978348" Fill="Transparent" Height="2.148" Margin="5.763,0,0,7.834" Stretch="Fill" Stroke="White" StrokeThickness="2" VerticalAlignment="Bottom" Width="41.521" />
+            <Path Style="{StaticResource variantStyle}" x:Name="Path3" Data="M45.812522,29.865927 L34.822825,29.897427 12.656155,17.028548" Fill="Transparent" HorizontalAlignment="Right" Margin="0,19.016,2.777,16.313" Stretch="Fill" Stroke="White" StrokeThickness="2" Width="35.16" />
         </Grid>
     </Grid>
 </controls:BaseTrainSwitchControl>
