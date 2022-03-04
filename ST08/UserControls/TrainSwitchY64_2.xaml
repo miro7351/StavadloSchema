@@ -1,4 +1,4 @@
-﻿<controls:BaseTrainSwitchControl x:Class="PA.Stavadlo.MH.UserControls.TrainSwitchY64"
+﻿<controls:BaseTrainSwitchControl x:Class="PA.Stavadlo.MH.UserControls.TrainSwitchY64_2"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -22,8 +22,8 @@
     <controls:BaseTrainSwitchControl.Resources>
 
         <!--Odremovat, ak sa pouziva Blend. V Runtime zaremovat, aby poruchove stavy blikali-->
-        <SolidColorBrush x:Key="redBrush">#FFFF0000</SolidColorBrush>
-        <Color x:Key="redColor">#FFFF0000</Color>
+        <SolidColorBrush x:Key="RedBrush">#FFFF0000</SolidColorBrush>
+        <Color x:Key="RedColor">#FFFF0000</Color>
         <SolidColorBrush x:Key="transparentBrush">Transparent</SolidColorBrush>
         <Color x:Key="transparentColor">Transparent</Color>
         <Color x:Key="poruchaCervenaColor">#FFB9AAB9</Color>
@@ -32,7 +32,7 @@
         <!--=====-->
 
         <Style TargetType="Path" x:Key="RozrezStyle">
-            <Setter Property="Fill" Value="{StaticResource RedBrush}"/>
+            <Setter Property="Fill" Value="{StaticResource transparentBrush}"/>
             <Setter Property="Stretch" Value="Fill"/>
             <Setter Property="StrokeThickness" Value="2"/>
             <Setter Property="Stroke" Value="Black"/>
@@ -82,12 +82,12 @@
     </controls:BaseTrainSwitchControl.Resources>
 
     <!-- mozeme nastavit ToolTip="{x:Null}" a vyhybka nebude mat tooltip
-      <UserControls:TrainSwitch64 x:Name="V100"  Margin="20,0,0,-0.033" ToolTip="{x:Null}".../>-->
+      <UserControls:TrainSwitch64_2 x:Name="V100"  Margin="20,0,0,-0.033" ToolTip="{x:Null}".../>-->
     <controls:BaseTrainSwitchControl.ToolTip>
         <StaticResource ResourceKey="ttVyhybka"/>
     </controls:BaseTrainSwitchControl.ToolTip>
 
-    <Grid MouseLeftButtonDown="MouseLeftButtonDown" x:Name="mainGridY_64" Margin="0">
+    <Grid MouseLeftButtonDown="MouseLeftButtonDown" x:Name="mainGridY_64_2" Margin="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="39*"/>
             <RowDefinition Height="11*"/>
@@ -102,8 +102,8 @@
               Data="M0,0 L50,0 L50,50 L0,50 z"  Margin="0,0,0,0"  Visibility="Collapsed" Grid.RowSpan="2"/>
 
         <!--Fill="{DynamicResource vylukaPrestaveniaBrush}"    Stroke="{DynamicResource vylukaPrestaveniaBrush}"-->
-        <Path Style="{StaticResource RozrezStyle}" x:Name="RozrezY2_64" Data="M3.2566807,2.1698331 L13.379035,11.876801 32.960147,13.223464 32.72457,20.614921 9.0470747,20.132135 -2.7529838,8.1197815 z" 
-              Fill="{DynamicResource vylukaPrestaveniaBrush}" Margin="0.294,1.751,11.999,16.484" RenderTransformOrigin="0.73313046142258,0.755141832065706" Stretch="Fill" 
+        <Path Style="{StaticResource RozrezStyle}" x:Name="RozrezY2_64_2" Data="M3.2566807,2.1698331 L15.412652,13.643392 33.342872,14.647982 32.981743,22.563465 10.579685,21.638097 -2.7529838,8.1197815 z" 
+              Fill="{DynamicResource vylukaPrestaveniaBrush}" Margin="0.294,1.751,11.623,14.502" RenderTransformOrigin="0.73313046142258,0.755141832065706" Stretch="Fill" 
               Stroke="{DynamicResource vylukaPrestaveniaBrush}" StrokeThickness="2"
 			Panel.ZIndex="0" >
             <Path.RenderTransform>
@@ -111,31 +111,31 @@
                     <ScaleTransform ScaleY="1" ScaleX="-1"/>
                     <SkewTransform AngleY="0" AngleX="0"/>
                     <RotateTransform Angle="45"/>
-                    <TranslateTransform X="-7.771094028420535" Y="-3.2188925410481986"/>
+                    <TranslateTransform X="-9.2999904877622157" Y="-3.852182189972126"/>
                 </TransformGroup>
             </Path.RenderTransform>
         </Path>
-        <Path Style="{StaticResource RamenaStyle}" x:Name="RamenoY1_64" Data="M5.0644545,-0.0072861533 L21.115894,-0.060941531 21.201346,7.4269293 1.5115433,8.753425 z" Fill="{DynamicResource BlueBrush}" HorizontalAlignment="Right" Height="10.812" Margin="0,0,-1.311,11.068" RenderTransformOrigin="-0.0425238692696327,0.500000038743017" Stretch="Fill" Stroke="{DynamicResource BlueBrush}" StrokeThickness="2"
-			VerticalAlignment="Bottom" Width="21.634"
+        <Path Style="{StaticResource RamenaStyle}" x:Name="RamenoY1_64_2" Data="M7.7365929,0.019820086 L21.225081,-0.19060783 21.176963,8.4576391 0.093623511,9.4757968 z" Fill="{DynamicResource BlueBrush}" HorizontalAlignment="Right" Height="11.662" Margin="0,0,-4.02,10.849" RenderTransformOrigin="-0.0425238692696327,0.500000038743017" Stretch="Fill" Stroke="{DynamicResource BlueBrush}" StrokeThickness="2"
+			VerticalAlignment="Bottom" Width="23.066"
 			Panel.ZIndex="0" >
             <Path.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1" ScaleX="-1"/>
                     <SkewTransform AngleY="0" AngleX="0"/>
                     <RotateTransform Angle="-21"/>
-                    <TranslateTransform X="0.21290589047007291" Y="0.0057535816273635021"/>
+                    <TranslateTransform X="0.48295607689953535" Y="-0.044297262009054705"/>
                 </TransformGroup>
             </Path.RenderTransform>
         </Path>
-        <Path Style="{StaticResource RamenaStyle}" x:Name="RamenoY2_64" Data="M-0.34085335,-0.41359217 L18.143768,-0.03244395 18.099621,8.5348175 2.1824945,8.441671 z" Fill="{DynamicResource BlueBrush}" HorizontalAlignment="Right" Margin="0,0,5.634,14.006" RenderTransformOrigin="0.127249843065485,0.49999995529652" Stretch="Fill" Stroke="{DynamicResource BlueBrush}" StrokeThickness="2"
-			Width="20.476"
-			Panel.ZIndex="0" Height="10.942" VerticalAlignment="Bottom" >
+        <Path Style="{StaticResource RamenaStyle}" x:Name="RamenoY2_64_2" Data="M0.49452553,1.6324317 L18.030773,1.8004216 17.972248,9.9551898 3.2393082,9.8986508 z" Fill="{DynamicResource BlueBrush}" HorizontalAlignment="Right" Margin="0,0,8.58,13.712" RenderTransformOrigin="0.127249843065485,0.49999995529652" Stretch="Fill" Stroke="{DynamicResource BlueBrush}" StrokeThickness="2"
+			Width="19.528"
+			Panel.ZIndex="0" Height="10.317" VerticalAlignment="Bottom" >
             <Path.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1" ScaleX="-1"/>
                     <SkewTransform AngleY="0" AngleX="0"/>
                     <RotateTransform Angle="43"/>
-                    <TranslateTransform X="-0.845321543165273" Y="-0.34887660808086007"/>
+                    <TranslateTransform X="-0.423338941193391" Y="-0.18265324063688926"/>
                 </TransformGroup>
             </Path.RenderTransform>
         </Path>
@@ -143,28 +143,28 @@
         <!--V DESIGN MODE:  x:Name="VariantGrid"  Visibility="Visible";   lebo inac sa neda editovat!!!!!
         dalsie Path...Stroke="Black" aby sme videli tvar Path, po nastaveni Path vratit x:Name="VariantGrid"  Visibility="Hidden"  Path Stroke="White", lebo inac nemozeme editovat Raozrez1, Rozrez2, Rameno1, Rameno2-->
 
-        <Grid x:Name="VariantGridY_64"  Visibility="Visible" Panel.ZIndex="20"  Background="Transparent" Margin="-3.706,-11.794,3.73,0.804">
+        <Grid x:Name="VariantGridY_64_2"  Visibility="Visible" Panel.ZIndex="20"  Background="Transparent" Margin="-3.697,-11.753,3.716,0.763">
             <!--<Path Style="{StaticResource variantStyle}" x:Name="Path2" Data="M6.65625,29.78125 L22.719,29.844 17.093837,18.794048" Fill="Transparent" HorizontalAlignment="Left" Margin="5.656,17.75,0,19.156" Stretch="Fill" Stroke="White" StrokeThickness="2" Width="18.063"  />
             <Path Style="{StaticResource variantStyle}" x:Name="Path1" Data="M2.8125,40.0625 L46.0005,39.8755" Fill="Transparent" Height="2.187" Margin="5.624,0,3,8.938" Stretch="Fill" Stroke="White" StrokeThickness="2" VerticalAlignment="Bottom" />
             <Path Style="{StaticResource variantStyle}" x:Name="Path3" Data="M46,29.78125 L33.96875,29.81275 25.999584,13.968065" Fill="Transparent" HorizontalAlignment="Right" Margin="0,13.219,3,19.188" Stretch="Fill" Stroke="White" StrokeThickness="2" Width="22" />-->
-            <Path Style="{StaticResource variantStyle}" x:Name="Path2" Data="M6.7870284,32.195823 L21.90106,29.547529 13.164771,17.354232" Fill="Transparent" HorizontalAlignment="Left" Margin="6.742,20.892,0,12.174" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="17.084" RenderTransformOrigin="0.5,0.5"  >
+            <Path Style="{StaticResource variantStyle}" x:Name="Path2" Data="M6.7295312,32.101405 L20.690106,30.015279 12.260581,18.0695" Fill="Transparent" HorizontalAlignment="Left" Margin="6.838,21.604,0,12.273" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="15.942" RenderTransformOrigin="0.5,0.5"  >
                 <Path.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
                         <SkewTransform/>
                         <RotateTransform Angle="-12.278"/>
-                        <TranslateTransform X="0.54664196330564785" Y="-0.048685116361538938"/>
+                        <TranslateTransform X="0.47347058641841322" Y="0.08201588946415761"/>
                     </TransformGroup>
                 </Path.RenderTransform>
             </Path>
-            <Path Style="{StaticResource variantStyle}" x:Name="Path3" Data="M49.4473,29.844786 L34.728838,29.473765 18.682875,14.887206" Fill="Transparent" HorizontalAlignment="Right" Margin="0,14.485,-1.057,18.801" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="32.767" />
-            <Path Style="{StaticResource variantStyle}" x:Name="Path3_Copy" Data="M47.312335,29.251535 L32.36066,29.253015 10.174823,22.189569" Fill="Transparent" HorizontalAlignment="Right" Margin="0,32.804,-1.065,8.24" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="39.145" RenderTransformOrigin="0.5,0.5" >
+            <Path Style="{StaticResource variantStyle}" x:Name="Path3" Data="M49.278192,29.556061 L31.389374,29.450102 17.296542,16.612253" Fill="Transparent" HorizontalAlignment="Right" Margin="0,16.174,-0.891,19.087" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="33.989" />
+            <Path Style="{StaticResource variantStyle}" x:Name="Path3_Copy" Data="M47.097873,29.441007 L31.668808,29.055436 10.345727,21.91025" Fill="Transparent" HorizontalAlignment="Right" Margin="0,33.06,-0.862,7.5" Stretch="Fill" Stroke="Black" StrokeThickness="2" Width="38.778" RenderTransformOrigin="0.5,0.5" >
                 <Path.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleY="-1" ScaleX="1"/>
                         <SkewTransform AngleY="0" AngleX="0"/>
                         <RotateTransform Angle="0"/>
-                        <TranslateTransform Y="5.1639999999999979"/>
+                        <TranslateTransform Y="4.6799999999999962"/>
                     </TransformGroup>
                 </Path.RenderTransform>
             </Path>
@@ -176,8 +176,8 @@
         Fill="LightGray"
         Stroke="Black"
         -->
-        <Path Style="{StaticResource RozrezStyle}" x:Name="RozrezY1_64" Data="M3.3892936,2.1263956 L14.601085,13.163346 32.014454,21.203323 29.226846,28.041114 8.5747359,19.066545 -2.4435819,7.8156868 z" 
-            Fill="{DynamicResource vylukaPrestaveniaBrush}" Margin="0.108,14.943,13.442,6.705" RenderTransformOrigin="0.73313046142258,0.755141832065706" Stretch="Fill" 
+        <Path Style="{StaticResource RozrezStyle}" x:Name="RozrezY1_64_2" Data="M3.5071707,2.0104999 L14.954716,12.81566 32.014454,21.203323 29.226846,28.041114 8.6746853,19.175151 -2.7972159,8.1633734 z" 
+            Fill="{DynamicResource vylukaPrestaveniaBrush}" Margin="0.444,14.775,12.752,6.755" RenderTransformOrigin="0.73313046142258,0.755141832065706" Stretch="Fill" 
             Stroke="{DynamicResource vylukaPrestaveniaBrush}" StrokeThickness="2"
             Panel.ZIndex="-1" 
               Grid.RowSpan="2" >
@@ -186,7 +186,7 @@
                     <ScaleTransform ScaleY="-1" ScaleX="-1"/>
                     <SkewTransform AngleY="0" AngleX="0"/>
                     <RotateTransform Angle="-45"/>
-                    <TranslateTransform X="-10.249117687582384" Y="-9.8639726212535663"/>
+                    <TranslateTransform X="-10.755167986682167" Y="-9.8325731964909728"/>
                 </TransformGroup>
             </Path.RenderTransform>
         </Path>
