@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{516D110D-223
 	ProjectSection(SolutionItems) = preProject
 		Doc\BlendEditor.txt = Doc\BlendEditor.txt
 		Doc\PopisProjektu.txt = Doc\PopisProjektu.txt
+		Doc\Situačná schema-ST.8.pdf = Doc\Situačná schema-ST.8.pdf
 	EndProjectSection
 EndProject
 Global

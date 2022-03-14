@@ -630,5 +630,21 @@
                 </TransformGroup>
             </UserControls:TrainSwitchY64.RenderTransform>
         </UserControls:TrainSwitchY64>
+        <Rectangle Fill="#FFCCED6C" HorizontalAlignment="Left" Height="10" Margin="648.408,404.041,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.506,0.502" Panel.ZIndex="40">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-25.046"/>
+                    <TranslateTransform X="-21.19" Y="34.413"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Path x:Name="K770A_Copy11" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
+            Height="10.4" Margin="1505.5,42,0,0" Stretch="Fill"  Width="176.696"
+                      
+                     />
+        <UserControls:UCrozvadzac HorizontalAlignment="Left" Height="50" Margin="117,42,0,0" VerticalAlignment="Top" Width="50"/>
+        <UserControls:UC_VstupOdchod HorizontalAlignment="Left" Height="79" Margin="39.333,263.956,0,0" SuhlasStatus="{Binding STC[s386].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP" VerticalAlignment="Top" Width="58" Visibility="Visible" RenderTransformOrigin="0.379,1.329"/>
     </Grid>
 </UserControl>

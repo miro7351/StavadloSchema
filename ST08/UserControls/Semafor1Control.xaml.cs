@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
 using System.Windows.Shapes;
-
-using PA.Stavadlo.MH.Controls;
-using PA.Stavadlo.MH.Enums;
-using ST08;
 
 namespace PA.Stavadlo.MH.UserControls
 {
@@ -112,7 +107,7 @@ namespace PA.Stavadlo.MH.UserControls
         {
             //Pre kazdy semafor mozeme nastavit v xaml binding pre DP TimerFlag: <controls:Semafor1Control x:Name="L808"  TimerFlag="{Binding TimerFlag, Mode=OneWay}".../>
             //Zmena TimerFlag zabezpecuje prekreslenie semaforu, ak je v blikajucom stave.
-            //AbBy sme nepisali pre kazdy semafor binding pre DP TimerFag v xaml, binding nastavime tu v kode.
+            //Aby sme nepisali pre kazdy semafor binding pre DP TimerFag v xaml, binding nastavime tu v kode.
             //Je to vyhodne, lebo pre vsetky semafory DP TimerFlagProperty sa binduje na jeden zdroj v DataContexte!!!
             //"TimerFlag" je meno property z DataContextu.
             //DataContext.TimerFlag sa nastavuje pomocou 1 sec. casovaca true/false, pouziva na to, aby vsetky semafory blikali synchronizovane (naraz)!!
