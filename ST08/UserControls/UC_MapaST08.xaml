@@ -91,7 +91,7 @@
                 <controls:UC_ColorPicker x:Name="colorPicker" HorizontalAlignment="Left" Margin="85,990,0,0" VerticalAlignment="Top"/>
 
                 <!--#region SEMAFORY -->
-                <controls:Semafor1Control x:Name="S119c" SemaphoreType="S1"    Margin="108.156,599.004,0,0"
+                <controls:Semafor1Control x:Name="S119c" SemaphoreType="S3"    Margin="108.156,599.004,0,0"
                     SemaforStatus="{Binding STC[S119c].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
                     <controls:Semafor1Control.RenderTransform>
                         <TransformGroup>
@@ -103,8 +103,8 @@
                     </controls:Semafor1Control.RenderTransform>
                 </controls:Semafor1Control>
 
-                <controls:Semafor1Control x:Name="L210" SemaphoreType="S3"    Margin="111.489,528.56,0,0"
-                    SemaforStatus="{Binding STC[L210].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
+                <controls:Semafor1Control x:Name="S210" SemaphoreType="S3"    Margin="111.489,528.56,0,0"
+                    SemaforStatus="{Binding STC[S210].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
                     <controls:Semafor1Control.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
