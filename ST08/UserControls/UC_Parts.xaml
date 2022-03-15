@@ -646,5 +646,39 @@
                      />
         <UserControls:UCrozvadzac HorizontalAlignment="Left" Height="50" Margin="117,42,0,0" VerticalAlignment="Top" Width="50"/>
         <UserControls:UC_VstupOdchod HorizontalAlignment="Left" Height="79" Margin="39.333,263.956,0,0" SuhlasStatus="{Binding STC[s386].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP" VerticalAlignment="Top" Width="58" Visibility="Visible" RenderTransformOrigin="0.379,1.329"/>
+        <Path x:Name="K770A_Copy7" Data="M-0.08607189,-0.00023271153 L90.820968,0.44467716 90.824161,12.315843 -0.08287891,11.870933"
+            Height="12.084" Margin="41.158,451.009,0,0" Stretch="Fill"  Width="177.035" RenderTransformOrigin="0.5,0.5"
+                      
+                     >
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0.072"/>
+                    <TranslateTransform X="0.261505361565753" Y="-0.2489466406001446"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path x:Name="V194p1_Copy11"
+            Height="74.656" Data="M115.00919,0.5 L168.11593,0.57167071 168.11593,9.634643 120.493,9.6553692 53.661999,73.80114 0.5,74.155999 0.5,65.155999 49.942121,65.155999 z" Margin="1781.105,661.481,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="168.616">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="43.804"/>
+                    <TranslateTransform Y="1.1000843281600094E-09"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path  x:Name="V539p2_Copy8" Data="M56.159775,9.8077837 L36.402337,49.833865 148.36111,51.126704 168.50714,10.790699 z M50.843197,0.5 L185.62323,1.5392517 185.52144,10.939656 178.40372,10.877283 153.67784,60.434866 31.788214,59.181494 14.911439,93.371718 158.69186,94.757239 158.60767,103.7564 74.667168,102.94752 91.833123,139.91519 159.03264,140.6207 158.95865,150.02132 86.343369,149.12182 64.886872,103.00061 0.5,102.23282 0.58418965,93.233656 5.0415559,93.27661 z" Height="150.521" Margin="288.068,762.663,0,0" RenderTransformOrigin="0.022927584284168,-9.10772556298957E-09" Stretch="Fill" Width="186.123">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.536"/>
+                    <TranslateTransform X="-1.6653960788204358E-07" Y="3.5604280130954735E-05"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
     </Grid>
 </UserControl>

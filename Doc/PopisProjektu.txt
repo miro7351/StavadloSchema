@@ -34,7 +34,35 @@ V kode StavadloPage.xaml upravit kod:
 
 Postupne kreslit schemu stavadla, spustit aplikaciu a sledovat ako sa vykresluje stavadlo.
 
-Poznamka napisana na PC 17.02.2022 21:12.
+-----------------------------------------------------
+
+Pri kresleni treba pouzivat dokument "Situacna schema stxx.pdf"
+
+V scheme su oznacene kolajove useky, ktore nepatria vynemam napr. 119b.
+Ale v xaml editore dam useku x:Name="_119b".
+
+<Path  x:Name="_119b"  .../>
+
+Ak sa nakreslia a oznacia vsetky kolajove useky pouzitim property x:Name, potom uz v projekte netreba pokracovat
+a subor UC_MapaSTxx.xaml treba preniest do ostreho projektu.
+
+Dalej nizsie su len poznamky ako je prepojeny kod a grafika pre jednotlive prvky stavadla.
+Ale tieto attached property treba uz nastavovat v ostrom projekte.
+
+ Pomocou attached property PathNumber nastavim cislo useku na 119b.
+ <Path  x:Name="_119b"  atttProp.PathHelper.PathNumber="119b"..../>
+
+Ak kolajovy usek ma v situacnej scheme oznacenie "K2101a", potom nastavim <Path x:Name="K201a" ...../>
+
+Ak usek je neizolovany, musime nastavit attached property IsUnisolated
+napr. <Path x:Name="_119c" atttProp.PathHelper.IsUnisolated="True" ..../>
+
+Pre binding musime pre kazdy kolajovy usek, ktory nepatri vymene, nastavit attached property PathStatus.
+
+napr. <Path x:Name="_119c" 
+             atttProp.PathHelper.IsUnisolated="True" 
+             atttProp.PathNumber="119c"
+             atttProp.PathStatus="{Binding STC[_119c].CombineStatus, Mode=OneWay}"...../>
 
 
   

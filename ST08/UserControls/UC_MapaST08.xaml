@@ -91,29 +91,6 @@
                 <controls:UC_ColorPicker x:Name="colorPicker" HorizontalAlignment="Left" Margin="85,990,0,0" VerticalAlignment="Top"/>
 
                 <!--#region SEMAFORY -->
-                <controls:Semafor1Control x:Name="S119c" SemaphoreType="S3"    Margin="108.156,599.004,0,0"
-                    SemaforStatus="{Binding STC[S119c].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-
-                <controls:Semafor1Control x:Name="S210" SemaphoreType="S3"    Margin="111.489,528.56,0,0"
-                    SemaforStatus="{Binding STC[S210].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
 
                 <!--#endregion SEMAFORY -->
 
@@ -123,6 +100,308 @@
                      SuhlasStatus="{Binding STC[s386].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
                      Margin="14.093,608.3,0,0" />
 
+                <!-- #region == KOLAJOVE USEKY == -->
+
+                <!-- Nazov: 119c; Podtyp: 0 -->
+                <Path x:Name="_119c" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
+                    Height="10" Margin="46.592,588,0,0" Stretch="Fill" Width="64.329" 
+                />
+
+                <!-- Nazov: 210; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_210" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
+                    Height="10" Margin="48.257,518,0,0" Stretch="Fill" Width="62.664"
+                />
+
+                <!-- Nazov: 119b; Podtyp: n  (izolovany) -->
+                <Path  x:Name="_119b" Data="M1097.4085,54.644474 L1300.8998,54.314718 1300.8711,63.29346 1102.7252,63.951939 1070.0219,130.73953 1061.8919,126.83655 z" 
+                    Height="77.399" Margin="276.806,556.364,0,0" Stretch="Fill"  Width="240.008" RenderTransformOrigin="0,0" 
+                >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="64"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+                <!-- Nazov: K399; Podtyp: n  (izolovany) -->
+                <Path x:Name="K399"  Data="M1099.0966,54.80596 L1231.4286,54.548041 1231.4289,63.777199 1104.7682,64.168894 994.17989,292.36074 986.13538,288.43729 z"
+                    Height="238.828" Margin="373.122,1010.198,0,-199.026" Stretch="Fill"  Width="246.276" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-180.087"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+                <!-- Nazov: K119a; Podtyp: n  (izolovany) -->
+                <Path x:Name="K119a" Data="M0,-0.13889223 L82.970182,-0.3626483 83.020264,9.6373517 0,10.138892 z"  
+                    Height="10.453" Margin="618.25,999.338,0,0" Stretch="Fill" Width="104.604"
+                />
+
+
+                <!-- Nazov: K140; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="K140" Data="M1226.5169,23.849999 L1121.5478,23.805986 1076.2455,117.00045 1042.2123,116.87553 1042.1754,108.00047 1070.8337,108.04205 1115.1263,14.368401 1226.5118,14.495734"
+                    Height="103.63" Margin="531.606,912.503,0,0" Stretch="Fill" Width="185.341"
+                    RenderTransformOrigin="0,0" >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+                <!-- Nazov: 140; Podtyp: 0 (neizolovany)  ??? su tu 2 useky 140-->
+                <Path x:Name="_140_V" Data="M-0.066777246,-0.046318929 L52.031361,-0.50259756 52.081443,9.7751225 0,10.046315 z"  
+                    Height="10.496" Margin="466.701,808.661,0,0" Stretch="Fill" Width="66.077"
+                />
+
+                <!-- Nazov: 141; Podtyp: 0 (neizolovany) -->
+                <Path x:Name="_141" Data="M1138.8882,23.895242 L1121.5478,23.805986 1076.2455,117.00045 1042.2123,116.87553 1042.1754,108.00047 1070.0832,107.67987 1115.1263,14.368401 1139.1299,14.573789"
+                    Height="103.63" Margin="528.272,774.337,0,0" Stretch="Fill" Width="97.954"
+                    RenderTransformOrigin="0.5,0.5" >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="64.24"/>
+                            <TranslateTransform X="62.682802248917739" Y="39.351344860744575"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+                <!-- Nazov: 142; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_142" Data="M0,0 L108.02641,0.44444444 108.02641,10.444444 0,10 z"
+                    Height="10.4" Margin="531.822,808.602,0,0" Stretch="Fill"  Width="188.421"
+                />
+
+                <!-- Nazov: 143; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_143"
+                    Height="74.801" Data="M22.561644,65.239333 L49.942121,65.155999 115.00919,0.5 156.44924,0.57167071 156.44924,9.634643 119.65967,9.6553692 53.661999,74.30114 22.561644,74.239333" Margin="584.833,743.981,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="134.886">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform Y="0"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Nazov: 119; Podtyp: n  (izolovany) -->
+                <Path x:Name="_119" Data="M0,0 L73.580429,-0.79476509 73.580429,9.2052349 0,10 z"  
+                    Height="10.714" Margin="941.177,998.277,0,0" Stretch="Fill" Width="410.06"
+                />
+
+                <!-- Nazov: 144; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_144" Data="M32.13236,0.74076125 L90.734896,0.25927222 90.734896,10.444444 32.13236,10.74077 z"
+                    Height="10.435" Margin="307.378,517.332,0,0" Stretch="Fill"  Width="125.922"
+                />
+
+                <!-- Nazov: 145; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_145" Data="M32.13236,0.34728283 L90.734896,0.027954181 90.734896,10.027954 32.13236,10.624999 z"
+                    Height="10.543" Margin="342.463,450.001,0,0" Stretch="Fill"  Width="90.725"
+                />
+
+
+                <!-- Nazov: 146; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_146" Data="M32.13236,0.30099447 L90.734896,0.37501061 90.734896,10.583319 32.13236,10.231553 z"
+                    Height="10.255" Margin="378.63,379.652,0,0" Stretch="Fill"  Width="90.447"
+                />
+
+                <!-- Nazov: 147; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_147" Data="M20.131881,-0.21604364 L117.44115,-0.030862301 117.44115,9.737662 20.131881,9.6913592 z"  
+                    Height="9.959" Margin="385.518,314.215,0,0" Stretch="Fill" Width="64.649"
+                />
+
+
+                <!-- Nazov: 83a; Podtyp: n  (izolovany) -->
+                <Path  x:Name="_83a" Data="M-0.44608812,111.48552 L20.529024,48.296262 30.967978,48.273909 30.970057,55.41278 23.291202,55.399011 3.4293793,114.56363 z" 
+                      Height="86.216"  Stretch="Fill" Width="66.329" Margin="917.898,173.338,0,0"/>
+
+
+                <!-- Nazov: K201a; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="K201a"   Data="M-0.013804301,0.69164428 L9.9861957,0.69164428 9.9923662,11.001001 0.0085234879,11.119151" 
+                    Height="10.386" Width="41.694" Margin="796.51,35.626,0,0"  Stretch="Fill" RenderTransformOrigin="0,0">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="31.716"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+
+                <!-- Nazov: 201a; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_201" Data="M0,0 L90,0 90,10 0,10 z"
+                    Height="10" Margin="1287.683,114.259,0,0" Stretch="Fill"  Width="250.544"
+                />
+
+
+                <!-- Nazov: 83; Podtyp: n  (izolovany) -->
+                <Path x:Name="_83" Data="M0,0 L90,0 90,10 0,10 z"
+                    Height="10" Margin="1284.757,173.952,0,0" Stretch="Fill"  Width="96.23"
+                />
+
+                <!-- Nazov: 129; Podtyp: n  (izolovany) -->
+                <Path x:Name="_129" Data="M-7.541637,0.092590323 L125.06522,-0.049386541 125.06522,9.950613 -7.541637,10.09259 z"
+                    Height="10.128" Margin="1273.417,237.72,0,0" Stretch="Fill"  Width="77.194"
+                />
+
+
+                <!-- Nazov: 80a; Podtyp: n  (izolovany) -->
+                <Path x:Name="_80a"  Data="M1098.2015,56.597602 L1144.4134,56.558169 1144.4134,65.704016 1104.5192,65.502531 806.10522,357.832 799.20661,351.11693 z"
+                    Height="302.294" Margin="2250.067,854.251,0,-106.545" Stretch="Fill"  Width="346.176" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+
+                <!-- Nazov: 104; Podtyp: n  (izolovany) -->
+                <Path x:Name="_104" Data="M-0.026332575,0 L90.734896,0.44444444 90.734896,10.444444 -0.026332575,10 z"
+                    Height="10.4" Margin="1870.892,514.1,0,0" Stretch="Fill"  Width="216.427"
+                />
+
+
+                <!-- Nazov: 105; Podtyp: n  (izolovany) -->
+                <Path x:Name="_105" Data="M0,0 L90.8823,0.44444444 90.919152,10.629632 0,10 z"
+                    Height="10.566" Margin="1879.855,450.858,0,0" Stretch="Fill"  Width="206.599"
+                />
+
+
+                <!-- Nazov: 106; Podtyp: n  (izolovany) -->
+                <Path x:Name="_106" Data="M15.198712,0.49383094 L90.734896,0.44444444 90.734896,10.444444 15.198712,10.493831 z"
+                    Height="10.044" Margin="1879.185,388.701,0,0" Stretch="Fill"  Width="95.466"
+                />
+
+
+                <!-- Nazov: 107; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_107" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
+                    Height="10.4" Margin="1809.304,314.288,0,0" Stretch="Fill"  Width="176.696"
+                />
+
+                <!-- Nazov: 108; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_108" Data="M0,0 L119.20641,0.93827157 119.20641,10.938271 0,10 z"
+                    Height="10.844" Margin="1809.488,183.067,0,0" Stretch="Fill"  Width="281.751"
+                />
+
+                <!-- Nazov: 109; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_109" Data="M0,-0.27779153 L81.86163,-0.32717422 81.829353,10.158934 0,10.208317 z"
+                    Height="10.483" Margin="1810.74,110.801,0,0" Stretch="Fill"  Width="159.514"
+                />
+
+                <!-- Nazov: 110; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_110" Data="M11.050193,-2.917111E-14 L91.122222,0.44444444 91.122222,11.000048 11.050193,10.555604 z"
+                    Height="10.898" Margin="1810.74,40.821,0,0" Stretch="Fill"  Width="156.046"
+                />
+
+
+                <!-- Nazov: 80; Podtyp: 0  (neizolovany) -->
+                <Path x:Name="_80_1" Data="M90.239529,10 L-1.4112582,10 -1.4112582,-0.092592593 90.239529,1.6770741E-13"  
+                    Height="10.083" Margin="2647.051,487.906,0,0" Stretch="Fill" Width="55.117" RenderTransformOrigin="3.264,-12.516"
+                />
+
+
+                <!-- Nazov: 113; Podtyp: 0 (neizolovany)-->
+                <Path  x:Name="_113" Data="M1098.0421,54.682426 L1154.0909,54.375488 1153.9265,63.774981 1103.6942,63.971619 1085.3602,100.56406 1077.1193,96.417517 z" 
+                       Height="47.192" Margin="2528.949,165.567,0,0" Stretch="Fill"  Width="77.967" RenderTransformOrigin="0,0" 
+                       >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-116.627"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+                <!-- Nazov: 81; Podtyp: n  (izolovany) -->
+                <Path x:Name="_81"  Data="M1,0.77747252 L80.560339,0.77747252 80.560339,9.1 1,9.1 z"  HorizontalAlignment="Left" Height="10.35" Margin="2489.25,314.873,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="72.269"/>
+
+                <!-- Nazov: 80; Podtyp: n  (izolovany) -->
+                <Path x:Name="_80" Data="M0,-0.13888386 L90.734896,0.25926258 90.734896,10.351848 0,10.092586 z"
+                    Height="10.442" Margin="2547.518,487.547,0,0" Stretch="Fill"  Width="100.363"
+                />
+                <!-- #endregion == KOLAJOVE USEKY == -->
+
+                
+                
+                
+                
+                
+                
+                <!-- #region == OZNACENIE USEKOV ==-->
+
+                <!-- Izolovany usek:   Podtyp="n"
+                     Neizolovany usek: Podtyp="0"
+                -->
+
+                <!-- Nazov: K119c; Podtyp: -->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="48.257,562.437,0,0"  Text="119c"/>
+
+                <!-- Nazov: K119b; Podtyp: -->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="344.077,664.909,0,0"  Text="119b"/>
+
+                <!-- Nazov: 210; Podtyp: -->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="48.257,492.492,0,0"  Text="210"/>
+
+
+                <!-- Nazov: K140; Podtyp: -->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="480.333,781.239,0,0"  Text="140"/>
+
+                <!-- Nazov: K140; Podtyp: -->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="634.243,876.382,0,0"  Text="140" />
+                <!-- Nazov: K141; Podtyp: -->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="634.333,825.239,0,0"  Text="141"/>
+                <!-- Nazov: K142; Podtyp: -->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="661.333,781.239,0,0"  Text="142"/>
+                <!-- Nazov: K143; Podtyp: -->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="677.666,720.938,0,0"  Text="143"/>
+
+                <!-- Nazov: K119a; Podtyp: -->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="667.243,973.382,0,0"  Text="119a" />
+
+                <!-- Nazov: K396; Podtyp: -->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="565.333,784.239,0,0"  Text="396"/>
+
+                <!-- Nazov: K398; Podtyp: -->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="528.127,823.901,0,0"  Text="398"/>
+
+
+                <!-- Nazov: K397; Podtyp: -->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="547.537,870.37,0,0"  Text="397"/>
+
+                <!-- Nazov: K144; Podtyp: 0 ?-->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="355.077,492.909,0,0"  Text="144"/>
+
+                <!-- Nazov: K145; Podtyp: 0 ?-->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="383.077,424.909,0,0"  Text="145"/>
+
+                <!-- Nazov: K146; Podtyp: 0 ?-->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="402.077,355,0,0"  Text="146"/>
+
+                <!-- Nazov: K147; Podtyp: 0 ?-->
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="404.077,288,0,0"  Text="147"/>
+
+                <!-- #endregion == OZNACENIE USEKOV ==-->
 
                 <Path  x:Name="V539p2" Data="M1097.4085,54.644474 L1144.3243,54.409922 1144.1599,63.80942 1102.7252,63.951939 1087.3489,96.093239 1079.4811,92.318128 z" 
                        Height="42.703" Margin="144.403,614.532,0,0" Stretch="Fill"  Width="65.85" RenderTransformOrigin="0,0" 
@@ -152,10 +431,7 @@
                     Height="10.525" Margin="1143.089,173.493,0,0" Stretch="Fill"  Width="142.836"
                       
                      />
-                <Path x:Name="K770A_Copy25" Data="M0,0 L90,0 90,10 0,10 z"
-                    Height="10" Margin="1287.683,114.259,0,0" Stretch="Fill"  Width="250.544"
-                      
-                     />
+                
                 <Path x:Name="K770A_Copy26" Data="M0.73680287,-0.49784131 L90.92624,0.046389225 90.887632,10.735844 0.61854964,9.4860657 z"
                     Height="11.11" Margin="816.596,99.703,0,0" Stretch="Fill"  Width="172.736" RenderTransformOrigin="0.5,0.5"
                       
@@ -195,57 +471,13 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K775_Copy" Data="M0,0 L90.027846,1.6770741E-13 90.027846,10 0,10 z"  
-                    Height="10" Margin="48.257,518,0,0" Stretch="Fill" Width="62.664"
-                     
-                     />
-                <Path x:Name="K775_Copy1" Data="M0,0 L90.027846,1.6770741E-13 90.027846,10 0,10 z"  
-                    Height="10" Margin="46.592,588,0,0" Stretch="Fill" Width="64.329"
-                     
-                     />
+
+
+
                 <Path x:Name="K775_Copy2" Data="M-8.0779694,-3.9306955E-14 L79.222902,0.37037037 79.222902,10.37037 -8.0779694,10 z"  
                     Height="10.333" Margin="109.74,588,0,0" Stretch="Fill" Width="101.927"
                      
                      />
-                <Path  x:Name="V539p2_Copy" Data="M1097.4085,54.644474 L1300.8998,54.314718 1300.8711,63.29346 1102.7252,63.951939 1070.0219,130.73953 1061.8919,126.83655 z" 
-                    Height="77.399" Margin="276.806,556.364,0,0" Stretch="Fill"  Width="240.008" RenderTransformOrigin="0,0" 
-                       >
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="64"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                <Path x:Name="V194p1_Copy"  Data="M1099.0966,54.80596 L1231.4286,54.548041 1231.4289,63.777199 1104.7682,64.168894 994.17989,292.36074 986.13538,288.43729 z"
-                    Height="238.828" Margin="373.122,1010.198,0,-199.026" Stretch="Fill"  Width="246.276" RenderTransformOrigin="0,0"
-                     >
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-180.087"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                <Path x:Name="K775_Copy5" Data="M0,-0.13889223 L82.970182,-0.3626483 83.020264,9.6373517 0,10.138892 z"  
-                    Height="10.453" Margin="618.25,999.338,0,0" Stretch="Fill" Width="104.604"
-                     
-                     />
-                <controls:Semafor1Control x:Name="S775_Copy1" SemaphoreType="S1"    Margin="722.046,1013.388,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.169"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path x:Name="K775_Copy6" Data="M0,0 L90.599545,1.6770741E-13 90.599545,10 0,10 z"  
                     Height="10" Margin="721.834,999.31,0,0" Stretch="Fill" Width="119.854"
                      
@@ -254,10 +486,7 @@
                     Height="10.374" Margin="840.687,998.967,0,0" Stretch="Fill" Width="100.607"
                      
                      />
-                <Path x:Name="K775_Copy8" Data="M0,0 L73.580429,-0.79476509 73.580429,9.2052349 0,10 z"  
-                    Height="10.714" Margin="941.177,998.277,0,0" Stretch="Fill" Width="410.06"
-                     
-                     />
+
                 <Path x:Name="K775_Copy9" Data="M0,0 L63.425017,0.50926421 63.425017,10.648158 0,10 z"  
                     Height="10.583" Margin="1350.184,998.283,0,0" Stretch="Fill" Width="127.691"
                      
@@ -286,18 +515,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="V194p1_Copy6"  Data="M1098.2015,56.597602 L1144.4134,56.558169 1144.4134,65.704016 1104.5192,65.502531 806.10522,357.832 799.20661,351.11693 z"
-                    Height="302.294" Margin="2250.067,854.251,0,-106.545" Stretch="Fill"  Width="346.176" RenderTransformOrigin="0,0"
-                     >
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
+                
                 <Path x:Name="V194p1_Copy7"  Data="M1098.7933,52.929742 L1152.1558,52.752839 1152.1474,63.315256 1102.7704,63.326086 1023.0219,142.26946 1016.4144,135.42798 z"
                     Height="90.521" Margin="2332.853,560.005,0,0" Stretch="Fill"  Width="136.726" RenderTransformOrigin="0,0"
                      >
@@ -320,13 +538,8 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K770A_Copy44" Data="M0,-0.13888386 L90.734896,0.25926258 90.734896,10.351848 0,10.092586 z"
-                    Height="10.442" Margin="2547.518,487.547,0,0" Stretch="Fill"  Width="100.363"
-                      
-                     />
-                <Path x:Name="K775_Copy13" Data="M90.239529,10 L-1.4112582,10 -1.4112582,-0.092592593 90.239529,1.6770741E-13"  
-                    Height="10.083" Margin="2647.051,487.906,0,0" Stretch="Fill" Width="55.117" RenderTransformOrigin="3.264,-12.516"
-                     />
+                
+                
                 <Path  x:Name="V539p2_Copy2" Data="M1096.4731,54.28101 L1246.24,55.354251 1246.3601,64.31304 1101.8236,63.234092 1078.1841,111.49349 1070.3912,107.75492 z" 
                     Height="58.215" Margin="893.235,1032.377,0,-40.592" Stretch="Fill"  Width="176.956" RenderTransformOrigin="0,0" 
                        >
@@ -368,10 +581,7 @@
                     Height="10" Margin="432.438,449.98,0,0" Stretch="Fill"  Width="156.524"
                       
                      />
-                <Path x:Name="K770A_Copy45" Data="M32.13236,0.34728283 L90.734896,0.027954181 90.734896,10.027954 32.13236,10.624999 z"
-                    Height="10.543" Margin="342.463,450.001,0,0" Stretch="Fill"  Width="90.725"
-                      
-                     />
+                
                 <Path x:Name="K775_Copy15" Data="M-33.418644,0.70221363 L80.151519,0.23150898 80.09893,10 -33.418644,10.702213 z"  
                     Height="10.422" Margin="109.849,517.585,0,0" Stretch="Fill" Width="90.985"
                      
@@ -414,23 +624,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K770A_Copy46" Data="M32.13236,0.74076125 L90.734896,0.25927222 90.734896,10.444444 32.13236,10.74077 z"
-                    Height="10.435" Margin="307.378,517.332,0,0" Stretch="Fill"  Width="125.922"
-                      
-                     />
-                <controls:Semafor1Control x:Name="S775_Copy2" SemaphoreType="S1"    Margin="252.378,489.432,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                <controls:Semafor1Control x:Name="S775_Copy3" SemaphoreType="S1"    Margin="431.267,530.782,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <controls:TrainSwitch64 HorizontalAlignment="Left" Height="50" Margin="213.166,487.842,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
                     <controls:TrainSwitch64.RenderTransform>
                         <TransformGroup>
@@ -453,12 +646,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy4" SemaphoreType="S1"    Margin="290.834,424.432,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                
-               
-                <controls:Semafor1Control x:Name="S775_Copy7" SemaphoreType="S1"    Margin="563.25,973,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
                 <Path  x:Name="V539p2_Copy5" Data="M1096.7175,55.012994 L1170.0682,55.479027 1169.9281,64.503753 1102.6002,63.95077 1083.685,101.35525 1075.5436,97.380902 z" 
                     Height="47.343" Margin="372.266,818.69,0,0" Stretch="Fill"  Width="95.522" RenderTransformOrigin="0,0" 
                        >
@@ -483,31 +670,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy8" SemaphoreType="S1"    Margin="730.546,950.11,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="245"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <Path x:Name="K775_Copy17" Data="M-0.1718874,0 L44.587475,-0.24691358 44.587475,9.7530864 -0.1718874,10 z"  
-                    Height="10.20" Margin="466.75,808.872,0,0" Stretch="Fill" Width="66.101"
-                     
-                     />
-                <Path  x:Name="V539p2_Copy8" Data="M56.159775,9.8077837 L36.402337,49.833865 148.36111,51.126704 168.50714,10.790699 z M50.843197,0.5 L185.62323,1.5392517 185.52144,10.939656 178.40372,10.877283 153.67784,60.434866 31.788214,59.181494 14.911439,93.371718 158.69186,94.757239 158.60767,103.7564 74.667168,102.94752 91.833123,139.91519 159.03264,140.6207 158.95865,150.02132 86.343369,149.12182 64.886872,103.00061 0.5,102.23282 0.58418965,93.233656 5.0415559,93.27661 z" Height="150.521" Margin="531.068,911.663,0,-12.184" RenderTransformOrigin="0.022927584284168,-9.10772556298957E-09" Stretch="Fill" Width="186.123">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1"/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="0.536"/>
-                            <TranslateTransform X="-1.6653960788204358E-07" Y="3.5604280130954735E-05"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
                 <Path  x:Name="V539p2_Copy9" Data="M1097.4108,54.3945 L1134.3542,54.770419 1134.2523,64.170502 1102.7252,63.951939 1093.5522,83.084787 1085.5322,79.486589 z" 
                     Height="29.692" Margin="766.025,902.037,0,0" Stretch="Fill"  Width="49.821" RenderTransformOrigin="0,0" 
                        >
@@ -520,19 +682,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy9" SemaphoreType="S1"    Margin="412.002,782.134,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                <controls:Semafor1Control x:Name="S775_Copy10" SemaphoreType="S1"    Margin="435.267,460.782,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path x:Name="V543xx_Copy3" Data="M1021.365,86.055759 L1079.8131,86.112008 1112.9707,16.191352 1141.597,16.092397 1141.6571,24.796429 1119.3796,24.774952 1084.8922,95.374347 1021.2455,95.295119 z"
                     Height="80.279" Margin="468.091,459.903,0,0" Stretch="Fill" Width="121.405"
                     RenderTransformOrigin="0,0" >
@@ -545,21 +694,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy11" SemaphoreType="S1"    Margin="465.462,390.254,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <Path x:Name="K770A_Copy47" Data="M32.13236,0.30099447 L90.734896,0.37501061 90.734896,10.583319 32.13236,10.231553 z"
-                    Height="10.255" Margin="378.63,379.652,0,0" Stretch="Fill"  Width="90.447"
-                      
-                     />
+
                 <Path x:Name="V543xx_Copy4" Data="M992.37829,107.86932 L1066.0837,108.04205 1135.8563,-30.307649 1170.881,-30.323819 1170.89,-21.059215 1142.7809,-21.209716 1070.4955,117.00045 992.29019,116.74438 z"
                     Height="148.328" Margin="379.546,527.728,0,0" Stretch="Fill" Width="179.601"
                     RenderTransformOrigin="0,0" Cursor="ScrollSE" >
@@ -572,8 +707,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy12" SemaphoreType="S1"    Margin="323.63,352.423,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
                 <Path  x:Name="V539p2_Copy7" Data="M1098.1585,54.477587 L1208.2725,57.955355 1208.4903,66.992082 1103.3353,63.427281 1082.2188,102.84139 1074.5076,98.684331 z" 
                     Height="49.369" Margin="489.075,293.415,0,0" Stretch="Fill"  Width="134.978" RenderTransformOrigin="0,0" 
                        >
@@ -586,21 +719,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K775_Copy18" Data="M20.131881,-0.21604364 L117.44115,-0.030862301 117.44115,9.737662 20.131881,9.6913592 z"  
-                    Height="9.959" Margin="385.518,314.215,0,0" Stretch="Fill" Width="64.649"
-                     
-                     />
-                <controls:Semafor1Control x:Name="S775_Copy13" SemaphoreType="S1"    Margin="438.962,322.893,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.739,-0.454">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform X="-26.29"/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path  x:Name="V539p2_Copy10" Data="M1098.0971,53.972852 L1198.4365,56.737847 1197.8446,65.343784 1103.1577,63.049772 1080.3778,106.41343 1072.4042,102.30553 z" 
                     Height="53.441" Margin="344.45,291.321,0,0" Stretch="Fill"  Width="127.026" RenderTransformOrigin="0,0" 
                        >
@@ -613,8 +731,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy14" SemaphoreType="S1"    Margin="336.074,286.548,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
                 <Path x:Name="K770A_Copy49" Data="M0,-0.13888888 L90.734896,0.44444444 90.734896,10.583333 0,10.277778 z"
                     Height="10.65" Margin="2560.519,314.823,0,0" Stretch="Fill"  Width="87.362"
                       
@@ -646,28 +762,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy15" SemaphoreType="S1"    Margin="2560.156,331.227,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy16" SemaphoreType="S1"    Margin="2601.045,283.227,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-179.079"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path  x:Name="V539p2_Copy11" Data="M1097.2961,54.589679 L1192.5198,54.813781 1192.3554,64.213279 1102.7252,63.951939 1082.6473,105.0983 1074.5173,101.19533 z" 
                     Height="51.51" Margin="2606.036,345.865,-15.032,0" Stretch="Fill"  Width="118.996" RenderTransformOrigin="0,0" 
                        >
@@ -684,18 +778,7 @@
                     Height="10.4" Margin="2348,184.389,0,0" Stretch="Fill"  Width="143.363"
                       
                      />
-                <Path  x:Name="V539p2_Copy12" Data="M1098.0421,54.682426 L1154.0909,54.375488 1153.9265,63.774981 1103.6942,63.971619 1085.3602,100.56406 1077.1193,96.417517 z" 
-                    Height="47.192" Margin="2528.949,165.567,0,0" Stretch="Fill"  Width="77.967" RenderTransformOrigin="0,0" 
-                       >
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-116.627"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
+                
                 <Path  x:Name="V539p2_Copy13" Data="M1097.7434,55.092042 L1159.3364,55.91699 1159.0418,65.018208 1103.2282,64.064284 1084.5148,101.37359 1076.4602,97.320409 z" 
                     Height="47.282" Margin="2453.067,165.466,0,0" Stretch="Fill"  Width="83.873" RenderTransformOrigin="0,0" 
                        >
@@ -720,55 +803,10 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy17" SemaphoreType="S1"    Margin="2525.712,254.116,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="63.321"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy18" SemaphoreType="S1"    Margin="2434.601,284.783,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-178.514"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy19" SemaphoreType="S1"    Margin="2444.823,154.339,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-180.032"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <Path x:Name="K770A_Copy51" Data="M11.050193,-2.917111E-14 L91.122222,0.44444444 91.122222,11.000048 11.050193,10.555604 z"
-                    Height="10.898" Margin="1810.74,40.821,0,0" Stretch="Fill"  Width="156.046"
-                      
-                     />
-                <Path x:Name="K770A_Copy52" Data="M0,-0.27779153 L81.86163,-0.32717422 81.829353,10.158934 0,10.208317 z"
-                    Height="10.483" Margin="1810.74,110.801,0,0" Stretch="Fill"  Width="159.514"
-                      
-                     />
-                <Path x:Name="K770A_Copy53" Data="M0,0 L119.20641,0.93827157 119.20641,10.938271 0,10 z"
-                    Height="10.844" Margin="1809.488,183.067,0,0" Stretch="Fill"  Width="281.751"
-                      
-                     />
-                <Path x:Name="K770A_Copy54" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
-                    Height="10.4" Margin="1809.304,314.288,0,0" Stretch="Fill"  Width="176.696"
-                      
-                     />
+
+
+
+
                 <Path x:Name="K770A_Copy55" Data="M0,0 L109.38465,0.44444444 109.38465,10.444444 0,10 z"
                     Height="10.4" Margin="2090.482,183.985,0,0" Stretch="Fill"  Width="258.619"
                       
@@ -809,17 +847,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy20" SemaphoreType="S1"    Margin="2299.49,150.339,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-180.032"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path x:Name="V543xx_Copy5" Data="M895.90054,108.78889 L1065.8344,108.07728 1131.3463,-23.731859 1258.3741,-23.681688 1258.3782,-14.815469 1139.1081,-13.625896 1073.3293,117.021 895.93744,117.66395 z"
                     Height="142.486" Margin="2348.104,327.246,-1.629,0" Stretch="Fill" Width="363.525"
                     RenderTransformOrigin="0,0" >
@@ -832,10 +859,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K770A_Copy57" Data="M15.198712,0.49383094 L90.734896,0.44444444 90.734896,10.444444 15.198712,10.493831 z"
-                    Height="10.044" Margin="1879.185,388.701,0,0" Stretch="Fill"  Width="95.466"
-                      
-                     />
+               
                 <Path x:Name="K770A_Copy58" Data="M-43.626737,-0.74074069 L79.352744,-0.7900825 79.352744,9.2099171 -43.626737,9.2592593 z"
                     Height="10.044" Margin="1667.792,450.896,0,0" Stretch="Fill"  Width="212.929"
                       
@@ -915,10 +939,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K770A_Copy63" Data="M-0.026332575,0 L90.734896,0.44444444 90.734896,10.444444 -0.026332575,10 z"
-                    Height="10.4" Margin="1870.892,514.1,0,0" Stretch="Fill"  Width="216.427"
-                      
-                     />
+                
                 <Path x:Name="K770A_Copy64" Data="M0,-0.13889989 L86.716799,-0.7553984 86.729965,9.2908917 0,10.32409 z"
                     Height="10.971" Margin="1665.112,514.086,0,0" Stretch="Fill"  Width="206.857"
                       
@@ -968,22 +989,10 @@
 
                 <Path Data="M0,0.092592593 L291.22202,0.43210099 291.22202,10.617297 0,10 z" 
                       Height="10.472" Width="151.779" Margin="799.264,450.441,0,0"  Stretch="Fill"/>
-                <Path Data="M-0.44608812,111.48552 L20.529024,48.296262 30.967978,48.273909 30.970057,55.41278 23.291202,55.399011 3.4293793,114.56363 z" 
-                      Height="86.216"  Stretch="Fill" Width="66.329" Margin="917.898,173.338,0,0"/>
-
+                
                 <Path Data="M5.3553588,0.13890991 L83.065782,0.13890991 83.065782,10.324064 5.3553588,10.324064 z" 
                     Height="10.166" Width="87.5" Margin="983.207,173.326,0,0"  Stretch="Fill"/>
-                <Path Data="M-0.013804301,0.69164428 L9.9861957,0.69164428 9.9923662,11.001001 0.0085234879,11.119151" 
-                    Height="10.386" Width="41.694" Margin="796.51,35.626,0,0"  Stretch="Fill" RenderTransformOrigin="0,0">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="31.716"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
+                
                 <Path Data="M0,0 L54,0 54,10 0,10 z" 
                     Height="10" Width="69.32" Margin="1028.047,114.238,0,0"  Stretch="Fill"/>
                 <Path Data="M-23.945845,-0.18518858 L76.055329,0 62.256642,10 -23.945845,9.8148114 z" 
@@ -1040,10 +1049,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy21" SemaphoreType="S1"    Margin="899.383,624.099,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                <controls:Semafor1Control x:Name="S775_Copy22" SemaphoreType="S1"    Margin="900.715,558.437,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
                 <Path x:Name="K775_Copy23" Data="M0,0 L107.28197,0.13888889 107.28197,10.138889 0,10 z"  
                     Height="10.125" Margin="956.584,655.186,0,0" Stretch="Fill" Width="64.351"
                      
@@ -1060,10 +1065,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K770A_Copy69" Data="M0,0 L90.8823,0.44444444 90.919152,10.629632 0,10 z"
-                    Height="10.566" Margin="1879.855,450.858,0,0" Stretch="Fill"  Width="206.599"
-                      
-                     />
+                
                 <Path x:Name="V194p1_Copy28"
                     Height="72.091" Data="M110.73066,4.8423353 L165.32211,4.9605183 165.32211,14.231809 114.064,14.425666 53.661999,75.801153 -36.705902,75.933788 -36.705902,66.933788 46.692121,67.156012 z" Margin="1785.581,460.961,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="203.028">
                     <Path.RenderTransform>
@@ -1179,50 +1181,6 @@
                     Height="11.068" Margin="1170.452,314.073,0,0" Stretch="Fill"  Width="83.473"
                       
                      />
-                <controls:Semafor1Control x:Name="S775_Copy23" SemaphoreType="S1"    Margin="1525.046,962.388,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.169"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy24" SemaphoreType="S1"    Margin="1491.713,1013.055,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.169"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy25" SemaphoreType="S1"    Margin="1384.713,1010.721,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.169"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy26" SemaphoreType="S1"    Margin="1856.879,818.055,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.349"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path x:Name="V194p1_Copy38"  Data="M1103.2015,55.262687 L1250.7179,54.060922 1250.7805,63.290042 1102.998,64.211549 963.71383,129.80606 959.23038,121.8606 z"
                     Height="76.746" Margin="1798.005,962.021,0,0" Stretch="Fill"  Width="292.546" RenderTransformOrigin="0,0"
                      >
@@ -1251,39 +1209,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy27" SemaphoreType="S1"    Margin="1604.546,916.055,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.169"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy28" SemaphoreType="S1"    Margin="1608.38,862.055,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.169"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy29" SemaphoreType="S1"    Margin="1607.713,805.059,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.169"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path x:Name="V194p1_Copy40"
                     Height="61.735" Data="M115.92586,2.3332584 L224.24625,2.2382302 224.24625,11.301337 120.493,11.363735 68.22823,62.969854 -74.867245,62.47724 -74.894425,53.278022 65.228223,53.692768 z" Margin="1604.711,854.24,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="300.14">
                     <Path.RenderTransform>
@@ -1408,199 +1333,6 @@
                         </TransformGroup>
                     </controls:UC_VstupOdchod.RenderTransform>
                 </controls:UC_VstupOdchod>
-                <controls:Semafor1Control x:Name="S775_Copy" SemaphoreType="S1"    Margin="895.257,971.666,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                <controls:Semafor1Control x:Name="S775_Copy30" SemaphoreType="S1"    Margin="771.986,713.876,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="52.174"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy31" SemaphoreType="S1"    Margin="1006.601,872.322,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                <controls:Semafor1Control x:Name="S775_Copy32" SemaphoreType="S1"    Margin="999.062,815.484,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                <controls:Semafor1Control x:Name="S775_Copy33" SemaphoreType="S1"    Margin="2258.879,531.388,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="132.145"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy34" SemaphoreType="S1"    Margin="2589.879,459.013,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.349"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy35" SemaphoreType="S1"    Margin="2495.879,457.388,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.349"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy36" SemaphoreType="S1"    Margin="1966.49,52.839,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-361.103"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy37" SemaphoreType="S1"    Margin="1970.823,119.006,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-360.115"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy38" SemaphoreType="S1"    Margin="2071,197,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-360.088"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy39" SemaphoreType="S1"    Margin="1984.99,326.339,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-359.549"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy40" SemaphoreType="S1"    Margin="1971.49,397.506,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-359.666"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy41" SemaphoreType="S1"    Margin="2114.157,398.006,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-360.336"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy42" SemaphoreType="S1"    Margin="2085.49,464.506,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-359.261"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy43" SemaphoreType="S1"    Margin="2085.49,527.506,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-359.261"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy44" SemaphoreType="S1"    Margin="1376.49,667.006,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-359.261"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy45" SemaphoreType="S1"    Margin="1371.49,594.006,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-359.261"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy46" SemaphoreType="S1"    Margin="1829.167,421.883,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.349"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy47" SemaphoreType="S1"    Margin="1829.167,361.88,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.349"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy48" SemaphoreType="S1"    Margin="1825.165,484.554,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.349"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <controls:UC_VstupOdchod x:Name="s386_Copy4" 
                     SuhlasStatus="{Binding STC[s386].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
                     Margin="777.426,65.856,0,0" RenderTransformOrigin="0.5,0.5" >
@@ -1837,8 +1569,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy49" SemaphoreType="S1"    Margin="900.715,355.124,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
                 <Path x:Name="V194p1_Copy4"  Data="M1070.6547,82.871103 L1133.4878,83.147668 1133.3683,92.261893 1075.1446,92.066292 1018.7066,144.43638 1012.3497,137.51299 z"
                     Height="62.569" Margin="828.305,316.225,0,0" Stretch="Fill"  Width="122.125" RenderTransformOrigin="0,0"
                      >
@@ -1851,8 +1581,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy50" SemaphoreType="S1"    Margin="1013.406,289.707,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
                 <Path Data="M1,1.1883339 L65.48277,1.3390011 65.48277,9.5129969 1,9.5129969 z" HorizontalAlignment="Left" Height="10.209" Margin="950.028,450.699,0,0" Stretch="Fill" VerticalAlignment="Top" Width="51.687"/>
                 <Path Data="M1,1 L61.666,1 61.666,10 1,10 z" HorizontalAlignment="Left" Height="10" Margin="1045.132,844.157,0,0" Stretch="Fill" VerticalAlignment="Top" Width="65.222"/>
                 <Path Data="M1,1.7909787 L48.035518,1.3892235 48.035518,9.6385628 1.0787532,10.040318 z" HorizontalAlignment="Left" Height="10.569" Margin="949.403,314.437,0,0" Stretch="Fill" VerticalAlignment="Top" Width="50.771"/>
@@ -1894,7 +1622,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path Data="M1,0.77747252 L80.560339,0.77747252 80.560339,9.1 1,9.1 z"  HorizontalAlignment="Left" Height="10.35" Margin="2489.25,314.873,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="72.269"/>
+                
                 <Path Data="M0.61240877,1 L79.444,1 79.444,9.1 0.61240877,9.1 z"  HorizontalAlignment="Left" Height="10.1" Margin="955.403,583.331,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="64.559"/>
                 <controls:TrainSwitch45 HorizontalAlignment="Left"  Margin="907.297,833.803,0,0" VerticalAlignment="Top" Width="50" Height="50" RenderTransformOrigin="0.5,0.5">
                     <controls:TrainSwitch45.RenderTransform>
@@ -1926,10 +1654,7 @@
                         </TransformGroup>
                     </controls:TrainSwitch45.RenderTransform>
                 </controls:TrainSwitch45>
-                <Path x:Name="K770A_Copy15" Data="M-7.541637,0.092590323 L125.06522,-0.049386541 125.06522,9.950613 -7.541637,10.09259 z"
-                    Height="10.128" Margin="1273.417,237.72,0,0" Stretch="Fill"  Width="77.194"
-                      
-                     />
+                
                 <Path x:Name="V194p1_Copy9"  Data="M1072.9339,81.922376 L1242.8569,84.050673 1242.2325,93.542885 1076.0354,91.427132 1039.4164,126.97545 1032.9962,120.46397 z"
                     Height="46.026" Margin="1377.169,209.891,0,0" Stretch="Fill"  Width="210.832" RenderTransformOrigin="0,0"
                      >
@@ -1979,10 +1704,7 @@
                 <Path x:Name="K775_Copy3" Data="M90,10 L-1,10 -1,0 90,0"  
                     Height="10.083" Margin="1560.125,173.956,0,0" Stretch="Fill" Width="55.117" RenderTransformOrigin="3.264,-12.516"
                      />
-                <Path x:Name="K770A_Copy18" Data="M0,0 L90,0 90,10 0,10 z"
-                    Height="10" Margin="1284.757,173.952,0,0" Stretch="Fill"  Width="96.23"
-                      
-                     />
+               
                 <Path x:Name="K775_Copy4" Data="M90,10 L-40,10 -40,0 90,0"  
                     Height="10" Margin="1537.385,114.238,0,0" Stretch="Fill" Width="78.389" RenderTransformOrigin="3.264,-12.516"
                      />
@@ -2000,17 +1722,6 @@
                         </TransformGroup>
                     </controls:TrainSwitch45.RenderTransform>
                 </controls:TrainSwitch45>
-                <controls:Semafor1Control x:Name="S775_Copy51" SemaphoreType="S1"    Margin="1352.99,247.506,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-359.261"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="881.889,787.717,0,0" VerticalAlignment="Top" Width="3.555"/>
                 <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="881.889,899.592,0,0" VerticalAlignment="Top" Width="3.555"/>
                 <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1446.288,719.014,0,0" VerticalAlignment="Top" Width="3.555"/>
@@ -2129,9 +1840,14 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="690.243,807.428,0,0" VerticalAlignment="Top" Width="3.555"/>
-                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="691.242,760.724,0,0" VerticalAlignment="Top" Width="3.555"/>
+                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="719.299,806.502,0,0" VerticalAlignment="Top" Width="3.555"/>
+                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="719.275,742.502,0,0" VerticalAlignment="Top" Width="3.555"/>
                 <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1806.375,311.795,0,0" VerticalAlignment="Top" Width="3.555"/>
+
+                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1807.375,181,0,0" VerticalAlignment="Top" Width="3.555"/>
+
+                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1807.875,109,0,0" VerticalAlignment="Top" Width="3.555"/>
+                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1807.875,39,0,0" VerticalAlignment="Top" Width="3.555"/>
                 <controls:TrainSwitch25 HorizontalAlignment="Left" Height="50" Margin="1846.565,831.533,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
                     <controls:TrainSwitch25.RenderTransform>
                         <TransformGroup>
@@ -2174,40 +1890,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:TrainSwitch64 HorizontalAlignment="Left" Height="50" Margin="992.227,245.259,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
-                    <controls:TrainSwitch64.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:TrainSwitch64.RenderTransform>
-                </controls:TrainSwitch64>
-                <controls:Semafor1Control x:Name="S775_Copy52" SemaphoreType="S1"    Margin="953.403,83.03,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                <controls:Semafor1Control x:Name="S775_Copy53" SemaphoreType="S1"    Margin="1093.419,123.032,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy54" SemaphoreType="S1"    Margin="970,190,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <controls:TrainSwitch30 HorizontalAlignment="Left" Height="50" Margin="2243.142,363.889,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
                     <controls:TrainSwitch30.RenderTransform>
                         <TransformGroup>
@@ -2283,7 +1965,7 @@
                 <Rectangle x:Name="RectnNaklZasobnik" Fill="Transparent" HorizontalAlignment="Left" Height="89.166" Margin="1133.667,832.5,0,0" Stroke="Black" 
                            VerticalAlignment="Top" Width="131.355" StrokeThickness="4"  RenderTransformOrigin=".5,.5"/>
                 <Rectangle x:Name="RectnCelnyVyklopnik" Fill="Transparent" HorizontalAlignment="Left" Height="46.833" Margin="1133.667,637.5,0,0" Stroke="Black" 
-                    VerticalAlignment="Top" Width="131.355" StrokeThickness="4"  RenderTransformOrigin=".5,.5"/>
+                    VerticalAlignment="Top" Width="120.258" StrokeThickness="4"  RenderTransformOrigin=".5,.5"/>
                 <Rectangle x:Name="RectnRotVyklopnik" Fill="Transparent" HorizontalAlignment="Left" Height="170.833" Margin="1120.272,300.462,0,0" Stroke="Black" 
                     VerticalAlignment="Top" Width="95.473" StrokeThickness="4"  RenderTransformOrigin=".5,.5"/>
 
@@ -2395,6 +2077,65 @@
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
                 </controls:UC_PanakUss>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="85,636.463,0,0"  Text="119c"/>
+                <TextBlock Style="{StaticResource txbMapTitle}"  Margin="10.033,466.26,0,0" TextWrapping="Wrap"  Text="St.17" />
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1328.077,90,0,0"  Text="201"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1332.577,145.5,0,0"  Text="83"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1303.881,207.78,0,0"  Text="129"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="2052.381,672.78,0,0"  Text="80a"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1767.381,305.28,0,0"  Text="107"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1767.381,176.5,0,0"  Text="108"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1767.381,103.5,0,0"  Text="109"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1767.381,35,0,0"  Text="110"/>
+
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1947.381,487.5,0,0"  Text="104"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1947.381,421,0,0"  Text="105"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1912.881,360.5,0,0"  Text="106"/>
+
+
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="2547.928,182.294,0,0"  Text="113"/>
+
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="2509.242,289.986,0,0"  Text="81"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="2569.242,458.5,0,0"  Text="80"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="905.077,187.5,0,0"  Text="83a"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="738.077,35,0,0"  Text="201a"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1622.403,103.5,0,0"  Text="201"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1622.403,168.076,0,0"  Text="83"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1237.243,973.382,0,0"  Text="119" />
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1280.243,973.382,0,0"  Text="119" />
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1269,872.882,0,0"  Text="121a" />
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1269,818,0,0"  Text="122a" />
+
+
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1460.243,925.5,0,0"  Text="120" />
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1460.243,872.5,0,0"  Text="121" />
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1460.243,816.5,0,0"  Text="122" />
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1460.243,765,0,0"  Text="123" />
+
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1253.243,631,0,0"  Text="124" />
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="976,628,0,0"  Text="124a" />
+                
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1253.243,554,0,0"  Text="125" />
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="976,554,0,0"  Text="125a" />
+
+
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1221.743,421,0,0"  Text="126" />
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1221.743,288,0,0"  Text="128" />
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="972.5,283.5,0,0"  Text="128a" />
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="966.5,354,0,0"  Text="127a" />
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="966.5,423,0,0"  Text="126a" />
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <!--#endregion PANACI-figurky -->
 
