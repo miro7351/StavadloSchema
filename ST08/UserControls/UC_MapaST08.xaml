@@ -91,29 +91,368 @@
                 <controls:UC_ColorPicker x:Name="colorPicker" HorizontalAlignment="Left" Margin="85,990,0,0" VerticalAlignment="Top"/>
 
                 <!--#region SEMAFORY -->
-                <controls:Semafor1Control x:Name="S119c" SemaphoreType="S3"    Margin="108.156,599.004,0,0"
-                    SemaforStatus="{Binding STC[S119c].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
+                <controls:Semafor1Control x:Name="S210" SemaphoreType="S3"    Margin="102.375,527.585,0,0"
+                    SemaforStatus="{Binding STC[S210].CombineStatus, Mode=OneWay}">
                     <controls:Semafor1Control.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S119c" SemaphoreType="S3"    Margin="101.906,598,0,0"
+                    SemaforStatus="{Binding STC[S119c].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="L147" SemaphoreType="S3"    Margin="341.075,286.158,0,0"
+                    SemaforStatus="{Binding STC[L147].CombineStatus, Mode=OneWay}"/>
+                <controls:Semafor1Control x:Name="L146" SemaphoreType="S3"    Margin="332.633,352.423,0,0"
+                    SemaforStatus="{Binding STC[L146].CombineStatus, Mode=OneWay}"/>
+                <controls:Semafor1Control x:Name="L145" SemaphoreType="S3"    Margin="296.002,422.765,0,0"
+                    SemaforStatus="{Binding STC[L145].CombineStatus, Mode=OneWay}"/>
+                <controls:Semafor1Control x:Name="L144" SemaphoreType="S3"    Margin="261.503,490.057,0,0"
+                    SemaforStatus="{Binding STC[L144].CombineStatus, Mode=OneWay}"/>
+                <controls:Semafor1Control x:Name="S147" SemaphoreType="S3"    Margin="441.631,323.561,0,0"
+                    SemaforStatus="{Binding STC[S147].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S146" SemaphoreType="S3"    Margin="460.625,389.92,0,0"
+                    SemaforStatus="{Binding STC[S146].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S145" SemaphoreType="S3"    Margin="424.597,459.613,0,0"
+                    SemaforStatus="{Binding STC[S145].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>                           
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S144" SemaphoreType="S3"    Margin="424.767,527.032,0,0"
+                    SemaforStatus="{Binding STC[S144].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="L140" SemaphoreType="S2"    Margin="420.502,781.634,0,0"
+                    SemaforStatus="{Binding STC[L140].CombineStatus, Mode=OneWay}"/>
+                <controls:Semafor1Control x:Name="L119a" SemaphoreType="S1"    Margin="565.166,972,0,0"
+                    SemaforStatus="{Binding STC[L119a].CombineStatus, Mode=OneWay}"/>
+                <controls:Semafor1Control x:Name="S140" SemaphoreType="S2"    Margin="724.882,940.117,0,0"
+                    SemaforStatus="{Binding STC[S140].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="245"/>
                             <TranslateTransform/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S119a" SemaphoreType="S2"    Margin="714.048,1009.056,0,0"
+                    SemaforStatus="{Binding STC[S119a].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="Se1" SemaphoreType="S2"    Margin="803.875,767.375,0,0"
+                    SemaforStatus="{Binding STC[Se1].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="38.634"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S201a" SemaphoreType="S1"    Margin="814.736,77.03,0,0"
+                    SemaforStatus="{Binding STC[S201a].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="210.245"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="Se3" SemaphoreType="S2"    Margin="982.731,86.363,0,0"
+                    SemaforStatus="{Binding STC[Se3].CombineStatus, Mode=OneWay}"/>
+
+                <controls:Semafor1Control x:Name="S83a" SemaphoreType="S1"    Margin="982.996,183.334,0,0"
+                    SemaforStatus="{Binding STC[S83a].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="L128" SemaphoreType="S2"    Margin="903.417,287.04,0,0"
+                    SemaforStatus="{Binding STC[L128].CombineStatus, Mode=OneWay}"/>
+                <controls:Semafor1Control x:Name="L127" SemaphoreType="S2"    Margin="903.049,353.456,0,0"
+                    SemaforStatus="{Binding STC[L127].CombineStatus, Mode=OneWay}"/>
+                <controls:Semafor1Control x:Name="L126" SemaphoreType="S2"    Margin="904,422.666,0,0"
+                    SemaforStatus="{Binding STC[L126].CombineStatus, Mode=OneWay}"/>
+                <controls:Semafor1Control x:Name="L125" SemaphoreType="S2"    Margin="909.379,555.104,0,0"
+                    SemaforStatus="{Binding STC[L125].CombineStatus, Mode=OneWay}"/>
+                <controls:Semafor1Control x:Name="L124" SemaphoreType="S2"    Margin="910.381,627.432,0,0"
+                    SemaforStatus="{Binding STC[L124].CombineStatus, Mode=OneWay}"/>
+                <controls:Semafor1Control x:Name="L122" SemaphoreType="S2"    Margin="999.062,815.484,0,0"
+                    SemaforStatus="{Binding STC[L122].CombineStatus, Mode=OneWay}"/>
+                <controls:Semafor1Control x:Name="L121" SemaphoreType="S2"    Margin="1008.266,873.321,0,0"
+                    SemaforStatus="{Binding STC[L121].CombineStatus, Mode=OneWay}"/>
+
+                <controls:Semafor1Control x:Name="L119" SemaphoreType="S2"    Margin="894.924,971.333,0,0"
+                    SemaforStatus="{Binding STC[L119].CombineStatus, Mode=OneWay}"/>
+                <controls:Semafor1Control x:Name="L201" SemaphoreType="S1"    Margin="1234.329,86.332,0,0"
+                    SemaforStatus="{Binding STC[L201].CombineStatus, Mode=OneWay}">
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="L83" SemaphoreType="S1"    Margin="1230.999,146,0,0"
+                    SemaforStatus="{Binding STC[L83].CombineStatus, Mode=OneWay}">
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="L129" SemaphoreType="S1"    Margin="1219.664,209.666,0,0"
+                    SemaforStatus="{Binding STC[L129].CombineStatus, Mode=OneWay}">
+                </controls:Semafor1Control>
+
+                <controls:Semafor1Control x:Name="S128" SemaphoreType="S1"    Margin="1390.49,325.006,0,0"
+                    SemaforStatus="{Binding STC[S128].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S126" SemaphoreType="S1" Margin="1408.49,461.006,0,0"
+                    SemaforStatus="{Binding STC[S126].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S125" SemaphoreType="S1"    Margin="1373.99,593.006,0,0"
+                    SemaforStatus="{Binding STC[S125].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S124" SemaphoreType="S1"    Margin="1373.99,666.506,0,0"
+                    SemaforStatus="{Binding STC[S124].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
                         </TransformGroup>
                     </controls:Semafor1Control.RenderTransform>
                 </controls:Semafor1Control>
 
-                <controls:Semafor1Control x:Name="S210" SemaphoreType="S3"    Margin="111.489,528.56,0,0"
-                    SemaforStatus="{Binding STC[S210].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
+                <controls:Semafor1Control x:Name="PrL201" SemaphoreType="S4"    Margin="1484,85.5,0,0"
+                    SemaforStatus="{Binding STC[PrL201].CombineStatus, Mode=OneWay}">
+                </controls:Semafor1Control>
+
+                <controls:Semafor1Control x:Name="S110" SemaphoreType="S1"    Margin="1965.49,52.839,0,0"
+                    SemaforStatus="{Binding STC[S110].CombineStatus, Mode=OneWay}">
                     <controls:Semafor1Control.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S109" SemaphoreType="S1"    Margin="1968.323,121.506,0,0"
+                    SemaforStatus="{Binding STC[S109].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S108" SemaphoreType="S1"    Margin="2090,194.5,0,0"
+                    SemaforStatus="{Binding STC[S108].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S107" SemaphoreType="S1"    Margin="1983.99,324.839,0,0"
+                    SemaforStatus="{Binding STC[S107].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="L106" SemaphoreType="S1"    Margin="1825.167,360.88,0,0"
+                    SemaforStatus="{Binding STC[L106].CombineStatus, Mode=OneWay}">
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="L105" SemaphoreType="S1"    Margin="1826.167,422.883,0,0"
+                    SemaforStatus="{Binding STC[L105].CombineStatus, Mode=OneWay}">
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="L104" SemaphoreType="S1"    Margin="1816.665,485.554,0,0"
+                    SemaforStatus="{Binding STC[L104].CombineStatus, Mode=OneWay}">
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S106" SemaphoreType="S1"    Margin="2114.157,399.006,0,0"
+                    SemaforStatus="{Binding STC[S106].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S105" SemaphoreType="S1"    Margin="2084.49,461.006,0,0"
+                    SemaforStatus="{Binding STC[S105].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S104" SemaphoreType="S1"    Margin="2085.99,525.006,0,0"
+                    SemaforStatus="{Binding STC[S104].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+
+                <controls:Semafor1Control x:Name="S123" SemaphoreType="S1"    Margin="1604.213,803.059,0,0"
+                    SemaforStatus="{Binding STC[S123].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S122" SemaphoreType="S1"    Margin="1604.88,854.555,0,0"
+                    SemaforStatus="{Binding STC[S122].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S121" SemaphoreType="S1"    Margin="1604.046,911.555,0,0"
+                    SemaforStatus="{Binding STC[S121].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S120" SemaphoreType="S1"    Margin="1504.546,961.888,0,0"
+                    SemaforStatus="{Binding STC[S120].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="PrS119" SemaphoreType="S2"    Margin="1342.213,1008.221,0,0"
+                    SemaforStatus="{Binding STC[PrS119].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S119" SemaphoreType="S3"    Margin="1469.213,1009.055,0,0"
+                    SemaforStatus="{Binding STC[S119].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="L80a" SemaphoreType="S1"    Margin="1850.379,816.055,0,0"
+                    SemaforStatus="{Binding STC[L80a].CombineStatus, Mode=OneWay}">
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="L113" SemaphoreType="S1"    Margin="2294.99,156.339,0,0"
+                    SemaforStatus="{Binding STC[L113].CombineStatus, Mode=OneWay}">
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="L113A" SemaphoreType="S3"    Margin="2444.323,156.839,0,0"
+                    SemaforStatus="{Binding STC[L113A].CombineStatus, Mode=OneWay}">
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S113" SemaphoreType="S2"    Margin="2523.212,249.616,0,0"
+                    SemaforStatus="{Binding STC[S113].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <RotateTransform Angle="63.321"/>
                             <TranslateTransform/>
                         </TransformGroup>
                     </controls:Semafor1Control.RenderTransform>
                 </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="L81" SemaphoreType="S1"    Margin="2435.601,286.283,0,0"
+                    SemaforStatus="{Binding STC[L81].CombineStatus, Mode=OneWay}">
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S81" SemaphoreType="S2"    Margin="2553.656,325.227,0,0"
+                    SemaforStatus="{Binding STC[S81].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="L81A" SemaphoreType="S2"    Margin="2601.045,286.727,0,0"
+                    SemaforStatus="{Binding STC[L81A].CombineStatus, Mode=OneWay}">
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S80a" SemaphoreType="S1"    Margin="2252.379,536.888,0,0"
+                    SemaforStatus="{Binding STC[S80a].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <RotateTransform Angle="134.878"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+
+                <controls:Semafor1Control x:Name="L80" SemaphoreType="S1"    Margin="2493.879,459.388,0,0"
+                    SemaforStatus="{Binding STC[L80].CombineStatus, Mode=OneWay}">
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="PrL80" SemaphoreType="S4"    Margin="2593.379,459.013,0,0"
+                    SemaforStatus="{Binding STC[PrL80].CombineStatus, Mode=OneWay}">
+                </controls:Semafor1Control>
+                <!--Po Tade-->
+                <!--#region Niesu v Situacnej Scheme-->
+                <controls:Semafor1Control x:Name="S775_Copy53" SemaphoreType="S1"    Margin="1096.419,123.698,0,0"
+                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <controls:Semafor1Control x:Name="S775_Copy51" SemaphoreType="S1"    Margin="1348.99,247.506,0,0"
+                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <!--#endregion Niesu v Situacnej Scheme-->
+
+                <!--#region Duplikat Se1-->
+                <controls:Semafor1Control x:Name="S775_Copy40" SemaphoreType="S1"    Margin="1972.49,398.506,0,0"
+                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}">
+                    <controls:Semafor1Control.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                        </TransformGroup>
+                    </controls:Semafor1Control.RenderTransform>
+                </controls:Semafor1Control>
+                <!--#endregion Duplikat Se1-->
 
                 <!--#endregion SEMAFORY -->
 
@@ -235,17 +574,6 @@
                     Height="10.453" Margin="618.25,999.338,0,0" Stretch="Fill" Width="104.604"
                      
                      />
-                <controls:Semafor1Control x:Name="S775_Copy1" SemaphoreType="S1"    Margin="722.046,1013.388,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.169"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path x:Name="K775_Copy6" Data="M0,0 L90.599545,1.6770741E-13 90.599545,10 0,10 z"  
                     Height="10" Margin="721.834,999.31,0,0" Stretch="Fill" Width="119.854"
                      
@@ -418,19 +746,6 @@
                     Height="10.435" Margin="307.378,517.332,0,0" Stretch="Fill"  Width="125.922"
                       
                      />
-                <controls:Semafor1Control x:Name="S775_Copy2" SemaphoreType="S1"    Margin="252.378,489.432,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                <controls:Semafor1Control x:Name="S775_Copy3" SemaphoreType="S1"    Margin="431.267,530.782,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <controls:TrainSwitch64 HorizontalAlignment="Left" Height="50" Margin="213.166,487.842,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
                     <controls:TrainSwitch64.RenderTransform>
                         <TransformGroup>
@@ -453,12 +768,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy4" SemaphoreType="S1"    Margin="290.834,424.432,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                
-               
-                <controls:Semafor1Control x:Name="S775_Copy7" SemaphoreType="S1"    Margin="563.25,973,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
                 <Path  x:Name="V539p2_Copy5" Data="M1096.7175,55.012994 L1170.0682,55.479027 1169.9281,64.503753 1102.6002,63.95077 1083.685,101.35525 1075.5436,97.380902 z" 
                     Height="47.343" Margin="372.266,818.69,0,0" Stretch="Fill"  Width="95.522" RenderTransformOrigin="0,0" 
                        >
@@ -483,17 +792,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy8" SemaphoreType="S1"    Margin="730.546,950.11,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="245"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path x:Name="K775_Copy17" Data="M-0.1718874,0 L44.587475,-0.24691358 44.587475,9.7530864 -0.1718874,10 z"  
                     Height="10.20" Margin="466.75,808.872,0,0" Stretch="Fill" Width="66.101"
                      
@@ -520,19 +818,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy9" SemaphoreType="S1"    Margin="412.002,782.134,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                <controls:Semafor1Control x:Name="S775_Copy10" SemaphoreType="S1"    Margin="435.267,460.782,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path x:Name="V543xx_Copy3" Data="M1021.365,86.055759 L1079.8131,86.112008 1112.9707,16.191352 1141.597,16.092397 1141.6571,24.796429 1119.3796,24.774952 1084.8922,95.374347 1021.2455,95.295119 z"
                     Height="80.279" Margin="468.091,459.903,0,0" Stretch="Fill" Width="121.405"
                     RenderTransformOrigin="0,0" >
@@ -545,17 +830,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy11" SemaphoreType="S1"    Margin="465.462,390.254,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path x:Name="K770A_Copy47" Data="M32.13236,0.30099447 L90.734896,0.37501061 90.734896,10.583319 32.13236,10.231553 z"
                     Height="10.255" Margin="378.63,379.652,0,0" Stretch="Fill"  Width="90.447"
                       
@@ -572,8 +846,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy12" SemaphoreType="S1"    Margin="323.63,352.423,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
                 <Path  x:Name="V539p2_Copy7" Data="M1098.1585,54.477587 L1208.2725,57.955355 1208.4903,66.992082 1103.3353,63.427281 1082.2188,102.84139 1074.5076,98.684331 z" 
                     Height="49.369" Margin="489.075,293.415,0,0" Stretch="Fill"  Width="134.978" RenderTransformOrigin="0,0" 
                        >
@@ -590,17 +862,6 @@
                     Height="9.959" Margin="385.518,314.215,0,0" Stretch="Fill" Width="64.649"
                      
                      />
-                <controls:Semafor1Control x:Name="S775_Copy13" SemaphoreType="S1"    Margin="438.962,322.893,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.739,-0.454">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform X="-26.29"/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path  x:Name="V539p2_Copy10" Data="M1098.0971,53.972852 L1198.4365,56.737847 1197.8446,65.343784 1103.1577,63.049772 1080.3778,106.41343 1072.4042,102.30553 z" 
                     Height="53.441" Margin="344.45,291.321,0,0" Stretch="Fill"  Width="127.026" RenderTransformOrigin="0,0" 
                        >
@@ -613,8 +874,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy14" SemaphoreType="S1"    Margin="336.074,286.548,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
                 <Path x:Name="K770A_Copy49" Data="M0,-0.13888888 L90.734896,0.44444444 90.734896,10.583333 0,10.277778 z"
                     Height="10.65" Margin="2560.519,314.823,0,0" Stretch="Fill"  Width="87.362"
                       
@@ -646,28 +905,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy15" SemaphoreType="S1"    Margin="2560.156,331.227,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy16" SemaphoreType="S1"    Margin="2601.045,283.227,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-179.079"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path  x:Name="V539p2_Copy11" Data="M1097.2961,54.589679 L1192.5198,54.813781 1192.3554,64.213279 1102.7252,63.951939 1082.6473,105.0983 1074.5173,101.19533 z" 
                     Height="51.51" Margin="2606.036,345.865,-15.032,0" Stretch="Fill"  Width="118.996" RenderTransformOrigin="0,0" 
                        >
@@ -720,39 +957,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy17" SemaphoreType="S1"    Margin="2525.712,254.116,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="63.321"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy18" SemaphoreType="S1"    Margin="2434.601,284.783,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-178.514"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy19" SemaphoreType="S1"    Margin="2444.823,154.339,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-180.032"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path x:Name="K770A_Copy51" Data="M11.050193,-2.917111E-14 L91.122222,0.44444444 91.122222,11.000048 11.050193,10.555604 z"
                     Height="10.898" Margin="1810.74,40.821,0,0" Stretch="Fill"  Width="156.046"
                       
@@ -809,17 +1013,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy20" SemaphoreType="S1"    Margin="2299.49,150.339,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-180.032"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path x:Name="V543xx_Copy5" Data="M895.90054,108.78889 L1065.8344,108.07728 1131.3463,-23.731859 1258.3741,-23.681688 1258.3782,-14.815469 1139.1081,-13.625896 1073.3293,117.021 895.93744,117.66395 z"
                     Height="142.486" Margin="2348.104,327.246,-1.629,0" Stretch="Fill" Width="363.525"
                     RenderTransformOrigin="0,0" >
@@ -1040,10 +1233,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy21" SemaphoreType="S1"    Margin="899.383,624.099,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                <controls:Semafor1Control x:Name="S775_Copy22" SemaphoreType="S1"    Margin="900.715,558.437,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
                 <Path x:Name="K775_Copy23" Data="M0,0 L107.28197,0.13888889 107.28197,10.138889 0,10 z"  
                     Height="10.125" Margin="956.584,655.186,0,0" Stretch="Fill" Width="64.351"
                      
@@ -1179,50 +1368,6 @@
                     Height="11.068" Margin="1170.452,314.073,0,0" Stretch="Fill"  Width="83.473"
                       
                      />
-                <controls:Semafor1Control x:Name="S775_Copy23" SemaphoreType="S1"    Margin="1525.046,962.388,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.169"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy24" SemaphoreType="S1"    Margin="1491.713,1013.055,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.169"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy25" SemaphoreType="S1"    Margin="1384.713,1010.721,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.169"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy26" SemaphoreType="S1"    Margin="1856.879,818.055,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.349"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path x:Name="V194p1_Copy38"  Data="M1103.2015,55.262687 L1250.7179,54.060922 1250.7805,63.290042 1102.998,64.211549 963.71383,129.80606 959.23038,121.8606 z"
                     Height="76.746" Margin="1798.005,962.021,0,0" Stretch="Fill"  Width="292.546" RenderTransformOrigin="0,0"
                      >
@@ -1251,39 +1396,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy27" SemaphoreType="S1"    Margin="1604.546,916.055,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.169"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy28" SemaphoreType="S1"    Margin="1608.38,862.055,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.169"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy29" SemaphoreType="S1"    Margin="1607.713,805.059,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.169"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Path x:Name="V194p1_Copy40"
                     Height="61.735" Data="M115.92586,2.3332584 L224.24625,2.2382302 224.24625,11.301337 120.493,11.363735 68.22823,62.969854 -74.867245,62.47724 -74.894425,53.278022 65.228223,53.692768 z" Margin="1604.711,854.24,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="300.14">
                     <Path.RenderTransform>
@@ -1408,199 +1520,6 @@
                         </TransformGroup>
                     </controls:UC_VstupOdchod.RenderTransform>
                 </controls:UC_VstupOdchod>
-                <controls:Semafor1Control x:Name="S775_Copy" SemaphoreType="S1"    Margin="895.257,971.666,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                <controls:Semafor1Control x:Name="S775_Copy30" SemaphoreType="S1"    Margin="771.986,713.876,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="52.174"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy31" SemaphoreType="S1"    Margin="1006.601,872.322,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                <controls:Semafor1Control x:Name="S775_Copy32" SemaphoreType="S1"    Margin="999.062,815.484,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                <controls:Semafor1Control x:Name="S775_Copy33" SemaphoreType="S1"    Margin="2258.879,531.388,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="132.145"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy34" SemaphoreType="S1"    Margin="2589.879,459.013,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.349"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy35" SemaphoreType="S1"    Margin="2495.879,457.388,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.349"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy36" SemaphoreType="S1"    Margin="1966.49,52.839,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-361.103"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy37" SemaphoreType="S1"    Margin="1970.823,119.006,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-360.115"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy38" SemaphoreType="S1"    Margin="2071,197,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-360.088"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy39" SemaphoreType="S1"    Margin="1984.99,326.339,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-359.549"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy40" SemaphoreType="S1"    Margin="1971.49,397.506,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-359.666"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy41" SemaphoreType="S1"    Margin="2114.157,398.006,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-360.336"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy42" SemaphoreType="S1"    Margin="2085.49,464.506,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-359.261"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy43" SemaphoreType="S1"    Margin="2085.49,527.506,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-359.261"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy44" SemaphoreType="S1"    Margin="1376.49,667.006,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-359.261"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy45" SemaphoreType="S1"    Margin="1371.49,594.006,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-359.261"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy46" SemaphoreType="S1"    Margin="1829.167,421.883,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.349"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy47" SemaphoreType="S1"    Margin="1829.167,361.88,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.349"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy48" SemaphoreType="S1"    Margin="1825.165,484.554,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-0.349"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <controls:UC_VstupOdchod x:Name="s386_Copy4" 
                     SuhlasStatus="{Binding STC[s386].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
                     Margin="777.426,65.856,0,0" RenderTransformOrigin="0.5,0.5" >
@@ -1837,8 +1756,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy49" SemaphoreType="S1"    Margin="900.715,355.124,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
                 <Path x:Name="V194p1_Copy4"  Data="M1070.6547,82.871103 L1133.4878,83.147668 1133.3683,92.261893 1075.1446,92.066292 1018.7066,144.43638 1012.3497,137.51299 z"
                     Height="62.569" Margin="828.305,316.225,0,0" Stretch="Fill"  Width="122.125" RenderTransformOrigin="0,0"
                      >
@@ -1851,8 +1768,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <controls:Semafor1Control x:Name="S775_Copy50" SemaphoreType="S1"    Margin="1013.406,289.707,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
                 <Path Data="M1,1.1883339 L65.48277,1.3390011 65.48277,9.5129969 1,9.5129969 z" HorizontalAlignment="Left" Height="10.209" Margin="950.028,450.699,0,0" Stretch="Fill" VerticalAlignment="Top" Width="51.687"/>
                 <Path Data="M1,1 L61.666,1 61.666,10 1,10 z" HorizontalAlignment="Left" Height="10" Margin="1045.132,844.157,0,0" Stretch="Fill" VerticalAlignment="Top" Width="65.222"/>
                 <Path Data="M1,1.7909787 L48.035518,1.3892235 48.035518,9.6385628 1.0787532,10.040318 z" HorizontalAlignment="Left" Height="10.569" Margin="949.403,314.437,0,0" Stretch="Fill" VerticalAlignment="Top" Width="50.771"/>
@@ -2000,17 +1915,6 @@
                         </TransformGroup>
                     </controls:TrainSwitch45.RenderTransform>
                 </controls:TrainSwitch45>
-                <controls:Semafor1Control x:Name="S775_Copy51" SemaphoreType="S1"    Margin="1352.99,247.506,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-359.261"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="881.889,787.717,0,0" VerticalAlignment="Top" Width="3.555"/>
                 <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="881.889,899.592,0,0" VerticalAlignment="Top" Width="3.555"/>
                 <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1446.288,719.014,0,0" VerticalAlignment="Top" Width="3.555"/>
@@ -2184,30 +2088,6 @@
                         </TransformGroup>
                     </controls:TrainSwitch64.RenderTransform>
                 </controls:TrainSwitch64>
-                <controls:Semafor1Control x:Name="S775_Copy52" SemaphoreType="S1"    Margin="953.403,83.03,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}"/>
-                <controls:Semafor1Control x:Name="S775_Copy53" SemaphoreType="S1"    Margin="1093.419,123.032,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S775_Copy54" SemaphoreType="S1"    Margin="970,190,0,0"
-                    SemaforStatus="{Binding STC[S775].CombineStatus, Mode=OneWay}" RenderTransformOrigin="0.5,0.5">
-                    <controls:Semafor1Control.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
                 <controls:TrainSwitch30 HorizontalAlignment="Left" Height="50" Margin="2243.142,363.889,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
                     <controls:TrainSwitch30.RenderTransform>
                         <TransformGroup>
