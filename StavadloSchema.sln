@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Blend for Visual Studio Version 16
+# Visual Studio Version 16
 VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ST08", "ST08\ST08.csproj", "{A2A61A19-B334-4BF0-885B-F742BA6F3610}"
@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{516D110D-223
 	ProjectSection(SolutionItems) = preProject
 		Doc\BlendEditor.txt = Doc\BlendEditor.txt
 		Doc\PopisProjektu.txt = Doc\PopisProjektu.txt
-		Doc\Situačná schema-ST.8.pdf = Doc\Situačná schema-ST.8.pdf
+		Doc\Situacna schema-ST.8.pdf = Doc\Situacna schema-ST.8.pdf
 	EndProjectSection
 EndProject
 Global

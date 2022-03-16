@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Stavadlo22.Infrastructure
+namespace PA.Stavadlo.Infrastructure
 {
     //MH: Januar  2019
     //pomocne funkcie pre aplikaciu

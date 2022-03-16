@@ -4,7 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
-              xmlns:controls="clr-namespace:PA.Stavadlo.MH.UserControls"
+             xmlns:attProp="clr-namespace:PA.Stavadlo.Infrastructure.PathHelper"
+             
+             xmlns:controls="clr-namespace:PA.Stavadlo.MH.UserControls"
              xmlns:conv="clr-namespace:PA.Stavadlo.MH.Infrastructure.Converters"
              Loaded="MapaST08_Loaded"
              Unloaded="MapaST08_Unloaded"
@@ -91,6 +93,7 @@
                 <controls:UC_ColorPicker x:Name="colorPicker" HorizontalAlignment="Left" Margin="85,990,0,0" VerticalAlignment="Top"/>
 
                 <!--#region SEMAFORY -->
+                
                 <controls:Semafor1Control x:Name="S210" SemaphoreType="S3"    Margin="102.375,527.585,0,0"
                     SemaforStatus="{Binding STC[S210].CombineStatus, Mode=OneWay}">
                     <controls:Semafor1Control.RenderTransform>
@@ -99,7 +102,8 @@
                         </TransformGroup>
                     </controls:Semafor1Control.RenderTransform>
                 </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="S119c" SemaphoreType="S3"    Margin="101.906,598,0,0"
+                
+                <controls:Semafor1Control x:Name="S119c" SemaphoreType="S3"    Margin="102,596,0,0"
                     SemaforStatus="{Binding STC[S119c].CombineStatus, Mode=OneWay}">
                     <controls:Semafor1Control.RenderTransform>
                         <TransformGroup>
@@ -107,6 +111,7 @@
                         </TransformGroup>
                     </controls:Semafor1Control.RenderTransform>
                 </controls:Semafor1Control>
+                
                 <controls:Semafor1Control x:Name="L147" SemaphoreType="S3"    Margin="341.075,286.158,0,0"
                     SemaforStatus="{Binding STC[L147].CombineStatus, Mode=OneWay}"/>
                 <controls:Semafor1Control x:Name="L146" SemaphoreType="S3"    Margin="332.633,352.423,0,0"
@@ -135,7 +140,7 @@
                     SemaforStatus="{Binding STC[S145].CombineStatus, Mode=OneWay}">
                     <controls:Semafor1Control.RenderTransform>
                         <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>                           
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
                         </TransformGroup>
                     </controls:Semafor1Control.RenderTransform>
                 </controls:Semafor1Control>
@@ -456,9 +461,61 @@
 
                 <!--#endregion SEMAFORY -->
 
+                <!--#region KOLAJOVE USEKY, KTORE NEPATRIA VYMENE -->
 
-                <!-- Nazov: K140; Podtyp: 0 (neizolovany)-->
-                <Path x:Name="K140" Data="M1226.5169,23.849999 L1121.5478,23.805986 1076.2455,117.00045 1042.2123,116.87553 1042.1754,108.00047 1070.8337,108.04205 1115.1263,14.368401 1226.5118,14.495734"
+
+                <Path  x:Name="ZLOZENA_14X" Data="M56.159775,9.8077837 L36.402337,49.833865 148.36111,51.126704 168.50714,10.790699 z M50.843197,0.5 L185.62323,1.5392517 185.52144,10.939656 178.40372,10.877283 153.67784,60.434866 31.788214,59.181494 14.911439,93.371718 158.69186,94.757239 158.60767,103.7564 74.667168,102.94752 91.833123,139.91519 159.03264,140.6207 158.95865,150.02132 86.343369,149.12182 64.886872,103.00061 0.5,102.23282 0.58418965,93.233656 5.0415559,93.27661 z" Height="150.521" Margin="466.068,592.663,0,0" 
+                       RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="186.123">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+                <!-- Nazov: 210; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_210_1" Data="M120,10 L-0.35778603,10.000004 -0.35778603,3.8316519E-06 120,0"
+                    Height="9.999"  Margin="6.344,518,0,0"  Stretch="Fill" Width="43.048" RenderTransformOrigin="0.5,0.5"
+                >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-180"/>
+                            <TranslateTransform X="-0.12400000000000944" Y="0.0010000000000012221"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+                <!-- Nazov: 210; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_210_2" Data="M32.13236,0.74076125 L90.734896,0.25927222 90.734896,10.444444 32.13236,10.74077 z"
+                    Height="10.435" Margin="48.257,517.656,0,0" Stretch="Fill"  Width="62.253"
+                />
+
+                <!-- Nazov: 119c; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_119c_1" Data="M120,10 L-0.89448423,10 -0.89448423,0 120,0"
+                    Height="10"  Margin="4.631,587.999,0,0"  Stretch="Fill" Width="43.235" RenderTransformOrigin="0.5,0.5"
+                >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-180"/>
+                            <TranslateTransform X="-0.31100000000000705"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+
+                <Path x:Name="_119c_2" Data="M32.13236,0.74076125 L90.734896,0.25927222 90.734896,10.444444 32.13236,10.74077 z"
+                    Height="10.435" Margin="48.257,587.656,0,0" Stretch="Fill"  Width="62.253"
+                />
+
+                <!-- Nazov: 140; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_140" Data="M1226.5169,23.849999 L1121.5478,23.805986 1076.2455,117.00045 1042.2123,116.87553 1042.1754,108.00047 1070.8337,108.04205 1115.1263,14.368401 1226.5118,14.495734"
                     Height="103.63" Margin="531.606,912.503,0,0" Stretch="Fill" Width="185.341"
                     RenderTransformOrigin="0,0" >
                     <Path.RenderTransform>
@@ -470,6 +527,25 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
+
+                <!-- Nazov: 119b; Podtyp: n (izolovany)-->
+                <Path  x:Name="_119b" Data="M1097.4085,54.644474 L1300.8998,54.314718 1300.8711,63.29346 1102.7252,63.951939 1070.0219,130.73953 1061.8919,126.83655 z" 
+                    Height="77.399" Margin="276.806,556.364,0,0" Stretch="Fill"  Width="240.008" RenderTransformOrigin="0,0" 
+                 >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="64"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+                <!-- Nazov: 119a; Podtyp: n (izolovany)-->
+                <Path x:Name="_119a" Data="M0,-0.13889223 L82.970182,-0.3626483 83.020264,9.6373517 0,10.138892 z"  
+                    Height="10.453" Margin="618.25,999.338,0,0" Stretch="Fill" Width="104.604"
+                />
 
                 <!-- Nazov: 140; Podtyp: 0 (neizolovany)  ??? su tu 2 useky 140-->
                 <Path x:Name="_140_V" Data="M-0.066777246,-0.046318929 L52.031361,-0.50259756 52.081443,9.7751225 0,10.046315 z"  
@@ -497,7 +573,7 @@
 
                 <!-- Nazov: 143; Podtyp: 0 (neizolovany)-->
                 <Path x:Name="_143"
-                    Height="74.801" Data="M22.561644,65.239333 L49.942121,65.155999 115.00919,0.5 156.44924,0.57167071 156.44924,9.634643 119.65967,9.6553692 53.661999,74.30114 22.561644,74.239333" Margin="584.833,743.981,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="134.886">
+                    Height="74.801" Data="M22.561644,65.239333 L49.942121,65.155999 115.00919,0.5 156.44924,0.57167071 156.44924,9.634643 119.65967,9.6553692 53.661999,74.30114 22.561644,74.239333" Margin="584.833,743.981,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="134.886">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1" ScaleX="-1"/>
@@ -507,6 +583,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
+                
                 <!-- Nazov: 119; Podtyp: n  (izolovany) -->
                 <Path x:Name="_119" Data="M0,0 L73.580429,-0.79476509 73.580429,9.2052349 0,10 z"  
                     Height="10.714" Margin="941.177,998.277,0,0" Stretch="Fill" Width="410.06"
@@ -558,11 +635,33 @@
                     Height="10" Margin="1287.683,114.259,0,0" Stretch="Fill"  Width="250.544"
                 />
 
+                <!-- Nazov: 201_1; Podtyp: 0  (neizolovany)  ???? -->
+                <Path x:Name="_201_1" Data="M90,10 L-40,10 -40,0 90,0"  
+                    Height="10" Margin="1537.385,114.238,0,0" Stretch="Fill" Width="78.389" RenderTransformOrigin="0.5, 0.5"
+                     />
+
 
                 <!-- Nazov: 83; Podtyp: n  (izolovany) -->
                 <Path x:Name="_83" Data="M0,0 L90,0 90,10 0,10 z"
                     Height="10" Margin="1284.757,173.952,0,0" Stretch="Fill"  Width="96.23"
                 />
+
+                <!-- Nazov: 83; Podtyp: 0  (neizolovany) ???? -->
+                <Path x:Name="_83_1" Data="M90,10 L-1,10 -1,0 90,0"  
+                    Height="10.083" Margin="1560.125,173.956,0,0" Stretch="Fill" Width="55.117" RenderTransformOrigin="3.264,-12.516"
+                     />
+
+
+                <!-- Nazov: 83; Podtyp: 0  (neizolovany) ???? -->
+                <Path x:Name="_83_2" Data="M0,0 L90,0 90,10 0,10 z"
+                    Height="10" Margin="1379.999,173.956,0,0" Stretch="Fill"  Width="102.918"
+                />
+
+                <!-- Nazov: 83; Podtyp: 0  (neizolovany) ???? -->
+                <Path x:Name="_83_3" Data="M0,0 L90,0 90,10 0,10 z"
+                    Height="10" Margin="1482.023,173.952,0,0" Stretch="Fill"  Width="78.956"
+                />
+
 
                 <!-- Nazov: 129; Podtyp: n  (izolovany) -->
                 <Path x:Name="_129" Data="M-7.541637,0.092590323 L125.06522,-0.049386541 125.06522,9.950613 -7.541637,10.09259 z"
@@ -623,9 +722,13 @@
                     Height="10.898" Margin="1810.74,40.821,0,0" Stretch="Fill"  Width="156.046"
                 />
 
+                <!-- Nazov: 80; Podtyp: n  (izolovany) ???? -->
+                <Path x:Name="_80" Data="M0,-0.13888386 L90.734896,0.25926258 90.734896,10.351848 0,10.092586 z"
+                    Height="10.442" Margin="2547.518,487.547,0,0" Stretch="Fill"  Width="100.363"
+                />
 
-                <!-- Nazov: 80; Podtyp: 0  (neizolovany) -->
-                <Path x:Name="_80_1" Data="M90.239529,10 L-1.4112582,10 -1.4112582,-0.092592593 90.239529,1.6770741E-13"  
+                <!-- Nazov: 80; Podtyp: 0  (neizolovany) ???? -->
+                <Path x:Name="_80_1" Data="M90.239529,10 L-1.4112582,10 -1.4112582,-0.092592593 90.239529,0"  
                     Height="10.083" Margin="2647.051,487.906,0,0" Stretch="Fill" Width="55.117" RenderTransformOrigin="3.264,-12.516"
                 />
 
@@ -647,19 +750,108 @@
                 <!-- Nazov: 81; Podtyp: n  (izolovany) -->
                 <Path x:Name="_81"  Data="M1,0.77747252 L80.560339,0.77747252 80.560339,9.1 1,9.1 z"  HorizontalAlignment="Left" Height="10.35" Margin="2489.25,314.873,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="72.269"/>
 
-                <!-- Nazov: 80; Podtyp: n  (izolovany) -->
-                <Path x:Name="_80" Data="M0,-0.13888386 L90.734896,0.25926258 90.734896,10.351848 0,10.092586 z"
-                    Height="10.442" Margin="2547.518,487.547,0,0" Stretch="Fill"  Width="100.363"
+                <!-- Nazov: 81; Podtyp: 0  (neizolovany) ???? -->
+                <Path x:Name="_81_1" Data="M90.239529,10.185195 L0,10.185195 0,-0.092592593 90.239529,-0.092592593"  
+                    Height="10.249" Margin="2647.881,315.24,0,0" Stretch="Fill" Width="54.287" RenderTransformOrigin="3.264,-12.516"
+                     />
+
+                <!-- Nazov: 124; Podtyp: 0  (neizolovany) -->
+                <Path x:Name="_124" Data="M0,0 L107.28197,0.13888889 107.28197,10.138889 0,10 z"  
+                    Height="10.125" Margin="956.584,655.186,0,0" Stretch="Fill" Width="64.351"
+                 />
+
+                <!-- Nazov: 124; Podtyp: 0  (neizolovany) ???? -->
+                <Path x:Name="_124_1" Data="M54.061759,0.32407406 L104.62616,0.16666153 104.62616,10.444444 54.061759,10.324074 z"
+                    Height="10.25" Margin="1187.167,656.157,0,0" Stretch="Fill"  Width="91.666"
                 />
+
+
+                <!-- Nazov: 124; Podtyp: 0  (neizolovany) ???? -->
+                <Path x:Name="_124_2" Data="M2.9846266,0 L90.027846,0 90.027846,10 2.9846266,10 z"  
+                    Height="10" Margin="1387.411,720.938,0,0" Stretch="Fill" Width="30.166"
+                />
+
+                <!-- Nazov: 124; Podtyp: 0  (neizolovany) ???? -->
+                <Path x:Name="_124_3" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
+                    Height="10" Margin="1416.748,720.938,0,0" Stretch="Fill" Width="31.162"
+                />
+
+                <!-- Nazov: 125; Podtyp: 0  (neizolovany) -->
+                <Path x:Name="_125"    Data="M0.61240877,1 L79.444,1 79.444,9.1 0.61240877,9.1 z"  HorizontalAlignment="Left" Height="10.1" Margin="955.403,583.331,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="64.559"/>
+
+
+                <!-- Nazov: 126; Podtyp: 0  (neizolovany) -->
+                <Path x:Name="_126" Data="M1,1.1883339 L65.48277,1.3390011 65.48277,9.5129969 1,9.5129969 z" HorizontalAlignment="Left" Height="10.209" Margin="950.028,450.699,0,0" Stretch="Fill" VerticalAlignment="Top" Width="51.687"/>
+
+                <!-- Nazov: 126; Podtyp: 0  (neizolovany)  ???? -->
+                <Path x:Name="_126_1" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
+                    Height="10.4" Margin="1170.452,450.741,0,0" Stretch="Fill"  Width="83.473"
+                />
+
+                <!-- Nazov: 126; Podtyp: 0  (neizolovany)  ???? -->
+                <Path x:Name="_126_2" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
+                    Height="10" Margin="1361.415,517.503,0,0" Stretch="Fill" Width="31.162"
+                />
+
+                <!-- Nazov: 126; Podtyp: 0  (neizolovany)  ???? -->
+                <Path x:Name="_126_3" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
+                    Height="10" Margin="1391.748,517.503,0,0" Stretch="Fill" Width="31.162"
+                />
+
+                <!-- Nazov: 127; Podtyp: 0  (neizolovany) -->
+                <Path x:Name="_127" Data="M1,1.3390011 L48.035518,1.3892235 48.035518,9.6385628 1,9.5883404 z" HorizontalAlignment="Left" Height="10.182" Margin="949.403,381.256,0,0" Stretch="Fill" VerticalAlignment="Top" Width="50.771"/>
+
+
+                <!-- Nazov: 128; Podtyp: 0  (neizolovany) -->
+                <Path x:Name="_128" Data="M1,1.7909787 L48.035518,1.3892235 48.035518,9.6385628 1.0787532,10.040318 z" HorizontalAlignment="Left" Height="10.569" Margin="949.403,314.437,0,0" Stretch="Fill" VerticalAlignment="Top" Width="50.771"/>
+
+                <!-- Nazov: 128; Podtyp: 0  (neizolovany)  ???? -->
+                <Path x:Name="_128_1" Data="M1.110223E-16,0 L90.734896,0.44444444 90.734896,11.185146 0,10.879572 z"
+                    Height="11.068" Margin="1170.452,314.073,0,0" Stretch="Fill"  Width="83.473"
+                />
+
+                <!-- Nazov: 128; Podtyp: 0  (neizolovany)  ???? -->
+                <Path x:Name="_128_2" Data="M0,0 L90,0 90,10 0,10 z"  
+                    Height="10" Margin="1361.415,380.003,0,0" Stretch="Fill" Width="31.162"
+                />
+
+                <!-- Nazov: 128; Podtyp: 0  (neizolovany)  ???? -->
+                <Path x:Name="_128_3" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
+                    Height="10" Margin="1391.748,380.003,0,0" Stretch="Fill" Width="31.162"
+                     
+                     />
+
+
+                <!-- Nazov: 123; Podtyp: 0  (neizolovany)  ???? -->
+                <Path x:Name="_123"   Data="M1,1 L150.667,1 L150.667,9.2 L1,9.2 z" HorizontalAlignment="Left" Height="10.2" Margin="1441.667,792.979,0,0" Stretch="Fill" VerticalAlignment="Top" Width="164"/>
+
+                <!-- Nazov: 122; Podtyp: 0  (neizolovany)  ???? -->
+                <Path x:Name="_122" Data="M1,1 L150.667,1 L150.667,10 L1,10 z" HorizontalAlignment="Left" Height="10" Margin="1441.828,844.157,0,0" Stretch="Fill" VerticalAlignment="Top" Width="164"/>
+
+                <!-- Nazov: 121; Podtyp: 0  (neizolovany)  ???? -->
+                <Path  x:Name="_121"  Data="M1,1 L150.667,1 L150.667,10 L1,10 z" HorizontalAlignment="Left" Height="10" Margin="1441.667,901.334,0,0" Stretch="Fill" VerticalAlignment="Top" Width="164"/>
+
+
+                <!-- Nazov: 120; Podtyp: 0  (neizolovany)  ???? -->
+                <Path  x:Name="_120" Data="M0.70147469,1.1114191 L153.30403,0.83287442 153.15476,9.0885809 0.70147469,9.4228382 z" HorizontalAlignment="Left" Height="10.637" Margin="1441.542,951.648,0,0" Stretch="Fill" VerticalAlignment="Top" Width="64.898"/>
+
+
+                <!-- Nazov: 119; Podtyp: n  (izolovany)  ???? -->
+                <Path x:Name="_119_2" Data="M0,0 L63.425017,0.50926421 63.425017,10.648158 0,10 z"  
+                    Height="10.583" Margin="1350.184,998.283,0,0" Stretch="Fill" Width="127.691"
+                />
+
+                <!-- Nazov: 121; Podtyp: 0 (neizolovany)  ???? -->
+                <Path x:Name="_121_1" Data="M1,1.3390011 L60.218289,1.3390011 60.218289,10 1,10 z" HorizontalAlignment="Left" Height="10" Margin="1054.062,901.312,0,0" Stretch="Fill" VerticalAlignment="Top" Width="54.687"/>
+
+                <!-- Nazov: 122; Podtyp: 0 (neizolovany)  ???? -->
+                <Path x:Name="_122_1" Data="M1,1 L61.666,1 61.666,10 1,10 z" HorizontalAlignment="Left" Height="10" Margin="1045.132,844.157,0,0" Stretch="Fill" VerticalAlignment="Top" Width="65.222"/>
+
+
                 <!-- #endregion == KOLAJOVE USEKY == -->
 
-                
-                
-                
-                
-                
-                
-                <!-- #region == OZNACENIE USEKOV ==-->
+   
+                <!-- #region == OZNACENIE USEKOV ktore nepatria vymene ==-->
 
                 <!-- Izolovany usek:   Podtyp="n"
                      Neizolovany usek: Podtyp="0"
@@ -713,10 +905,71 @@
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="404.077,288,0,0"  Text="147"/>
 
                 <!-- #endregion == OZNACENIE USEKOV ==-->
+                
+                
+                <!--#region ========  VYMENY a useky pre vymeny  ==============-->
+                
+                <!-- na ST22 vymeny su oznacene Vxxx, napr. V876, na ST08 len xxx, napr. 400, ale ja im dam x:Name="Vxxx"
+                     attProp:PathHelper.PathNumber vyuziva sa to pre ToolTip
+                     attProp:PathHelper.IsTrainSwitch="True"  oznacuje kolajovy usek ktory patri vymene
+                     attProp:PathHelper.ArmType="+"
+                     alebo attProp:PathHelper.ArmType="-"
+                 
+                    Na scheme stavadla v pohotovostnom stave "-" rameno je zaciernene (neprechodne), moze to byt Rameno1_xx, alebo Rameno2_xx user controlu controls:TrainSwitchXX.
+                
+                V dokumente "Situacna schema stxx.pdf" a na grafickej mape stavadla napr. UC_MapaST08.xaml vymena nie je zobrazena rovnako!!!!
 
-                <Path  x:Name="V539p2" Data="M1097.4085,54.644474 L1144.3243,54.409922 1144.1599,63.80942 1102.7252,63.951939 1087.3489,96.093239 1079.4811,92.318128 z" 
+                Pri kresleni schemy stavadla, pri vytvarani  UC_MapaSTxx.xaml plati dohoda, ze kolajovy usek ktory patri vymene a prechadza cez Rameno1_xx ( obdlznikovy tvar)  sa oznaci napr. <Path x:Name="V400p1" .../>
+                a kolajovy usek ktory prechadza cez Rameno2_xx (tvar hokejky)  sa oznaci napr. <Path x:Name="V400p2" .../>.
+
+                Ale v dokumente "Situacna schema stxx.pdf" moze mat v nasom ponimani (obdlznik, hokejka) ramien  Rameno2_xx ( obdlznikovy tvar) a Rameno1_xx (tvar hokejky).
+                Preto som zaviedol attached property InvertArm. Default je InvertArm="False".
+                Ak Rameno1_xx ( obdlznikovy tvar) odpoveda rovnemu ramenu v Situacnej scheme, potom InvertArm="False";
+                Ak Rameno1_xx ( obdlznikovy tvar) odpoveda sikmemu ramenu (hokejke) v Situacnej scheme, potom InvertArm="True";
+
+                Ak Rameno2_xx ( hokejkovy tvar) odpoveda rovnemu ramenu v Situacnej scheme, potom InvertArm="True";
+                Ak Rameno2_xx ( hokejkovy tvar) odpoveda sikmemu ramenu (hokejke) v Situacnej scheme, potom InvertArm="False";
+                -->
+                
+                <!-- === V400 ===-->
+
+                <!-- len pre kopirovanie na oznacenie dalsich vymen-->
+                <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="400"
+                    Foreground="{Binding ElementName=V400, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
+                    Margin="157,700,0,0" />
+                
+                <!--oznacenie vymeny-->
+                <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="400"
+                    Foreground="{Binding ElementName=V400, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
+                    Margin="157,599,0,0" />
+
+                <controls:TrainSwitch64 x:Name="V400"  Tag="V400"  Margin="130,558,0,0" 
+                    TsStatus="{Binding STC[V400].CombineStatus, Mode=OneWay}" 
+                                        Part01="{Binding ElementName=V400p1}"
+                                        Part02="{Binding ElementName=V400p2}">
+                    <controls:TrainSwitch64.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </controls:TrainSwitch64.RenderTransform>
+                </controls:TrainSwitch64>
+
+                <!--Path ktora ide cez Rameno1-xx, vodorovna cast-->
+                <Path x:Name="V400p1" Data="M-8.0779694,-3.9306955E-14 L79.222902,0.37037037 79.222902,10.37037 -8.0779694,10 z"  
+                    Height="10.333" Margin="109.74,588,0,0" Stretch="Fill" Width="101.927"
+                      attProp:PathHelper.PathNumber="V400"
+                      attProp:PathHelper.ArmType="-"
+                      attProp:PathHelper.IsTrainSwitch="True"
+                     />
+                <!--Path ktora ide cez Rameno2-xx, hokejkova cast-->
+                <Path  x:Name="V400p2" Data="M1097.4085,54.644474 L1144.3243,54.409922 1144.1599,63.80942 1102.7252,63.951939 1087.3489,96.093239 1079.4811,92.318128 z" 
                        Height="42.703" Margin="144.403,614.532,0,0" Stretch="Fill"  Width="65.85" RenderTransformOrigin="0,0" 
-                       >
+                       attProp:PathHelper.PathNumber="V400"
+                      attProp:PathHelper.ArmType="+"
+                      attProp:PathHelper.IsTrainSwitch="True" >
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1"/>
@@ -727,22 +980,71 @@
                     </Path.RenderTransform>
                 </Path>
 
+                <!-- === V352 ===-->
+                <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="352"
+                    Foreground="{Binding ElementName=V352, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
+                    Margin="163,492,0,0" />
+
+                <controls:TrainSwitch64 x:Name="V352" Tag="V352" Margin="153,507,0,0"
+                   TsStatus="{Binding STC[V352].CombineStatus, Mode=OneWay}" 
+                   Part01="{Binding ElementName=V352p1}"
+                   Part02="{Binding ElementName=V352p2}">
+                    <controls:TrainSwitch64.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </controls:TrainSwitch64.RenderTransform>
+                </controls:TrainSwitch64>
+
+                <Path x:Name="V352p1" Data="M-33.418644,0.70221363 L80.151519,0.23150898 80.09893,10 -33.418644,10.702213 z"  
+                    Height="10.422" Margin="109.849,517.585,0,0" Stretch="Fill" Width="90.985"
+                    attProp:PathHelper.PathNumber="V352"
+                     attProp:PathHelper.ArmType="-"
+                     attProp:PathHelper.IsTrainSwitch="True" 
+                />
+                <Path  x:Name="V352p2" Data="M1097.0677,54.4879 L1133.7268,54.031077 1133.5625,63.430625 1102.7252,63.951943 1096.8019,76.833328 1088.4788,73.051155 z" 
+                     Height="23.804" Margin="182.859,509.525,0,0" Stretch="Fill"  Width="46.241" RenderTransformOrigin="0,0" 
+                      attProp:PathHelper.PathNumber="V352"
+                      attProp:PathHelper.ArmType="+"
+                      attProp:PathHelper.IsTrainSwitch="True" >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="114.676"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+                <!-- === V351 ===-->
+                
+                <Path x:Name="V351p1" Data="M0,-0.27777778 L90.872821,-0.27777778 90.872821,9.7222674 0,9.7222674 z"  
+                    Height="10.002" Margin="199.833,517.75,0,0" Stretch="Fill" Width="108.545"
+                />
+                
+
+                <!--#endregion =======  VYMENY a useky pre vymeny =============-->
 
 
-
-                <Path x:Name="K770A_Copy" Data="M29.148256,0.44444508 L199.99945,0.011110151 199.99945,9.7611015 139.68451,9.7533099 79.107005,69.802428 79.107005,70.052893 146.30561,136.6412 199.99945,136.66388 199.99945,145.66388 29.981587,145.81944 29.981587,136.81944 133.60305,136.61801 72.593684,76.266341 28.870479,76.344439 28.870479,67.344439 68.900737,67.24726 126.92424,9.7298848 29.148256,9.4444448 z" Height="146.81" Margin="999.056,314.059,0,0" Stretch="Fill" Width="172.129"/>
-                <Path x:Name="K770A_Copy1" Data="M68.376151,0.38889024 L423.93241,-0.32221724 423.93241,8.6777845 114.51921,9.5822573 177.98698,73.555326 236.43207,73.366669 236.43207,82.366669 69.042818,81.300008 69.042818,72.300008 165.2912,73.537061 101.83247,9.5731049 68.376151,9.3888912 z" Height="83.689" Margin="1019.296,582.663,0,0" Stretch="Fill"  Width="356.555"
+                <Path x:Name="K770A_CopyA" Data="M29.148256,0.44444508 L199.99945,0.011110151 199.99945,9.7611015 139.68451,9.7533099 79.107005,69.802428 79.107005,70.052893 146.30561,136.6412 199.99945,136.66388 199.99945,145.66388 29.981587,145.81944 29.981587,136.81944 133.60305,136.61801 72.593684,76.266341 28.870479,76.344439 28.870479,67.344439 68.900737,67.24726 126.92424,9.7298848 29.148256,9.4444448 z" Height="146.81" Margin="999.056,314.059,0,0" Stretch="Fill" Width="172.129"/>
+                <Path x:Name="K770A_Copy1A" Data="M68.376151,0.38889024 L423.93241,-0.32221724 423.93241,8.6777845 114.51921,9.5822573 177.98698,73.555326 236.43207,73.366669 236.43207,82.366669 69.042818,81.300008 69.042818,72.300008 165.2912,73.537061 101.83247,9.5731049 68.376151,9.3888912 z" Height="83.689" Margin="1019.296,582.663,0,0" Stretch="Fill"  Width="356.555"
                       
                      />
-                <Path x:Name="K770A_Copy21" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
-                    Height="10.4" Margin="1170.452,450.741,0,0" Stretch="Fill"  Width="83.473"
-                      
-                     />
+
+
+
+
+               
+
                 <Path x:Name="K770A_Copy24" Data="M0,-0.13888888 L90.734896,0.30555556 90.734896,10.444444 0,10 z"
                     Height="10.525" Margin="1143.089,173.493,0,0" Stretch="Fill"  Width="142.836"
                       
                      />
-                
+
                 <Path x:Name="K770A_Copy26" Data="M0.73680287,-0.49784131 L90.92624,0.046389225 90.887632,10.735844 0.61854964,9.4860657 z"
                     Height="11.11" Margin="816.596,99.703,0,0" Stretch="Fill"  Width="172.736" RenderTransformOrigin="0.5,0.5"
                       
@@ -756,51 +1058,12 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="_775_Copy" Data="M120,10 L-0.35778603,10.000004 -0.35778603,3.8316519E-06 120,0"
-                    Height="9.999"  Margin="6.344,518,0,0"  Stretch="Fill" Width="43.048" RenderTransformOrigin="0.5,0.5"
-                      
-                      >
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-180"/>
-                            <TranslateTransform X="-0.12400000000000944" Y="0.0010000000000012221"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                <Path x:Name="_775_Copy1" Data="M120,10 L-0.89448423,10 -0.89448423,4.2521054E-17 120,0"
-                    Height="10"  Margin="4.631,587.999,0,0"  Stretch="Fill" Width="43.235" RenderTransformOrigin="0.5,0.5"
-                      
-                      >
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-180"/>
-                            <TranslateTransform X="-0.31100000000000705"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
+                
+                
 
 
 
-                <Path x:Name="K775_Copy2" Data="M-8.0779694,-3.9306955E-14 L79.222902,0.37037037 79.222902,10.37037 -8.0779694,10 z"  
-                    Height="10.333" Margin="109.74,588,0,0" Stretch="Fill" Width="101.927"
-                     
-                     />
-                <Path  x:Name="V539p2_Copy" Data="M1097.4085,54.644474 L1300.8998,54.314718 1300.8711,63.29346 1102.7252,63.951939 1070.0219,130.73953 1061.8919,126.83655 z" 
-                    Height="77.399" Margin="276.806,556.364,0,0" Stretch="Fill"  Width="240.008" RenderTransformOrigin="0,0" 
-                       >
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="64"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
+                
                 <Path x:Name="V194p1_Copy"  Data="M1099.0966,54.80596 L1231.4286,54.548041 1231.4289,63.777199 1104.7682,64.168894 994.17989,292.36074 986.13538,288.43729 z"
                     Height="238.828" Margin="373.122,1010.198,0,-199.026" Stretch="Fill"  Width="246.276" RenderTransformOrigin="0,0"
                      >
@@ -813,10 +1076,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K775_Copy5" Data="M0,-0.13889223 L82.970182,-0.3626483 83.020264,9.6373517 0,10.138892 z"  
-                    Height="10.453" Margin="618.25,999.338,0,0" Stretch="Fill" Width="104.604"
-                     
-                     />
+                
                 <Path x:Name="K775_Copy6" Data="M0,0 L90.599545,1.6770741E-13 90.599545,10 0,10 z"  
                     Height="10" Margin="721.834,999.31,0,0" Stretch="Fill" Width="119.854"
                      
@@ -826,10 +1086,7 @@
                      
                      />
 
-                <Path x:Name="K775_Copy9" Data="M0,0 L63.425017,0.50926421 63.425017,10.648158 0,10 z"  
-                    Height="10.583" Margin="1350.184,998.283,0,0" Stretch="Fill" Width="127.691"
-                     
-                     />
+              
                 <Path x:Name="V194p1_Copy2"  Data="M1098.4591,55.056367 L1169.8847,54.801558 1169.8613,63.905705 1101.0075,63.83744 868.93658,177.14608 864.7986,169.51298 z"
                     Height="123.346" Margin="1797.959,1008.933,0,-82.279" Stretch="Fill"  Width="321.057" RenderTransformOrigin="0,0"
                      >
@@ -854,7 +1111,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                
+
                 <Path x:Name="V194p1_Copy7"  Data="M1098.7933,52.929742 L1152.1558,52.752839 1152.1474,63.315256 1102.7704,63.326086 1023.0219,142.26946 1016.4144,135.42798 z"
                     Height="90.521" Margin="2332.853,560.005,0,0" Stretch="Fill"  Width="136.726" RenderTransformOrigin="0,0"
                      >
@@ -877,8 +1134,8 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                
-                
+
+
                 <Path  x:Name="V539p2_Copy2" Data="M1096.4731,54.28101 L1246.24,55.354251 1246.3601,64.31304 1101.8236,63.234092 1078.1841,111.49349 1070.3912,107.75492 z" 
                     Height="58.215" Margin="893.235,1032.377,0,-40.592" Stretch="Fill"  Width="176.956" RenderTransformOrigin="0,0" 
                        >
@@ -920,37 +1177,11 @@
                     Height="10" Margin="432.438,449.98,0,0" Stretch="Fill"  Width="156.524"
                       
                      />
+
+               
+               
                 
-                <Path x:Name="K775_Copy15" Data="M-33.418644,0.70221363 L80.151519,0.23150898 80.09893,10 -33.418644,10.702213 z"  
-                    Height="10.422" Margin="109.849,517.585,0,0" Stretch="Fill" Width="90.985"
-                     
-                     />
-                <controls:TrainSwitch64 HorizontalAlignment="Left" Height="50" Margin="129.597,558.297,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
-                    <controls:TrainSwitch64.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:TrainSwitch64.RenderTransform>
-                </controls:TrainSwitch64>
-                <Path  x:Name="V539p2_Copy4" Data="M1097.0677,54.4879 L1133.7268,54.031077 1133.5625,63.430625 1102.7252,63.951943 1096.8019,76.833328 1088.4788,73.051155 z" 
-                    Height="23.804" Margin="182.859,509.525,0,0" Stretch="Fill"  Width="46.241" RenderTransformOrigin="0,0" 
-                       >
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1"/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="114.676"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                <Path x:Name="K775_Copy16" Data="M0,-0.27777778 L90.872821,-0.27777778 90.872821,9.7222674 0,9.7222674 z"  
-                    Height="10.002" Margin="199.833,517.75,0,0" Stretch="Fill" Width="108.545"
-                     
-                     />
+              
                 <Path x:Name="V543xx_Copy" Data="M1008.3093,83.522118 L1081.9317,82.878057 1115.4588,15.574378 1150.4909,15.304416 1150.4968,24.450374 1121.2972,24.724442 1087.4962,92.005425 1008.4579,92.771261 z"
                     Height="78.472" Margin="342.931,528.767,0,0" Stretch="Fill" Width="143.184"
                     RenderTransformOrigin="0,0" >
@@ -963,10 +1194,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K770A_Copy46" Data="M32.13236,0.74076125 L90.734896,0.25927222 90.734896,10.444444 32.13236,10.74077 z"
-                    Height="10.435" Margin="307.378,517.332,0,0" Stretch="Fill"  Width="125.922"
-                      
-                     />
+               
                 <controls:TrainSwitch64 HorizontalAlignment="Left" Height="50" Margin="213.166,487.842,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
                     <controls:TrainSwitch64.RenderTransform>
                         <TransformGroup>
@@ -1013,20 +1241,9 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K775_Copy17" Data="M-0.1718874,0 L44.587475,-0.24691358 44.587475,9.7530864 -0.1718874,10 z"  
-                    Height="10.20" Margin="466.75,808.872,0,0" Stretch="Fill" Width="66.101"
-                     
-                     />
-                <Path  x:Name="V539p2_Copy8" Data="M56.159775,9.8077837 L36.402337,49.833865 148.36111,51.126704 168.50714,10.790699 z M50.843197,0.5 L185.62323,1.5392517 185.52144,10.939656 178.40372,10.877283 153.67784,60.434866 31.788214,59.181494 14.911439,93.371718 158.69186,94.757239 158.60767,103.7564 74.667168,102.94752 91.833123,139.91519 159.03264,140.6207 158.95865,150.02132 86.343369,149.12182 64.886872,103.00061 0.5,102.23282 0.58418965,93.233656 5.0415559,93.27661 z" Height="150.521" Margin="531.068,911.663,0,-12.184" RenderTransformOrigin="0.022927584284168,-9.10772556298957E-09" Stretch="Fill" Width="186.123">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1"/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="0.536"/>
-                            <TranslateTransform X="-1.6653960788204358E-07" Y="3.5604280130954735E-05"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
+               
+
+                
                 <Path  x:Name="V539p2_Copy9" Data="M1097.4108,54.3945 L1134.3542,54.770419 1134.2523,64.170502 1102.7252,63.951939 1093.5522,83.084787 1085.5322,79.486589 z" 
                     Height="29.692" Margin="766.025,902.037,0,0" Stretch="Fill"  Width="49.821" RenderTransformOrigin="0,0" 
                        >
@@ -1099,9 +1316,7 @@
                     Height="10.65" Margin="2560.519,314.823,0,0" Stretch="Fill"  Width="87.362"
                       
                      />
-                <Path x:Name="K775_Copy19" Data="M90.239529,10.185195 L0,10.185195 0,-0.092592593 90.239529,-0.092592593"  
-                    Height="10.249" Margin="2647.881,315.24,0,0" Stretch="Fill" Width="54.287" RenderTransformOrigin="3.264,-12.516"
-                     />
+               
                 <Path x:Name="V194p1_Copy11"  Data="M1102.4686,57.225827 L1152.1218,57.252618 1152.1086,67.81506 1104.4979,68.160611 1069.3807,95.229409 1063.4318,106.73845 1055.3483,101.88327 1060.582,92.074407 z"
                     Height="50.51" Margin="2322.961,326.381,0,0" Stretch="Fill"  Width="97.766" RenderTransformOrigin="0,0"
                      >
@@ -1142,7 +1357,7 @@
                     Height="10.4" Margin="2348,184.389,0,0" Stretch="Fill"  Width="143.363"
                       
                      />
-                
+
                 <Path  x:Name="V539p2_Copy13" Data="M1097.7434,55.092042 L1159.3364,55.91699 1159.0418,65.018208 1103.2282,64.064284 1084.5148,101.37359 1076.4602,97.320409 z" 
                     Height="47.282" Margin="2453.067,165.466,0,0" Stretch="Fill"  Width="83.873" RenderTransformOrigin="0,0" 
                        >
@@ -1223,7 +1438,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-               
+
                 <Path x:Name="K770A_Copy58" Data="M-43.626737,-0.74074069 L79.352744,-0.7900825 79.352744,9.2099171 -43.626737,9.2592593 z"
                     Height="10.044" Margin="1667.792,450.896,0,0" Stretch="Fill"  Width="212.929"
                       
@@ -1303,7 +1518,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                
+
                 <Path x:Name="K770A_Copy64" Data="M0,-0.13889989 L86.716799,-0.7553984 86.729965,9.2908917 0,10.32409 z"
                     Height="10.971" Margin="1665.112,514.086,0,0" Stretch="Fill"  Width="206.857"
                       
@@ -1319,10 +1534,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K770A_Copy67" Data="M54.061759,0.32407406 L104.62616,0.16666153 104.62616,10.444444 54.061759,10.324074 z"
-                    Height="10.25" Margin="1187.167,656.157,0,0" Stretch="Fill"  Width="91.666"
-                      
-                     />
+               
                 <Path x:Name="K770A_Copy66" Data="M38.750796,0.83333839 L88.930823,0.49073562 88.930823,10.629629 38.750796,10.972232 z"
                     Height="10.433" Margin="1277.75,655.887,0,0" Stretch="Fill"  Width="98.167"
                       
@@ -1338,14 +1550,8 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K775_Copy20" Data="M2.9846266,0 L90.027846,1.6770741E-13 90.027846,10 2.9846266,10 z"  
-                    Height="10" Margin="1387.411,720.938,0,0" Stretch="Fill" Width="30.166"
-                     
-                     />
-                <Path x:Name="K775_Copy21" Data="M0,0 L90.027846,1.6770741E-13 90.027846,10 0,10 z"  
-                    Height="10" Margin="1416.748,720.938,0,0" Stretch="Fill" Width="31.162"
-                     
-                     />
+               
+              
                 <Path x:Name="K770A_Copy68" Data="M-0.3738151,-0.18518519 L90.565658,-0.46293865 90.565658,9.8148118 -0.3738151,9.4444546 z"
                     Height="10.25" Margin="588.829,449.859,0,0" Stretch="Fill"  Width="135.337"/>
                 <Path Data="M-3.9592074,99.218161 L7.7234241,99.231278 39.194726,46.053507 69.393732,46.015278 69.434486,53.092321 40.851978,53.286133 10.568948,106.41735 -3.959113,106.33177 z" 
@@ -1353,16 +1559,17 @@
 
                 <Path Data="M0,0.092592593 L291.22202,0.43210099 291.22202,10.617297 0,10 z" 
                       Height="10.472" Width="151.779" Margin="799.264,450.441,0,0"  Stretch="Fill"/>
-                
+
                 <Path Data="M5.3553588,0.13890991 L83.065782,0.13890991 83.065782,10.324064 5.3553588,10.324064 z" 
                     Height="10.166" Width="87.5" Margin="983.207,173.326,0,0"  Stretch="Fill"/>
-                
+
                 <Path Data="M0,0 L54,0 54,10 0,10 z" 
                     Height="10" Width="69.32" Margin="1028.047,114.238,0,0"  Stretch="Fill"/>
                 <Path Data="M-23.945845,-0.18518858 L76.055329,0 62.256642,10 -23.945845,9.8148114 z" 
                     Height="10.166" Width="106.958" Margin="1096.368,114.259,0,0"  Stretch="Fill"/>
                 <Path Data="M3.8086187,68.844395 L20.186079,68.745679 43.968853,46.6814 46.358854,52.801354 21.493475,75.630293 3.8386874,75.502637 z" 
                     Height="40.106"  Stretch="Fill" Width="89.436" Margin="1070.58,143.523,0,0"/>
+                
                 <Path
                     Height="74.575" Data="M112.50912,0.5 L177.20555,0.79389444 177.20555,9.8568667 117.2429,9.6553692 53.411991,73.926141 35.624034,74.075791 35.66558,64.946288 49.192097,65.030998 z" Margin="1131.812,248.167,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="142.577">
                     <Path.RenderTransform>
@@ -1413,10 +1620,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K775_Copy23" Data="M0,0 L107.28197,0.13888889 107.28197,10.138889 0,10 z"  
-                    Height="10.125" Margin="956.584,655.186,0,0" Stretch="Fill" Width="64.351"
-                     
-                     />
+               
                 <Path x:Name="V194p1_Copy27"  Data="M1087.9406,62.907094 L1135.3642,50.818053 1158.1038,57.400785 1155.1574,65.741156 1135.179,60.469006 1090.525,72.264229 1018.897,113.66281 1014.2969,105.73466 z"
                     Height="63.822" Margin="2113.294,509.054,0,0" Stretch="Fill"  Width="144.835" RenderTransformOrigin="0,0"
                      >
@@ -1429,7 +1633,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                
+
                 <Path x:Name="V194p1_Copy28"
                     Height="72.091" Data="M110.73066,4.8423353 L165.32211,4.9605183 165.32211,14.231809 114.064,14.425666 53.661999,75.801153 -36.705902,75.933788 -36.705902,66.933788 46.692121,67.156012 z" Margin="1785.581,460.961,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="203.028">
                     <Path.RenderTransform>
@@ -1503,14 +1707,8 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K775_Copy24" Data="M0,0 L90.027846,1.6770741E-13 90.027846,10 0,10 z"  
-                    Height="10" Margin="1361.415,517.503,0,0" Stretch="Fill" Width="31.162"
-                     
-                     />
-                <Path x:Name="K775_Copy25" Data="M0,0 L90.027846,1.6770741E-13 90.027846,10 0,10 z"  
-                    Height="10" Margin="1391.748,517.503,0,0" Stretch="Fill" Width="31.162"
-                     
-                     />
+               
+               
                 <Path x:Name="V194p1_Copy36"
                     Height="187.057" Data="M115.00919,0.91667162 L155.83862,0.90501888 155.83862,9.8429887 120.493,10.030376 -15.956017,151.43239 -71.714039,186.96721 -76.929471,178.93719 -20.516331,142.50721 z" Margin="1513.977,665.857,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="233.775">
                     <Path.RenderTransform>
@@ -1533,18 +1731,9 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="K775_Copy26" Data="M0,0 L90,0 90,10 0,10 z"  
-                    Height="10" Margin="1361.415,380.003,0,0" Stretch="Fill" Width="31.162"
-                     
-                     />
-                <Path x:Name="K775_Copy27" Data="M0,0 L90.027846,1.6770741E-13 90.027846,10 0,10 z"  
-                    Height="10" Margin="1391.748,380.003,0,0" Stretch="Fill" Width="31.162"
-                     
-                     />
-                <Path x:Name="K770A_Copy3" Data="M1.110223E-16,0 L90.734896,0.44444444 90.734896,11.185146 0,10.879572 z"
-                    Height="11.068" Margin="1170.452,314.073,0,0" Stretch="Fill"  Width="83.473"
-                      
-                     />
+                
+               
+                
                 <Path x:Name="V194p1_Copy38"  Data="M1103.2015,55.262687 L1250.7179,54.060922 1250.7805,63.290042 1102.998,64.211549 963.71383,129.80606 959.23038,121.8606 z"
                     Height="76.746" Margin="1798.005,962.021,0,0" Stretch="Fill"  Width="292.546" RenderTransformOrigin="0,0"
                      >
@@ -1608,7 +1797,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path Data="M1,1.3390011 L60.218289,1.3390011 60.218289,10 1,10 z" HorizontalAlignment="Left" Height="10" Margin="1054.062,901.312,0,0" Stretch="Fill" VerticalAlignment="Top" Width="54.687"/>
+              
                 <Path Data="M0,1 L61.666,1 61.666,10 0,10 z" HorizontalAlignment="Left" Height="10" Margin="950.307,901.334,0,0" Stretch="Fill" VerticalAlignment="Top" Width="104.034"/>
                 <Path Data="M0,0 L54,0 54,10 0,10 z" HorizontalAlignment="Left" Height="10" Margin="903.554,901.334,0,0" Stretch="Fill" VerticalAlignment="Top" Width="47.718"/>
                 <Path Data="M1,1.3390011 L61.666,1.3390011 61.666,9.4564874 1,9.4564874 z" HorizontalAlignment="Left" Height="9.979" Margin="884.146,901.375,0,0" Stretch="Fill" VerticalAlignment="Top" Width="20.4"/>
@@ -1903,10 +2092,10 @@
                         </TransformGroup>
                     </controls:TrainSwitch25.RenderTransform>
                 </controls:TrainSwitch25>
-                <Path Data="M1,1 L150.667,1 L150.667,10 L1,10 z" HorizontalAlignment="Left" Height="10" Margin="1441.667,901.334,0,0" Stretch="Fill" VerticalAlignment="Top" Width="164"/>
-                <Path Data="M1,1 L150.667,1 L150.667,9.2 L1,9.2 z" HorizontalAlignment="Left" Height="10.2" Margin="1441.667,792.979,0,0" Stretch="Fill" VerticalAlignment="Top" Width="164"/>
-                <Path Data="M1,1 L150.667,1 L150.667,10 L1,10 z" HorizontalAlignment="Left" Height="10" Margin="1441.828,844.157,0,0" Stretch="Fill" VerticalAlignment="Top" Width="164"/>
-                <Path Data="M0.70147469,1.1114191 L153.30403,0.83287442 153.15476,9.0885809 0.70147469,9.4228382 z" HorizontalAlignment="Left" Height="10.637" Margin="1441.542,951.648,0,0" Stretch="Fill" VerticalAlignment="Top" Width="64.898"/>
+                
+               
+                
+                
                 <controls:TrainSwitch45 HorizontalAlignment="Left"  Margin="806.684,420.954,0,0" VerticalAlignment="Top" Width="50" Height="50" RenderTransformOrigin="0.5,0.5">
                     <controls:TrainSwitch45.RenderTransform>
                         <TransformGroup>
@@ -1945,18 +2134,15 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path Data="M1,1.1883339 L65.48277,1.3390011 65.48277,9.5129969 1,9.5129969 z" HorizontalAlignment="Left" Height="10.209" Margin="950.028,450.699,0,0" Stretch="Fill" VerticalAlignment="Top" Width="51.687"/>
-                <Path Data="M1,1 L61.666,1 61.666,10 1,10 z" HorizontalAlignment="Left" Height="10" Margin="1045.132,844.157,0,0" Stretch="Fill" VerticalAlignment="Top" Width="65.222"/>
-                <Path Data="M1,1.7909787 L48.035518,1.3892235 48.035518,9.6385628 1.0787532,10.040318 z" HorizontalAlignment="Left" Height="10.569" Margin="949.403,314.437,0,0" Stretch="Fill" VerticalAlignment="Top" Width="50.771"/>
-                <Path Data="M1,1.3390011 L48.035518,1.3892235 48.035518,9.6385628 1,9.5883404 z" HorizontalAlignment="Left" Height="10.182" Margin="949.403,381.256,0,0" Stretch="Fill" VerticalAlignment="Top" Width="50.771"/>
+               
+               
+               
+                
                 <Path x:Name="K770A_Copy8" Data="M-0.65859211,-0.55555552 L90.734896,-0.11111108 90.652572,10.444444 -0.65859211,10 z"
                     Height="10.9" Margin="1252.925,314.448,0,0" Stretch="Fill"  Width="139.771"
                       
                      />
-                <Path x:Name="K770A_Copy10" Data="M0,0 L90,0 90,10 0,10 z"
-                    Height="10" Margin="1379.999,173.956,0,0" Stretch="Fill"  Width="102.918"
-                      
-                     />
+             
                 <Path x:Name="V194p1_Copy5"  Data="M1072.3979,82.447364 L1133.9592,83.152593 1133.2492,92.378556 1076.2047,92.136511 1015.0295,152.19865 1008.3177,145.38927 z"
                     Height="70.711" Margin="1436.155,269.67,0,0" Stretch="Fill"  Width="126.621" RenderTransformOrigin="0,0"
                      >
@@ -1986,8 +2172,8 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                
-                <Path Data="M0.61240877,1 L79.444,1 79.444,9.1 0.61240877,9.1 z"  HorizontalAlignment="Left" Height="10.1" Margin="955.403,583.331,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="64.559"/>
+
+               
                 <controls:TrainSwitch45 HorizontalAlignment="Left"  Margin="907.297,833.803,0,0" VerticalAlignment="Top" Width="50" Height="50" RenderTransformOrigin="0.5,0.5">
                     <controls:TrainSwitch45.RenderTransform>
                         <TransformGroup>
@@ -2018,7 +2204,7 @@
                         </TransformGroup>
                     </controls:TrainSwitch45.RenderTransform>
                 </controls:TrainSwitch45>
-                
+
                 <Path x:Name="V194p1_Copy9"  Data="M1072.9339,81.922376 L1242.8569,84.050673 1242.2325,93.542885 1076.0354,91.427132 1039.4164,126.97545 1032.9962,120.46397 z"
                     Height="46.026" Margin="1377.169,209.891,0,0" Stretch="Fill"  Width="210.832" RenderTransformOrigin="0,0"
                      >
@@ -2061,17 +2247,10 @@
                         </TransformGroup>
                     </controls:TrainSwitch64.RenderTransform>
                 </controls:TrainSwitch64>
-                <Path x:Name="K770A_Copy17" Data="M0,0 L90,0 90,10 0,10 z"
-                    Height="10" Margin="1482.023,173.952,0,0" Stretch="Fill"  Width="78.956"
-                      
-                     />
-                <Path x:Name="K775_Copy3" Data="M90,10 L-1,10 -1,0 90,0"  
-                    Height="10.083" Margin="1560.125,173.956,0,0" Stretch="Fill" Width="55.117" RenderTransformOrigin="3.264,-12.516"
-                     />
+                
                
-                <Path x:Name="K775_Copy4" Data="M90,10 L-40,10 -40,0 90,0"  
-                    Height="10" Margin="1537.385,114.238,0,0" Stretch="Fill" Width="78.389" RenderTransformOrigin="3.264,-12.516"
-                     />
+
+              
                 <Path x:Name="K770A_Copy19" Data="M0,-0.1852143 L73.466547,0.027760067 73.466547,10.374961 0,10.023103 z"
                     Height="10.503" Margin="1069.733,173.287,0,0" Stretch="Fill"  Width="64.093"
                       
@@ -2086,11 +2265,7 @@
                         </TransformGroup>
                     </controls:TrainSwitch45.RenderTransform>
                 </controls:TrainSwitch45>
-                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="881.889,787.717,0,0" VerticalAlignment="Top" Width="3.555"/>
-                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="881.889,899.592,0,0" VerticalAlignment="Top" Width="3.555"/>
-                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1446.288,719.014,0,0" VerticalAlignment="Top" Width="3.555"/>
-                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1422.312,515.701,0,0" VerticalAlignment="Top" Width="3.555"/>
-                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1422.075,377.438,0,0" VerticalAlignment="Top" Width="3.555"/>
+               
                 <controls:TrainSwitch30 HorizontalAlignment="Left" Height="50" Margin="2265,154.377,0,0" VerticalAlignment="Top" Width="50"/>
                 <controls:TrainSwitch30 HorizontalAlignment="Left" Height="50" Margin="2138.484,96.606,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
                     <controls:TrainSwitch30.RenderTransform>
@@ -2204,6 +2379,8 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
+                
+                <!--#region  UKONCOVACE USEKOV -->
                 <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="719.299,806.502,0,0" VerticalAlignment="Top" Width="3.555"/>
                 <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="719.275,742.502,0,0" VerticalAlignment="Top" Width="3.555"/>
                 <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1806.375,311.795,0,0" VerticalAlignment="Top" Width="3.555"/>
@@ -2212,6 +2389,18 @@
 
                 <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1807.875,109,0,0" VerticalAlignment="Top" Width="3.555"/>
                 <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1807.875,39,0,0" VerticalAlignment="Top" Width="3.555"/>
+
+
+                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="881.889,787.717,0,0" VerticalAlignment="Top" Width="3.555"/>
+                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="881.889,899.592,0,0" VerticalAlignment="Top" Width="3.555"/>
+                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1446.288,719.014,0,0" VerticalAlignment="Top" Width="3.555"/>
+                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1422.312,515.701,0,0" VerticalAlignment="Top" Width="3.555"/>
+                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1422.075,377.438,0,0" VerticalAlignment="Top" Width="3.555"/>
+
+
+                <!--#endregion  UKONCOVACE USEKOV -->
+                
+                
                 <controls:TrainSwitch25 HorizontalAlignment="Left" Height="50" Margin="1846.565,831.533,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5">
                     <controls:TrainSwitch25.RenderTransform>
                         <TransformGroup>
@@ -2420,6 +2609,7 @@
                 <!--#endregion LOKOMOTIVY -->
 
                 <!--#region PANACI-figurky -->
+                
                 <controls:UC_PanakUss  Margin="2518.556,727.925,0,0" x:Name="Panak1">
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
@@ -2436,11 +2626,16 @@
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
                 </controls:UC_PanakUss>
+                
                 <controls:UC_PanakUss  Margin="2520.556,828.442,0,0" x:Name="Panak4">
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
                 </controls:UC_PanakUss>
+                
+                <!--#endregion PANACI-figurky -->
+
+
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="85,636.463,0,0"  Text="119c"/>
                 <TextBlock Style="{StaticResource txbMapTitle}"  Margin="10.033,466.26,0,0" TextWrapping="Wrap"  Text="St.17" />
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1328.077,90,0,0"  Text="201"/>
@@ -2478,7 +2673,7 @@
 
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1253.243,631,0,0"  Text="124" />
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="976,628,0,0"  Text="124a" />
-                
+
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1253.243,554,0,0"  Text="125" />
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="976,554,0,0"  Text="125a" />
 
@@ -2488,6 +2683,9 @@
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="972.5,283.5,0,0"  Text="128a" />
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="966.5,354,0,0"  Text="127a" />
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="966.5,423,0,0"  Text="126a" />
+                
+
+
 
 
 

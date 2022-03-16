@@ -792,6 +792,20 @@ namespace PA.Stavadlo.MH.UserControls
         /*POZNAMKY:
          * 
        
+        V dokumente "Situacna schema stxx.pdf" a na grafickej mape stavadla  UC_MapaSTxx.xaml vymena nie je zobrazena rovnako!!!!
+
+        Pri kresleni schemy stavadla, pri vytvarani  UC_MapaSTxx.xaml plati dohoda, ze kolajovy usek ktory patri vymene a prechadza cez Rameno1_xx ( obdlznikovy tvar)  sa oznaci napr. <Path x:Name="V400p1" .../>
+        a kolajovy usek ktory prechadza cez Rameno2_xx (tvar hokejky)  sa oznaci napr. <Path x:Name="V400p2" .../>.
+
+        Ale v dokumente "Situacna schema stxx.pdf" moze byt v nasom ponimani ramien vymeny Rameno2_xx ( obdlznikovy tvar) a Rameno1_xx (tvar hokejky).
+        Preto som zaviedol attached property InvertArm. Default je InvertArm="False".
+        Ak Rameno1_xx ( obdlznikovy tvar) odpoveda rovnemu ramenu v Situacnej scheme, potom InvertArm="False";
+        Ak Rameno1_xx ( obdlznikovy tvar) odpoveda sikmemu ramenu (hokejke) v Situacnej scheme, potom InvertArm="True";
+
+        Ak Rameno2_xx ( hokejkovy tvar) odpoveda rovnemu ramenu v Situacnej scheme, potom InvertArm="True";
+        Ak Rameno2_xx ( hokejkovy tvar) odpoveda sikmemu ramenu (hokejke) v Situacnej scheme, potom InvertArm="False";
+
+
         Flag InvertArm udava ci sa meni-invertuje Rameno+ za Rameno- a naopak;
         DP InvertArm nam prepaja graficky objekt TrainSwitch64 a Situacnu  schemu ST22.
         Pouziva sa pri nastavovani vyhybky;

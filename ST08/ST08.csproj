@@ -41,6 +41,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -59,12 +62,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data\Telegrams\StructMessage01.cs" />
     <Compile Include="Infrastructure\Controls\BlinkedControl.cs" />
     <Compile Include="Infrastructure\Converters\AppConverters.cs" />
     <Compile Include="Infrastructure\Converters\BackgroundColorConverters.cs" />
     <Compile Include="Infrastructure\Enums\EnumExtension.cs" />
     <Compile Include="Infrastructure\Enums\Enums01.cs" />
     <Compile Include="Infrastructure\Enums\TelegramEnums.cs" />
+    <Compile Include="Infrastructure\PathHelper\PathHelperPA.cs" />
+    <Compile Include="Infrastructure\StavadloHelper.cs" />
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -411,7 +417,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Infrastructure\Comminication\" />
-    <Folder Include="Infrastructure\PathHelper\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
