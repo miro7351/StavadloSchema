@@ -47,7 +47,7 @@
                 <ControlTemplate TargetType="ToolTip">
                     <Border Style="{StaticResource ttVyhybkaBorder}">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type controls:TrainSwitch45}}, Path=Name}" Style="{StaticResource txbToolTip}"/>
+                            <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type controls:TrainSwitchY64_2}}, Path=Name}" Style="{StaticResource txbToolTip}"/>
                         </StackPanel>
                     </Border>
                 </ControlTemplate>

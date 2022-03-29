@@ -25,7 +25,7 @@ namespace PA.Stavadlo.UserControls
         {
             InitializeComponent();
             base.Rameno1 = this.RamenoY1_64_2;
-            base.Rameno2 = this.RamenoY1_64_2;
+            base.Rameno2 = this.RamenoY2_64_2;
             base.Rozrez1 = this.RozrezY1_64_2;
             base.Rozrez2 = this.RozrezY2_64_2;
             base.MainGrid = this.mainGridY_64_2;
