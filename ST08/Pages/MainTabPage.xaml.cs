@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PA.Stavadlo.MH.Pages
+namespace PA.Stavadlo.Pages
 {
     /// <summary>
     /// Interaction logic for MainTabPage.xaml

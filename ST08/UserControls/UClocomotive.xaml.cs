@@ -5,7 +5,7 @@ using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Media;
 
-namespace PA.Stavadlo.MH.UserControls
+namespace PA.Stavadlo.UserControls
 {
     /// <summary>
     /// Interaction logic for UClocomotive.xaml

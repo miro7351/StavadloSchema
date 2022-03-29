@@ -5,7 +5,7 @@ using System.Windows.Data;
 using ST08;
 
 
-namespace PA.Stavadlo.MH.Infrastructure.Converters
+namespace PA.Stavadlo.Infrastructure.Converters
 {
     /// <summary>
     /// Pre Button nastavi IsEnabled property;

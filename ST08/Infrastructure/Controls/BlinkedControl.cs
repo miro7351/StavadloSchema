@@ -1,4 +1,4 @@
-﻿namespace PA.Stavadlo.MH.Controls
+﻿namespace PA.Stavadlo.Controls
 {
     //MH: oktober 2018
     //trieda pouzita pre EventAgrs pre zapnutie/vypnutie kontrolu do stavu blikania/neblikania

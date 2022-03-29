@@ -1,10 +1,10 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-using PA.Stavadlo.MH.Enums;
+using PA.Stavadlo.Infrastructure.Enums;
 
 
-namespace PA.Stavadlo.MH.UserControls
+namespace PA.Stavadlo.UserControls
 {
     //MH: semptember 2018 uprava Mode, pridanie ARROW_SYMBOL_MODE do Infrastructure.Enums
     /// <summary>

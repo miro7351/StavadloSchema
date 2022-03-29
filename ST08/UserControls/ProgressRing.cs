@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Windows.Controls;
 using System.Collections.Generic;
 
-namespace PA.Stavadlo.MH.UserControls
+namespace PA.Stavadlo.UserControls
 {
     [TemplateVisualState(Name = "Large", GroupName = "SizeStates")]
     [TemplateVisualState(Name = "Small", GroupName = "SizeStates")]

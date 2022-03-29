@@ -8,7 +8,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/ST08;component/Resources/BasicResources.xaml"/>
+                <ResourceDictionary Source="/Resources/BasicResources.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
@@ -91,6 +91,9 @@
     <!--<SolidColorBrush x:Key="vylukaPrestaveniaBrush">#FFFFFF00</SolidColorBrush>-->
     <SolidColorBrush x:Key="vylukaPrestaveniaBrush">#FFFFFF00</SolidColorBrush>
     <!--zlta: vyluka prestavenia-->
+
+    <SolidColorBrush x:Key="neriadenyUsekBrush">#FFC0C0C0</SolidColorBrush>
+    <!---->
 
     <!--Suhlasy - farby pre sipky -->
     <SolidColorBrush x:Key="SuhlasYellowBrush" Color="Yellow"/>

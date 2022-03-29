@@ -4,7 +4,7 @@ using System.Windows.Controls;
 
 
 
-namespace PA.Stavadlo.MH.UserControls
+namespace PA.Stavadlo.UserControls
 {
     /// <summary>
     /// UserControl pre vypis kratkych sprav v pravej dolnej casti obrazovky

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PA.Stavadlo.MH.UserControls
+namespace PA.Stavadlo.UserControls
 {
     /// <summary>
     /// Interaction logic for TrainSwitchY64.xaml

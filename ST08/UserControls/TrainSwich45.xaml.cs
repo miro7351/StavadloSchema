@@ -1,6 +1,6 @@
-﻿using PA.Stavadlo.MH.UserControls;
+﻿using PA.Stavadlo.UserControls;
 
-namespace PA.Stavadlo.MH.UserControls
+namespace PA.Stavadlo.UserControls
 {
     //MH: Januar 2022
     /// <summary>

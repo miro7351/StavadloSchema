@@ -1,7 +1,7 @@
 ﻿
 using System.Windows.Controls;
 
-namespace PA.Stavadlo.MH.UserControls
+namespace PA.Stavadlo.UserControls
 {
     /// <summary>
     /// SoundControler zapina/vypina pouzitie zvuku pri zobrazeni chybovych stavov

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace PA.Stavadlo.MH.Enums
+namespace PA.Stavadlo.Infrastructure.Enums
 {
     public class StringValueAttribute : Attribute
     {

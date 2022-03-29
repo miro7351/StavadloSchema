@@ -1,9 +1,9 @@
-﻿using PA.Stavadlo.MH.Enums;
+﻿using PA.Stavadlo.Infrastructure.Enums;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace PA.Stavadlo.MH.UserControls
+namespace PA.Stavadlo.UserControls
 {
     //MH: uprava semtember 2018, pouzitie ARROW_SYMBOL_MODE
     /// <summary>

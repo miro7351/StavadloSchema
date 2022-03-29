@@ -7,7 +7,7 @@ using System.Windows.Media;
 
 
 
-namespace PA.Stavadlo.MH.UserControls
+namespace PA.Stavadlo.UserControls
 {
     //MH: August 2018
     

@@ -7,7 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-namespace PA.Stavadlo.Infrastructure.PathHelper
+namespace PA.Stavadlo.Infrastructure.PathHelperPA
 {
 
     /// <summary>
@@ -16,6 +16,7 @@ namespace PA.Stavadlo.Infrastructure.PathHelper
     public enum PATH_MODE
     {
         NEINICIALIZOVANY,
+        NERIADENY_USEK,//MH: 25.03.2022 neriadi sa Logicom, v aplikacii sa nemeni jeho farba;
         NORMAL,
         NEIZOLOVANY_USEK,
         IZOLOVANY_USEK,
@@ -52,7 +53,7 @@ namespace PA.Stavadlo.Infrastructure.PathHelper
 
 
     //Pozn: Path je Sealed class, preto sa nedaju pridat DependencyProperty, daju sa pridat len AttachedProperty;
-    //      Preto som vytvoril class PathHelper, ktora obsahuje attached properties pouzivane pre Path.
+    //      Preto som vytvoril class PathHelperPA, ktora obsahuje attached properties pouzivane pre Path.
     /// <summary>
     /// Obsahuje Attached Properties pouzivane pre Path-usek trate  a pre vyhybku
     /// </summary>

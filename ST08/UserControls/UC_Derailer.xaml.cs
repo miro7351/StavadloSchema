@@ -10,7 +10,7 @@ using System.Windows.Shapes;
 
 
 
-namespace PA.Stavadlo.MH.UserControls
+namespace PA.Stavadlo.UserControls
 {
 
     //Pozn: vyhybka, vyhybna: shunt; vykolajka:derailer 

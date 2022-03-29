@@ -1,22 +1,25 @@
-﻿<UserControl x:Class="PA.Stavadlo.MH.UserControls.UC_MapaST08"
+﻿<UserControl x:Class="PA.Stavadlo.UserControls.UC_MapaST08"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
-             xmlns:attProp="clr-namespace:PA.Stavadlo.Infrastructure.PathHelper"
+             xmlns:attProp="clr-namespace:PA.Stavadlo.Infrastructure.PathHelperPA"
              
-             xmlns:controls="clr-namespace:PA.Stavadlo.MH.UserControls"
-             xmlns:conv="clr-namespace:PA.Stavadlo.MH.Infrastructure.Converters"
-             Loaded="MapaST08_Loaded"
-             Unloaded="MapaST08_Unloaded"
+             xmlns:controls="clr-namespace:PA.Stavadlo.UserControls"
+             xmlns:conv="clr-namespace:PA.Stavadlo.Infrastructure.Converters"
+             Loaded="MapaStavadla_Loaded"
+             Unloaded="MapaStavadla_Unloaded"
              mc:Ignorable="d" 
              >
 
     <!--
         Zobrazuje schemu pre Stavadlo08;
+    Marec 2022
         Blend for Visual Studio 2022 Community nefunguje dobre!!!
-        Preto schemu nakreslim tu Blend 2019 a dufam ze to skoro v Microsofte opravia
+        Preto schemu nakreslim tu Blend 2019 a dufam ze to skoro v Microsofte opravia;
+    
+    24.03.2022   VS Comunity 2022 verzia: 17.1.2 Blend ide lepsie, ale aj tak nefunguje dobre!!!!
     
     SEMAFORY:
     SemaphoreType udava aky typ semaforu sa zobrazi 
@@ -74,10 +77,7 @@
                     </Setter.Value>
                 </Setter>
             </Style>
-
-
         </ResourceDictionary>
-
     </UserControl.Resources>
 
     <!--DockPanel Height="1120" Width="3644"-->
@@ -262,9 +262,10 @@
                     </controls:Semafor1Control.RenderTransform>
                 </controls:Semafor1Control>
 
-                <controls:Semafor1Control x:Name="PrL201" SemaphoreType="S4"    Margin="1484,85.5,0,0"
+                <!-- x:Name="PrL201" NEPOUZIVA SA-->
+                <!--<controls:Semafor1Control x:Name="PrL201" SemaphoreType="S4"    Margin="1484,85.5,0,0"
                     SemaforStatus="{Binding STC[PrL201].CombineStatus, Mode=OneWay}">
-                </controls:Semafor1Control>
+                </controls:Semafor1Control>-->
 
                 <controls:Semafor1Control x:Name="S110" SemaphoreType="S1"    Margin="1965.49,52.839,0,0"
                     SemaforStatus="{Binding STC[S110].CombineStatus, Mode=OneWay}">
@@ -364,14 +365,16 @@
                         </TransformGroup>
                     </controls:Semafor1Control.RenderTransform>
                 </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="PrS119" SemaphoreType="S2"    Margin="1342.213,1008.221,0,0"
+                <!--  x:Name="PrS119" NEPOUZIVA SA-->
+                <!--<controls:Semafor1Control x:Name="PrS119" SemaphoreType="S2"    Margin="1342.213,1008.221,0,0"
                     SemaforStatus="{Binding STC[PrS119].CombineStatus, Mode=OneWay}">
                     <controls:Semafor1Control.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
                         </TransformGroup>
                     </controls:Semafor1Control.RenderTransform>
-                </controls:Semafor1Control>
+                </controls:Semafor1Control>-->
+
                 <controls:Semafor1Control x:Name="S119" SemaphoreType="S3"    Margin="1469.213,1009.055,0,0"
                     SemaforStatus="{Binding STC[S119].CombineStatus, Mode=OneWay}">
                     <controls:Semafor1Control.RenderTransform>
@@ -425,9 +428,14 @@
                 <controls:Semafor1Control x:Name="L80" SemaphoreType="S1"    Margin="2493.879,459.388,0,0"
                     SemaforStatus="{Binding STC[L80].CombineStatus, Mode=OneWay}">
                 </controls:Semafor1Control>
-                <controls:Semafor1Control x:Name="PrL80" SemaphoreType="S4"    Margin="2593.379,459.013,0,0"
+
+                <!-- x:Name="PrL80" NEPOUZIVA SA-->
+                <!--<controls:Semafor1Control x:Name="PrL80" SemaphoreType="S4"    Margin="2593.379,459.013,0,0"
                     SemaforStatus="{Binding STC[PrL80].CombineStatus, Mode=OneWay}">
-                </controls:Semafor1Control>
+                </controls:Semafor1Control>-->
+
+
+
                 <!--Po Tade-->
                 <!--#region Niesu v Situacnej Scheme-->
                 <controls:Semafor1Control x:Name="S775_Copy53" SemaphoreType="S2"    Margin="1096.419,123.698,0,0"
@@ -475,42 +483,41 @@
 
                 <!--#region KOLAJOVE USEKY, KTORE NEPATRIA VYMENE -->
 
-
-                <Path  x:Name="ZLOZENA_14X" Data="M56.159775,9.8077837 L36.402337,49.833865 148.36111,51.126704 168.50714,10.790699 z M50.843197,0.5 L185.62323,1.5392517 185.52144,10.939656 178.40372,10.877283 153.67784,60.434866 31.788214,59.181494 14.911439,93.371718 158.69186,94.757239 158.60767,103.7564 74.667168,102.94752 91.833123,139.91519 159.03264,140.6207 158.95865,150.02132 86.343369,149.12182 64.886872,103.00061 0.5,102.23282 0.58418965,93.233656 5.0415559,93.27661 z" Height="150.521" Margin="466.068,592.663,0,0" 
-                       RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="186.123">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1"/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform X="0" Y="0"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
+                <!-- POUZITIE attProp:PathHelper.PathNumber pre KOLAJOVE USEKY, KTORE NEPATRIA VYMENE
+                     attProp:PathHelper.PathNumber="210"  sa pouziva pre ToolTip
+                     Ak v telegrame z Logicu je nazov kolaj. useku 210, v xaml mu dam  x:Name="_210"
+                     Aby ToolTip zobrazil dobre nazov useku, pouzijem attProp:PathHelper.PathNumber="210"
+                
+                     KOLAJOVE USEKY, KTORE PATRIA VYMENE
+                
+                    attProp:PathHelper.PathNumber="V352"  pre  <controls:TrainSwitch64 x:Name="V352" .../>
+                    attProp:PathHelper.PathNumber je <controls:TrainSwitchXX x:Name
+                -->
 
                 <!-- Nazov: 210; Podtyp: 0 (neizolovany)-->
-                <Path x:Name="_210_1" Data="M120,10 L-0.35778603,10.000004 -0.35778603,3.8316519E-06 120,0"
-                    Height="9.999"  Margin="6.344,518,0,0"  Stretch="Fill" Width="43.048" RenderTransformOrigin="0.5,0.5"
-                >
+                <Path x:Name="_210" Data="M120,10 L-0.35778603,10.000004 -0.35778603,0 120,0"
+                    attProp:PathHelper.PathNumber="210"
+                    Height="10.1"  Margin="6.344,518,0,0"  Stretch="Fill" Width="43.048" RenderTransformOrigin="0.5,0.5">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
                             <SkewTransform/>
                             <RotateTransform Angle="-180"/>
-                            <TranslateTransform X="-0.12400000000000944" Y="0.0010000000000012221"/>
+                            <TranslateTransform X="0" Y="0"/>
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
 
-                <!-- Nazov: 210; Podtyp: 0 (neizolovany)-->
-                <Path x:Name="_210_2" Data="M32.13236,0.74076125 L90.734896,0.25927222 90.734896,10.444444 32.13236,10.74077 z"
-                    Height="10.435" Margin="48.257,517.656,0,0" Stretch="Fill"  Width="62.253"
+                <!-- Nazov: K210; Podtyp: n (izolovany)-->
+                <Path x:Name="K210" Data="M32.13236,0.74076125 L90.734896,0.25927222 90.734896,10.444444 32.13236,10.74077 z"
+                    attProp:PathHelper.PathNumber="K210"
+                      Height="10.435" Margin="48.257,517.656,0,0" Stretch="Fill"  Width="62.253"
                 />
 
                 <!-- Nazov: 119c; Podtyp: 0 (neizolovany)-->
-                <Path x:Name="_119c_1" Data="M120,10 L-0.89448423,10 -0.89448423,0 120,0"
+                <Path x:Name="_119c" Data="M120,10 L-0.89448423,10 -0.89448423,0 120,0"
                     Height="10"  Margin="4.631,587.999,0,0"  Stretch="Fill" Width="43.235" RenderTransformOrigin="0.5,0.5"
-                >
+                    attProp:PathHelper.PathNumber="119c">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -521,29 +528,15 @@
                     </Path.RenderTransform>
                 </Path>
 
-
-                <Path x:Name="_119c_2" Data="M32.13236,0.74076125 L90.734896,0.25927222 90.734896,10.444444 32.13236,10.74077 z"
+                <!-- Nazov: 119c; Podtyp: n (izolovany)-->
+                <Path x:Name="K119c" Data="M32.13236,0.74076125 L90.734896,0.25927222 90.734896,10.444444 32.13236,10.74077 z"
                     Height="10.435" Margin="48.257,587.656,0,0" Stretch="Fill"  Width="62.253"
-                />
-
-                <!-- Nazov: 140; Podtyp: 0 (neizolovany)-->
-                <Path x:Name="_140" Data="M1226.5169,23.849999 L1121.5478,23.805986 1076.2455,117.00045 1042.2123,116.87553 1042.1754,108.00047 1070.8337,108.04205 1115.1263,14.368401 1226.5118,14.495734"
-                    Height="103.63" Margin="531.606,912.503,0,0" Stretch="Fill" Width="185.341"
-                    RenderTransformOrigin="0,0" >
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1"/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
+                    attProp:PathHelper.PathNumber="K119c"/>
 
                 <!-- Nazov: 119b; Podtyp: n (izolovany)-->
                 <Path  x:Name="_119b" Data="M1097.4085,54.644474 L1300.8998,54.314718 1300.8711,63.29346 1102.7252,63.951939 1070.0219,130.73953 1061.8919,126.83655 z" 
                     Height="77.399" Margin="276.806,556.364,0,0" Stretch="Fill"  Width="240.008" RenderTransformOrigin="0,0" 
-                 >
+                    attProp:PathHelper.PathNumber="119b">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="1"/>
@@ -559,14 +552,29 @@
                     Height="10.453" Margin="618.25,999.338,0,0" Stretch="Fill" Width="104.604"
                 />
 
-                <!-- Nazov: 140; Podtyp: 0 (neizolovany)  ??? su tu 2 useky 140-->
-                <Path x:Name="_140_V" Data="M-0.066777246,-0.046318929 L52.031361,-0.50259756 52.081443,9.7751225 0,10.046315 z"  
+                <!-- Nazov: 140; Podtyp: n (izolovany) -->
+                <Path x:Name="_140" Data="M0,0 L52.031361,-0.50259756 52.081443,9.7751225 0,10.046315 z"  
                     Height="10.496" Margin="466.701,808.661,0,0" Stretch="Fill" Width="66.077"
                 />
 
+                <!--#region  NEPOUZITE USEKY: 140, 141,142,143 -->
+
+                <!-- Nazov: 140; Podtyp: 0 (neizolovany)-->
+                <!--<Path x:Name="_140" Data="M1226.5169,23.849999 L1121.5478,23.805986 1076.2455,117.00045 1042.2123,116.87553 1042.1754,108.00047 1070.8337,108.04205 1115.1263,14.368401 1226.5118,14.495734"
+                    Height="103.63" Margin="140,913,0,0" Stretch="Fill" Width="185.341"
+                    RenderTransformOrigin="0,0" >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>-->
                 <!-- Nazov: 141; Podtyp: 0 (neizolovany) -->
-                <Path x:Name="_141" Data="M1138.8882,23.895242 L1121.5478,23.805986 1076.2455,117.00045 1042.2123,116.87553 1042.1754,108.00047 1070.0832,107.67987 1115.1263,14.368401 1139.1299,14.573789"
-                    Height="103.63" Margin="528.272,774.337,0,0" Stretch="Fill" Width="97.954"
+                <!--<Path x:Name="_141" Data="M1138.8882,23.895242 L1121.5478,23.805986 1076.2455,117.00045 1042.2123,116.87553 1042.1754,108.00047 1070.0832,107.67987 1115.1263,14.368401 1139.1299,14.573789"
+                    Height="103.63" Margin="136,774,0,0" Stretch="Fill" Width="97.954"
                     RenderTransformOrigin="0.5,0.5" >
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -576,16 +584,16 @@
                             <TranslateTransform X="62.682802248917739" Y="39.351344860744575"/>
                         </TransformGroup>
                     </Path.RenderTransform>
-                </Path>
+                </Path>-->
 
                 <!-- Nazov: 142; Podtyp: 0 (neizolovany)-->
-                <Path x:Name="_142" Data="M0,0 L108.02641,0.44444444 108.02641,10.444444 0,10 z"
-                    Height="10.4" Margin="531.822,808.602,0,0" Stretch="Fill"  Width="188.421"
-                />
+                <!--<Path x:Name="_142" Data="M0,0 L108.02641,0.44444444 108.02641,10.444444 0,10 z"
+                    Height="10.4" Margin="140,809,0,0" Stretch="Fill"  Width="188.421"
+                />-->
 
                 <!-- Nazov: 143; Podtyp: 0 (neizolovany)-->
-                <Path x:Name="_143"
-                    Height="74.801" Data="M22.561644,65.239333 L49.942121,65.155999 115.00919,0.5 156.44924,0.57167071 156.44924,9.634643 119.65967,9.6553692 53.661999,74.30114 22.561644,74.239333" Margin="584.833,743.981,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="134.886">
+                <!--<Path x:Name="_143"
+                    Height="74.801" Data="M22.561644,65.239333 L49.942121,65.155999 115.00919,0.5 156.44924,0.57167071 156.44924,9.634643 119.65967,9.6553692 53.661999,74.30114 22.561644,74.239333" Margin="141,744,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="134.886">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1" ScaleX="-1"/>
@@ -594,7 +602,9 @@
                             <TranslateTransform Y="0"/>
                         </TransformGroup>
                     </Path.RenderTransform>
-                </Path>
+                </Path>-->
+
+                <!--#endregion  NEPOUZITE USEKY: 140, 141,142,143 -->
 
                 <!-- Nazov: 119; Podtyp: n  (izolovany) -->
                 <Path x:Name="_119" Data="M0,0 L73.580429,-0.79476509 73.580429,9.2052349 0,10 z"  
@@ -642,35 +652,35 @@
                 </Path>
 
 
-                <!-- Nazov: 201a; Podtyp: 0 (neizolovany)-->
-                <Path x:Name="_201" Data="M0,0 L90,0 90,10 0,10 z"
+                <!-- Nazov: K201a; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="K201" Data="M0,0 L90,0 90,10 0,10 z"
                     Height="10" Margin="1287.683,114.259,0,0" Stretch="Fill"  Width="250.544"
                 />
 
                 <!-- Nazov: 201_1; Podtyp: 0  (neizolovany)  ???? -->
-                <Path x:Name="_201_1" Data="M90,10 L-40,10 -40,0 90,0"  
+                <Path x:Name="_201" Data="M90,10 L-40,10 -40,0 90,0"  
                     Height="10" Margin="1537.385,114.238,0,0" Stretch="Fill" Width="78.389" RenderTransformOrigin="0.5, 0.5"
                      />
 
 
                 <!-- Nazov: 83; Podtyp: n  (izolovany) -->
-                <Path x:Name="_83" Data="M0,0 L90,0 90,10 0,10 z"
+                <Path x:Name="K83" Data="M0,0 L90,0 90,10 0,10 z"
                     Height="10" Margin="1284.757,173.952,0,0" Stretch="Fill"  Width="96.23"
                 />
 
                 <!-- Nazov: 83; Podtyp: 0  (neizolovany) ???? -->
-                <Path x:Name="_83_1" Data="M90,10 L-1,10 -1,0 90,0"  
+                <Path x:Name="_83" Data="M90,10 L-1,10 -1,0 90,0"  
                     Height="10.083" Margin="1560.125,173.956,0,0" Stretch="Fill" Width="55.117" RenderTransformOrigin="3.264,-12.516"
                      />
 
 
-                <!-- Nazov: 83; Podtyp: 0  (neizolovany) ???? -->
-                <Path x:Name="_83_2" Data="M0,0 L90,0 90,10 0,10 z"
+                <!-- Nazov: K83_2; Podtyp: 0  (neizolovany)  -->
+                <Path x:Name="K83_2" Data="M0,0 L90,0 90,10 0,10 z"
                     Height="10" Margin="1379.999,173.956,0,0" Stretch="Fill"  Width="102.918"
                 />
 
-                <!-- Nazov: 83; Podtyp: 0  (neizolovany) ???? -->
-                <Path x:Name="_83_3" Data="M0,0 L90,0 90,10 0,10 z"
+                <!-- Nazov: K83_3; Podtyp: 0  (neizolovany)  -->
+                <Path x:Name="K83_3" Data="M0,0 L90,0 90,10 0,10 z"
                     Height="10" Margin="1482.023,173.952,0,0" Stretch="Fill"  Width="78.956"
                 />
 
@@ -734,15 +744,14 @@
                     Height="10.898" Margin="1810.74,40.821,0,0" Stretch="Fill"  Width="156.046"
                 />
 
-                <!-- Nazov: 80; Podtyp: n  (izolovany) ???? -->
-                <Path x:Name="_80" Data="M0,0 L90,0 90,10 0,10 z"
-                    Height="10" Margin="2547.518,487.547,0,0" Stretch="Fill"  Width="100.363"
+                <!-- Nazov: K80; Podtyp: n  (izolovany) ???? -->
+                <Path x:Name="K80" Data="M0,-0.13888386 L90.734896,0.25926258 90.734896,10.351848 0,10.092586 z"
+                    Height="10.442" Margin="2547.518,487.547,0,0" Stretch="Fill"  Width="100.363"
                 />
 
-
                 <!-- Nazov: 80; Podtyp: 0  (neizolovany) ???? -->
-                <Path x:Name="_80_1" Data="M90,10 L0,10 0,0 90,0"  
-                    Height="10" Margin="2647.051,487.547,0,0" Stretch="Fill" Width="55.117" RenderTransformOrigin="3.264,-12.516"
+                <Path x:Name="_80" Data="M90.239529,10 L-1.4112582,10 -1.4112582,-0.092592593 90.239529,0"  
+                    Height="10.083" Margin="2647.051,487.906,0,0" Stretch="Fill" Width="55.117" RenderTransformOrigin="3.264,-12.516"
                 />
 
 
@@ -760,34 +769,35 @@
                     </Path.RenderTransform>
                 </Path>
 
-                <!-- Nazov: 81; Podtyp: n  (izolovany) -->
-                <Path x:Name="_81"  Data="M1,0.77747252 L80.560339,0.77747252 80.560339,9.1 1,9.1 z"  HorizontalAlignment="Left" Height="10.35" Margin="2489.25,314.873,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="72.269"/>
+                <!-- Nazov: K81; Podtyp: n  (izolovany) -->
+                <Path x:Name="K81"  Data="M1,0.77747252 L80.560339,0.77747252 80.560339,9.1 1,9.1 z"  HorizontalAlignment="Left" Height="10.35" Margin="2489.25,314.873,0,0" RenderTransformOrigin="0.5,0.5" 
+                      Stretch="Fill"   Width="72.269"/>
 
                 <!-- Nazov: 81; Podtyp: 0  (neizolovany) ???? -->
-                <Path x:Name="_81_1" Data="M90.239529,10.185195 L0,10.185195 0,-0.092592593 90.239529,-0.092592593"  
-                    Height="10.249" Margin="2647.881,315.24,0,0" Stretch="Fill" Width="54.287" RenderTransformOrigin="3.264,-12.516"
-                     />
+                <Path x:Name="_81" Data="M90.239529,10.185195 L0,10.185195 0,-0.092592593 90.239529,-0.092592593"  
+                    Height="10.249" Margin="2647.881,315.24,0,0" Stretch="Fill" Width="54.287" RenderTransformOrigin="3.264,-12.516"/>
 
-                <!-- Nazov: 124; Podtyp: 0  (neizolovany) -->
-                <Path x:Name="_124" Data="M0,0 L107.28197,0.13888889 107.28197,10.138889 0,10 z"  
+
+                <!-- Nazov: 124a; Podtyp: 0  (neizolovany) -->
+                <Path x:Name="_124a" Data="M0,0 L107.28197,0.13888889 107.28197,10.138889 0,10 z"  
                     Height="10.125" Margin="956.584,655.186,0,0" Stretch="Fill" Width="64.351"
                  />
 
                 <!-- Nazov: 124; Podtyp: 0  (neizolovany) ???? -->
-                <Path x:Name="_124_1" Data="M54.061759,0.32407406 L104.62616,0.16666153 104.62616,10.444444 54.061759,10.324074 z"
-                    Height="10.25" Margin="1187.167,656.157,0,0" Stretch="Fill"  Width="91.666"
-                />
+                <Path x:Name="_124" Data="M54.061759,0.32407406 L104.62616,0.16666153 104.62616,10.444444 54.061759,10.324074 z"
+                    Height="10.25" Margin="1187.167,656.157,0,0" Stretch="Fill"  Width="91.666" />
 
 
-                <!-- Nazov: 124; Podtyp: 0  (neizolovany) ???? -->
-                <Path x:Name="_124_2" Data="M2.9846266,0 L90.027846,0 90.027846,10 2.9846266,10 z"  
-                    Height="10" Margin="1387.411,720.938,0,0" Stretch="Fill" Width="30.166"
-                />
 
-                <!-- Nazov: 124; Podtyp: 0  (neizolovany) ???? -->
-                <Path x:Name="_124_3" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
-                    Height="10" Margin="1416.748,720.938,0,0" Stretch="Fill" Width="31.162"
-                />
+                <!-- Nazov: K124; Podtyp: 0  (neizolovany) ???? -->
+                <Path x:Name="K124" Data="M2.9846266,0 L90.027846,0 90.027846,10 2.9846266,10 z"  
+                    Height="10" Margin="1387.411,720.938,0,0" Stretch="Fill" Width="30.166" />
+
+
+                <!-- Nazov: K124a; Podtyp: 0  (neizolovany) ???? -->
+                <Path x:Name="K124a" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
+                    Height="10" Margin="1416.748,720.938,0,0" Stretch="Fill" Width="31.162"/>
+
 
                 <!-- Nazov: 125; Podtyp: 0  (neizolovany) -->
                 <Path x:Name="_125"    Data="M0.61240877,1 L79.444,1 79.444,9.1 0.61240877,9.1 z"  HorizontalAlignment="Left" Height="10.1" Margin="955.403,583.331,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="64.559"/>
@@ -798,18 +808,18 @@
 
                 <!-- Nazov: 126; Podtyp: 0  (neizolovany)  ???? -->
                 <Path x:Name="_126_1" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
-                    Height="10.4" Margin="1170.452,450.741,0,0" Stretch="Fill"  Width="83.473"
-                />
+                    Height="10.4" Margin="1170.452,450.741,0,0" Stretch="Fill"  Width="83.473"/>
 
-                <!-- Nazov: 126; Podtyp: 0  (neizolovany)  ???? -->
-                <Path x:Name="_126_2" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
-                    Height="10" Margin="1361.415,517.503,0,0" Stretch="Fill" Width="31.162"
-                />
 
-                <!-- Nazov: 126; Podtyp: 0  (neizolovany)  ???? -->
-                <Path x:Name="_126_3" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
-                    Height="10" Margin="1391.748,517.503,0,0" Stretch="Fill" Width="31.162"
-                />
+                <!-- Nazov: 126; Podtyp: n (izolovany)   -->
+                <Path x:Name="_126s_" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
+                    Height="10" Margin="1361.415,517.503,0,0" Stretch="Fill" Width="31.162" />
+
+
+                <!-- Nazov: K126a; Podtyp: 0  (neizolovany)  -->
+                <Path x:Name="K126a" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
+                    Height="10" Margin="1391.748,517.503,0,0" Stretch="Fill" Width="31.162"/>
+
 
                 <!-- Nazov: 127; Podtyp: 0  (neizolovany) -->
                 <Path x:Name="_127" Data="M1,1.3390011 L48.035518,1.3892235 48.035518,9.6385628 1,9.5883404 z" HorizontalAlignment="Left" Height="10.182" Margin="949.403,381.256,0,0" Stretch="Fill" VerticalAlignment="Top" Width="50.771"/>
@@ -823,16 +833,15 @@
                     Height="11.068" Margin="1170.452,314.073,0,0" Stretch="Fill"  Width="83.473"
                 />
 
-                <!-- Nazov: 128; Podtyp: 0  (neizolovany)  ???? -->
-                <Path x:Name="_128_2" Data="M0,0 L90,0 90,10 0,10 z"  
-                    Height="10" Margin="1361.415,380.003,0,0" Stretch="Fill" Width="31.162"
-                />
+                <!-- Nazov: K128; Podtyp: n  (izolovany)  -->
+                <Path x:Name="K128" Data="M0,0 L90,0 90,10 0,10 z"  
+                    Height="10" Margin="1361.415,380.003,0,0" Stretch="Fill" Width="31.162" />
 
-                <!-- Nazov: 128; Podtyp: 0  (neizolovany)  ???? -->
-                <Path x:Name="_128_3" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
-                    Height="10" Margin="1391.748,380.003,0,0" Stretch="Fill" Width="31.162"
-                     
-                     />
+                <!-- Nazov: 128a Podtyp: 0  (neizolovany)  -->
+                <Path x:Name="_128a" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
+                    Height="10" Margin="1391.748,380.003,0,0" Stretch="Fill" Width="31.162" />
+
+
 
 
                 <!-- Nazov: 123; Podtyp: 0  (neizolovany)  ???? -->
@@ -886,11 +895,11 @@
                 <!-- Nazov: K140; Podtyp: -->
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="634.243,876.382,0,0"  Text="140" />
                 <!-- Nazov: K141; Podtyp: -->
-                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="634.333,825.239,0,0"  Text="141"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="634,827,0,0"  Text="141"/>
                 <!-- Nazov: K142; Podtyp: -->
-                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="661.333,781.239,0,0"  Text="142"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="634,783,0,0"  Text="142"/>
                 <!-- Nazov: K143; Podtyp: -->
-                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="677.666,720.938,0,0"  Text="143"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="636,737,0,0"  Text="143"/>
 
                 <!-- Nazov: K119a; Podtyp: -->
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="667.243,973.382,0,0"  Text="119a" />
@@ -899,11 +908,11 @@
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="565.333,784.239,0,0"  Text="396"/>
 
                 <!-- Nazov: K398; Podtyp: -->
-                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="528.127,823.901,0,0"  Text="398"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="508,824,0,0"  Text="398"/>
 
 
                 <!-- Nazov: K397; Podtyp: -->
-                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="547.537,870.37,0,0"  Text="397"/>
+                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="531,870,0,0"  Text="397"/>
 
                 <!-- Nazov: K144; Podtyp: 0 ?-->
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="355.077,492.909,0,0"  Text="144"/>
@@ -928,7 +937,7 @@
                      attProp:PathHelper.ArmType="+"
                      alebo attProp:PathHelper.ArmType="-"
                  
-                    Na scheme stavadla v pohotovostnom stave "-" rameno je zaciernene (neprechodne), moze to byt Rameno1_xx, alebo Rameno2_xx user controlu controls:TrainSwitchXX.
+                Na scheme stavadla XX v pohotovostnom stave "-" rameno je zaciernene (neprechodne), moze to byt Rameno1_xx, alebo Rameno2_xx user controlu controls:TrainSwitchXX.
                 
                 V dokumente "Situacna schema stxx.pdf" a na grafickej mape stavadla napr. UC_MapaST08.xaml vymena nie je zobrazena rovnako!!!!
 
@@ -942,6 +951,10 @@
 
                 Ak Rameno2_xx ( hokejkovy tvar) odpoveda rovnemu ramenu v Situacnej scheme, potom InvertArm="True";
                 Ak Rameno2_xx ( hokejkovy tvar) odpoveda sikmemu ramenu (hokejke) v Situacnej scheme, potom InvertArm="False";
+                
+
+                 if (InvertArm == false)  Rameno1....Rameno+, Rameno2...Rameno-
+                 if (InvertArm == true)   Rameno1....Rameno-, Rameno2...Rameno+
                 -->
 
                 <!-- === V400 ===-->
@@ -956,10 +969,11 @@
                     Foreground="{Binding ElementName=V400, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="157,599,0,0" />
 
-                <controls:TrainSwitch64 x:Name="V400"  Tag="V400"  Margin="130,558,0,0" 
+                <controls:TrainSwitch64 x:Name="V400"  Tag="V400"  Margin="129.975,558,0,0" 
                     TsStatus="{Binding STC[V400].CombineStatus, Mode=OneWay}" 
-                                        Part01="{Binding ElementName=V400p1}"
-                                        Part02="{Binding ElementName=V400p2}">
+                     Part01="{Binding ElementName=V400p1}"
+                     Part02="{Binding ElementName=V400p2}"
+                     InvertArm="True">
                     <controls:TrainSwitch64.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
@@ -971,14 +985,14 @@
                 <Path x:Name="V400p1" Data="M-8.0779694,-3.9306955E-14 L79.222902,0.37037037 79.222902,10.37037 -8.0779694,10 z"  
                     Height="10.333" Margin="109.74,588,0,0" Stretch="Fill" Width="101.927"
                       attProp:PathHelper.PathNumber="V400"
-                      attProp:PathHelper.ArmType="-"
+                      attProp:PathHelper.ArmType="+"
                       attProp:PathHelper.IsTrainSwitch="True"                     
                      />
                 <!--Path ktora ide cez Rameno2-xx, hokejkova cast-->
                 <Path  x:Name="V400p2" Data="M1097.4085,54.644474 L1144.3243,54.409922 1144.1599,63.80942 1102.7252,63.951939 1087.3489,96.093239 1079.4811,92.318128 z" 
                        Height="42.703" Margin="144.403,614.532,0,0" Stretch="Fill"  Width="65.85" RenderTransformOrigin="0,0" 
                        attProp:PathHelper.PathNumber="V400"
-                      attProp:PathHelper.ArmType="+"
+                      attProp:PathHelper.ArmType="-"
                       attProp:PathHelper.IsTrainSwitch="True" >
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -995,10 +1009,11 @@
                     Foreground="{Binding ElementName=V352, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="163,492,0,0" />
 
-                <controls:TrainSwitch64 x:Name="V352" Tag="V352" Margin="153,507,0,0"
+                <controls:TrainSwitch64 x:Name="V352" Tag="V352" Margin="152,507.642,0,0"
                    TsStatus="{Binding STC[V352].CombineStatus, Mode=OneWay}" 
                    Part01="{Binding ElementName=V352p1}"
-                   Part02="{Binding ElementName=V352p2}">
+                   Part02="{Binding ElementName=V352p2}"
+                   InvertArm="True">
                     <controls:TrainSwitch64.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1" ScaleX="1"/>
@@ -1009,12 +1024,12 @@
                 <Path x:Name="V352p1" Data="M-33.418644,0.70221363 L80.151519,0.23150898 80.09893,10 -33.418644,10.702213 z"  
                     Height="10.422" Margin="109.849,517.585,0,0" Stretch="Fill" Width="90.985"
                     attProp:PathHelper.PathNumber="V352"
-                     attProp:PathHelper.ArmType="-"
+                     attProp:PathHelper.ArmType="+"
                      attProp:PathHelper.IsTrainSwitch="True"/>
                 <Path  x:Name="V352p2" Data="M1097.0677,54.4879 L1133.7268,54.031077 1133.5625,63.430625 1102.7252,63.951943 1096.8019,76.833328 1088.4788,73.051155 z" 
                      Height="23.804" Margin="182.859,509.525,0,0" Stretch="Fill"  Width="46.241" RenderTransformOrigin="0,0" 
                       attProp:PathHelper.PathNumber="V352"
-                      attProp:PathHelper.ArmType="+"
+                      attProp:PathHelper.ArmType="-"
                       attProp:PathHelper.IsTrainSwitch="True" >
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -1031,7 +1046,8 @@
                     Margin="220,527,0,0" />
 
                 <controls:TrainSwitch64 x:Name="V351" Tag="V351" Height="50" Margin="213.166,487.842,0,0" Width="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V351].CombineStatus, Mode=OneWay}" >
+                                        TsStatus="{Binding STC[V351].CombineStatus, Mode=OneWay}" 
+                                        InvertArm="True">
                     <!--Part01="{Binding ElementName=V351p1}"
                                         Part02="{Binding ElementName=V351p2}"
                                         >-->
@@ -1044,7 +1060,7 @@
 
                 <Path x:Name="V351p1" Data="M0,-0.27777778 L90.872821,-0.27777778 90.872821,9.7222674 0,9.7222674 z"  
                     Height="10.002" Margin="199.833,517.75,0,0" Stretch="Fill" Width="108.545"
-                attProp:PathHelper.PathNumber="V351"
+                     attProp:PathHelper.PathNumber="V351"
                      attProp:PathHelper.ArmType="-"
                      attProp:PathHelper.IsTrainSwitch="True" 
                       />
@@ -1056,7 +1072,8 @@
                 <controls:TrainSwitch64 x:Name="V399" Tag="V399"  HorizontalAlignment="Left" Height="50" Margin="383.223,789.607,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
                                          TsStatus="{Binding STC[V399].CombineStatus, Mode=OneWay}" 
                                         Part01="{Binding ElementName=V399p1}"
-                                        Part02="{Binding ElementName=V399p2}">
+                                        Part02="{Binding ElementName=V399p2}"
+                                        InvertArm="True">
                     <controls:TrainSwitch64.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
@@ -1067,7 +1084,7 @@
                 <Path x:Name="V399p1"  Data="M1099.0966,54.80596 L1231.4286,54.548041 1231.4289,63.777199 1104.7682,64.168894 994.17989,292.36074 986.13538,288.43729 z"
                     Height="238.828" Margin="373.122,1010.198,0,-199.026" Stretch="Fill"  Width="246.276" RenderTransformOrigin="0,0"
                       attProp:PathHelper.PathNumber="V399"
-                     attProp:PathHelper.ArmType="-"
+                     attProp:PathHelper.ArmType="+"
                      attProp:PathHelper.IsTrainSwitch="True" >
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -1080,7 +1097,7 @@
                 <Path  x:Name="V399p2" Data="M1096.7175,55.012994 L1170.0682,55.479027 1169.9281,64.503753 1102.6002,63.95077 1083.685,101.35525 1075.5436,97.380902 z" 
                     Height="47.343" Margin="372.266,818.69,0,0" Stretch="Fill"  Width="95.522" RenderTransformOrigin="0,0" 
                        attProp:PathHelper.PathNumber="V399"
-                     attProp:PathHelper.ArmType="+"
+                     attProp:PathHelper.ArmType="-"
                      attProp:PathHelper.IsTrainSwitch="True">
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -1299,7 +1316,8 @@
                 <controls:TrainSwitch64 x:Name="V349" Tag="V349" HorizontalAlignment="Left" Height="50" Margin="289.167,358.599,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
                                         TsStatus="{Binding STC[V349].CombineStatus, Mode=OneWay}"
                                         Part01="{Binding ElementName=V349p1}"
-                                        Part02="{Binding ElementName=V349p2}">
+                                        Part02="{Binding ElementName=V349p2}"
+                                        InvertArm="True">
                     <controls:TrainSwitch64.RenderTransform>
                         <TransformGroup>
                             <RotateTransform Angle="116.479"/>
@@ -1309,7 +1327,7 @@
                 <Path  x:Name="V349p1" Data="M1098.0971,53.972852 L1198.4365,56.737847 1197.8446,65.343784 1103.1577,63.049772 1080.3778,106.41343 1072.4042,102.30553 z" 
                     Height="53.441" Margin="344.45,291.321,0,0" Stretch="Fill"  Width="127.026" RenderTransformOrigin="0,0" 
                      attProp:PathHelper.PathNumber="V349"
-                     attProp:PathHelper.ArmType="-"
+                     attProp:PathHelper.ArmType="+"
                      attProp:PathHelper.IsTrainSwitch="True" >
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -1324,7 +1342,7 @@
                     Height="148.328" Margin="380,528,0,0" Stretch="Fill" Width="179.601"
                     RenderTransformOrigin="0,0" 
                      attProp:PathHelper.PathNumber="V349"
-                     attProp:PathHelper.ArmType="+"
+                     attProp:PathHelper.ArmType="-"
                      attProp:PathHelper.IsTrainSwitch="True">
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -1417,7 +1435,8 @@
                       attProp:PathHelper.PathNumber="V387A"
                      attProp:PathHelper.ArmType="-"
                      attProp:PathHelper.IsTrainSwitch="True"/>
-                <Path x:Name="V387Ap2" Height="64.327" Data="M115.59252,-0.12499948 L160.45061,-0.3866621 160.45061,8.6763102 118.63884,9.0303697 63.455184,62.918759 49.785443,62.940281 49.950529,53.426958 58.525402,53.42696 z" Margin="934.584,854.145,0,0" RenderTransformOrigin="0,0" Stretch="Fill" Width="111.666"
+                <Path x:Name="V387Ap2"
+                    Height="64.327" Data="M115.59252,-0.12499948 L160.45061,-0.3866621 160.45061,8.6763102 118.63884,9.0303697 63.455184,62.918759 49.785443,62.940281 49.950529,53.426958 58.525402,53.42696 z" Margin="934.584,854.145,0,0" RenderTransformOrigin="0,0" Stretch="Fill" Width="111.666"
                       attProp:PathHelper.PathNumber="V387A"
                      attProp:PathHelper.ArmType="+"
                      attProp:PathHelper.IsTrainSwitch="True">
@@ -1483,7 +1502,8 @@
                      attProp:PathHelper.ArmType="-"
                      attProp:PathHelper.IsTrainSwitch="True"
                      />
-                <Path x:Name="V330p2" Height="74.97" Data="M115.00919,0.16666903 L125.85763,0.23833974 125.85763,9.3013097 120.493,9.3220359 53.661999,74.134473 16.274621,74.030999 16.274621,65.030999 49.942121,65.155999 z" Margin="1277.766,731.02,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="110.584"
+                <Path x:Name="V330p2"
+                    Height="74.97" Data="M115.00919,0.16666903 L125.85763,0.23833974 125.85763,9.3013097 120.493,9.3220359 53.661999,74.134473 16.274621,74.030999 16.274621,65.030999 49.942121,65.155999 z" Margin="1277.766,731.02,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="110.584"
                       attProp:PathHelper.PathNumber="V330"
                      attProp:PathHelper.ArmType="+"
                      attProp:PathHelper.IsTrainSwitch="True">
@@ -1707,25 +1727,22 @@
                     </controls:TrainSwitch45.RenderTransform>
                 </controls:TrainSwitch45>
 
-                <!-- === V313 ===-->              
+                <!-- === V313 ===-->
+                <!--DOKONCIT-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="313"
                     Foreground="{Binding ElementName=V313, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="1594.129,406.295,0,0"/>
                 <controls:TrainSwitch45 x:Name="V313" Tag="V313" HorizontalAlignment="Left"  Margin="1584.129,421.295,0,0" VerticalAlignment="Top" Width="50" Height="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V313].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V313p1}"
+                                        TsStatus="{Binding STC[V313].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V313p1}"
                                         Part02="{Binding ElementName=V313p2}"
-                                        InvertArm="True">
+                    InvertArm="True">-->
                     <controls:TrainSwitch45.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="1"/>
                         </TransformGroup>
                     </controls:TrainSwitch45.RenderTransform>
                 </controls:TrainSwitch45>
-                <Path x:Name="V313p1" Data="M0.68889535,1 L79.444,1 79.444,9.2112637 0.68889535,9.2112637 z"  HorizontalAlignment="Left" Height="10.225" Margin="1570.697,450.852,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" VerticalAlignment="Top" Width="95.93" 
-                      attProp:PathHelper.PathNumber="V313"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True" />
                 <Path x:Name="V313p2"  Data="M1099.1875,51.932293 L1154.1302,51.66038 1154.1321,61.19814 1103.005,61.238472 1011.9274,154.33367 1005.0676,147.90742 z"
                     Height="103.68" Margin="1518.739,461.95,0,0" Stretch="Fill"  Width="150.049" RenderTransformOrigin="0,0"
                      attProp:PathHelper.PathNumber="V313"
@@ -1773,7 +1790,6 @@
                 </Path>
 
                 <!-- === V384 ===-->
-                <!--DOKONCIT-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="384"
                     Foreground="{Binding ElementName=V384, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="1655.455,953.915,0,0"/>
@@ -1787,48 +1803,23 @@
                         </TransformGroup>
                     </controls:TrainSwitch25.RenderTransform>
                 </controls:TrainSwitch25>
-                <Path x:Name="V384p2"  Data="M1103.2015,55.262687 L1250.7179,54.060922 1250.7805,63.290042 1102.998,64.211549 963.71383,129.80606 959.23038,121.8606 z"
-                    Height="76.746" Margin="1798.005,962.021,0,0" Stretch="Fill"  Width="292.546" RenderTransformOrigin="0,0"                     
-                      attProp:PathHelper.PathNumber="V384"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180.023"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V342 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="342"
                     Foreground="{Binding ElementName=V342, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="812.184,460.454,0,0"/>
                 <controls:TrainSwitch45 x:Name="V342" Tag="V342" HorizontalAlignment="Left"  Margin="806.684,420.954,0,0" VerticalAlignment="Top" Width="50" Height="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V342].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V342p1}"
-                                        Part02="{Binding ElementName=V342p2}">
+                                        TsStatus="{Binding STC[V342].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V342p1}"
+                                        Part02="{Binding ElementName=V342p2}">-->
                     <controls:TrainSwitch45.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
                         </TransformGroup>
                     </controls:TrainSwitch45.RenderTransform>
                 </controls:TrainSwitch45>
-                <Path x:Name="V342p1" Data="M0,0.092592593 L291.22202,0.43210099 291.22202,10.617297 0,10 z" 
-                      Height="10.472" Width="151.779" Margin="799.264,450.441,0,0"  Stretch="Fill"
-                      attProp:PathHelper.PathNumber="V342"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True"/>
-                <Path x:Name="V342p2" Data="M-3.9592074,99.218161 L7.7234241,99.231278 39.194726,46.053507 69.393732,46.015278 69.434486,53.092321 40.851978,53.286133 10.568948,106.41735 -3.959113,106.33177 z" 
-                      Height="79.41"  Stretch="Fill" Width="151.083" Margin="799.248,381.256,0,0"
-                      attProp:PathHelper.PathNumber="V342"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True"/>
 
                 <!-- === V381 ===-->
-                <!--DOKONCIT-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="381"
                     Foreground="{Binding ElementName=V381, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="1873.229,853.86,0,0"/>
@@ -1842,21 +1833,15 @@
                         </TransformGroup>
                     </controls:TrainSwitch25.RenderTransform>
                 </controls:TrainSwitch25>
-                <Path x:Name="V381p2"  Data="M1122.4237,51.627736 L1146.6724,51.123563 1146.7303,60.263382 1125.4652,60.215672 1039.7768,100.31341 1035.8766,91.951064 z"
-                    Height="50.195" Margin="1793.21,844.115,0,0" Stretch="Fill"  Width="111.832"
-                     attProp:PathHelper.PathNumber="V381"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True"/>
 
                 <!-- === V302A ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="302A"
                     Foreground="{Binding ElementName=V302A, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="2292.192,518.333,0,0"/>
-                <controls:TrainSwitch30 x:Name="V302A" Tag="V302A" HorizontalAlignment="Left" Height="50" Margin="2271.192,495.583,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V302A].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V302Ap1}"
-                                        Part02="{Binding ElementName=V302Ap2}"
-                                        InvertArm="True">
+                <controls:TrainSwitch30 x:Name="V302A" Tag="V302A" HorizontalAlignment="Left" Height="50" Margin="2272.192,495.333,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
+                                        TsStatus="{Binding STC[V302A].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V302Ap1}"
+                                        Part02="{Binding ElementName=V302Ap2}">-->
                     <controls:TrainSwitch30.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="1"/>
@@ -1864,38 +1849,15 @@
                         </TransformGroup>
                     </controls:TrainSwitch30.RenderTransform>
                 </controls:TrainSwitch30>
-                <Path x:Name="V302Ap1"  Data="M1098.7933,52.929742 L1152.1558,52.752839 1152.1474,63.315256 1102.7704,63.326086 1023.0219,142.26946 1016.4144,135.42798 z"
-                    Height="90.521" Margin="2332.853,560.005,0,0" Stretch="Fill"  Width="136.726" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V302"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True" >
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <RotateTransform Angle="-269.676"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                <Path x:Name="V302Ap2" Data="M0.47273664,9.126893 L0.50512695,-0.43270154 52.525922,-0.17255298 145.98938,54.94765 261.23245,171.45408 254.81834,177.76995 138.57111,60.255564 50.183177,9.6203506 z" Height="179.162" Margin="2241.984,552.531,0,0" RenderTransformOrigin="0,0" Stretch="Fill" Width="261.787"
-                       attProp:PathHelper.PathNumber="V302"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <RotateTransform Angle="-45.302"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V388 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="388"
                     Foreground="{Binding ElementName=V388, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="764.524,724.665,0,0"/>
                 <controls:TrainSwitch25 x:Name="V388" Tag="V388" HorizontalAlignment="Left" Height="50" Margin="747.194,730,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V388].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V388p1}"
-                                        Part02="{Binding ElementName=V388p2}"
-                                        InvertArm="True">
+                                        TsStatus="{Binding STC[V388].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V388p1}"
+                                        Part02="{Binding ElementName=V388p2}">-->
                     <controls:TrainSwitch25.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
@@ -1903,40 +1865,15 @@
                         </TransformGroup>
                     </controls:TrainSwitch25.RenderTransform>
                 </controls:TrainSwitch25>
-                <Path x:Name="V388p1" Data="M-75.305055,-0.32178571 L90.734896,0.44444444 90.734896,10.444444 -75.305055,9.6782143 z"
-                    Height="10.689" Margin="629.561,656.481,0,0" Stretch="Fill"  Width="322.514" RenderTransformOrigin="0.5,0.5"
-                      attProp:PathHelper.PathNumber="V388"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True"
-                     >
-                    <Path.RenderTransform>
-                        <TransformGroup>                          
-                            <RotateTransform Angle="63.6"/>
-                            <TranslateTransform X="-40.620524070160741" Y="65.225198510687576"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                <Path x:Name="V388p2"  Data="M1103.0417,54.636113 L1290.7157,56.650964 1290.6846,65.697565 1106.3497,63.677894 1021.5023,102.15354 1018.0836,93.846551 z"
-                    Height="48.518" Margin="796.475,829.401,0,0" Stretch="Fill"  Width="273.643" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V388"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>                            
-                            <RotateTransform Angle="243.036"/>                           
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V303 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="303"
                     Foreground="{Binding ElementName=V303, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="2227.642,353.389,0,0"/>
                 <controls:TrainSwitch30 x:Name="V303" Tag="V303" HorizontalAlignment="Left" Height="50" Margin="2243.142,363.889,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V303].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V303p1}"
-                                        Part02="{Binding ElementName=V303p2}"
-                                        InvertArm="True">
+                                        TsStatus="{Binding STC[V303].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V303p1}"
+                                        Part02="{Binding ElementName=V303p2}">-->
                     <controls:TrainSwitch30.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1"/>
@@ -1944,132 +1881,45 @@
                         </TransformGroup>
                     </controls:TrainSwitch30.RenderTransform>
                 </controls:TrainSwitch30>
-                <Path x:Name="V303p1"  Data="M1123.6419,51.746611 L1236.0788,51.890292 1236.1044,61.456159 1123.8643,61.447256 1048.1102,92.815152 1044.3608,83.863107 z"
-                    Height="42.063" Margin="2307.403,399.531,0,0" Stretch="Fill"  Width="192.761" RenderTransformOrigin="0,0"                     
-                      attProp:PathHelper.PathNumber="V303"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="1"/>
-                            <SkewTransform AngleY="0" AngleX="180"/>
-                            <RotateTransform Angle="180"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                <Path x:Name="V303p2"  Data="M1102.2088,51.704562 L1136.3692,54.71815 1135.2518,64.419347 1102.9113,61.388904 1041.809,86.673095 1038.444,78.333636 z"
-                    Height="35.971" Margin="2214.629,401.007,0,0" Stretch="Fill"  Width="98.931" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V303"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="152.003"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V341 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="341"
                     Foreground="{Binding ElementName=V341, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="885.152,325.425,0,0"/>
                 <controls:TrainSwitchY64 x:Name="V341" Tag="V341" HorizontalAlignment="Left" Height="50" Margin="865.152,294.425,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V341].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V341p1}"
-                                        Part02="{Binding ElementName=V341p2}">
+                                        TsStatus="{Binding STC[V341].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V341p1}"
+                                        Part02="{Binding ElementName=V341p2}">-->
                     <controls:TrainSwitchY64.RenderTransform>
                         <TransformGroup>
                             <RotateTransform Angle="137.354"/>
                         </TransformGroup>
                     </controls:TrainSwitchY64.RenderTransform>
                 </controls:TrainSwitchY64>
-                <Path x:Name="V341p1" Data="M-6.3381219,-5.070012 L64.39834,20.498426 137.48026,23.817483 137.48026,32.817485 63.281698,30.42321 -9.3958346,3.8624639 z" Height="38.889" Margin="796.253,274.572,0,0" RenderTransformOrigin="0.742136705905957,0.834398449532532" Stretch="Fill" Width="147.876"
-                      attProp:PathHelper.PathNumber="V341"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-64"/>
-                            <TranslateTransform Y="-16.728661198484758" X="-1.3852124815074731"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                <Path x:Name="V341p2"  Data="M1070.6547,82.871103 L1133.4878,83.147668 1133.3683,92.261893 1075.1446,92.066292 1018.7066,144.43638 1012.3497,137.51299 z"
-                    Height="62.569" Margin="828.305,316.225,0,0" Stretch="Fill"  Width="122.125" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V341"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-0.749"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V301A ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="301A"
                     Foreground="{Binding ElementName=V301A, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="2383.514,324.576,0,0"/>
                 <controls:TrainSwitchY64 x:Name="V301A" Tag="V301A" HorizontalAlignment="Left" Height="50" Margin="2358.514,293.576,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V301A].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V301Ap1}"
-                                        Part02="{Binding ElementName=V301Ap2}"
-                                        InvertArm="True">
+                                        TsStatus="{Binding STC[V301A].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V301Ap1}"
+                                        Part02="{Binding ElementName=V301Ap2}">-->
                     <controls:TrainSwitchY64.RenderTransform>
                         <TransformGroup>
                             <RotateTransform Angle="138.16"/>
                         </TransformGroup>
                     </controls:TrainSwitchY64.RenderTransform>
                 </controls:TrainSwitchY64>
-                <Path x:Name="V301Ap1"  Data="M1102.5189,52.74661 L1118.8106,45.472517 1120.7361,55.044379 1108.0604,60.790617 1046.9283,121.18205 1040.2377,114.98157 z"
-                    Height="76.697" Margin="2448.093,310.415,0,0" Stretch="Fill"  Width="81.477" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V301A"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True"
-                      >
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="161.232"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                <Path x:Name="V301Ap2"  Data="M1099.1815,54.464207 L1117.3807,54.374852 1119.4109,63.576487 1104.0884,63.133125 1027.6206,136.59437 1021.1429,129.78583 z"
-                    Height="83.222" Margin="2437.771,260.014,0,0" Stretch="Fill"  Width="99.257" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V301A"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True"
-                      >
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-43.567"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V304 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="304"
                     Foreground="{Binding ElementName=V304, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="2216.496,444.33,0,0"/>
                 <controls:TrainSwitch30 x:Name="V304" Tag="V304" HorizontalAlignment="Left" Height="50" Margin="2177.167,417.667,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V304].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V304p1}"
-                                        Part02="{Binding ElementName=V304p2}"
-                                        InvertArm="True">
+                                        TsStatus="{Binding STC[V304].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V304p1}"
+                                        Part02="{Binding ElementName=V304p2}">-->
                     <controls:TrainSwitch30.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="1"/>
@@ -2077,43 +1927,15 @@
                         </TransformGroup>
                     </controls:TrainSwitch30.RenderTransform>
                 </controls:TrainSwitch30>
-                <Path x:Name="V304p1"  Data="M1096.3678,54.446016 L1152.4793,54.500876 1152.4793,63.563375 1101.8521,63.600906 1011.9274,154.33367 1005.4458,148.46778 z"
-                    Height="100.892" Margin="2234.342,525.385,0,0" Stretch="Fill"  Width="148.006" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V304"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="180.321"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                <Path x:Name="V304p2"  Data="M1087.9406,62.907094 L1135.3642,50.818053 1158.1038,57.400785 1155.1574,65.741156 1135.179,60.469006 1090.525,72.264229 1018.897,113.66281 1014.2969,105.73466 z"
-                    Height="63.822" Margin="2113.294,509.054,0,0" Stretch="Fill"  Width="144.835" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V304"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-210.121"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V302 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="302"
                     Foreground="{Binding ElementName=V302, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="2314.715,315.607,0,0"/>
                 <controls:TrainSwitch25 x:Name="V302" Tag="V302" HorizontalAlignment="Left" Height="50" Margin="2326.06,324.945,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V302].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V302p1}"
-                                        Part02="{Binding ElementName=V302p2}">
+                                        TsStatus="{Binding STC[V302].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V302p1}"
+                                        Part02="{Binding ElementName=V302p2}">-->
                     <controls:TrainSwitch25.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
@@ -2121,195 +1943,89 @@
                         </TransformGroup>
                     </controls:TrainSwitch25.RenderTransform>
                 </controls:TrainSwitch25>
-                <Path x:Name="V302p1" Data="M21.175272,-3.1501789 L49.202855,0.96546772 89.052936,0.73354027 89.512098,11.457653 48.75253,10.983748 19.974933,7.726158 z"
-                    Height="14.137" Margin="2298.354,334.742,0,0" Stretch="Fill"  Width="74.18" RenderTransformOrigin="0.5,0.5"
-                     attProp:PathHelper.PathNumber="V302"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-28.156"/>
-                            <TranslateTransform X="2.2165964245284826" Y="5.1328547921599394"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                <Path x:Name="V302p2"  Data="M1102.4686,57.225827 L1152.1218,57.252618 1152.1086,67.81506 1104.4979,68.160611 1069.3807,95.229409 1063.4318,106.73845 1055.3483,101.88327 1060.582,92.074407 z"
-                    Height="50.51" Margin="2322.961,326.381,0,0" Stretch="Fill"  Width="97.766" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V302"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>                         
-                            <RotateTransform Angle="-89.497"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V315 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="315"
                     Foreground="{Binding ElementName=V315, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="1545.307,524.505,0,0"/>
                 <controls:TrainSwitchY30 x:Name="V315" Tag="V315" HorizontalAlignment="Left" Height="50" Margin="1535.307,499.505,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
-                                         TsStatus="{Binding STC[V315].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V315p1}"
-                                        Part02="{Binding ElementName=V315p2}"
-                                        InvertArm="True">
+                                         TsStatus="{Binding STC[V315].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V315p1}"
+                                        Part02="{Binding ElementName=V315p2}">-->
                     <controls:TrainSwitchY30.RenderTransform>
                         <TransformGroup>
                             <RotateTransform Angle="148.713"/>
                         </TransformGroup>
                     </controls:TrainSwitchY30.RenderTransform>
                 </controls:TrainSwitchY30>
-                <Path x:Name="V315p1" Height="187.057" Data="M115.00919,0.91667162 L155.83862,0.90501888 155.83862,9.8429887 120.493,10.030376 -15.956017,151.43239 -71.714039,186.96721 -76.929471,178.93719 -20.516331,142.50721 z" Margin="1513.977,665.857,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="233.775"
-                      attProp:PathHelper.PathNumber="V315"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180"/>
-                            <TranslateTransform Y="-1.0741223357799516E-06" X="-36.50800580738462"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                <Path x:Name="V315p2" Height="151.555" Data="M184.75794,-76.864452 L225.0424,-76.834479 225.0424,-67.754506 190.15844,-67.900564 53.661999,73.80114 -65.07334,73.655757 -65.07334,64.322179 50.442115,63.821686 z" Margin="1571.79,666.106,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="291.119"
-                      attProp:PathHelper.PathNumber="V315"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="180"/>
-                            <TranslateTransform Y="-7.3451195278367633E-07" X="-68.637336905447157"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V387 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="387"
                     Foreground="{Binding ElementName=V387, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="891.797,854.303,0,0"/>
                 <controls:TrainSwitch45 x:Name="V387" Tag="V387" HorizontalAlignment="Left"  Margin="907.297,833.803,0,0" VerticalAlignment="Top" Width="50" Height="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V387].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V387p1}"
-                                        Part02="{Binding ElementName=V387p2}">
+                                        TsStatus="{Binding STC[V387].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V387p1}"
+                                        Part02="{Binding ElementName=V387p2}">-->
                     <controls:TrainSwitch45.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1" ScaleX="-1"/>
                         </TransformGroup>
                     </controls:TrainSwitch45.RenderTransform>
                 </controls:TrainSwitch45>
-                <Path x:Name="V387p1"  Data="M1108.1606,53.139545 L1185.0053,53.141824 1185.0053,62.141762 1109.6859,62.148601 1060.364,102.61859 1054.7365,95.924244 z"
-                    Height="50.488" Margin="831.373,854.128,0,0" Stretch="Fill"  Width="131.249" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V387"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-180"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                <Path x:Name="V387p2" HorizontalAlignment="Left" VerticalAlignment="Top" Data="M184.5184,1.1101238 L183.09807,10.465027 149.78729,5.9905649 118.8399,29.593671 50.265102,28.334758 50.797264,19.318644 115.50596,20.591672 147.53167,-3.6743112 z" Height="34.268" Margin="814.177,882.293,0,0" RenderTransformOrigin="0.873069103696686,0.180204984743888" Stretch="Fill" Width="135.278"
-                      attProp:PathHelper.PathNumber="V387"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="37.389"/>
-                            <TranslateTransform Y="-26.970241035242623" X="8.7016393348196885"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V317 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="317"
                     Foreground="{Binding ElementName=V317, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="1280.347,426.949,0,0"/>
                 <controls:TrainSwitch45 x:Name="V317" Tag="V317" HorizontalAlignment="Left"  Margin="1268.35,440.62,0,0" VerticalAlignment="Top" Width="50" Height="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V317].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V317p1}"
-                                        Part02="{Binding ElementName=V317p2}"
-                                        InvertArm="True">
+                                        TsStatus="{Binding STC[V317].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V317p1}"
+                                        Part02="{Binding ElementName=V317p2}">-->
                     <controls:TrainSwitch45.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1" ScaleX="-1"/>
                         </TransformGroup>
                     </controls:TrainSwitch45.RenderTransform>
                 </controls:TrainSwitch45>
-                <Path x:Name="V317p1" Data="M0,0 L70.479361,-0.049382685 70.479361,9.9506169 0,10 z"
-                    Height="10.044" Margin="1253.225,451.049,0,0" Stretch="Fill"  Width="157.497"
-                      attProp:PathHelper.PathNumber="V317"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True"/>
-                <Path x:Name="V317p2" Height="76.271" Data="M115.00919,0.5 L125.85763,0.488337 125.85763,9.3846441 120.493,9.4053703 53.661999,75.73881 18.024605,75.760336 18.024605,66.760336 49.942121,66.760336 z" Margin="1253.415,527.392,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="108.834"
-                      attProp:PathHelper.PathNumber="V317"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-180"/>
-                            <TranslateTransform Y="-1.4348928070406062E-08"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V318 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="318"
                     Foreground="{Binding ElementName=V318, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="1281.682,290.963,0,0"/>
-                <controls:TrainSwitch45 x:Name="V318" Tag="V318" HorizontalAlignment="Left"  Margin="1268.35,304.3,0,0" VerticalAlignment="Top" Width="50" Height="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V318].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V318p1}"
-                                        Part02="{Binding ElementName=V318p2}"
-                                        InvertArm="True">
+                <controls:TrainSwitch45 x:Name="V318" Tag="V318"  Margin="1268.35,304.3,0,0" 
+                    TsStatus="{Binding STC[V318].CombineStatus, Mode=OneWay}" >
                     <controls:TrainSwitch45.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1" ScaleX="-1"/>
                         </TransformGroup>
                     </controls:TrainSwitch45.RenderTransform>
                 </controls:TrainSwitch45>
+
                 <Path x:Name="V318p1" Data="M-0.65859211,-0.55555552 L90.734896,-0.11111108 90.652572,10.444444 -0.65859211,10 z"
-                    Height="10.9" Margin="1252.925,314.448,0,0" Stretch="Fill"  Width="139.771"
-                     attProp:PathHelper.PathNumber="V318"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True" 
-                     />
-                <Path x:Name="V318p2" Height="74.781" Data="M115.00919,0.375 L125.85763,0.44667071 125.85763,9.3013097 120.493,9.3220359 53.661999,74.134473 18.024605,74.155999 18.024605,65.155999 49.942121,65.155999 z" Margin="1253.415,390.005,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="108.834"
-                      attProp:PathHelper.PathNumber="V318"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
+                    Height="10.9" Margin="1252.925,314.448,0,0" Stretch="Fill"  Width="139.771" />
+                      
+                    
+                <Path x:Name="V318p2"
+                    Height="74.781" Data="M115.00919,0.375 L125.85763,0.44667071 125.85763,9.3013097 120.493,9.3220359 53.661999,74.134473 18.024605,74.155999 18.024605,65.155999 49.942121,65.155999 z" Margin="1253,315,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="108.834">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
                             <SkewTransform AngleY="0" AngleX="0"/>
                             <RotateTransform Angle="-180"/>
-                            <TranslateTransform Y="-9.56615577254998E-11"/>
+                            <TranslateTransform Y="0"/>
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                
+
                 <!-- === V316 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="316"
                     Foreground="{Binding ElementName=V316, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="1480.965,294.298,0,0"/>
                 <controls:TrainSwitch45 x:Name="V316" Tag="V316" HorizontalAlignment="Left"  Margin="1443.969,297.632,0,0" VerticalAlignment="Top" Width="50" Height="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V316].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V316p1}"
-                                        Part02="{Binding ElementName=V316p2}">
+                                        TsStatus="{Binding STC[V316].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V316p1}"
+                                        Part02="{Binding ElementName=V316p2}">-->
                     <controls:TrainSwitch45.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1" ScaleX="1"/>
@@ -2317,165 +2033,69 @@
                         </TransformGroup>
                     </controls:TrainSwitch45.RenderTransform>
                 </controls:TrainSwitch45>
-                <Path x:Name="V316p1"  Data="M1072.9339,81.922376 L1242.8569,84.050673 1242.2325,93.542885 1076.0354,91.427132 1039.4164,126.97545 1032.9962,120.46397 z"
-                    Height="46.026" Margin="1377.169,209.891,0,0" Stretch="Fill"  Width="210.832" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V316"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="44.392"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                <Path x:Name="V316p2"  Data="M1072.3979,82.447364 L1133.9592,83.152593 1133.2492,92.378556 1076.2047,92.136511 1015.0295,152.19865 1008.3177,145.38927 z"
-                    Height="70.711" Margin="1436.155,269.67,0,0" Stretch="Fill"  Width="126.621" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V316"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="1"/>                            
-                            <RotateTransform Angle="44.392"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V314 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="314"
                     Foreground="{Binding ElementName=V314, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="1521.348,427.278,0,0"/>
                 <controls:TrainSwitch45 x:Name="V314" Tag="V314" HorizontalAlignment="Left"  Margin="1511.35,440.62,0,0" VerticalAlignment="Top" Width="50" Height="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V314].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V314p1}"
-                                        Part02="{Binding ElementName=V314p2}"
-                                        InvertArm="True">
+                                        TsStatus="{Binding STC[V314].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V314p1}"
+                                        Part02="{Binding ElementName=V314p2}">-->
                     <controls:TrainSwitch45.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1" ScaleX="1"/>
                         </TransformGroup>
                     </controls:TrainSwitch45.RenderTransform>
                 </controls:TrainSwitch45>
-                <Path x:Name="V314p1" Data="M0,0.092597143 L72.393374,-0.049382685 72.393374,10.321017 0,10.092597 z"
-                    Height="10.333" Margin="1409.957,450.885,0,0" Stretch="Fill"  Width="161.747"
-                      attProp:PathHelper.PathNumber="V314"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True"/>
-                <Path x:Name="V314p2" Height="141.963" Data="M187.78682,-66.69481 L217.87351,-66.828282 217.87214,-57.642819 192.26929,-57.666949 53.661999,74.134473 22.024543,73.989333 22.024543,64.989333 49.942121,64.989333 z" Margin="1374.772,450.819,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="196.852"
-                      attProp:PathHelper.PathNumber="V314"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="180"/>
-                            <TranslateTransform Y="1.1000792576148522E-09"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V322 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="322"
                     Foreground="{Binding ElementName=V322, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="1179.35,183.175,0,0"/>
                 <controls:TrainSwitch45 x:Name="V322" Tag="V322" HorizontalAlignment="Left"  Margin="1128.85,163.175,0,0" VerticalAlignment="Top" Width="50" Height="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V322].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V322p1}"
-                                        Part02="{Binding ElementName=V322p2}">
+                                        TsStatus="{Binding STC[V322].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V322p1}"
+                                        Part02="{Binding ElementName=V322p2}">-->
                     <controls:TrainSwitch45.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1" ScaleX="-1"/>
                         </TransformGroup>
                     </controls:TrainSwitch45.RenderTransform>
                 </controls:TrainSwitch45>
-                <Path x:Name="V322p1" Data="M0,-0.13888888 L90.734896,0.30555556 90.734896,10.444444 0,10 z"
-                    Height="10.525" Margin="1143.089,173.493,0,0" Stretch="Fill"  Width="142.836"
-                     attProp:PathHelper.PathNumber="V322"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True"/>
-                <Path x:Name="V322p2" Height="74.575" Data="M112.50912,0.5 L177.20555,0.79389444 177.20555,9.8568667 117.2429,9.6553692 53.411991,73.926141 35.624034,74.075791 35.66558,64.946288 49.192097,65.030998 z" Margin="1131.812,248.167,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="142.577"
-                    attProp:PathHelper.PathNumber="V322"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1"/>                          
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
+
                 <!-- === V307 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="307"
                     Foreground="{Binding ElementName=V307, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="2174.751,194.328,0,0"/>
                 <controls:TrainSwitch64 x:Name="V307" Tag="V307" HorizontalAlignment="Left" Height="50" Margin="2143.755,174.666,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V307].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V307p1}"
-                                        Part02="{Binding ElementName=V307p2}">
+                                        TsStatus="{Binding STC[V307].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V307p1}"
+                                        Part02="{Binding ElementName=V307p2}">-->
                     <controls:TrainSwitch64.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1" ScaleX="1"/>
                         </TransformGroup>
                     </controls:TrainSwitch64.RenderTransform>
                 </controls:TrainSwitch64>
-                <Path x:Name="V307p1" Data="M0,0 L109.38465,0.44444444 109.38465,10.444444 0,10 z"
-                    Height="10.4" Margin="2090.482,183.985,0,0" Stretch="Fill"  Width="258.619"
-                      attProp:PathHelper.PathNumber="V307"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True"/>
-                <Path x:Name="V307p2" Data="M895.90054,108.78889 L1065.8344,108.07728 1131.3463,-23.731859 1258.3741,-23.681688 1258.3782,-14.815469 1139.1081,-13.625896 1073.3293,117.021 895.93744,117.66395 z"
-                    Height="142.486" Margin="2348.104,327.246,-1.629,0" Stretch="Fill" Width="363.525" RenderTransformOrigin="0,0" 
-                      attProp:PathHelper.PathNumber="V307"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0.404"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V308 ===-->
-                <!--DOKONCIT-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="308"
                     Foreground="{Binding ElementName=V308, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="2273.5,194.377,0,0"/>
                 <controls:TrainSwitch30 x:Name="V308" Tag="V308" HorizontalAlignment="Left" Height="50" Margin="2265,154.377,0,0" VerticalAlignment="Top" Width="50"
                                         TsStatus="{Binding STC[V308].CombineStatus, Mode=OneWay}" />
                 <!--Part01="{Binding ElementName=V308p1}"
-                                        Part02="{Binding ElementName=V308p2}"
-                InvertArm="True"/>-->
-                <Path x:Name="V308p2"  Data="M1100.8684,55.305289 L1152.9793,54.835721 1152.9795,64.398165 1104.519,64.335933 1022.6674,112.05542 1017.684,104.2144 z"
-                    Height="58.214" Margin="2212.899,194.894,0,0" Stretch="Fill"  Width="136.303" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V308"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-180.023"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
+                                        Part02="{Binding ElementName=V308p2}"/>-->
 
                 <!-- === V309 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="309"
                     Foreground="{Binding ElementName=V309, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="2178.484,91.606,0,0"/>
                 <controls:TrainSwitch30 x:Name="V309" Tag="V309" HorizontalAlignment="Left" Height="50" Margin="2138.484,96.606,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V309].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V309p1}"
-                                        Part02="{Binding ElementName=V309p2}"
-                                        InvertArm="True">
+                                        TsStatus="{Binding STC[V309].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V309p1}"
+                                        Part02="{Binding ElementName=V309p2}">-->
                     <controls:TrainSwitch30.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1" ScaleX="1"/>
@@ -2483,34 +2103,8 @@
                         </TransformGroup>
                     </controls:TrainSwitch30.RenderTransform>
                 </controls:TrainSwitch30>
-                <Path x:Name="V309p1"  Data="M1102.2873,54.581487 L1287.1993,58.532089 1286.8426,67.889516 1104.8082,64.170215 1025.9524,109.31275 1021.1858,101.09742 z"
-                    Height="55.73" Margin="1989.357,0.695,0,0" Stretch="Fill"  Width="267.026" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V309"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>                            
-                            <RotateTransform Angle="209.812"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                <Path x:Name="V309p2"  Data="M1104.7256,53.808483 L1151.867,54.851889 1151.4944,63.930212 1106.203,63.755081 928.29879,164.63457 923.3379,155.95428 z"
-                    Height="111.817" Margin="2020.26,21.79,0,0" Stretch="Fill"  Width="229.538" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V309"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>                           
-                            <RotateTransform Angle="209.812"/>                        
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
-                <!-- === V312A ===-->                
-                <!--DOKONCIT-->
+                <!-- === V312A ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="312A"
                     Foreground="{Binding ElementName=V312A, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="1671.866,426.441,0,0"/>
@@ -2524,55 +2118,23 @@
                         </TransformGroup>
                     </controls:TrainSwitch30.RenderTransform>
                 </controls:TrainSwitch30>
-                <Path x:Name="V312Ap2"  Data="M1098.0332,56.626038 L1150.6195,45.002356 1152.2381,54.233591 1101.9848,65.818973 1088.956,78.546897 1082.335,71.888355 z"
-                    Height="34.579" Margin="1686.73,431.165,0,0" Stretch="Fill"  Width="70.897" RenderTransformOrigin="0,0"
-                    attProp:PathHelper.PathNumber="V312A"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>                            
-                            <RotateTransform Angle="224.233"/>                           
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V310 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="310"
                     Foreground="{Binding ElementName=V310, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="1768.829,524.281,0,0"/>
                 <controls:TrainSwitch30 x:Name="V310" Tag="V310" HorizontalAlignment="Left" Height="50" Margin="1758.829,484.281,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V310].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V310p1}"
-                                        Part02="{Binding ElementName=V310p2}">
+                                        TsStatus="{Binding STC[V310].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V310p1}"
+                                        Part02="{Binding ElementName=V310p2}">-->
                     <controls:TrainSwitch30.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="1"/>
                         </TransformGroup>
                     </controls:TrainSwitch30.RenderTransform>
                 </controls:TrainSwitch30>
-                <Path x:Name="V310p1" Data="M0,-0.13889989 L86.716799,-0.7553984 86.729965,9.2908917 0,10.32409 z"
-                    Height="10.971" Margin="1665.112,514.086,0,0" Stretch="Fill"  Width="206.857"
-                      attProp:PathHelper.PathNumber="V310"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True"/>
-                <Path x:Name="V310p2"  Data="M1124.2637,54.214283 L1205.9885,54.152629 1205.9882,63.173518 1128.5907,62.911904 1070.3474,98.911948 1065.2308,91.226028 z"
-                    Height="45.768" Margin="1730.276,524.882,0,0" Stretch="Fill"  Width="141.748" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V310"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="-180.321"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V312B ===-->
-                <!--DOKONCIT-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="312B"
                     Foreground="{Binding ElementName=V312B, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="1621,426,0,0"/>
@@ -2586,79 +2148,45 @@
                         </TransformGroup>
                     </controls:TrainSwitch30.RenderTransform>
                 </controls:TrainSwitch30>
-                <Path x:Name="V312Bp2"  Data="M1096.9928,57.288654 L1149.8787,45.316314 1151.6716,54.725938 1101.1516,66.396102 1089.7934,77.616108 1083.2337,70.781778 z"
-                    Height="33.337" Margin="1650.501,432.13,0,0" Stretch="Fill"  Width="69.435" RenderTransformOrigin="0,0"
-                     attProp:PathHelper.PathNumber="V312B"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1" ScaleX="1"/>                           
-                            <RotateTransform Angle="-224.233"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
                 <!-- === V321 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="321"
                     Foreground="{Binding ElementName=V321, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="1181.932,91.338,0,0"/>
                 <controls:TrainSwitch30 x:Name="V321" Tag="V321" HorizontalAlignment="Left" Height="50" Margin="1171.936,104.672,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V321].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V321p1}"
-                                        Part02="{Binding ElementName=V321p2}">
+                                        TsStatus="{Binding STC[V321].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V321p1}"
+                                        Part02="{Binding ElementName=V321p2}">-->
                     <controls:TrainSwitch30.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1" ScaleX="1"/>
                         </TransformGroup>
                     </controls:TrainSwitch30.RenderTransform>
                 </controls:TrainSwitch30>
-                <Path x:Name="V321p1" Data="M-23.945845,-0.18518858 L76.055329,0 62.256642,10 -23.945845,9.8148114 z" 
-                    Height="10.166" Width="106.958" Margin="1096.368,114.259,0,0"  Stretch="Fill"
-                      attProp:PathHelper.PathNumber="V321"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True"/>
-                <Path x:Name="V321p2" Data="M-9.0855076,73.16239 L15.287762,51.436818 56.433279,51.341512 56.435031,58.01704 16.271136,58.42845 -6.7439156,79.446313 z" 
-                    Height="38.538"  Stretch="Fill" Width="134.547" Margin="1154.098,114.332,0,0"
-                      attProp:PathHelper.PathNumber="V321"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True"/>
 
                 <!-- === V323 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="323"
                     Foreground="{Binding ElementName=V323, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="1093.97,183.433,0,0"/>
                 <controls:TrainSwitch30 x:Name="V323" Tag="V323" HorizontalAlignment="Left" Height="50" Margin="1089.31,143.438,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V323].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V323p1}"
-                                        Part02="{Binding ElementName=V323p2}">
+                                        TsStatus="{Binding STC[V323].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V323p1}"
+                                        Part02="{Binding ElementName=V323p2}">-->
                     <controls:TrainSwitch30.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
                         </TransformGroup>
                     </controls:TrainSwitch30.RenderTransform>
                 </controls:TrainSwitch30>
-                <Path x:Name="V323p1" Data="M0,-0.1852143 L73.466547,0.027760067 73.466547,10.374961 0,10.023103 z"
-                    Height="10.503" Margin="1069.733,173.287,0,0" Stretch="Fill"  Width="64.093"
-                     attProp:PathHelper.PathNumber="V323"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True" 
-                     />
-                <Path x:Name="V323p2" Data="M3.8086187,68.844395 L20.186079,68.745679 43.968853,46.6814 46.358854,52.801354 21.493475,75.630293 3.8386874,75.502637 z" 
-                    Height="40.106"  Stretch="Fill" Width="89.436" Margin="1070.58,143.523,0,0"
-                      attProp:PathHelper.PathNumber="V323"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True"/>
 
                 <!-- === V324 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="324"
                     Foreground="{Binding ElementName=V324, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="1018.02,146.685,0,0"/>
                 <controls:TrainSwitch30 x:Name="V324" Tag="V324" HorizontalAlignment="Left" Height="50" Margin="994.698,143.354,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V324].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V324p1}"
-                                        Part02="{Binding ElementName=V324p2}">
+                                        TsStatus="{Binding STC[V324].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V324p1}"
+                                        Part02="{Binding ElementName=V324p2}">-->
                     <controls:TrainSwitch30.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="1"/>
@@ -2666,34 +2194,15 @@
                         </TransformGroup>
                     </controls:TrainSwitch30.RenderTransform>
                 </controls:TrainSwitch30>
-                <Path x:Name="V324p1" Data="M5.3553588,0.13890991 L83.065782,0.13890991 83.065782,10.324064 5.3553588,10.324064 z" 
-                    Height="10.166" Width="87.5" Margin="983.207,173.326,0,0"  Stretch="Fill"
-                      attProp:PathHelper.PathNumber="V324"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True"/>
-                <Path x:Name="V324p2" Data="M0.53134008,68.747713 L20.125936,68.745679 44.086013,46.739892 46.476014,52.859846 21.493475,75.630293 0.53133729,75.498488 z" 
-                    Height="40.027"  Stretch="Fill" Width="96.491" Margin="990.581,143.602,0,0" RenderTransformOrigin="0.5,0.5"
-                      attProp:PathHelper.PathNumber="V324"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform X="-16.305999999999926"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
-                
+
                 <!-- === V326 ===-->
                 <TextBlock Style="{StaticResource txbVyhybkaStyle}" Text="326"
                     Foreground="{Binding ElementName=V326, Path=ZaverBezCesty, Converter={StaticResource ForeSwitchNameConv}, Mode=OneWay}"
                     Margin="924.655,90.229,0,0"/>
                 <controls:TrainSwitch30 x:Name="V326" Tag="V326" HorizontalAlignment="Left" Height="50" Margin="916.657,90.229,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.5,0.5"
-                                        TsStatus="{Binding STC[V326].CombineStatus, Mode=OneWay}"
-                                        Part01="{Binding ElementName=V326p1}"
-                                        Part02="{Binding ElementName=V326p2}">
+                                        TsStatus="{Binding STC[V326].CombineStatus, Mode=OneWay}" >
+                    <!--Part01="{Binding ElementName=V326p1}"
+                                        Part02="{Binding ElementName=V326p2}">-->
                     <controls:TrainSwitch30.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
@@ -2701,38 +2210,50 @@
                         </TransformGroup>
                     </controls:TrainSwitch30.RenderTransform>
                 </controls:TrainSwitch30>
-                <Path x:Name="V326p1" Data="M0.73680287,-0.49784131 L90.92624,0.046389225 90.887632,10.735844 0.61854964,9.4860657 z"
-                    Height="11.11" Margin="816.596,99.703,0,0" Stretch="Fill"  Width="172.736" RenderTransformOrigin="0.5,0.5"
-                     attProp:PathHelper.PathNumber="V326"
-                            attProp:PathHelper.ArmType="-"
-                            attProp:PathHelper.IsTrainSwitch="True">
+
+                <!--#endregion =======  VYMENY a useky pre vymeny =============-->
+
+                <Path x:Name="_775_Copy2" Data="M-6.3381219,-5.070012 L64.39834,20.498426 137.48026,23.817483 137.48026,32.817485 63.281698,30.42321 -9.3958346,3.8624639 z" Height="38.889" Margin="796.253,274.572,0,0" RenderTransformOrigin="0.742136705905957,0.834398449532532" Stretch="Fill" Width="147.876">
                     <Path.RenderTransform>
-                        <TransformGroup>                        
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-64"/>
+                            <TranslateTransform Y="-16.728661198484758" X="-1.3852124815074731"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+               
+
+                <Path x:Name="K770A_Copy24" Data="M0,-0.13888888 L90.734896,0.30555556 90.734896,10.444444 0,10 z"
+                    Height="10.525" Margin="1143.089,173.493,0,0" Stretch="Fill"  Width="142.836"/>
+
+
+
+                <Path x:Name="K770A_Copy26" Data="M0.73680287,-0.49784131 L90.92624,0.046389225 90.887632,10.735844 0.61854964,9.4860657 z"
+                    Height="11.11" Margin="816.596,99.703,0,0" Stretch="Fill"  Width="172.736" RenderTransformOrigin="0.5,0.5" >
+
+
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
                             <RotateTransform Angle="30"/>
                             <TranslateTransform X="-0.1235082377251473" Y="-0.24906098165646995"/>
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="V326p2" Data="M-34.686818,95.406277 L14.776701,51.312032 64.719147,51.825734 64.700457,58.579247 16.107594,58.178877 -32.314562,101.31584 z" 
-                    Height="67.786"  Stretch="Fill" Width="203.61" Margin="825.883,86.667,0,0" RenderTransformOrigin="0.5,0.5"
-                      attProp:PathHelper.PathNumber="V326"
-                            attProp:PathHelper.ArmType="+"
-                            attProp:PathHelper.IsTrainSwitch="True">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleY="-1" ScaleX="1"/>
-                            <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0"/>
-                            <TranslateTransform Y="-29.500999999999991"/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
 
-                <!--#endregion =======  VYMENY a useky pre vymeny =============-->
 
-                <Path x:Name="K770A_CopyA" Data="M29.148256,0.44444508 L199.99945,0.011110151 199.99945,9.7611015 139.68451,9.7533099 79.107005,69.802428 79.107005,70.052893 146.30561,136.6412 199.99945,136.66388 199.99945,145.66388 29.981587,145.81944 29.981587,136.81944 133.60305,136.61801 72.593684,76.266341 28.870479,76.344439 28.870479,67.344439 68.900737,67.24726 126.92424,9.7298848 29.148256,9.4444448 z" Height="146.81" Margin="999.056,314.059,0,0" Stretch="Fill" Width="172.129"/>
-                <Path x:Name="K770A_Copy1A" Data="M68.376151,0.38889024 L423.93241,-0.32221724 423.93241,8.6777845 114.51921,9.5822573 177.98698,73.555326 236.43207,73.366669 236.43207,82.366669 69.042818,81.300008 69.042818,72.300008 165.2912,73.537061 101.83247,9.5731049 68.376151,9.3888912 z" Height="83.689" Margin="1019.296,582.663,0,0" Stretch="Fill"  Width="356.555"
-                     />
+
+
+
+
+
+
+
+
 
                 <Path x:Name="V194p1_Copy2"  Data="M1098.4591,55.056367 L1169.8847,54.801558 1169.8613,63.905705 1101.0075,63.83744 868.93658,177.14608 864.7986,169.51298 z"
                     Height="123.346" Margin="1797.959,1008.933,0,-82.279" Stretch="Fill"  Width="321.057" RenderTransformOrigin="0,0"
@@ -2746,8 +2267,71 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
+                <Path x:Name="V194p1_Copy3"  Data="M1122.4237,51.627736 L1146.6724,51.123563 1146.7303,60.263382 1125.4652,60.215672 1039.7768,100.31341 1035.8766,91.951064 z"
+                    Height="50.195" Margin="1793.21,844.115,0,0" Stretch="Fill"  Width="111.832" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="360"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
 
-            
+                <Path x:Name="V194p1_Copy7"  Data="M1098.7933,52.929742 L1152.1558,52.752839 1152.1474,63.315256 1102.7704,63.326086 1023.0219,142.26946 1016.4144,135.42798 z"
+                    Height="90.521" Margin="2332.853,560.005,0,0" Stretch="Fill"  Width="136.726" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-269.676"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="K775_Copy11" Data="M0.5592514,9.4809881 L0.50372939,-0.16747936 52.527164,-0.40830585 145.97457,54.962307 261.01034,171.67393 254.53149,178.1299 137.9492,60.871153 50.067823,9.1482267 z" Height="179.497" Margin="2237.357,531.527,0,0" RenderTransformOrigin="0.13453767786376,0.0640106789632481" Stretch="Fill" Width="261.531">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-45.302"/>
+                            <TranslateTransform X="2.1807528252576347" Y="-7.674393816666381"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+
+                <Path x:Name="V194p1_Copy10"  Data="M1103.0417,54.636113 L1290.7157,56.650964 1290.6846,65.697565 1106.3497,63.677894 1021.5023,102.15354 1018.0836,93.846551 z"
+                    Height="48.518" Margin="796.475,829.401,0,0" Stretch="Fill"  Width="273.643" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="243.036"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+                <Path x:Name="K770A_Copy38" Data="M-75.305055,-0.32178571 L90.734896,0.44444444 90.734896,10.444444 -75.305055,9.6782143 z"
+                    Height="10.689" Margin="629.561,656.481,0,0" Stretch="Fill"  Width="322.514" RenderTransformOrigin="0.5,0.5"
+                      
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="63.6"/>
+                            <TranslateTransform X="-40.620524070160741" Y="65.225198510687576"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+
                 <Path x:Name="V543xx_Copy" Data="M1008.3093,83.522118 L1081.9317,82.878057 1115.4588,15.574378 1150.4909,15.304416 1150.4968,24.450374 1121.2972,24.724442 1087.4962,92.005425 1008.4579,92.771261 z"
                     Height="78.472" Margin="342.931,528.767,0,0" Stretch="Fill" Width="143.184"
                     RenderTransformOrigin="0,0" >
@@ -2762,15 +2346,16 @@
                 </Path>
 
 
-                <Path  x:Name="V539p2_Copy9" Data="M1097.4108,54.3945 L1134.3542,54.770419 1134.2523,64.170502 1102.7252,63.951939 1093.5522,83.084787 1085.5322,79.486589 z" 
-                    Height="29.692" Margin="766.025,902.037,0,0" Stretch="Fill"  Width="49.821" RenderTransformOrigin="0,0" 
+
+                <Path  x:Name="V539p2_Copy9" Data="M1097.6326,52.025273 L1132.459,51.717978 1132.4015,60.748774 1102.9914,60.95425 1093.5522,83.084787 1085.5322,79.486589 z" 
+                    Height="30" Margin="766,902,0,0" Stretch="Fill"  Width="49" RenderTransformOrigin="0,0" 
                        >
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
                             <SkewTransform AngleY="0" AngleX="0"/>
-                            <RotateTransform Angle="0.536"/>
-                            <TranslateTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="0" Y="0"/>
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
@@ -2782,7 +2367,102 @@
                     Height="9.959" Margin="385.518,314.215,0,0" Stretch="Fill" Width="64.649"
                      
                      />
-                
+
+
+                <Path x:Name="V194p1_Copy11"  Data="M1102.4686,57.225827 L1152.1218,57.252618 1152.1086,67.81506 1104.4979,68.160611 1069.3807,95.229409 1063.4318,106.73845 1055.3483,101.88327 1060.582,92.074407 z"
+                    Height="50.51" Margin="2322.961,326.381,0,0" Stretch="Fill"  Width="97.766" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-89.497"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="V194p1_Copy12"  Data="M1099.1815,54.464207 L1117.3807,54.374852 1119.4109,63.576487 1104.0884,63.133125 1027.6206,136.59437 1021.1429,129.78583 z"
+                    Height="83.222" Margin="2437.771,260.014,0,0" Stretch="Fill"  Width="99.257" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-43.567"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+
+                <Path x:Name="V194p1_Copy13"  Data="M1102.5189,52.74661 L1118.8106,45.472517 1120.7361,55.044379 1108.0604,60.790617 1046.9283,121.18205 1040.2377,114.98157 z"
+                    Height="76.697" Margin="2448.093,310.415,0,0" Stretch="Fill"  Width="81.477" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="161.232"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+
+
+
+                <Path x:Name="K770A_Copy55" Data="M0,0 L109.38465,0.44444444 109.38465,10.444444 0,10 z"
+                    Height="10.4" Margin="2090.482,183.985,0,0" Stretch="Fill"  Width="258.619"
+                      
+                     />
+                <Path x:Name="V194p1_Copy15"  Data="M1100.8684,55.305289 L1152.9793,54.835721 1152.9795,64.398165 1104.519,64.335933 1022.6674,112.05542 1017.684,104.2144 z"
+                    Height="58.214" Margin="2212.899,194.894,0,0" Stretch="Fill"  Width="136.303" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-180.023"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="V194p1_Copy17"  Data="M1104.7256,53.808483 L1151.867,54.851889 1151.4944,63.930212 1106.203,63.755081 928.29879,164.63457 923.3379,155.95428 z"
+                    Height="111.817" Margin="2020.26,21.79,0,0" Stretch="Fill"  Width="229.538" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="209.812"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="V194p1_Copy18"  Data="M1102.2873,54.581487 L1287.1993,58.532089 1286.8426,67.889516 1104.8082,64.170215 1025.9524,109.31275 1021.1858,101.09742 z"
+                    Height="55.73" Margin="1989.357,0.695,0,0" Stretch="Fill"  Width="267.026" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="209.812"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="V543xx_Copy5" Data="M895.90054,108.78889 L1065.8344,108.07728 1131.3463,-23.731859 1258.3741,-23.681688 1258.3782,-14.815469 1139.1081,-13.625896 1073.3293,117.021 895.93744,117.66395 z"
+                    Height="142.486" Margin="2348.104,327.246,-1.629,0" Stretch="Fill" Width="363.525"
+                    RenderTransformOrigin="0,0" >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0.404"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
 
                 <Path x:Name="K770A_Copy58" Data="M-43.626737,-0.74074069 L79.352744,-0.7900825 79.352744,9.2099171 -43.626737,9.2592593 z"
                     Height="10.044" Margin="1667.792,450.896,0,0" Stretch="Fill"  Width="212.929"
@@ -2798,10 +2478,120 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
+                <Path x:Name="V194p1_Copy19"  Data="M1123.6419,51.746611 L1236.0788,51.890292 1236.1044,61.456159 1123.8643,61.447256 1048.1102,92.815152 1044.3608,83.863107 z"
+                    Height="42.063" Margin="2307.403,399.531,0,0" Stretch="Fill"  Width="192.761" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="180"/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="K770A_Copy62" Data="M21.175272,-3.1501789 L49.202855,0.96546772 89.052936,0.73354027 89.512098,11.457653 48.75253,10.983748 19.974933,7.726158 z"
+                    Height="14.137" Margin="2298.354,334.742,0,0" Stretch="Fill"  Width="74.18" RenderTransformOrigin="0.5,0.5"
+                      
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-28.156"/>
+                            <TranslateTransform X="2.2165964245284826" Y="5.1328547921599394"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="V194p1_Copy20"  Data="M1102.2088,51.704562 L1136.3692,54.71815 1135.2518,64.419347 1102.9113,61.388904 1041.809,86.673095 1038.444,78.333636 z"
+                    Height="35.971" Margin="2214.629,401.007,0,0" Stretch="Fill"  Width="98.931" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="152.003"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="V194p1_Copy21"  Data="M1096.3678,54.446016 L1152.4793,54.500876 1152.4793,63.563375 1101.8521,63.600906 1011.9274,154.33367 1005.4458,148.46778 z"
+                    Height="100.892" Margin="2234.342,525.385,0,0" Stretch="Fill"  Width="148.006" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="180.321"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
 
-                
+                <Path x:Name="K770A_Copy64" Data="M0,-0.13889989 L86.716799,-0.7553984 86.729965,9.2908917 0,10.32409 z"
+                    Height="10.971" Margin="1665.112,514.086,0,0" Stretch="Fill"  Width="206.857"
+                      
+                     />
+                <Path x:Name="V194p1_Copy22"
+                    Height="151.555" Data="M184.75794,-76.864452 L225.0424,-76.834479 225.0424,-67.754506 190.15844,-67.900564 53.661999,73.80114 -65.07334,73.655757 -65.07334,64.322179 50.442115,63.821686 z" Margin="1571.79,666.106,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="291.119">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform Y="-7.3451195278367633E-07" X="-68.637336905447157"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+
+
+
+
+                <Path Data="M-3.9592074,99.218161 L7.7234241,99.231278 39.194726,46.053507 69.393732,46.015278 69.434486,53.092321 40.851978,53.286133 10.568948,106.41735 -3.959113,106.33177 z" 
+                      Height="79.41"  Stretch="Fill" Width="151.083" Margin="799.248,381.256,0,0"/>
+
+                <Path Data="M0,0.092592593 L291.22202,0.43210099 291.22202,10.617297 0,10 z" 
+                      Height="10.472" Width="151.779" Margin="799.264,450.441,0,0"  Stretch="Fill"/>
+
+                <Path Data="M5.3553588,0.13890991 L83.065782,0.13890991 83.065782,10.324064 5.3553588,10.324064 z" 
+                    Height="10.166" Width="87.5" Margin="983.207,173.326,0,0"  Stretch="Fill"/>
+
                 <Path Data="M0,0 L54,0 54,10 0,10 z" 
                     Height="10" Width="69.32" Margin="1028.047,114.238,0,0"  Stretch="Fill"/>
+                <Path Data="M-23.945845,-0.18518858 L76.055329,0 62.256642,10 -23.945845,9.8148114 z" 
+                    Height="10.166" Width="106.958" Margin="1096.368,114.259,0,0"  Stretch="Fill"/>
+                <Path Data="M3.8086187,68.844395 L20.186079,68.745679 43.968853,46.6814 46.358854,52.801354 21.493475,75.630293 3.8386874,75.502637 z" 
+                    Height="40.106"  Stretch="Fill" Width="89.436" Margin="1070.58,143.523,0,0"/>
+
+                <Path
+                    Height="74.575" Data="M112.50912,0.5 L177.20555,0.79389444 177.20555,9.8568667 117.2429,9.6553692 53.411991,73.926141 35.624034,74.075791 35.66558,64.946288 49.192097,65.030998 z" Margin="1131.812,248.167,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="142.577">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="7.0164775638926606E-15"/>
+                            <TranslateTransform Y="7.7484111172910937E-10"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path Data="M-9.0855076,73.16239 L15.287762,51.436818 56.433279,51.341512 56.435031,58.01704 16.271136,58.42845 -6.7439156,79.446313 z" 
+                    Height="38.538"  Stretch="Fill" Width="134.547" Margin="1154.098,114.332,0,0"/>
+
+
+
+                <Path x:Name="V194p1_Copy27"  Data="M1087.9406,62.907094 L1135.3642,50.818053 1158.1038,57.400785 1155.1574,65.741156 1135.179,60.469006 1090.525,72.264229 1018.897,113.66281 1014.2969,105.73466 z"
+                    Height="63.822" Margin="2113.294,509.054,0,0" Stretch="Fill"  Width="144.835" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-210.121"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
 
                 <Path x:Name="V194p1_Copy28"
                     Height="72.091" Data="M110.73066,4.8423353 L165.32211,4.9605183 165.32211,14.231809 114.064,14.425666 53.661999,75.801153 -36.705902,75.933788 -36.705902,66.933788 46.692121,67.156012 z" Margin="1785.581,460.961,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="203.028">
@@ -2814,9 +2604,104 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
+                <Path x:Name="V194p1_Copy29"  Data="M1124.2637,54.214283 L1205.9885,54.152629 1205.9882,63.173518 1128.5907,62.911904 1070.3474,98.911948 1065.2308,91.226028 z"
+                    Height="45.768" Margin="1730.276,524.882,0,0" Stretch="Fill"  Width="141.748" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-180.321"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="V194p1_Copy30"  Data="M1098.0332,56.626038 L1150.6195,45.002356 1152.2381,54.233591 1101.9848,65.818973 1088.956,78.546897 1082.335,71.888355 z"
+                    Height="34.579" Margin="1686.73,431.165,0,0" Stretch="Fill"  Width="70.897" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="224.233"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="V194p1_Copy34"
+                    Height="141.963" Data="M187.78682,-66.69481 L217.87351,-66.828282 217.87214,-57.642819 192.26929,-57.666949 53.661999,74.134473 22.024543,73.989333 22.024543,64.989333 49.942121,64.989333 z" Margin="1374.772,450.819,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="196.852">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform Y="1.1000792576148522E-09"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="K770A_Copy71" Data="M0,0 L70.479361,-0.049382685 70.479361,9.9506169 0,10 z"
+                    Height="10.044" Margin="1253.225,451.049,0,0" Stretch="Fill"  Width="157.497"
+                      
+                     />
+                <Path x:Name="V194p1_Copy35"
+                    Height="76.271" Data="M115.00919,0.5 L125.85763,0.488337 125.85763,9.3846441 120.493,9.4053703 53.661999,75.73881 18.024605,75.760336 18.024605,66.760336 49.942121,66.760336 z" Margin="1253.415,527.392,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="108.834">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-180"/>
+                            <TranslateTransform Y="-1.4348928070406062E-08"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+
+                <Path x:Name="V194p1_Copy36"
+                    Height="187.057" Data="M115.00919,0.91667162 L155.83862,0.90501888 155.83862,9.8429887 120.493,10.030376 -15.956017,151.43239 -71.714039,186.96721 -76.929471,178.93719 -20.516331,142.50721 z" Margin="1513.977,665.857,0,0" RenderTransformOrigin="0.280145534825462,4.78297533982573E-09" Stretch="Fill" Width="233.775">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180"/>
+                            <TranslateTransform Y="-1.0741223357799516E-06" X="-36.50800580738462"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
                
 
-                <Path x:Name="V194p1_Copy41"
+
+
+                <Path x:Name="V194p1_Copy38"  Data="M1103.2015,55.262687 L1250.7179,54.060922 1250.7805,63.290042 1102.998,64.211549 963.71383,129.80606 959.23038,121.8606 z"
+                    Height="76.746" Margin="1798.005,962.021,0,0" Stretch="Fill"  Width="292.546" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="180.023"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+                <!--#region NERIADENE USEKY -->
+                <!--x:Name="NERIADENY_USEK_14X" v telegrame nie su udaje, stale ma tu istu farbu, tmavsi sivi odtien-->
+                <Path  x:Name="NERIADENY_USEK_14X" Data="M56.159775,9.8077837 L36.402337,49.833865 148.36111,51.126704 168.50714,9.8745509 z M50.843197,0.33333298 L185.49823,0.91451066 185.52144,9.4396528 178.40372,9.5020198 153.67784,60.434866 31.788214,59.181494 14.911439,93.371718 158.69186,94.757239 158.60767,103.7564 74.667168,102.94752 91.833123,139.91519 159.03264,140.6207 158.95865,150.02132 86.343369,149.12182 64.886872,103.00061 0.5,102.23282 0.58418965,93.066989 5.0415559,93.109943 z" Height="151" Margin="532,761.4,0,0" 
+                       RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="186"
+                       attProp:PathHelper.Mode="NERIADENY_USEK">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="0" Y="-0.478999999999985"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+                <!--x:Name="NERIADENY_USEK_121a" v telegrame nie su udaje, stale ma tu istu farbu-->
+                <Path x:Name="NERIADENY_USEK_121a"
+                    attProp:PathHelper.Mode="NERIADENY_USEK"
                     Height="61.255"
                     Margin="1107.938,962.552,0,0" Data="M101.45497,0.5 L180.03401,0.80111653 180.04742,10.093089 107.82723,9.8843715 63.075619,51.747322 180.334,51.714676 180.334,60.756557 14.727195,60.712033 -153.56116,60.723667 -153.56116,51.786066 0.60400051,51.806897 0.60400051,51.725781 50.07299,51.67685 z" RenderTransformOrigin="0,1.06945551731951E-08" Stretch="Fill" Width="334.895">
                     <Path.RenderTransform>
@@ -2824,11 +2709,13 @@
                             <ScaleTransform ScaleY="1" ScaleX="-1"/>
                             <SkewTransform AngleY="0" AngleX="0"/>
                             <RotateTransform Angle="-180"/>
-                            <TranslateTransform Y="1.0908446276659288E-09" X="-6.6792763103639568E-26"/>
+                            <TranslateTransform Y="0" X="0"/>
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="V194p1_Copy42"
+                <!--x:Name="NERIADENY_USEK_122a" v telegrame nie su udaje, stale ma tu istu farbu-->
+                <Path x:Name="NERIADENY_USEK_122a"
+                    attProp:PathHelper.Mode="NERIADENY_USEK"
                     Height="61.627"
                     Margin="1108.833,792.649,0,0" Data="M101.45497,0.5 L178.90901,0.80111653 178.92242,10.093089 107.82723,9.8843715 62.825619,51.913994 178.834,52.048015 178.834,60.964889 14.727195,61.128704 -153.99967,61.015349 -153.99967,52.015246 49.906323,51.926857 z" RenderTransformOrigin="0,1.06945551731951E-08" Stretch="Fill" Width="333.922">
                     <Path.RenderTransform>
@@ -2836,70 +2723,158 @@
                             <ScaleTransform ScaleY="-1" ScaleX="-1"/>
                             <SkewTransform AngleY="0" AngleX="0"/>
                             <RotateTransform Angle="180"/>
-                            <TranslateTransform X="4.1909184692475718E-25"/>
+                            <TranslateTransform X="0"/>
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
 
-                <Path Data="M0,0 L54,0 54,10 0,10 z" HorizontalAlignment="Left" Height="10" Margin="903.554,901.334,0,0" Stretch="Fill" VerticalAlignment="Top" Width="47.718"/>
-                <Path Data="M1,1.3390011 L61.666,1.3390011 61.666,9.4564874 1,9.4564874 z" HorizontalAlignment="Left" Height="9.979" Margin="884.146,901.375,0,0" Stretch="Fill" VerticalAlignment="Top" Width="20.4"/>
-                <Path Data="M1,1.3390011 L52.823593,1.3892148 52.823593,10.015223 1,9.814333 z" HorizontalAlignment="Left" Height="10.597" Margin="903.396,789.736,0,0" Stretch="Fill" VerticalAlignment="Top" Width="32.289"/>
-                <Path Data="M1,1.3390011 L52.823593,1.5398907 52.823593,10.01522 1,9.8143305 z" HorizontalAlignment="Left" Height="10.597" Margin="884.146,789.487,0,0" Stretch="Fill" VerticalAlignment="Top" Width="20.4"/>
 
-                <controls:UC_VstupOdchod x:Name="s386_Copy1" 
-                    SuhlasStatus="{Binding STC[s386].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
-                    Margin="1269.204,661.16,0,0" RenderTransformOrigin="0.5,0.5" >
-                    <controls:UC_VstupOdchod.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-179.701"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:UC_VstupOdchod.RenderTransform>
-                </controls:UC_VstupOdchod>
-                <controls:UC_VstupOdchod x:Name="s386_Copy2" 
-                    SuhlasStatus="{Binding STC[s386].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
-                    Margin="1235.728,455.852,0,0" RenderTransformOrigin="0.5,0.5" >
-                    <controls:UC_VstupOdchod.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-179.701"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:UC_VstupOdchod.RenderTransform>
-                </controls:UC_VstupOdchod>
-                <controls:UC_VstupOdchod x:Name="s386_Copy3" 
-                    SuhlasStatus="{Binding STC[s386].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
-                    Margin="1216.56,319.202,0,0" RenderTransformOrigin="0.5,0.5" >
-                    <controls:UC_VstupOdchod.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-179.701"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:UC_VstupOdchod.RenderTransform>
-                </controls:UC_VstupOdchod>
-                <controls:UC_VstupOdchod x:Name="s386_Copy4" 
-                    SuhlasStatus="{Binding STC[s386].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
-                    Margin="777.426,65.856,0,0" RenderTransformOrigin="0.5,0.5" >
-                    <controls:UC_VstupOdchod.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="32.814"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </controls:UC_VstupOdchod.RenderTransform>
-                </controls:UC_VstupOdchod>
+                <!--x:Name="NERIADENY_USEK_RotVyklop" v telegrame nie su udaje, stale ma tu istu farbu, tmavsi sivi odtien-->
+                <Path x:Name="NERIADENY_USEK_RotVyklop" Data="M29.148256,0.44444508 L199.99945,0.011110151 199.99945,9.7611015 139.68451,9.7533099 79.107005,69.802428 79.107005,70.052893 146.30561,136.6412 199.99945,136.66388 199.99945,145.66388 29.981587,145.81944 29.981587,136.81944 133.60305,136.61801 72.593684,76.266341 28.870479,76.344439 28.870479,67.344439 68.900737,67.24726 126.92424,9.7298848 29.148256,9.4444448 z"
+                      Height="146.81" Margin="999.056,314.059,0,0" Stretch="Fill" Width="172.129"
+                      attProp:PathHelper.Mode="NERIADENY_USEK"/>
 
-                
+                <!--x:Name="NERIADENY_USEK_125"  Celny vyklopnik-->
+                <Path x:Name="NERIADENY_USEK_125" Data="M68.376151,0.38889024 L423.93241,-0.32221724 423.93241,8.6777845 114.51921,9.5822573 177.98698,73.555326 236.43207,73.366669 236.43207,82.366669 69.042818,81.300008 69.042818,72.300008 165.2912,73.537061 101.83247,9.5731049 68.376151,9.3888912 z" 
+                      Height="83.689"
+                      Margin="1019.296,582.663,0,0" Stretch="Fill"  Width="356.555"
+                      attProp:PathHelper.Mode="NERIADENY_USEK"/>
+
+
+                <!--#endregion NERIADENE USEKY -->
+
+                <Path Data="M0,0 L54,0 54,10 0,10 z"  Height="10" Margin="903.554,901.334,0,0" Stretch="Fill"  Width="47.718"/>
+
+                <!-- Nazov: 121; Podtyp: 0 (neizolovany)-->
+                <Path x:Name="_121a"  Data="M1,1.3390011 L61.666,1.3390011 61.666,9.4564874 1,9.4564874 z"  Height="9.979" Margin="884.146,901.375,0,0" Stretch="Fill"  Width="20.4"/>
+
+                <Path x:Name="V194p1_Copy43"  Data="M1108.1606,53.139545 L1185.0053,53.141824 1185.0053,62.141762 1109.6859,62.148601 1058.0996,104.45779 1052.7846,97.201052 z"
+                    Height="52.328" Margin="829.42,854.128,0,0" Stretch="Fill"  Width="133.202" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path Data="M1,1.3390011 L52.823593,1.3892148 52.823593,10.015223 1,9.814333 z" Height="10.597" Margin="903.396,789.736,0,0" Stretch="Fill" Width="32.289"/>
+
+                <!-- Nazov: 122a; Podtyp: 0 (neizolovany)-->
+                <Path  x:Name="_122a"  Data="M1,1.3390011 L52.823593,1.5398907 52.823593,10.01522 1,9.8143305 z" 
+                       Height="10.4" Margin="884.146,789.487,0,0" Stretch="Fill"  Width="20.4"/>
+
+
+                <Path HorizontalAlignment="Left" VerticalAlignment="Top" Data="M184.5184,1.1101238 L183.09807,10.465027 149.78729,5.9905649 118.8399,29.593671 50.265102,28.334758 50.797264,19.318644 115.50596,20.591672 147.53167,-3.6743112 z" Height="34.268" Margin="814.177,882.293,0,0" RenderTransformOrigin="0.873069103696686,0.180204984743888" Stretch="Fill" Width="135.278">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="37.389"/>
+                            <TranslateTransform Y="-26.970241035242623" X="8.7016393348196885"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+
+
+
+                <Path x:Name="V194p1_Copy4"  Data="M1070.6547,82.871103 L1133.4878,83.147668 1133.3683,92.261893 1075.1446,92.066292 1018.7066,144.43638 1012.3497,137.51299 z"
+                    Height="62.569" Margin="828.305,316.225,0,0" Stretch="Fill"  Width="122.125" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-0.749"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+
+
+
+               
+
+                <Path x:Name="V194p1_Copy5"  Data="M1072.3979,82.447364 L1133.9592,83.152593 1133.2492,92.378556 1076.2047,92.136511 1015.0295,152.19865 1008.3177,145.38927 z"
+                    Height="70.711" Margin="1436.155,269.67,0,0" Stretch="Fill"  Width="126.621" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="44.392"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path x:Name="K770A_Copy13" Data="M0,0.092597143 L72.393374,-0.049382685 72.393374,10.321017 0,10.092597 z"
+                    Height="10.333" Margin="1409.957,450.885,0,0" Stretch="Fill"  Width="161.747"
+                      
+                     />
+                <Path Data="M0.68889535,1 L79.444,1 79.444,9.2112637 0.68889535,9.2112637 z"  HorizontalAlignment="Left" Height="10.225" Margin="1570.697,450.852,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="95.93" />
+                <Path x:Name="V194p1_Copy8"  Data="M1096.9928,57.288654 L1149.8787,45.316314 1151.6716,54.725938 1101.1516,66.396102 1089.7934,77.616108 1083.2337,70.781778 z"
+                    Height="33.337" Margin="1650.501,432.13,0,0" Stretch="Fill"  Width="69.435" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="-224.233"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+
+
+                <Path x:Name="V194p1_Copy9"  Data="M1072.9339,81.922376 L1242.8569,84.050673 1242.2325,93.542885 1076.0354,91.427132 1039.4164,126.97545 1032.9962,120.46397 z"
+                    Height="46.026" Margin="1377.169,209.891,0,0" Stretch="Fill"  Width="210.832" RenderTransformOrigin="0,0"
+                     >
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="44.392"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+
+                <Path x:Name="K770A_Copy19" Data="M0,-0.1852143 L73.466547,0.027760067 73.466547,10.374961 0,10.023103 z"
+                    Height="10.503" Margin="1069.733,173.287,0,0" Stretch="Fill"  Width="64.093"
+                      
+                     />
+
+                <Path Data="M0.53134008,68.747713 L20.125936,68.745679 44.086013,46.739892 46.476014,52.859846 21.493475,75.630293 0.53133729,75.498488 z" 
+                    Height="40.027"  Stretch="Fill" Width="96.491" Margin="990.581,143.602,0,0" RenderTransformOrigin="0.5,0.5">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="-16.305999999999926"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path Data="M-34.686818,95.406277 L14.776701,51.312032 64.719147,51.825734 64.700457,58.579247 16.107594,58.178877 -32.314562,101.31584 z" 
+                    Height="67.786"  Stretch="Fill" Width="203.61" Margin="825.883,86.667,0,0" RenderTransformOrigin="0.5,0.5">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1" ScaleX="1"/>
+                            <SkewTransform AngleY="0" AngleX="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform Y="-29.500999999999991"/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
 
                 <!--#region  UKONCOVACE USEKOV -->
-                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="719.299,806.502,0,0" VerticalAlignment="Top" Width="3.555"/>
-                <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="719.275,742.502,0,0" VerticalAlignment="Top" Width="3.555"/>
+                <Rectangle Fill="#FF000000" Height="14" Margin="690,805,0,0" Width="4"/>
+                <Rectangle Fill="#FF000000" Height="14" Margin="690,759,0,0" Width="4"/>
                 <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1806.375,311.795,0,0" VerticalAlignment="Top" Width="3.555"/>
 
                 <Rectangle Fill="#FF000000" HorizontalAlignment="Left" Height="14" Margin="1807.375,181,0,0" VerticalAlignment="Top" Width="3.555"/>
@@ -2951,7 +2926,8 @@
 
                 <!--Pozri StavadloElementsStyles.xaml-->
                 <!--#region LOKOMOTIVY -->
-                <controls:UClocomotive Margin="2348,729,0,0"   LocNumber="I"  >
+                <!--ST09: TU 2x; obycajny rusen 6x-->
+                <controls:UClocomotive Margin="2262,732,0,0"   LocNumber="I"  >
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
@@ -2968,44 +2944,44 @@
                     </i:Interaction.Behaviors>
                 </controls:UClocomotive>
 
-                <controls:UClocomotive Margin="2261.5,914.442,0,0"  LocNumber="IV">
+                <controls:UClocomotive Margin="2347,732,0,0"  LocNumber="IV">
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
                 </controls:UClocomotive>
 
-                <controls:UClocomotive Margin="2262,727,0,0"  LocNumber="V">
+                <controls:UClocomotive Margin="2350,790,0,0"  LocNumber="V">
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
                 </controls:UClocomotive>
 
-                <controls:UClocomotive Margin="2348.5,794.442,0,0"  LocNumber="VI" >
+                <controls:UClocomotive Margin="2348,850,0,0"  LocNumber="VI" >
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
                 </controls:UClocomotive>
 
-                <controls:UClocomotive Margin="2348.5,854.442,0,0"   LocNumber="VII">
+                <!--<controls:UClocomotive Margin="2348.5,854.442,0,0"   LocNumber="VII">
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
-                </controls:UClocomotive>
+                </controls:UClocomotive>-->
 
                 <!--Mazaci rusen-->
-                <controls:UClocomotive Margin="2348.5,915,0,0"   LocomotiveBrush="#FF7E7ED0" LocNumber="M">
+                <!--<controls:UClocomotive Margin="2348.5,915,0,0"   LocomotiveBrush="#FF7E7ED0" LocNumber="M">
+                    <i:Interaction.Behaviors>
+                        <i:MouseDragElementBehavior/>
+                    </i:Interaction.Behaviors>
+                </controls:UClocomotive>-->
+
+                <controls:UClocomotive Margin="2262,906,0,0"  LocNumber="TU" LocomotiveBrush="Orange">
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
                 </controls:UClocomotive>
 
-                <controls:UClocomotive Margin="2261.5,974.442,0,0"  LocNumber="TU" LocomotiveBrush="Orange">
-                    <i:Interaction.Behaviors>
-                        <i:MouseDragElementBehavior/>
-                    </i:Interaction.Behaviors>
-                </controls:UClocomotive>
-
-                <controls:UClocomotive Margin="2348.5,974.442,0,0" LocNumber="TU" LocomotiveBrush="Orange">
+                <controls:UClocomotive Margin="2348,906,0,0" LocNumber="TU" LocomotiveBrush="Orange">
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
@@ -3013,7 +2989,7 @@
                 <!--#endregion LOKOMOTIVY -->
 
                 <!--#region PANACI-figurky -->
-
+                <!-- ST08 panak 2x-->
                 <controls:UC_PanakUss  Margin="2518.556,727.925,0,0" x:Name="Panak1">
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
@@ -3025,7 +3001,7 @@
                     </i:Interaction.Behaviors>
                 </controls:UC_PanakUss>
 
-                <controls:UC_PanakUss  Margin="2460,828,0,0" x:Name="Panak3">
+                <!--<controls:UC_PanakUss  Margin="2460,828,0,0" x:Name="Panak3">
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
@@ -3035,9 +3011,37 @@
                     <i:Interaction.Behaviors>
                         <i:MouseDragElementBehavior/>
                     </i:Interaction.Behaviors>
-                </controls:UC_PanakUss>
+                </controls:UC_PanakUss>-->
 
                 <!--#endregion PANACI-figurky -->
+
+                <!--#region === VYKOLAJKY: (cervene trojuholniky) === -->
+
+                <controls:UC_Vykolajka Typ="L"  Style="{StaticResource vykolajkaRed}"  Margin="2054,860,0,0" x:Name="vykolajka3" >
+                    <i:Interaction.Behaviors>
+                        <i:MouseDragElementBehavior/>
+                    </i:Interaction.Behaviors>
+                </controls:UC_Vykolajka>
+
+                <controls:UC_Vykolajka Typ="L"  Style="{StaticResource vykolajkaRed}" Margin="2051,899,0,0" x:Name="vykolajka4">
+                    <i:Interaction.Behaviors>
+                        <i:MouseDragElementBehavior/>
+                    </i:Interaction.Behaviors>
+                </controls:UC_Vykolajka>
+
+                <controls:UC_Vykolajka Typ="P" Style="{StaticResource vykolajkaRed}" Margin="2124,858,0,0" x:Name="vykolajka1" >
+                    <i:Interaction.Behaviors>
+                        <i:MouseDragElementBehavior/>
+                    </i:Interaction.Behaviors>
+                </controls:UC_Vykolajka>
+
+                <controls:UC_Vykolajka Typ="P" Style="{StaticResource vykolajkaRed}" Margin="2124,898,0,0" x:Name="vykolajka2" >
+                    <i:Interaction.Behaviors>
+                        <i:MouseDragElementBehavior/>
+                    </i:Interaction.Behaviors>
+                </controls:UC_Vykolajka>
+
+                <!--#endregion === VYKOLAJKY === -->
 
 
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="85,636.463,0,0"  Text="119c"/>
@@ -3064,7 +3068,6 @@
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="738.077,35,0,0"  Text="201a"/>
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1622.403,103.5,0,0"  Text="201"/>
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1622.403,168.076,0,0"  Text="83"/>
-                <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1237.243,973.382,0,0"  Text="119" />
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1280.243,973.382,0,0"  Text="119" />
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1269,872.882,0,0"  Text="121a" />
                 <TextBlock Style="{StaticResource txbUsekStyle}"   Margin="1269,818,0,0"  Text="122a" />
@@ -3090,7 +3093,118 @@
 
 
 
+
+
+
                 <!--#endregion PANACI-figurky -->
+
+                <!--#region SUHLASY (Smerove sipky)-->
+
+                <controls:UC_VstupOdchod x:Name="s124" 
+                    SuhlasStatus="{Binding STC[s386].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
+                    Margin="1269.204,661.16,0,0" RenderTransformOrigin="0.5,0.5" >
+                    <controls:UC_VstupOdchod.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-179.701"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </controls:UC_VstupOdchod.RenderTransform>
+                </controls:UC_VstupOdchod>
+                <controls:UC_VstupOdchod x:Name="s126" 
+                    SuhlasStatus="{Binding STC[s386].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
+                    Margin="1235.728,455.852,0,0" RenderTransformOrigin="0.5,0.5" >
+                    <controls:UC_VstupOdchod.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-179.701"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </controls:UC_VstupOdchod.RenderTransform>
+                </controls:UC_VstupOdchod>
+
+                <controls:UC_VstupOdchod x:Name="s128" 
+                    SuhlasStatus="{Binding STC[s386].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
+                    Margin="1216.56,319.202,0,0" RenderTransformOrigin="0.5,0.5" >
+                    <controls:UC_VstupOdchod.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-179.701"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </controls:UC_VstupOdchod.RenderTransform>
+                </controls:UC_VstupOdchod>
+
+
+                <controls:UC_VstupOdchod x:Name="s81" 
+                    SuhlasStatus="{Binding STC[s81].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
+                    Margin="2659,320,0,0" RenderTransformOrigin="0.5,0.5" >
+                    <controls:UC_VstupOdchod.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </controls:UC_VstupOdchod.RenderTransform>
+                </controls:UC_VstupOdchod>
+
+                <controls:UC_VstupOdchod x:Name="s83" 
+                    SuhlasStatus="{Binding STC[s386].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
+                    Margin="1576,180,0,0" RenderTransformOrigin="0.5,0.5" >
+                    <controls:UC_VstupOdchod.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </controls:UC_VstupOdchod.RenderTransform>
+                </controls:UC_VstupOdchod>
+
+                <controls:UC_VstupOdchod x:Name="s80" 
+                    SuhlasStatus="{Binding STC[s80].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
+                    Margin="2656,496,0,0" RenderTransformOrigin="0.5,0.5" >
+                    <controls:UC_VstupOdchod.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-180.085"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </controls:UC_VstupOdchod.RenderTransform>
+                </controls:UC_VstupOdchod>
+
+                <controls:UC_VstupOdchod x:Name="s122" 
+                    SuhlasStatus="{Binding STC[s122].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
+                    Margin="1061,809,0,0" RenderTransformOrigin="0.5,0.5" >
+                    <controls:UC_VstupOdchod.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </controls:UC_VstupOdchod.RenderTransform>
+                </controls:UC_VstupOdchod>
+
+                <controls:UC_VstupOdchod x:Name="s121" 
+                    SuhlasStatus="{Binding STC[s121].CombineStatus, Mode=OneWay}" SuhlasTyp="SUHLAS_VSTUP"
+                    Margin="1061,866,0,0" RenderTransformOrigin="0.5,0.5" >
+                    <controls:UC_VstupOdchod.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-359.926"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </controls:UC_VstupOdchod.RenderTransform>
+                </controls:UC_VstupOdchod>
+
+                <!--#endregion SUHLASY (Smerove sipky)-->
 
             </Grid>
         </Grid>

@@ -6,7 +6,7 @@ using System.Windows.Input;
 
 
 
-namespace PA.Stavadlo.MH.UserControls
+namespace PA.Stavadlo.UserControls
 {
     /// <summary>
     /// UserContol znazornuje rozvadzac

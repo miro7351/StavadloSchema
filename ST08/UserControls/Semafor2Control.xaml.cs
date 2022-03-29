@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace PA.Stavadlo.MH.UserControls
+namespace PA.Stavadlo.UserControls
 {
 
     // 9.11.2015 Pozn. Semafor2 sa na MapeStavadla uz nepouziva, namiesto neho je semafor1 s attached property s1,s2,s3, tento objekt sa pouziva len v okne oSymbolochWindow

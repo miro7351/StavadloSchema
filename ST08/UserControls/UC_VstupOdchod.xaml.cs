@@ -4,10 +4,10 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 
-using PA.Stavadlo.MH.Controls;
-using PA.Stavadlo.MH.Enums;
+using PA.Stavadlo.Controls;
+using PA.Stavadlo.Infrastructure.Enums;
 
-namespace PA.Stavadlo.MH.UserControls
+namespace PA.Stavadlo.UserControls
 {
     //MH: september 2018
     //testovane 7.9.2018 OK!! synchronizacia pre 2 UserControly spolu so zvukom je OK!!

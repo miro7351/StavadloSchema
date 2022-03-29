@@ -7,11 +7,11 @@ using System.Windows.Shapes;
 using System.Windows.Media;
 
 
-using PA.Stavadlo.MH.Enums;
+using PA.Stavadlo.Infrastructure.Enums;
 
 using ST08;
 
-namespace PA.Stavadlo.MH.UserControls
+namespace PA.Stavadlo.UserControls
 {
     
     /// <summary>
@@ -50,7 +50,7 @@ namespace PA.Stavadlo.MH.UserControls
         {
             NONE,
             NORMAL,
-
+            NERIADENY_USEK,
             UVOLNENA_IZOLACIA,
             OBSADENY_USEK,
             VLAKOVA_CESTA,
@@ -143,8 +143,8 @@ namespace PA.Stavadlo.MH.UserControls
             //Binding urobime v kode pred zobrazenim controlu, lebo pre vymenu DP TimerFlagProperty sa binduje na jeden zdroj v DataContexte!!!
             //"TimerFlag" je meno property z DataContextu
 
-            Binding timerFlagBinding = new Binding("TimerFlag") { Mode = BindingMode.OneWay, Source = this.DataContext };
-            BindingOperations.SetBinding(this, TimerFlagProperty, timerFlagBinding);
+            Binding timerFlagBinding = new Binding("TimerFlag") { Mode = BindingMode.OneWay, Source = DataContext };
+            _ = BindingOperations.SetBinding(this, TimerFlagProperty, timerFlagBinding);
 
             //NastavPohotovostnyStav();
         }
@@ -591,7 +591,7 @@ namespace PA.Stavadlo.MH.UserControls
         {
             get
             {
-                if (InvertArm == true)//InvertArm == true a plus: neprechodne Rameno-...Rameno1...Part01, prechodne Rameno+...Rameno2...Part02
+                if (InvertArm)//InvertArm == true a plus: neprechodne Rameno-...Rameno1...Part01, prechodne Rameno+...Rameno2...Part02
                     return Part02;
                 else                 //InvertArm == false a plus: neprechodne Rameno-...Rameno2...Part02, prechodne Rameno+...Rameno1...Part01
                     return Part01;
@@ -605,7 +605,7 @@ namespace PA.Stavadlo.MH.UserControls
         {
             get
             {
-                if (InvertArm == true)// InvertArm == true a minus: neprechodne Rameno+...Rameno2...Part02, prechodne Rameno-...Rameno1...Part01
+                if (InvertArm)// InvertArm == true a minus: neprechodne Rameno+...Rameno2...Part02, prechodne Rameno-...Rameno1...Part01
                     return Part01;
                 else                 //InvertArm == false a minus:neprechodne Rameno+...Rameno1...Part01, prechodne Rameno-...Rameno2...Part02
                     return Part02;
@@ -728,8 +728,6 @@ namespace PA.Stavadlo.MH.UserControls
         {
             SWITCH_STATE oldValue = (SWITCH_STATE)e.OldValue;
             SWITCH_STATE newValue = (SWITCH_STATE)e.NewValue;
-            
-            
         }
 
 

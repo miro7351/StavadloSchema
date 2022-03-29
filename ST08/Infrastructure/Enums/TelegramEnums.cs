@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PA.Stavadlo.MH.Enums
+namespace PA.Stavadlo.Infrastructure.Enums
 {
     [Flags]
     public enum STAV_NAVESTIDLA

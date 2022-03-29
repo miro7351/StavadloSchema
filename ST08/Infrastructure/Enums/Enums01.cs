@@ -1,5 +1,5 @@
 ﻿
-namespace PA.Stavadlo.MH.Enums
+namespace PA.Stavadlo.Infrastructure.Enums
 {
     /// <summary>
     /// mod v akom pracuje program; Parkanyi: 21.08.2013 typ aplikacie moze byt len M-Master, R-ReadOnly;

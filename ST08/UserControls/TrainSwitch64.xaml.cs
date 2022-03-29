@@ -1,4 +1,4 @@
-﻿namespace PA.Stavadlo.MH.UserControls
+﻿namespace PA.Stavadlo.UserControls
 {
     #region Documentation
     /// <summary

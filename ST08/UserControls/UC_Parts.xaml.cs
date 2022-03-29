@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ST08.UserControls
+namespace PA.Stavadlo.UserControls
 {
     /// <summary>
     /// Interaction logic for UC_Parts.xaml

@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace PA.Stavadlo.MH.Pages
+namespace PA.Stavadlo.Pages
 {
     /// <summary>
     /// Interaction logic for MainPage.xaml

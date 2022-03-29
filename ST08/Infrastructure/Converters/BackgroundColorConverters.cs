@@ -4,7 +4,7 @@ using System.Collections;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace PA.Stavadlo.MH.Infrastructure.Converters
+namespace PA.Stavadlo.Infrastructure.Converters
 {
     /// <summary>
     /// Nastavuje farbu pozadia textbloku koncovym castiam vlakovej cesty ak je dana cesta nastavena ako obsadeny usek
