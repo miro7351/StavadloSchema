@@ -550,12 +550,12 @@
                 <!-- Nazov: 119a; Podtyp: n (izolovany)-->
                 <Path x:Name="_119a" Data="M0,-0.13889223 L82.970182,-0.3626483 83.020264,9.6373517 0,10.138892 z"  
                     Height="10.453" Margin="618.25,999.338,0,0" Stretch="Fill" Width="104.604"
-                />
+                      attProp:PathHelper.PathNumber="119a"/>
 
                 <!-- Nazov: 140; Podtyp: n (izolovany) -->
                 <Path x:Name="_140" Data="M0,0 L52.031361,-0.50259756 52.081443,9.7751225 0,10.046315 z"  
                     Height="10.496" Margin="466.701,808.661,0,0" Stretch="Fill" Width="66.077"
-                />
+                attProp:PathHelper.PathNumber="140"/>
 
                 <!--#region  NEPOUZITE USEKY: 140, 141,142,143 -->
 
@@ -609,38 +609,40 @@
                 <!-- Nazov: 119; Podtyp: n  (izolovany) -->
                 <Path x:Name="_119" Data="M0,0 L73.580429,-0.79476509 73.580429,9.2052349 0,10 z"  
                     Height="10.714" Margin="941.177,998.277,0,0" Stretch="Fill" Width="410.06"
-                />
+                attProp:PathHelper.PathNumber="119"/>
 
                 <!-- Nazov: 144; Podtyp: 0 (neizolovany)-->
                 <Path x:Name="_144" Data="M32.13236,0.74076125 L90.734896,0.25927222 90.734896,10.444444 32.13236,10.74077 z"
                     Height="10.435" Margin="307.378,517.332,0,0" Stretch="Fill"  Width="125.922"
-                />
+                attProp:PathHelper.PathNumber="144"/>
 
                 <!-- Nazov: 145; Podtyp: 0 (neizolovany)-->
                 <Path x:Name="_145" Data="M32.13236,0.34728283 L90.734896,0.027954181 90.734896,10.027954 32.13236,10.624999 z"
                     Height="10.543" Margin="342.463,450.001,0,0" Stretch="Fill"  Width="90.725"
-                />
+                attProp:PathHelper.PathNumber="145"/>
 
 
                 <!-- Nazov: 146; Podtyp: 0 (neizolovany)-->
                 <Path x:Name="_146" Data="M32.13236,0.30099447 L90.734896,0.37501061 90.734896,10.583319 32.13236,10.231553 z"
                     Height="10.255" Margin="378.63,379.652,0,0" Stretch="Fill"  Width="90.447"
-                />
+                attProp:PathHelper.PathNumber="146"/>
 
                 <!-- Nazov: 147; Podtyp: 0 (neizolovany)-->
                 <Path x:Name="_147" Data="M20.131881,-0.21604364 L117.44115,-0.030862301 117.44115,9.737662 20.131881,9.6913592 z"  
                     Height="9.959" Margin="385.518,314.215,0,0" Stretch="Fill" Width="64.649"
-                />
+                attProp:PathHelper.PathNumber="147"/>
 
 
                 <!-- Nazov: 83a; Podtyp: n  (izolovany) -->
                 <Path  x:Name="_83a" Data="M-0.44608812,111.48552 L20.529024,48.296262 30.967978,48.273909 30.970057,55.41278 23.291202,55.399011 3.4293793,114.56363 z" 
-                      Height="86.216"  Stretch="Fill" Width="66.329" Margin="917.898,173.338,0,0"/>
+                      Height="86.216"  Stretch="Fill" Width="66.329" Margin="917.898,173.338,0,0"
+                       attProp:PathHelper.PathNumber="83a"/>
 
 
                 <!-- Nazov: K201a; Podtyp: 0 (neizolovany)-->
                 <Path x:Name="K201a"   Data="M-0.013804301,0.69164428 L9.9861957,0.69164428 9.9923662,11.001001 0.0085234879,11.119151" 
-                    Height="10.386" Width="41.694" Margin="796.51,35.626,0,0"  Stretch="Fill" RenderTransformOrigin="0,0">
+                    Height="10.386" Width="41.694" Margin="796.51,35.626,0,0"  Stretch="Fill" RenderTransformOrigin="0,0"
+                      attProp:PathHelper.PathNumber="K201a">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -655,46 +657,46 @@
                 <!-- Nazov: K201a; Podtyp: 0 (neizolovany)-->
                 <Path x:Name="K201" Data="M0,0 L90,0 90,10 0,10 z"
                     Height="10" Margin="1287.683,114.259,0,0" Stretch="Fill"  Width="250.544"
-                />
+                attProp:PathHelper.PathNumber="K201"/>
 
                 <!-- Nazov: 201_1; Podtyp: 0  (neizolovany)  ???? -->
                 <Path x:Name="_201" Data="M90,10 L-40,10 -40,0 90,0"  
                     Height="10" Margin="1537.385,114.238,0,0" Stretch="Fill" Width="78.389" RenderTransformOrigin="0.5, 0.5"
-                     />
+                     attProp:PathHelper.PathNumber="201"/>
 
 
                 <!-- Nazov: 83; Podtyp: n  (izolovany) -->
                 <Path x:Name="K83" Data="M0,0 L90,0 90,10 0,10 z"
                     Height="10" Margin="1284.757,173.952,0,0" Stretch="Fill"  Width="96.23"
-                />
+                attProp:PathHelper.PathNumber="K83"/>
 
                 <!-- Nazov: 83; Podtyp: 0  (neizolovany) ???? -->
                 <Path x:Name="_83" Data="M90,10 L-1,10 -1,0 90,0"  
                     Height="10.083" Margin="1560.125,173.956,0,0" Stretch="Fill" Width="55.117" RenderTransformOrigin="3.264,-12.516"
-                     />
+                     attProp:PathHelper.PathNumber="83"/>
 
 
                 <!-- Nazov: K83_2; Podtyp: 0  (neizolovany)  -->
                 <Path x:Name="K83_2" Data="M0,0 L90,0 90,10 0,10 z"
                     Height="10" Margin="1379.999,173.956,0,0" Stretch="Fill"  Width="102.918"
-                />
+                attProp:PathHelper.PathNumber="K83_2"/>
 
                 <!-- Nazov: K83_3; Podtyp: 0  (neizolovany)  -->
                 <Path x:Name="K83_3" Data="M0,0 L90,0 90,10 0,10 z"
                     Height="10" Margin="1482.023,173.952,0,0" Stretch="Fill"  Width="78.956"
-                />
+                attProp:PathHelper.PathNumber="K83_3"/>
 
 
                 <!-- Nazov: 129; Podtyp: n  (izolovany) -->
                 <Path x:Name="_129" Data="M-7.541637,0.092590323 L125.06522,-0.049386541 125.06522,9.950613 -7.541637,10.09259 z"
                     Height="10.128" Margin="1273.417,237.72,0,0" Stretch="Fill"  Width="77.194"
-                />
+                attProp:PathHelper.PathNumber="129"/>
 
 
                 <!-- Nazov: 80a; Podtyp: n  (izolovany) -->
                 <Path x:Name="_80a"  Data="M1098.2015,56.597602 L1144.4134,56.558169 1144.4134,65.704016 1104.5192,65.502531 806.10522,357.832 799.20661,351.11693 z"
                     Height="302.294" Margin="2250.067,854.251,0,-106.545" Stretch="Fill"  Width="346.176" RenderTransformOrigin="0,0"
-                     >
+                    attProp:PathHelper.PathNumber="80a">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -709,56 +711,56 @@
                 <!-- Nazov: 104; Podtyp: n  (izolovany) -->
                 <Path x:Name="_104" Data="M-0.026332575,0 L90.734896,0.44444444 90.734896,10.444444 -0.026332575,10 z"
                     Height="10.4" Margin="1870.892,514.1,0,0" Stretch="Fill"  Width="216.427"
-                />
+                attProp:PathHelper.PathNumber="104"/>
 
 
                 <!-- Nazov: 105; Podtyp: n  (izolovany) -->
                 <Path x:Name="_105" Data="M0,0 L90.8823,0.44444444 90.919152,10.629632 0,10 z"
                     Height="10.566" Margin="1879.855,450.858,0,0" Stretch="Fill"  Width="206.599"
-                />
+                attProp:PathHelper.PathNumber="105"/>
 
 
                 <!-- Nazov: 106; Podtyp: n  (izolovany) -->
                 <Path x:Name="_106" Data="M15.198712,0.49383094 L90.734896,0.44444444 90.734896,10.444444 15.198712,10.493831 z"
                     Height="10.044" Margin="1879.185,388.701,0,0" Stretch="Fill"  Width="95.466"
-                />
+                attProp:PathHelper.PathNumber="106"/>
 
 
                 <!-- Nazov: 107; Podtyp: 0 (neizolovany)-->
                 <Path x:Name="_107" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
                     Height="10.4" Margin="1809.304,314.288,0,0" Stretch="Fill"  Width="176.696"
-                />
+                attProp:PathHelper.PathNumber="107"/>
 
                 <!-- Nazov: 108; Podtyp: 0 (neizolovany)-->
                 <Path x:Name="_108" Data="M0,0 L119.20641,0.93827157 119.20641,10.938271 0,10 z"
                     Height="10.844" Margin="1809.488,183.067,0,0" Stretch="Fill"  Width="281.751"
-                />
+                attProp:PathHelper.PathNumber="108"/>
 
                 <!-- Nazov: 109; Podtyp: 0 (neizolovany)-->
                 <Path x:Name="_109" Data="M0,-0.27779153 L81.86163,-0.32717422 81.829353,10.158934 0,10.208317 z"
                     Height="10.483" Margin="1810.74,110.801,0,0" Stretch="Fill"  Width="159.514"
-                />
+                attProp:PathHelper.PathNumber="109"/>
 
                 <!-- Nazov: 110; Podtyp: 0 (neizolovany)-->
-                <Path x:Name="_110" Data="M11.050193,-2.917111E-14 L91.122222,0.44444444 91.122222,11.000048 11.050193,10.555604 z"
+                <Path x:Name="_110" Data="M11.050193,0 L91.122222,0 91.122222,11 11.050193,10.555604 z"
                     Height="10.898" Margin="1810.74,40.821,0,0" Stretch="Fill"  Width="156.046"
-                />
+                attProp:PathHelper.PathNumber="110"/>
 
                 <!-- Nazov: K80; Podtyp: n  (izolovany) ???? -->
                 <Path x:Name="K80" Data="M0,-0.13888386 L90.734896,0.25926258 90.734896,10.351848 0,10.092586 z"
                     Height="10.442" Margin="2547.518,487.547,0,0" Stretch="Fill"  Width="100.363"
-                />
+                attProp:PathHelper.PathNumber="K80"/>
 
                 <!-- Nazov: 80; Podtyp: 0  (neizolovany) ???? -->
                 <Path x:Name="_80" Data="M90.239529,10 L-1.4112582,10 -1.4112582,-0.092592593 90.239529,0"  
                     Height="10.083" Margin="2647.051,487.906,0,0" Stretch="Fill" Width="55.117" RenderTransformOrigin="3.264,-12.516"
-                />
+                attProp:PathHelper.PathNumber="80"/>
 
 
                 <!-- Nazov: 113; Podtyp: 0 (neizolovany)-->
                 <Path  x:Name="_113" Data="M1098.0421,54.682426 L1154.0909,54.375488 1153.9265,63.774981 1103.6942,63.971619 1085.3602,100.56406 1077.1193,96.417517 z" 
                        Height="47.192" Margin="2528.949,165.567,0,0" Stretch="Fill"  Width="77.967" RenderTransformOrigin="0,0" 
-                       >
+                       attProp:PathHelper.PathNumber="113">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleY="-1" ScaleX="-1"/>
@@ -771,103 +773,123 @@
 
                 <!-- Nazov: K81; Podtyp: n  (izolovany) -->
                 <Path x:Name="K81"  Data="M1,0.77747252 L80.560339,0.77747252 80.560339,9.1 1,9.1 z"  HorizontalAlignment="Left" Height="10.35" Margin="2489.25,314.873,0,0" RenderTransformOrigin="0.5,0.5" 
-                      Stretch="Fill"   Width="72.269"/>
+                      Stretch="Fill"   Width="72.269" 
+                      attProp:PathHelper.PathNumber="K81"/>
 
                 <!-- Nazov: 81; Podtyp: 0  (neizolovany) ???? -->
                 <Path x:Name="_81" Data="M90.239529,10.185195 L0,10.185195 0,-0.092592593 90.239529,-0.092592593"  
-                    Height="10.249" Margin="2647.881,315.24,0,0" Stretch="Fill" Width="54.287" RenderTransformOrigin="3.264,-12.516"/>
+                    Height="10.249" Margin="2647.881,315.24,0,0" Stretch="Fill" Width="54.287" RenderTransformOrigin="3.264,-12.516"
+                      attProp:PathHelper.PathNumber="81"/>
 
 
                 <!-- Nazov: 124a; Podtyp: 0  (neizolovany) -->
                 <Path x:Name="_124a" Data="M0,0 L107.28197,0.13888889 107.28197,10.138889 0,10 z"  
                     Height="10.125" Margin="956.584,655.186,0,0" Stretch="Fill" Width="64.351"
-                 />
+                 attProp:PathHelper.PathNumber="124a"/>
 
                 <!-- Nazov: 124; Podtyp: 0  (neizolovany) ???? -->
                 <Path x:Name="_124" Data="M54.061759,0.32407406 L104.62616,0.16666153 104.62616,10.444444 54.061759,10.324074 z"
-                    Height="10.25" Margin="1187.167,656.157,0,0" Stretch="Fill"  Width="91.666" />
+                    Height="10.25" Margin="1187.167,656.157,0,0" Stretch="Fill"  Width="91.666" 
+                      attProp:PathHelper.PathNumber="124"/>
 
                 
                
                 <!-- Nazov: K124; Podtyp: 0  (neizolovany) ???? -->
                 <Path x:Name="K124" Data="M2.9846266,0 L90.027846,0 90.027846,10 2.9846266,10 z"  
-                    Height="10" Margin="1387.411,720.938,0,0" Stretch="Fill" Width="30.166" />
+                    Height="10" Margin="1387.411,720.938,0,0" Stretch="Fill" Width="30.166" 
+                      attProp:PathHelper.PathNumber="K124"/>
 
                 
                 <!-- Nazov: K124a; Podtyp: 0  (neizolovany) ???? -->
                 <Path x:Name="K124a" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
-                    Height="10" Margin="1416.748,720.938,0,0" Stretch="Fill" Width="31.162"/>
+                    Height="10" Margin="1416.748,720.938,0,0" Stretch="Fill" Width="31.162"
+                      attProp:PathHelper.PathNumber="K124a"/>
 
                 
                 <!-- Nazov: 125; Podtyp: 0  (neizolovany) -->
-                <Path x:Name="_125"    Data="M0.61240877,1 L79.444,1 79.444,9.1 0.61240877,9.1 z"  HorizontalAlignment="Left" Height="10.1" Margin="955.403,583.331,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="64.559"/>
+                <Path x:Name="_125"    Data="M0.61240877,1 L79.444,1 79.444,9.1 0.61240877,9.1 z"  HorizontalAlignment="Left" Height="10.1" Margin="955.403,583.331,0,0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="Black" StrokeThickness="1" VerticalAlignment="Top" Width="64.559"
+                      attProp:PathHelper.PathNumber="125"/>
 
 
                 <!-- Nazov: 126; Podtyp: 0  (neizolovany) -->
-                <Path x:Name="_126" Data="M1,1.1883339 L65.48277,1.3390011 65.48277,9.5129969 1,9.5129969 z" HorizontalAlignment="Left" Height="10.209" Margin="950.028,450.699,0,0" Stretch="Fill" VerticalAlignment="Top" Width="51.687"/>
+                <Path x:Name="_126" Data="M1,1.1883339 L65.48277,1.3390011 65.48277,9.5129969 1,9.5129969 z" HorizontalAlignment="Left" Height="10.209" Margin="950.028,450.699,0,0" Stretch="Fill" VerticalAlignment="Top" Width="51.687"
+                      attProp:PathHelper.PathNumber="126"/>
 
                 <!-- Nazov: 126; Podtyp: 0  (neizolovany)  ???? -->
                 <Path x:Name="_126_1" Data="M0,0 L90.734896,0.44444444 90.734896,10.444444 0,10 z"
-                    Height="10.4" Margin="1170.452,450.741,0,0" Stretch="Fill"  Width="83.473"/>
+                    Height="10.4" Margin="1170.452,450.741,0,0" Stretch="Fill"  Width="83.473"
+                      attProp:PathHelper.PathNumber="126_1"/>
 
                 
                 <!-- Nazov: 126; Podtyp: n (izolovany)   -->
                 <Path x:Name="_126s_" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
-                    Height="10" Margin="1361.415,517.503,0,0" Stretch="Fill" Width="31.162" />
+                    Height="10" Margin="1361.415,517.503,0,0" Stretch="Fill" Width="31.162"
+                      attProp:PathHelper.PathNumber="126s_"/>
 
                 
                 <!-- Nazov: K126a; Podtyp: 0  (neizolovany)  -->
                 <Path x:Name="K126a" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
-                    Height="10" Margin="1391.748,517.503,0,0" Stretch="Fill" Width="31.162"/>
+                    Height="10" Margin="1391.748,517.503,0,0" Stretch="Fill" Width="31.162"
+                      attProp:PathHelper.PathNumber="K126a"/>
                 
 
                 <!-- Nazov: 127; Podtyp: 0  (neizolovany) -->
-                <Path x:Name="_127" Data="M1,1.3390011 L48.035518,1.3892235 48.035518,9.6385628 1,9.5883404 z" HorizontalAlignment="Left" Height="10.182" Margin="949.403,381.256,0,0" Stretch="Fill" VerticalAlignment="Top" Width="50.771"/>
+                <Path x:Name="_127" Data="M1,1.3390011 L48.035518,1.3892235 48.035518,9.6385628 1,9.5883404 z" HorizontalAlignment="Left" Height="10.182" Margin="949.403,381.256,0,0" Stretch="Fill" VerticalAlignment="Top" Width="50.771"
+                      attProp:PathHelper.PathNumber="127"/>
 
 
                 <!-- Nazov: 128; Podtyp: 0  (neizolovany) -->
-                <Path x:Name="_128" Data="M1,1.7909787 L48.035518,1.3892235 48.035518,9.6385628 1.0787532,10.040318 z" HorizontalAlignment="Left" Height="10.569" Margin="949.403,314.437,0,0" Stretch="Fill" VerticalAlignment="Top" Width="50.771"/>
+                <Path x:Name="_128" Data="M1,1.7909787 L48.035518,1.3892235 48.035518,9.6385628 1.0787532,10.040318 z" HorizontalAlignment="Left" Height="10.569" Margin="949.403,314.437,0,0" Stretch="Fill" VerticalAlignment="Top" Width="50.771"
+                      attProp:PathHelper.PathNumber="128"/>
 
                 <!-- Nazov: 128; Podtyp: 0  (neizolovany)  ???? -->
-                <Path x:Name="_128_1" Data="M1.110223E-16,0 L90.734896,0.44444444 90.734896,11.185146 0,10.879572 z"
+                <Path x:Name="_128_1" Data="M0,0 L90.734896,0.44444444 90.734896,11.185146 0,10.879572 z"
                     Height="11.068" Margin="1170.452,314.073,0,0" Stretch="Fill"  Width="83.473"
-                />
+                attProp:PathHelper.PathNumber="128_1"/>
 
                 <!-- Nazov: K128; Podtyp: n  (izolovany)  -->
                 <Path x:Name="K128" Data="M0,0 L90,0 90,10 0,10 z"  
-                    Height="10" Margin="1361.415,380.003,0,0" Stretch="Fill" Width="31.162" />
+                    Height="10" Margin="1361.415,380.003,0,0" Stretch="Fill" Width="31.162"
+                      attProp:PathHelper.PathNumber="K128"/>
 
                 <!-- Nazov: 128a Podtyp: 0  (neizolovany)  -->
                 <Path x:Name="_128a" Data="M0,0 L90.027846,0 90.027846,10 0,10 z"  
-                    Height="10" Margin="1391.748,380.003,0,0" Stretch="Fill" Width="31.162" />
+                    Height="10" Margin="1391.748,380.003,0,0" Stretch="Fill" Width="31.162"
+                      attProp:PathHelper.PathNumber="128a"/>
 
                 
 
 
                 <!-- Nazov: 123; Podtyp: 0  (neizolovany)  ???? -->
-                <Path x:Name="_123"   Data="M1,1 L150.667,1 L150.667,9.2 L1,9.2 z" HorizontalAlignment="Left" Height="10.2" Margin="1441.667,792.979,0,0" Stretch="Fill" VerticalAlignment="Top" Width="164"/>
+                <Path x:Name="_123"   Data="M1,1 L150.667,1 L150.667,9.2 L1,9.2 z" HorizontalAlignment="Left" Height="10.2" Margin="1441.667,792.979,0,0" Stretch="Fill" VerticalAlignment="Top" Width="164"
+                      attProp:PathHelper.PathNumber="123"/>
 
                 <!-- Nazov: 122; Podtyp: 0  (neizolovany)  ???? -->
-                <Path x:Name="_122" Data="M1,1 L150.667,1 L150.667,10 L1,10 z" HorizontalAlignment="Left" Height="10" Margin="1441.828,844.157,0,0" Stretch="Fill" VerticalAlignment="Top" Width="164"/>
+                <Path x:Name="_122" Data="M1,1 L150.667,1 L150.667,10 L1,10 z" HorizontalAlignment="Left" Height="10" Margin="1441.828,844.157,0,0" Stretch="Fill" VerticalAlignment="Top" Width="164"
+                      attProp:PathHelper.PathNumber="122"/>
 
                 <!-- Nazov: 121; Podtyp: 0  (neizolovany)  ???? -->
-                <Path  x:Name="_121"  Data="M1,1 L150.667,1 L150.667,10 L1,10 z" HorizontalAlignment="Left" Height="10" Margin="1441.667,901.334,0,0" Stretch="Fill" VerticalAlignment="Top" Width="164"/>
+                <Path  x:Name="_121"  Data="M1,1 L150.667,1 L150.667,10 L1,10 z" HorizontalAlignment="Left" Height="10" Margin="1441.667,901.334,0,0" Stretch="Fill" VerticalAlignment="Top" Width="164"
+                       attProp:PathHelper.PathNumber="121"/>
 
 
                 <!-- Nazov: 120; Podtyp: 0  (neizolovany)  ???? -->
-                <Path  x:Name="_120" Data="M0.70147469,1.1114191 L153.30403,0.83287442 153.15476,9.0885809 0.70147469,9.4228382 z" HorizontalAlignment="Left" Height="10.637" Margin="1441.542,951.648,0,0" Stretch="Fill" VerticalAlignment="Top" Width="64.898"/>
+                <Path  x:Name="_120" Data="M0.70147469,1.1114191 L153.30403,0.83287442 153.15476,9.0885809 0.70147469,9.4228382 z" HorizontalAlignment="Left" Height="10.637" Margin="1441.542,951.648,0,0" Stretch="Fill" VerticalAlignment="Top" Width="64.898"
+                       attProp:PathHelper.PathNumber="120"/>
 
 
                 <!-- Nazov: 119; Podtyp: n  (izolovany)  ???? -->
                 <Path x:Name="_119_2" Data="M0,0 L63.425017,0.50926421 63.425017,10.648158 0,10 z"  
                     Height="10.583" Margin="1350.184,998.283,0,0" Stretch="Fill" Width="127.691"
-                />
+                attProp:PathHelper.PathNumber="119_2"/>
 
                 <!-- Nazov: 121; Podtyp: 0 (neizolovany)  ???? -->
-                <Path x:Name="_121_1" Data="M1,1.3390011 L60.218289,1.3390011 60.218289,10 1,10 z" HorizontalAlignment="Left" Height="10" Margin="1054.062,901.312,0,0" Stretch="Fill" VerticalAlignment="Top" Width="54.687"/>
+                <Path x:Name="_121_1" Data="M1,1.3390011 L60.218289,1.3390011 60.218289,10 1,10 z" HorizontalAlignment="Left" Height="10" Margin="1054.062,901.312,0,0" Stretch="Fill" VerticalAlignment="Top" Width="54.687"
+                      attProp:PathHelper.PathNumber="121_1"/>
 
                 <!-- Nazov: 122; Podtyp: 0 (neizolovany)  ???? -->
-                <Path x:Name="_122_1" Data="M1,1 L61.666,1 61.666,10 1,10 z" HorizontalAlignment="Left" Height="10" Margin="1045.132,844.157,0,0" Stretch="Fill" VerticalAlignment="Top" Width="65.222"/>
+                <Path x:Name="_122_1" Data="M1,1 L61.666,1 61.666,10 1,10 z" HorizontalAlignment="Left" Height="10" Margin="1045.132,844.157,0,0" Stretch="Fill" VerticalAlignment="Top" Width="65.222"
+                      attProp:PathHelper.PathNumber="122_1"/>
 
 
                 <!-- #endregion == KOLAJOVE USEKY == -->
